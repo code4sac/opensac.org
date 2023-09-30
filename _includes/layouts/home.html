@@ -1,0 +1,25 @@
+---
+layout: layouts/base
+---
+<!--
+Home layout.
+-->
+{% block head %}
+<!--Add stylesheet for nav bar and footer-->
+<style>
+  * {
+    font-family: 'Inter', 'Arial', sans-serif;
+  }
+</style>
+{% endblock %}
+<div class="">
+  <div class="w-full">
+    {% include "navigation-bar.html" %}
+  </div>
+  <div class="container mx-auto">
+    {{ content }}
+  </div>
+  <div class="w-full">
+    {% include "footer.html" %}
+  </div>
+</div>

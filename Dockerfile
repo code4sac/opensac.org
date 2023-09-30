@@ -1,17 +1,15 @@
-FROM ruby:3.0
+FROM node:latest
 
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
+WORKDIR /app
 
-WORKDIR /usr/src/app
+COPY _src/package*.json ./
 
-COPY Gemfile Gemfile.lock ./
-RUN bundle install
+RUN npm install
 
-RUN jekyll build
+COPY _src .
 
-EXPOSE 4000
+RUN npm run webpack-build
 
-COPY . .
+EXPOSE 8080
 
-CMD ["/usr/local/bundle/bin/jekyll", "serve", "--watch", "-H", "0.0.0.0"]
+CMD ["npx", "@11ty/eleventy", "--quiet", "--port=8080"]
