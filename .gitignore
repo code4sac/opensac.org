@@ -2,10 +2,8 @@
 _site/
 .sass-cache/
 bower_components/
-dist/
 node_modules/
 build/
-*.json
 !projects/*.json
 gulpfile.js
 
