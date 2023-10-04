@@ -1,8 +1,0 @@
-/*
-Base layout styles for all pages. This file should be imported in the base layout file. Initialize Bootstrap.
-**Note:** Due to the way the project is building the CSS files, everything must be imported here if you want to use it anywhere in the app.
- */
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "./home";
-@import "./footer";
-@import "./navigation-bar";

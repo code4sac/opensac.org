@@ -1,43 +1,8 @@
 /*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+Base layout styles for all pages. This file should be imported in the base layout file. Initialize Bootstrap.
+**Note:** Due to the way the project is building the CSS files, everything must be imported here if you want to use it anywhere in the app.
  */
-/******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./styles/home.scss":
-/*!**************************!*\
-  !*** ./styles/home.scss ***!
-  \**************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: Unexpected token (1:0)\nFile was processed with these loaders:\n * ./node_modules/sass-loader/dist/cjs.js\n * ./node_modules/postcss-loader/dist/cjs.js\n * ./node_modules/sass-loader/dist/cjs.js\nYou may need an additional loader to handle the result of these loaders.\n> :root {\n|   --secondary-50:#fffcf5;\n|   --secondary-500:#ffc107;");
-
-/***/ }),
-
-/***/ "./styles/main.scss":
-/*!**************************!*\
-  !*** ./styles/main.scss ***!
-  \**************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: Unexpected character '@' (1:0)\nFile was processed with these loaders:\n * ./node_modules/sass-loader/dist/cjs.js\n * ./node_modules/postcss-loader/dist/cjs.js\n * ./node_modules/sass-loader/dist/cjs.js\nYou may need an additional loader to handle the result of these loaders.\n> @charset \"UTF-8\";\n| /*!\n|  * Bootstrap  v5.3.2 (https://getbootstrap.com/)");
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	__webpack_modules__["./styles/main.scss"]();
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./styles/home.scss"]();
-/******/ 	
-/******/ })()
-;
+@import "css/bootstrap/bootstrap.css";
+@import "css/home.css";
+@import "css/footer.css";
+@import "css/navigation-bar.css";
