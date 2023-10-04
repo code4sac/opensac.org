@@ -43,7 +43,7 @@ const eleventyConfig = config => {
   return {
     dir: {
       input: 'content',
-      includes: '../_includes',
+      includes: '../_includes'
     }
   }
 }

@@ -7,15 +7,16 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./javascript/app.js":
 /*!***************************!*\
   !*** ./javascript/app.js ***!
   \***************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("// This file is intended to be loaded in every page. It is in global scope.\n\n//# sourceURL=webpack://opensac.org/./javascript/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./javascript/home.js\");\n// This file is intended to be loaded in every page. It is in global scope.\n\n(0,_home_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack://opensac.org/./javascript/app.js?");
 
 /***/ }),
 
@@ -25,7 +26,6 @@ eval("// This file is intended to be loaded in every page. It is in global scope
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/**\n * GitHub API.\n */\nvar github = function github() {};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (github);\n\n//# sourceURL=webpack://opensac.org/./javascript/github.js?");
 
 /***/ }),
@@ -36,8 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _navigationBar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigationBar.js */ \"./javascript/navigationBar.js\");\n/* harmony import */ var _github_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./github.js */ \"./javascript/github.js\");\n\n\nvar home = function home() {\n  (0,_navigationBar_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (home);\n\n//# sourceURL=webpack://opensac.org/./javascript/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _navigationBar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigationBar.js */ \"./javascript/navigationBar.js\");\n/* harmony import */ var _github_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./github.js */ \"./javascript/github.js\");\n\n\nvar home = function home() {\n  (0,_navigationBar_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  console.log('Home layout loaded.');\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (home);\n\n//# sourceURL=webpack://opensac.org/./javascript/home.js?");
 
 /***/ }),
 
@@ -47,7 +46,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/**\n * Initialize navigation bar scripts.\n */\nvar initNavigationBar = function initNavigationBar() {};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initNavigationBar);\n\n//# sourceURL=webpack://opensac.org/./javascript/navigationBar.js?");
 
 /***/ })
