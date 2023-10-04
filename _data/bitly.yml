@@ -1,0 +1,4 @@
+# Bitly links used by application.
+# See: https://bitly.com
+- shortlink: "bit.ly/asdf"
+  name: "contact"

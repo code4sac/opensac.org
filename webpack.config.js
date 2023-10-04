@@ -1,14 +1,17 @@
-import path, {dirname} from 'path'
-import autoprefixer from 'autoprefixer'
-import miniCssExtractPlugin from 'mini-css-extract-plugin'
-import {fileURLToPath} from 'url'
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+const miniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-export default [
+module.exports = [
   {
     name: 'Site CSS',
     mode: 'development' || 'production',
+    entry: ['./styles/main.scss', './styles/home.scss'],
     devtool: 'eval-source-map',
+    output: {
+      path: path.join(__dirname, '/public/css'),
+      filename: 'main.css'
+    },
     resolve: {
       extensions: ['.scss']
     },
@@ -18,15 +21,14 @@ export default [
     module: {
       rules: [
         {
-          test: /\.(scss)$/,
-          include: [
-            path.resolve(__dirname, 'node_modules'),
-            path.resolve(__dirname, 'styles'),
-          ],
-          use: [{
-            loader: 'style-loader'
-          }, {
-            loader: 'css-loader',
+          test: /\.(scss|css)$/i, use: [
+            {
+              loader: "sass-loader",
+              options: {
+                sassOptions: {
+                  includePaths: ['./node_modules/bootstrap'],
+                },
+              },
           }, {
             loader: 'postcss-loader',
             options: {
@@ -44,10 +46,10 @@ export default [
   {
     name: 'Main Scripts',
     mode: 'development' || 'production',
-    entry: './javascript/app.js',
+    entry: ['./javascript/app.js', './javascript/home.js'],
     output: {
-      path: path.join(__dirname, 'public/js'),
-      filename: 'main.bundle.js'
+      path: path.join(__dirname, '/public/js'),
+      filename: 'app.bundle.js'
     },
     resolve: {
       extensions: ['.js']

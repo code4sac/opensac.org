@@ -1,3 +1,6 @@
+/**
+ * Initialize navigation bar scripts.
+ */
 const initNavigationBar = () => {
 
 }

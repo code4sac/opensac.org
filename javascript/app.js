@@ -1,4 +1,1 @@
-import initNavigationBar from './navigationBar.js'
-import './github.js'
-
-initNavigationBar()
+// This file is intended to be loaded in every page. It is in global scope.
