@@ -1,5 +1,7 @@
 <!--
-Base application layout. Contains imports that are used for all pages.
+Base application layout. Contains libraries and metadata that are used for all pages.
+Note: External libraries should be imported through main.css or app.js instead of added to this file. See /documentation/add-third-party-libraries.md
+Usage: Include `layout: layouts/base` in the Front Matter of a template file.
 -->
 <!doctype html>
 <html lang="en">
@@ -13,7 +15,7 @@ Base application layout. Contains imports that are used for all pages.
   <!--  Load application CSS-->
   <link rel="stylesheet" href="/css/main.css">
   <!--  Load application Javascript-->
-  <script src="/js/app.bundle.js" async></script>
+  <script src="/js/app.js" async></script>
   <!--  SEO meta data-->
   <script type="application/ld+json">
     {
@@ -21,9 +23,9 @@ Base application layout. Contains imports that are used for all pages.
       "@type": "Article",
       "name": "Open Sacramento",
       "image": [
-        "http://opensac.org/images/apps/openbudget.png",
-        "http://opensac.org/images/apps/trashai.png",
-        "http://opensac.org/images/apps/learningBlocks.png"
+        "http://opensac.org/img/openbudget.png",
+        "http://opensac.org/img/trashai.png",
+        "http://opensac.org/img/learningBlocks.png"
       ]
     }
   </script>
