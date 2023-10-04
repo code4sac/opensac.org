@@ -9,10 +9,9 @@ const yaml = require('js-yaml')
  */
 const eleventyConfig = config => {
   config.ignores.add('README.md')
-  config.addPassthroughCopy({
-    './public/': '/',
-    './node_modules/bootstrap/dist/css/': '/css/bootstrap'
-  });
+  config.addPassthroughCopy('./public/')
+  config.addPassthroughCopy('./node_modules/bootstrap/dist/css/')
+  config.addPassthroughCopy('./node_modules/tailwindcss/')
   config.addDataExtension('yml', contents => yaml.load(contents))
   return {
     dir: {
