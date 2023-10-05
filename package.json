@@ -28,6 +28,7 @@
   "homepage": "https://github.com/code4sac/opensac.org#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "eleventy-sass": "^2.2.3",
     "jest": "^29.7.0",
     "js-yaml": "^4.1.0"
   },

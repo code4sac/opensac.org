@@ -6,7 +6,7 @@ To use frontend libraries installed with NPM, add a new pass-through copy rule t
 ```js
 eleventyConfig.addPassthroughCopy('./node_modules/bootstrap/dist/css/')
 ```
-See: [Eleventy config documentation](/documentation/eleventy-config.md)
+See: [Eleventy config documentation](/documentation/eleventy-configuration.md)
 
 ## CSS
 The application loads main.css in the [base layout](/_includes/layouts/base.html). All imports should be added to the CSS file instead of in the HTML <head> when possible.

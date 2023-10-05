@@ -2,12 +2,14 @@
 Opensac.org is run as a static site with [Eleventy (11ty)](https://www.11ty.dev/).
 
 ## Configuration
+
 ### Example adding node_module libraries:
 ```js
-addPassthroughCopy({
-'./node_modules/prismjs/themes/prism-okaidia.css': '/css/prism-okaidia.css'
+eleventyConfig.addPassthroughCopy({
+  './node_modules/prismjs/themes/prism-okaidia.css': '/css/prism-okaidia.css'
 })
 ```
+
 ### Example return object:
 ```js
 {
@@ -24,7 +26,13 @@ addPassthroughCopy({
   pathPrefix: '/'
 }
 ```
-**Note:** See webpack for more information about building the public/ folder.
 
 ## Feature support
-- YAML data files. The default data files are in JSON format. YAML files have features like comments. This support is provided with [js-yaml](https://github.com/nodeca/js-yaml) through an Eleventy data extension. See https://www.11ty.dev/docs/data-custom/.
+
+### YAML data files
+The default data files are in JSON format. YAML files have features like comments. This support is provided with [js-yaml](https://github.com/nodeca/js-yaml) through an Eleventy data extension. See https://www.11ty.dev/docs/data-custom/.
+
+### SASS
+The app uses the [eleventy-sass plugin](https://github.com/kentaroi/eleventy-sass) to build SCSS to CSS files at runtime.
+
+**Issue:** If you need to load the CSS file in HTML. Since this file is not actually on the filesystem, your editor could give a warning that the file is not found.
