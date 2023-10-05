@@ -8,8 +8,11 @@ eleventyConfig.addPassthroughCopy('./node_modules/bootstrap/dist/css/')
 ```
 See: [Eleventy config documentation](/documentation/eleventy-configuration.md)
 
-## CSS
-The application loads main.css in the [base layout](/_includes/layouts/base.html). All imports should be added to the CSS file instead of in the HTML <head> when possible.
-
-## JS
-The application loads app.js in the [base layout](/_includes/layouts/base.html). All imports should be added to the Javascript file instead of in the HTML <head> when possible.
+## Frontend
+To add a new CSS or JS library, add it to the head block in the layout.
+```liquid
+{%block head%}
+<link rel="stylesheet" href="public/css/my-style.css">
+<script src="/public/js/my-script.js"></script>
+{%endblock%}
+```

@@ -35,4 +35,4 @@ The default data files are in JSON format. YAML files have features like comment
 ### SASS
 The app uses the [eleventy-sass plugin](https://github.com/kentaroi/eleventy-sass) to build SCSS to CSS files at runtime.
 
-**Issue:** If you need to load the CSS file in HTML. Since this file is not actually on the filesystem, your editor could give a warning that the file is not found.
+**Issue:** HTML files need to reference the CSS files, not the SCSS. Since the CSS file is not actually on the filesystem, your editor could give a warning that the file is not found.
