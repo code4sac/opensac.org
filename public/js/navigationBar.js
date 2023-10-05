@@ -1,8 +1,12 @@
 /**
  * Initialize navigation bar scripts.
+ * Usage:
+ * ```js
+ * initializeNavigationBar()
+ * ```
  */
-const initNavigationBar = () => {
+const initializeNavigationBar = () => {
 
 }
 
-export default initNavigationBar
+export default initializeNavigationBar

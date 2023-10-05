@@ -1,8 +1,14 @@
-import initNavigationBar from './navigationBar.js'
-import './github.js'
+import initializeNavigationBar from './navigationBar.js'
 
+/**
+ * Home scripts.
+ * Usage:
+ * ```js
+ * home()
+ * ```
+ */
 const home = () => {
-  initNavigationBar()
+  initializeNavigationBar()
   console.log('Home layout loaded.')
 }
 
