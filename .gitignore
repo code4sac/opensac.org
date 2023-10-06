@@ -1,4 +1,5 @@
 # PRODUCTION - aka: gh-pages
+dist/
 _site/
 .sass-cache/
 bower_components/

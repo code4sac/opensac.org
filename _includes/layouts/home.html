@@ -1,0 +1,20 @@
+---
+layout: layouts/base
+---
+<!--
+Home layout with navigation bar and footer.
+-->
+{%block head%}
+<link rel="stylesheet" href="/public/css/home.scss">
+{%endblock%}
+<div class="">
+  <div class="w-full">
+    {% include "navigation-bar.html" %}
+  </div>
+  <div class="container mx-auto">
+    {{ content }}
+  </div>
+  <div class="w-full">
+    {% include "footer.html" %}
+  </div>
+</div>
