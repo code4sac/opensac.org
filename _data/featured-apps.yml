@@ -1,3 +1,4 @@
+# Featured apps
 - name: Open Budget Sacramento
   description: Visualize where the money comes from and how it's spent. Drill into the details of income and spending.
   image: openbudget.png
@@ -10,4 +11,3 @@
   description: API assisting the gathering and reporting of student grant data.
   image: learningBlocks.png
   url: https://github.com/code4sac/learning-blocks
-  

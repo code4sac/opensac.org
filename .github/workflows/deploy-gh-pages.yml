@@ -25,5 +25,5 @@ jobs:
         with:
           folder: _site
           git-config-name: Automated
-          git-config-email: hello@codeforsacramento.org
+          git-config-email: hello@opensac.org
           branch: gh-pages
