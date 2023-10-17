@@ -116,10 +116,33 @@ Open Sacramento home page.
     </p>
     <a href="" class="home-button home-button-alt">Find Projects</a>
   </div>
-  <div class="home-projects-container">
-    <h2 class="heading-section-sub">TrashAI</h2>
-    <p class="home-section-dark-paragraph">Developing machine learning technology to identify trash in images.</p>
-    <img src="../public/img/TrashAI2.png" alt="Open Data Day" class="home-section-project-image">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <h2 class="heading-section-sub">TrashAI</h2>
+          <p class="home-section-dark-paragraph">Developing machine learning technology to identify trash in images.</p>
+        </div>
+        <img src="../public/img/TrashAI2.png" alt="Open Data Day" class="home-section-project-image">
+      </div>
+      
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <h2 class="heading-section-sub">TrashAI</h2>
+          <p class="home-section-dark-paragraph">Developing machine learning technology to identify trash in images.</p>
+        </div>
+        <img src="../public/img/TrashAI2.png" alt="Open Data Day" class="home-section-project-image">
+      </div>
+      
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <h2 class="heading-section-sub">TrashAI</h2>
+          <p class="home-section-dark-paragraph">Developing machine learning technology to identify trash in images. Donations fuel our technology</p>
+        </div>
+        <img src="../public/img/TrashAI2.png" alt="Open Data Day" class="home-section-project-image">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
   </div>
 </section>
 
@@ -147,3 +170,25 @@ Open Sacramento home page.
     </div>
   </div>
 </section>
+
+<script>
+  function setSwiperSlideHeight() {
+    const slides = document.querySelectorAll('.swiper-slide');
+    let maxHeight = 0;
+
+    slides.forEach((slide) => {
+      const slideHeight = slide.clientHeight;
+      if (slideHeight > maxHeight) {
+        maxHeight = slideHeight;
+      }
+    });
+
+    slides.forEach((slide) => {
+      slide.style.height = `${maxHeight}px`;
+    });
+  }
+
+  // Call the function when the page loads and when the window resizes
+  window.addEventListener('load', setSwiperSlideHeight);
+  window.addEventListener('resize', setSwiperSlideHeight);
+</script>

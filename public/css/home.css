@@ -296,7 +296,7 @@ Home page layout
   font-weight: 700;
   line-height: 38px;
   text-align: center;
-  height: 76px;
+  flex: 1;
   display: flex;
   align-items: center;
   margin: 0;
@@ -324,14 +324,7 @@ Home page layout
   justify-content: space-between;
   gap: 30px;
 
-  @media (max-width: 1400px) {
-    flex-direction: column;
-    justify-content: center;
-    padding: 48px 40px;
-    gap: 80px;
-  }
-
-  @media (max-width: 1400px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
     justify-content: center;
     padding: 48px 40px;
@@ -352,12 +345,57 @@ Home page layout
   }
 }
 
-.home-projects-container {
+.home-section-project-image {
+  width: 100%;
+  aspect-ratio: 2/1;
+}
+
+.swiper {
+  width: 100%;
+  height: fit-content;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 20px;
+}
+
+.swiper-slide {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 98% !important;
+  padding: 0 1%;
+}
+
+.slide-content {
   width: 100%;
 }
 
-.home-section-project-image {
-  width: 100%;
+.swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+  background-color: #f7f7f8 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffc107 !important;
+}
+
+.swiper-slide .slide-content {
+  opacity: 0;
+  transition: opacity 0s;
+}
+
+.swiper-slide-active .slide-content {
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 .donate-section {
@@ -376,6 +414,8 @@ Home page layout
 
 .donate-section-paragraph-container {
   width: 45%;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 1400px) {
     width: 100%;
@@ -400,10 +440,11 @@ Home page layout
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
-  margin: 0 0 40px 0;
+  margin: 0 0 30px 0;
 
   @media (max-width: 1024px) {
     font-size: 18px;
     line-height: 28px;
+    margin: 0 0 30px 0;
   }
 }
