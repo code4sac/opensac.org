@@ -1,0 +1,73 @@
+/*
+Application color theme.
+ */
+/*
+Navigation bar.
+It is made up of three sections.
+- Left: Logo
+- Middle: Links with animated underline
+- Right: Dropdown link that displays extended section
+ */
+.navbar-toolbar {
+  height: 84px;
+  color: #fffcf5;
+  background: #060718;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-toolbar a:link {
+  color: #fffcf5;
+  text-decoration: none;
+}
+
+.navbar-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left-container {
+  display: inline-flex;
+}
+
+.navbar-left-section {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-middle-container {
+  display: inline-flex;
+}
+
+.navbar-middle-section {
+  display: inline-flex;
+  list-style: none;
+  margin: 20px;
+  column-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+
+.navbar-right-container {
+  display: inline-flex;
+}
+
+.navbar-right-section {
+  display: inline-flex;
+}
+
+.navbar-nested-parent-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=navigation-bar.css.map */
