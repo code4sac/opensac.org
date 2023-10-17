@@ -1,8 +1,9 @@
+@import "theme";
 /*
 Home page layout
  */
 .home-section-dark {
-  background-color: #060718;
+  background-color: $neutral-900;
   color: #f7f7f8;
 }
 
@@ -60,10 +61,10 @@ Home page layout
 }
 
 .home-button {
-  color: #fffcf5;
+  color: $secondary-50;
   background-color: transparent;
 
-  border: solid #ffc107 1px;
+  border: solid $secondary-500 1px;
   border-radius: 6px;
   padding: 16px 24px;
   text-decoration: none;
@@ -82,21 +83,24 @@ Home page layout
 
 .home-button-alt {
   /* alternative colors */
-  background-color: #ffc107;
-  color: #060718;
+  background-color: $secondary-500;
+  color: $neutral-900;
 }
 
 .home-button-numbered {
-  color: #ffc107;
+  color: $secondary-500;
 }
 
 .heading-small {
+  /*
+  TODO: Should we make this a variable?
+   */
   background: #121211;
 }
 
 .home-section-light {
-  color: #060718;
-  background-color: #fffcf5;
+  color: $neutral-900;
+  background-color: $secondary-50;
   padding: 96px 80px;
   display: flex;
   flex-direction: row;
@@ -126,7 +130,7 @@ Home page layout
   right: 0;
   height: 1px;
   width: 43px;
-  border-bottom: 4px solid #060718;
+  border-bottom: 4px solid $neutral-900;
 }
 
 .home-section-dark-container {
@@ -154,7 +158,7 @@ Home page layout
 }
 
 .heading-section-alt {
-  color: #ffc107;
+  color: $secondary-500;
 }
 
 .heading-section-sub {
@@ -188,7 +192,7 @@ Home page layout
 }
 
 .home-section-paragraph-anchor {
-  color: #060718;
+  color: $neutral-900;
   font-weight: 700;
 }
 
@@ -385,7 +389,7 @@ Home page layout
 }
 
 .swiper-pagination-bullet-active {
-  background: #ffc107 !important;
+  background: $secondary-500 !important;
 }
 
 .swiper-slide .slide-content {

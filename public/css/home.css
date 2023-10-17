@@ -1,4 +1,7 @@
 /*
+Application theme.
+ */
+/*
 Home page layout
  */
 .home-section-dark {
@@ -93,6 +96,9 @@ Home page layout
 }
 
 .heading-small {
+  /*
+  TODO: Should we make this a variable?
+   */
   background: #121211;
 }
 

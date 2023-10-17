@@ -1,16 +1,10 @@
 @import url("node_modules/bootstrap/dist/css/bootstrap.css");
-@import url("node_modules/tailwindcss/tailwind.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
 /*
 Base layout styles for all pages. Includes the app theme. This file should be imported in the base layout file. Initialize Bootstrap.
  */
 * {
   font-family: "Inter", "Arial", sans-serif;
-}
-:root {
-  --secondary-50: #fffcf5;
-  --secondary-500: #ffc107;
-  --neutral-900: #060718;
 }
 
 body {

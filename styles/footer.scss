@@ -1,6 +1,7 @@
+@import "theme";
 footer {
   height: fit-content;
-  background-color: #fffcf5;
+  background-color: $secondary-50;
 }
 
 .footerContainerTop {
