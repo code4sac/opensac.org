@@ -13,8 +13,6 @@ Usage: Include `layout: layouts/base` in the Front Matter of a template file.
   <link rel="icon" href="/public/img/favicon.ico">
   <!--  Load application CSS and Javascript -->
   <link rel="stylesheet" href="/public/css/main.css">
-  <link rel="stylesheet" href="/public/css/pages/home.css">
-  <link rel="stylesheet" type="text/css" href="/public/css/components/footer.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +34,6 @@ Usage: Include `layout: layouts/base` in the Front Matter of a template file.
       ]
     }
   </script>
-  <!--  Load page CSS and Javascript -->
 </head>
 <body>
 <!--Load page layout-->
@@ -44,102 +41,100 @@ Usage: Include `layout: layouts/base` in the Front Matter of a template file.
 Home layout with navigation bar and footer.
 -->
 <div class="">
-  <div class="w-full">
+  <div class="">
     <!--
 Default application navigation bar.
 -->
-<header class="w-full">
-  <div class="nav-main-toolbar">
-    <div class="container mx-auto flex items-end flex-nowrap">
-      <div class="nav-left-container">
-        <a class="nav-left-section" href="home">
-          <img src="/public/img/Open Sac - Black Logo.png" alt="Open Sacramento logo" height="100" width="200">
-        </a>
-      </div>
+<nav class="navbar-toolbar">
+  <div class="container">
+  <div class="navbar-toolbar-content">
+    <div class="navbar-left-container">
+      <a class="navbar-left-section" href="/home">
+        <img src="/public/img/Open Sac - Black Logo.png" alt="Open Sacramento logo" height="100" width="200">
+      </a>
+    </div>
 
-      <nav class="nav-middle-container" role="navigation">
-        <ul>
-          <li class="nav-middle-section">
-            <a href="home">Home</a>
-          <li/>
-          <li class="nav-middle-section">
-            <a href="about">About</a>
-          </li>
-          <li class="nav-middle-section">
-            <a href="contact">Contact</a>
-          </li>
-          <li class="nav-middle-section">
-            <a href="">Donate</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="navbar-middle-container">
+      <ul class="navbar-middle-section">
+        <li class="navbar-link">
+          <a href="/home">Home</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/about">About</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/contact">Contact</a>
+        </li>
+        <li class="navbar-link">
+          <a href="">Donate</a>
+        </li>
+      </ul>
+    </div>
 
-      <div class="nav-right-container">
-        <div class="nav-right-section">
-          <a class="nav-nested-parent-link">Get Involved</a>
+    <div class="navbar-right-container">
+      <div class="navbar-right-section">
+        <a class="navbar-nested-parent-link">Get Involved</a>
           <img class="inline ml-1" src="/public/img/chevron-down.png" width="16" height="16">
         </div>
       </div>
     </div>
   </div>
+</nav>
 
-  <div class="hidden nav-toolbar-extended">
-    <nav class="nav-extended-container-mobile container mx-auto" role="navigation">
-      <ul>
-        <li class="nav-extended-mobile-section">
-          <a href="projects">Projects</a>
-        <li/>
-        <li class="nav-extended-mobile-section">
-          <a href="project-pitch">Pitch a Project</a>
-        </li>
-        <li class="nav-extended-mobile-section">
-          <a href="meetup">Meetup</a>
-        </li>
-        <li class="nav-extended-mobile-section">
-          <a href="faqs">FAQs</a>
-        </li>
-      </ul>
-    </nav>
 
-    <nav class="hidden nav-extended-container-desktop container mx-auto" role="navigation">
-      <div class="container mx-auto">
-        <div class="nav-extended-desktop-left-container">
-          <div class="nav-extended-desktop-left-section">
-            Get started today and volunteer with us to drive positive change through technology, making a meaningful
-            impact in your community!
-            <a class="nav-extended-desktop-button" href="projects">Get Started</a>
-          </div>
-          <div class="nav-extended-desktop-left-section">
-            Explore our projects and discover how you can contribute your skills to drive innovation and create positive
-            change.
-            <a class="nav-extended-desktop-button" href="projects">See Projects</a>
-          </div>
-          <div class="nav-extended-desktop-left-section">
-            Explore our projects and discover how you can contribute your skills to drive innovation and create positive
-            change.
-            <a class="nav-extended-desktop-button" href="project-pitch">Pitch a Project</a>
-          </div>
-        </div>
-        <div class="nav-extended-desktop-right-container">
-          <div class="nav-extended-desktop-right-section">
-            Join us for our weekly meetings on <a href="meetup">meetup</a>.
-          </div>
-          <div class="nav-extended-desktop-right-section">
-            For any questions, visit our <a href="faqs">FAQs</a>.
-          </div>
-        </div>
-      </div>
-    </nav>
+
+<!-- <div class="navbar-toolbar-extended d-none">-->
+<!--    <ul>-->
+<!--      <li class="navbar-extended-mobile-section">-->
+<!--        <a href="/projects">Projects</a>-->
+<!--      <li/>-->
+<!--      <li class="navbar-extended-mobile-section">-->
+<!--        <a href="/project-pitch">Pitch a Project</a>-->
+<!--      </li>-->
+<!--      <li class="navbar-extended-mobile-section">-->
+<!--        <a href="/meetup">Meetup</a>-->
+<!--      </li>-->
+<!--      <li class="navbar-extended-mobile-section">-->
+<!--        <a href="/faqs">FAQs</a>-->
+<!--      </li>-->
+<!--    </ul>-->
+
+<!--    <div class="container">-->
+<!--      <div class="navbar-extended-desktop-left-container">-->
+<!--        <div class="navbar-extended-desktop-left-section">-->
+<!--            Get started today and volunteer with us to drive positive change through technology, making a meaningful-->
+<!--            impact in your community!-->
+<!--          <a class="navbar-extended-desktop-button" href="/projects">Get Started</a>-->
+<!--          </div>-->
+<!--        <div class="navbar-extended-desktop-left-section">-->
+<!--            Explore our projects and discover how you can contribute your skills to drive innovation and create positive-->
+<!--            change.-->
+<!--          <a class="navbar-extended-desktop-button" href="/projects">See Projects</a>-->
+<!--          </div>-->
+<!--        <div class="navbar-extended-desktop-left-section">-->
+<!--            Explore our projects and discover how you can contribute your skills to drive innovation and create positive-->
+<!--            change.-->
+<!--          <a class="navbar-extended-desktop-button" href="/project-pitch">Pitch a Project</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      <div class="navbar-extended-desktop-right-container">-->
+<!--        <div class="navbar-extended-desktop-right-section">-->
+<!--          Join us for our weekly meetings on <a href="/meetup">meetup</a>.-->
+<!--          </div>-->
+<!--        <div class="navbar-extended-desktop-right-section">-->
+<!--          For any questions, visit our <a href="/faqs">FAQs</a>.-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--  </div>-->
   </div>
-</header>
-  </div>
-  <div class="container mx-auto">
+  <div class="">
     <!--
 About page.
 -->
 <h1>About</h1>
   </div>
-  <div class="w-full">
+  <div class="">
     <!--
 Default application footer.
 -->
