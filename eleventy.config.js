@@ -5,7 +5,6 @@ const yaml = require('js-yaml')
  * See: /documentation/eleventy-configuration.md
  * Supports:
  * - Yaml data files
- * - SASS
  *
  * @parameter config Eleventy config
  */

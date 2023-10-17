@@ -1,4 +1,4 @@
-# Eleventy configuration for opensac.org
+# Eleventy Configuration for the Open Sacramento Website
 Opensac.org is run as a static site with [Eleventy (11ty)](https://www.11ty.dev/).
 
 ## Configuration

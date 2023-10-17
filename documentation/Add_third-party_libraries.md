@@ -1,4 +1,4 @@
-# How to add third-party libraries
+# How to add third-party libraries to the Open Sacramento Website
 This document describes how to add external backend and frontend libraries.
 
 ## Add to eleventy config
@@ -12,7 +12,7 @@ See: [Eleventy config documentation](/documentation/eleventy-configuration.md)
 To add a new CSS or JS library, add it to the head block in the layout.
 ```liquid
 {%block head%}
-<link rel="stylesheet" href="public/css/my-style.css">
+<link rel="stylesheet" href="/public/css/my-style.css">
 <script src="/public/js/my-script.js"></script>
 {%endblock%}
 ```
