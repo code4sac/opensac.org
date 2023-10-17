@@ -1,3 +1,5 @@
+public/css/**
+
 # PRODUCTION - aka: gh-pages
 dist/
 _site/
