@@ -15,11 +15,14 @@ It is made up of three sections.
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.navbar-toolbar a:link {
+  color: $secondary-50;
+  text-decoration: none;
+}
 .navbar-link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: green;
 }
 
 .navbar-toolbar-content {
@@ -64,7 +67,9 @@ It is made up of three sections.
 }
 
 .navbar-nested-parent-link {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-extended-desktop-button {
