@@ -19,10 +19,28 @@ It is made up of three sections.
   color: $secondary-50;
   text-decoration: none;
 }
+
+.navbar-toolbar a:visited {
+  color: $secondary-50;
+  text-decoration: none;
+}
+
 .navbar-link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
+}
+
+.navbar-link-selected {
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .6em;
+}
+
+.navbar-link-selected a {
+  text-underline-offset: 16px;
 }
 
 .navbar-toolbar-content {
@@ -70,6 +88,7 @@ It is made up of three sections.
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
 }
 
 .navbar-extended-desktop-button {
