@@ -1,14 +1,18 @@
 {
   "name": "opensac.org",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0-alpha.1",
   "description": "Website for Open Sacramento",
   "private": true,
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "silent": "npx @11ty/eleventy --quiet",
-    "css-build": "npx tailwindcss --postcss --watch -i ./styles/main.scss -o ./public/css/main.css",
-    "webpack-watch": "npx webpack --watch --config webpack.config.js",
-    "webpack-build": "npx webpack --config webpack.config.js",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "watch:sass": "sass --watch _src/sass:_site/css",
+    "watch:eleventy": "eleventy --serve",
+    "cli": "npm-run-all cli:*",
+    "cli:eleventy": "npx @11ty/eleventy --quiet",
+    "cli:sass": "sass --quiet",
+    "build": "npm-run-all build:*",
+    "build:eleventy": "eleventy",
+    "build:sass": "sass styles:public/css",
     "test": "jest"
   },
   "repository": {
@@ -30,10 +34,10 @@
     "@11ty/eleventy": "^2.0.1",
     "jest": "^29.7.0",
     "js-yaml": "^4.1.0",
-    "sass": "^1.68.0"
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.69.3"
   },
   "dependencies": {
-    "bootstrap": "^5.3.2",
-    "tailwindcss": "^3.3.3"
+    "bootstrap": "^5.3.2"
   }
 }
