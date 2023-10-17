@@ -10,6 +10,8 @@
 @import 'base/utilities';
 @import 'layout/header';
 @import 'pages/home';
+@import "components/footer";
+@import "components/navigation-bar";
 /*
 Base layout styles for all pages. Includes the app theme. This file should be imported in the base layout file. Initialize Bootstrap.
  */
