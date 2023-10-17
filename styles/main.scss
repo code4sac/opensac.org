@@ -1,5 +1,15 @@
+@charset "UTF-8";
 @import url("node_modules/bootstrap/dist/css/bootstrap.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+@import 'layout/header';
+@import 'pages/home';
 /*
 Base layout styles for all pages. Includes the app theme. This file should be imported in the base layout file. Initialize Bootstrap.
  */
