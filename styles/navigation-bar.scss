@@ -16,7 +16,6 @@ It is made up of three sections.
   justify-content: space-between;
   align-items: center;
 }
-
 .nav-left-container {
   margin: 1em;
   max-width: 400px;
@@ -43,6 +42,9 @@ It is made up of three sections.
 
 .nav-middle-section {
   margin: 0 4em;
+  //text-underline-offset: 1rem;
+  //z-index: 4;
+  // TODO: Hide overflow
 }
 
 .nav-right-container {
@@ -65,8 +67,26 @@ It is made up of three sections.
   display: block;
 }
 
+.nav-toolbar-extended-mobile {
+
+}
+
 .nav-toolbar-extended-desktop {
   background: #EBEAE5;
 }
 
-/*# sourceMappingURL=navigation-bar.css.map */
+.nav-extended-desktop-left-container {
+
+}
+
+.nav-extended-desktop-left-section {
+
+}
+
+.nav-extended-desktop-right-container {
+
+}
+
+.nav-extended-desktop-right-section {
+
+}
