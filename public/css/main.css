@@ -7,6 +7,7 @@ Base layout styles for all pages. Includes the app theme. This file should be im
 * {
   font-family: "Inter", "Arial", sans-serif;
 }
+
 :root {
   --secondary-50: #fffcf5;
   --secondary-500: #ffc107;
@@ -16,3 +17,5 @@ Base layout styles for all pages. Includes the app theme. This file should be im
 body {
   margin: 0;
 }
+
+/*# sourceMappingURL=main.css.map */

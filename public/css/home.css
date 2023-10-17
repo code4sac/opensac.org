@@ -21,8 +21,9 @@ Home page layout
   flex-direction: column;
   justify-content: center;
   gap: 24px;
-
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .home-landing-container {
     width: 80%;
     padding: 0;
     margin: auto;
@@ -37,8 +38,9 @@ Home page layout
   font-weight: 700;
   line-height: 56px;
   margin: 0;
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .home-landing-heading {
     font-size: 31px;
   }
 }
@@ -47,8 +49,9 @@ Home page layout
   font-size: 39px;
   font-weight: 600;
   line-height: 47px;
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .home-landing-heading span {
     font-size: 31px;
   }
 }
@@ -62,19 +65,18 @@ Home page layout
 .home-button {
   color: #fffcf5;
   background-color: transparent;
-
   border: solid #ffc107 1px;
   border-radius: 6px;
   padding: 16px 24px;
   text-decoration: none;
   width: fit-content;
-
   font-family: "Inter", sans-serif;
   font-size: 0.9em;
   font-weight: 600;
   line-height: 18px;
-
-  @media (max-width: 400px) {
+}
+@media (max-width: 400px) {
+  .home-button {
     padding: 10px 15px;
     font-size: 0.8em;
   }
@@ -103,8 +105,9 @@ Home page layout
   align-items: center;
   justify-content: center;
   gap: 24px;
-
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .home-section-light {
     padding: 48px 40px;
     flex-direction: column;
   }
@@ -113,8 +116,9 @@ Home page layout
 .home-section-light-container {
   width: 50%;
   position: relative;
-
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .home-section-light-container {
     width: 100%;
   }
 }
@@ -163,8 +167,9 @@ Home page layout
   font-size: 39px;
   font-weight: 600;
   line-height: 47px;
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .heading-section-sub {
     font-size: 31px;
     line-height: 38px;
   }
@@ -176,8 +181,9 @@ Home page layout
   font-weight: 400;
   line-height: 32px;
   margin: 0;
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .home-section-paragraph {
     font-size: 18px;
     line-height: 28px;
   }
@@ -198,8 +204,9 @@ Home page layout
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-
-  @media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
+  .home-about-container {
     width: auto;
     padding: 48px 40px 0 40px;
     margin: auto;
@@ -212,8 +219,9 @@ Home page layout
   justify-content: space-between;
   align-items: center;
   padding: 192px 0 192px 80px;
-
-  @media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
+  .home-section-dark-flex {
     padding: 0;
     flex-direction: column;
     align-items: flex-end;
@@ -225,20 +233,24 @@ Home page layout
   background-repeat: no-repeat;
   background-size: 50% 70%;
   background-position: right center;
-
-  @media (min-width: 1700px) {
+}
+@media (min-width: 1700px) {
+  .home-about-image {
     background-size: 40% 80%;
   }
-
-  @media (max-width: 1280px) {
+}
+@media (max-width: 1280px) {
+  .home-about-image {
     background-size: 50% 60%;
   }
-
-  @media (max-width: 1200px) {
+}
+@media (max-width: 1200px) {
+  .home-about-image {
     background-size: 50% 50%;
   }
-
-  @media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
+  .home-about-image {
     background-image: none;
   }
 }
@@ -246,14 +258,16 @@ Home page layout
 .home-section-action-image {
   display: none;
   height: 80%;
-
-  @media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
+  .home-section-action-image {
     display: block;
     height: 50vw;
     margin-bottom: 80px;
   }
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .home-section-action-image {
     display: block;
     height: 70vw;
     margin-bottom: 80px;
@@ -262,8 +276,9 @@ Home page layout
 
 .home-services-container {
   padding: 0 80px 96px 80px;
-
-  @media (max-width: 930px) {
+}
+@media (max-width: 930px) {
+  .home-services-container {
     padding: 48px 40px;
   }
 }
@@ -274,8 +289,9 @@ Home page layout
   flex-direction: row;
   justify-content: space-between;
   gap: 24px;
-
-  @media (max-width: 930px) {
+}
+@media (max-width: 930px) {
+  .home-numbered-grid {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -300,8 +316,9 @@ Home page layout
   display: flex;
   align-items: center;
   margin: 0;
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .home-numbered-header {
     font-size: 25px;
     line-height: 32px;
   }
@@ -323,8 +340,9 @@ Home page layout
   align-items: stretch;
   justify-content: space-between;
   gap: 30px;
-
-  @media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
+  .home-projects-section {
     flex-direction: column;
     justify-content: center;
     padding: 48px 40px;
@@ -339,8 +357,9 @@ Home page layout
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
-
-  @media (max-width: 1400px) {
+}
+@media (max-width: 1400px) {
+  .home-projects-info-container {
     width: 100%;
   }
 }
@@ -405,8 +424,9 @@ Home page layout
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-
-  @media (max-width: 930px) {
+}
+@media (max-width: 930px) {
+  .donate-section {
     flex-direction: column;
     padding: 64px 40px;
   }
@@ -416,8 +436,9 @@ Home page layout
   width: 45%;
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 1400px) {
+}
+@media (max-width: 1400px) {
+  .donate-section-paragraph-container {
     width: 100%;
   }
 }
@@ -428,8 +449,9 @@ Home page layout
   font-size: 48px;
   font-weight: 600;
   line-height: 56px;
-
-  @media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
+  .heading-large-section-sub {
     font-size: 31px;
     line-height: 38px;
   }
@@ -441,10 +463,13 @@ Home page layout
   font-weight: 400;
   line-height: 30px;
   margin: 0 0 30px 0;
-
-  @media (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
+  .home-section-dark-paragraph {
     font-size: 18px;
     line-height: 28px;
     margin: 0 0 30px 0;
   }
 }
+
+/*# sourceMappingURL=home.css.map */
