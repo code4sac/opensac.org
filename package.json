@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "npm-run-all build:sass --parallel watch:*",
-    "watch:sass": "sass --watch _src/sass:_site/css",
+    "watch:sass": "sass --watch styles:public/css",
     "watch:eleventy": "eleventy --serve",
     "cli": "npm-run-all cli:*",
     "cli:eleventy": "npx @11ty/eleventy --quiet",
