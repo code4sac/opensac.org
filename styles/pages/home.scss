@@ -4,7 +4,7 @@ Home page layout
  */
 .home-section-dark {
   background-color: $neutral-900;
-  color: #f7f7f8;
+  color: $neutral-50;
 }
 
 .home-landing-image {
@@ -12,6 +12,10 @@ Home page layout
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;
+
+  @media (max-width: $screen-sm) {
+    background-image: none;
+  }
 }
 
 .home-landing-container {
@@ -23,12 +27,19 @@ Home page layout
   justify-content: center;
   gap: 24px;
 
-  @media (max-width: 768px) {
-    width: 80%;
-    padding: 0;
-    margin: auto;
+  @media (max-width: $screen-xl) {
+    width: 70%;
+  }
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+    padding: 96px 40px 0px 40px;
     justify-content: start;
     padding-top: 30%;
+  }
+
+  @media (max-width: $screen-sm) {
+    min-height: 0;
   }
 }
 
@@ -39,8 +50,9 @@ Home page layout
   line-height: 56px;
   margin: 0;
 
-  @media (max-width: 640px) {
+  @media (max-width: $screen-sm) {
     font-size: 31px;
+    line-height: 38px;
   }
 }
 
@@ -49,8 +61,19 @@ Home page layout
   font-weight: 600;
   line-height: 47px;
 
-  @media (max-width: 640px) {
+  @media (max-width: $screen-sm) {
     font-size: 31px;
+    line-height: 38px;
+  }
+}
+
+.home-section-landing-image{
+  display: none;
+
+  @media (max-width: $screen-sm) {
+    display: block;
+    width: 100%;
+    margin-top: 23px;
   }
 }
 
@@ -75,9 +98,9 @@ Home page layout
   font-weight: 600;
   line-height: 18px;
 
-  @media (max-width: 400px) {
+  @media (max-width: $screen-xs) {
     padding: 10px 15px;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 }
 
@@ -108,7 +131,7 @@ Home page layout
   justify-content: center;
   gap: 24px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $screen-md) {
     padding: 48px 40px;
     flex-direction: column;
   }
@@ -118,7 +141,7 @@ Home page layout
   width: 50%;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-width: $screen-md) {
     width: 100%;
   }
 }
@@ -138,12 +161,12 @@ Home page layout
 }
 
 .underline-alt::after {
-  border-bottom: 4px solid #f7f7f8;
+  border-bottom: 4px solid $neutral-50;
 }
 
 .donate-section-underline::after {
   padding-bottom: 18px;
-  border-bottom: 8px solid #f7f7f8;
+  border-bottom: 8px solid $neutral-50;
   width: 101px;
 }
 
@@ -168,7 +191,7 @@ Home page layout
   font-weight: 600;
   line-height: 47px;
 
-  @media (max-width: 640px) {
+  @media (max-width: $screen-sm) {
     font-size: 31px;
     line-height: 38px;
   }
@@ -181,7 +204,7 @@ Home page layout
   line-height: 32px;
   margin: 0;
 
-  @media (max-width: 640px) {
+  @media (max-width: $screen-sm) {
     font-size: 18px;
     line-height: 28px;
   }
@@ -203,7 +226,7 @@ Home page layout
   justify-content: center;
   gap: 40px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $screen-lg) {
     width: auto;
     padding: 48px 40px 0 40px;
     margin: auto;
@@ -217,7 +240,7 @@ Home page layout
   align-items: center;
   padding: 192px 0 192px 80px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $screen-lg) {
     padding: 0;
     flex-direction: column;
     align-items: flex-end;
@@ -227,37 +250,37 @@ Home page layout
 .home-about-image {
   background-image: url("../img/open_data_day_curved.png");
   background-repeat: no-repeat;
-  background-size: 50% 70%;
+  background-size: 50% 75%;
   background-position: right center;
 
   @media (min-width: 1700px) {
     background-size: 40% 80%;
   }
 
-  @media (max-width: 1280px) {
+  @media (max-width: $screen-xxl) {
     background-size: 50% 60%;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: $screen-xl) {
     background-size: 50% 50%;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: $screen-lg) {
     background-image: none;
   }
 }
 
 .home-section-action-image {
   display: none;
-  height: 80%;
+  margin-top: 40px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $screen-lg) {
     display: block;
     height: 50vw;
     margin-bottom: 80px;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: $screen-md) {
     display: block;
     height: 70vw;
     margin-bottom: 80px;
@@ -267,7 +290,11 @@ Home page layout
 .home-services-container {
   padding: 0 80px 96px 80px;
 
-  @media (max-width: 930px) {
+  @media (max-width: $screen-lg) {
+    padding: 0 20px 96px 20px;
+  }
+
+  @media (max-width: $screen-md) {
     padding: 48px 40px;
   }
 }
@@ -279,9 +306,10 @@ Home page layout
   justify-content: space-between;
   gap: 24px;
 
-  @media (max-width: 930px) {
+  @media (max-width: $screen-md) {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 40px;
   }
 }
 
@@ -305,7 +333,7 @@ Home page layout
   align-items: center;
   margin: 0;
 
-  @media (max-width: 640px) {
+  @media (max-width: $screen-sm) {
     font-size: 25px;
     line-height: 32px;
   }
@@ -328,7 +356,7 @@ Home page layout
   justify-content: space-between;
   gap: 30px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $screen-xl) {
     flex-direction: column;
     justify-content: center;
     padding: 48px 40px;
@@ -344,7 +372,7 @@ Home page layout
   justify-content: space-between;
   gap: 40px;
 
-  @media (max-width: 1400px) {
+  @media (max-width: $screen-xxl) {
     width: 100%;
   }
 }
@@ -356,7 +384,6 @@ Home page layout
 
 .swiper {
   width: 100%;
-  height: fit-content;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -368,7 +395,6 @@ Home page layout
   flex-direction: column !important;
   justify-content: space-between !important;
   align-items: center !important;
-  width: 98% !important;
   padding: 0 1%;
 }
 
@@ -376,15 +402,20 @@ Home page layout
   width: 100%;
 }
 
+.slide-content p {
+  @media (max-width: $screen-lg) {
+    margin-bottom: 10px;
+  }
+}
+
 .swiper-pagination {
   position: relative !important;
-  bottom: 0 !important;
 }
 
 .swiper-pagination-bullet {
   width: 15px !important;
   height: 15px !important;
-  background-color: #f7f7f8 !important;
+  background-color: $secondary-50 !important;
   opacity: 1 !important;
 }
 
@@ -410,7 +441,7 @@ Home page layout
   justify-content: space-between;
   gap: 60px;
 
-  @media (max-width: 930px) {
+  @media (max-width: $screen-lg) {
     flex-direction: column;
     padding: 64px 40px;
   }
@@ -421,7 +452,7 @@ Home page layout
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 1400px) {
+  @media (max-width: $screen-xxl) {
     width: 100%;
   }
 }
@@ -433,7 +464,7 @@ Home page layout
   font-weight: 600;
   line-height: 56px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $screen-lg) {
     font-size: 31px;
     line-height: 38px;
   }
@@ -446,9 +477,8 @@ Home page layout
   line-height: 30px;
   margin: 0 0 30px 0;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $screen-lg) {
     font-size: 18px;
     line-height: 28px;
-    margin: 0 0 30px 0;
   }
 }
