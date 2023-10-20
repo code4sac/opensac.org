@@ -10,11 +10,24 @@ footer {
   flex-direction: row;
   align-items: start;
   justify-content: space-between;
+
+  @media (max-width: $screen-md) {
+    padding: 40px;
+    gap: 32px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
 }
 
 .footerMessage {
   padding: 10px 0;
   width: 23%;
+  gap: 16px;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
 }
 
 .footerMessageHeader {
@@ -24,6 +37,11 @@ footer {
   line-height: 47px;
   margin: 0;
   padding: 10px 0;
+
+  @media (max-width: $screen-md) {
+    font-size: 31px;
+    line-height: 38px;
+  }
 }
 
 .footerMessageParagraph {
@@ -33,6 +51,11 @@ footer {
   line-height: 18px;
   margin: 0;
   padding: 10px 0;
+
+  @media (max-width: $screen-md) {
+    width: 90%;
+    padding: 0;
+  }
 }
 
 .footerActionLinks {
@@ -42,6 +65,11 @@ footer {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   gap: 30px;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .footerActionLinksItem {
@@ -55,12 +83,12 @@ footer {
 .footerActionLinksAnchor {
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: $primary-900;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 18px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $primary-900;
 }
 
 .footerSocialMedia {
@@ -70,11 +98,18 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   padding: 10px 0;
+  gap: 30px;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+    justify-content: start;
+    padding: 0;
+  }
 }
 
 .footerSocialMediaLink {
   text-decoration: none;
-  color: black;
+  color: $neutral-900;
 }
 
 .footerSocialMediaIcon {
@@ -88,6 +123,13 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 80px;
+
+  @media (max-width: $screen-md) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+  }
 }
 
 .footerBottomTitle {
@@ -97,6 +139,12 @@ footer {
   line-height: 18px;
   text-transform: uppercase;
   margin: auto 0;
+  order: 1;
+  color: $neutral-900;
+
+  @media (max-width: $screen-md) {
+    order: 2;
+  }
 }
 
 .footerBottomLinksContainer {
@@ -105,13 +153,18 @@ footer {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  order: 2;
+
+  @media (max-width: $screen-md) {
+    order: 1;
+  }
 }
 
 .footerBottomLink {
   font-family: "Inter", sans-serif;
   font-size: 12px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 14px;
   text-transform: uppercase;
   text-decoration: none;
   color: black;
