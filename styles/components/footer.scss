@@ -1,4 +1,8 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
+/*
+Footer layout
+ */
 footer {
   height: fit-content;
   background-color: $secondary-50;
@@ -21,9 +25,13 @@ footer {
 }
 
 .footerMessage {
-  padding: 10px 0;
+  padding: 0 10px;
   width: 23%;
   gap: 16px;
+
+  @media (max-width: $screen-xl) {
+    padding: 0;
+  }
 
   @media (max-width: $screen-md) {
     width: 100%;
@@ -31,24 +39,17 @@ footer {
 }
 
 .footerMessageHeader {
-  font-family: "Inter", sans-serif;
-  font-size: 39px;
-  font-weight: 600;
-  line-height: 47px;
+  @include h2-semi-bold;
   margin: 0;
   padding: 10px 0;
 
   @media (max-width: $screen-md) {
-    font-size: 31px;
-    line-height: 38px;
+    @include h3-semi-bold;
   }
 }
 
 .footerMessageParagraph {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
+  @include p-footer;
   margin: 0;
   padding: 10px 0;
 
@@ -73,10 +74,7 @@ footer {
 }
 
 .footerActionLinksItem {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
+  @include p-footer;
   margin: 0;
 }
 
@@ -84,10 +82,7 @@ footer {
   cursor: pointer;
   text-decoration: none;
   color: $primary-900;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 18px;
+  @include p-footer-bold;
   border-bottom: 1px solid $primary-900;
 }
 
@@ -133,11 +128,7 @@ footer {
 }
 
 .footerBottomTitle {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  text-transform: uppercase;
+  @include caption-footer;
   margin: auto 0;
   order: 1;
   color: $neutral-900;
@@ -161,11 +152,7 @@ footer {
 }
 
 .footerBottomLink {
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14px;
-  text-transform: uppercase;
+  @include caption-regular-uppercase;
   text-decoration: none;
   color: black;
 }

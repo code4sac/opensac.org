@@ -1,4 +1,5 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 /*
 Home page layout
  */
@@ -44,26 +45,19 @@ Home page layout
 }
 
 .home-landing-heading {
-  font-family: "Inter", sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
+  @include h1-bold;
   margin: 0;
 
   @media (max-width: $screen-sm) {
-    font-size: 31px;
-    line-height: 38px;
+    @include h3-bold;
   }
 }
 
 .home-landing-heading span {
-  font-size: 39px;
-  font-weight: 600;
-  line-height: 47px;
+  @include h1-small-bold;
 
   @media (max-width: $screen-sm) {
-    font-size: 31px;
-    line-height: 38px;
+    @include h3-bold;
   }
 }
 
@@ -93,15 +87,7 @@ Home page layout
   text-decoration: none;
   width: fit-content;
 
-  font-family: "Inter", sans-serif;
-  font-size: 0.9em;
-  font-weight: 600;
-  line-height: 18px;
-
-  @media (max-width: $screen-xs) {
-    padding: 10px 15px;
-    font-size: 0.7em;
-  }
+  @include button-regular;
 }
 
 .home-button-alt {
@@ -112,13 +98,6 @@ Home page layout
 
 .home-button-numbered {
   color: $secondary-500;
-}
-
-.heading-small {
-  /*
-  TODO: Should we make this a variable?
-   */
-  background: #121211;
 }
 
 .home-section-light {
@@ -171,12 +150,8 @@ Home page layout
 }
 
 .heading-section {
-  color: #a9aab1;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 17px;
-  text-transform: uppercase;
+  color: $neutral-300;
+  @include h1-section;
   margin: 0;
 }
 
@@ -186,32 +161,24 @@ Home page layout
 
 .heading-section-sub {
   margin: 10px 0;
-  font-family: "Inter", sans-serif;
-  font-size: 39px;
-  font-weight: 600;
-  line-height: 47px;
+  @include h2-semi-bold;
 
   @media (max-width: $screen-sm) {
-    font-size: 31px;
-    line-height: 38px;
+    @include h3-semi-bold;
   }
 }
 
 .home-section-paragraph {
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 32px;
+  @include subheading-regular;
   margin: 0;
-
+  
   @media (max-width: $screen-sm) {
-    font-size: 18px;
-    line-height: 28px;
+    @include p3-regular;
   }
 }
 
 .home-section-paragraph-bold {
-  font-weight: 700;
+  @include subheading-bold;
 }
 
 .home-section-paragraph-anchor {
@@ -323,10 +290,7 @@ Home page layout
 }
 
 .home-numbered-header {
-  font-family: "Inter", sans-serif;
-  font-size: 31px;
-  font-weight: 700;
-  line-height: 38px;
+  @include h3-bold;
   text-align: center;
   flex: 1;
   display: flex;
@@ -334,18 +298,13 @@ Home page layout
   margin: 0;
 
   @media (max-width: $screen-sm) {
-    font-size: 25px;
-    line-height: 32px;
+    @include h4-bold;
   }
 }
 
 .home-numbered-paragraph {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
+  @include p3-regular;
   text-align: center;
-  margin: 0 0 16px 0;
 }
 
 .home-projects-section {
@@ -459,26 +418,27 @@ Home page layout
 
 .heading-large-section-sub {
   margin: 10px 0;
-  font-family: "Inter", sans-serif;
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 56px;
+  @include h1-semi-bold;
 
   @media (max-width: $screen-lg) {
-    font-size: 31px;
-    line-height: 38px;
+    @include h3-semi-bold;
   }
 }
 
 .home-section-dark-paragraph {
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 30px;
+  @include subheading-medium-regular;
   margin: 0 0 30px 0;
 
   @media (max-width: $screen-lg) {
-    font-size: 18px;
-    line-height: 28px;
+    @include p3-regular;
+  }
+}
+
+.home-section-dark-paragraph span {
+  @include subheading-medium-bold;
+  margin: 0 0 30px 0;
+
+  @media (max-width: $screen-lg) {
+    @include p3-bold;
   }
 }
