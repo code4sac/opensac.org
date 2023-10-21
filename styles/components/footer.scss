@@ -1,4 +1,8 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
+/*
+Footer layout
+ */
 footer {
   height: fit-content;
   background-color: $secondary-50;
@@ -10,29 +14,49 @@ footer {
   flex-direction: row;
   align-items: start;
   justify-content: space-between;
+
+  @media (max-width: $screen-md) {
+    padding: 40px;
+    gap: 32px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
 }
 
 .footerMessage {
-  padding: 10px 0;
+  padding: 0 10px;
   width: 23%;
+  gap: 16px;
+
+  @media (max-width: $screen-xl) {
+    padding: 0;
+  }
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
 }
 
 .footerMessageHeader {
-  font-family: "Inter", sans-serif;
-  font-size: 39px;
-  font-weight: 600;
-  line-height: 47px;
+  @include h2-semi-bold;
   margin: 0;
   padding: 10px 0;
+
+  @media (max-width: $screen-md) {
+    @include h3-semi-bold;
+  }
 }
 
 .footerMessageParagraph {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
+  @include p-footer;
   margin: 0;
   padding: 10px 0;
+
+  @media (max-width: $screen-md) {
+    width: 90%;
+    padding: 0;
+  }
 }
 
 .footerActionLinks {
@@ -42,25 +66,24 @@ footer {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   gap: 30px;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .footerActionLinksItem {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
+  @include p-footer;
   margin: 0;
 }
 
 .footerActionLinksAnchor {
   cursor: pointer;
   text-decoration: none;
-  color: black;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 18px;
-  border-bottom: 1px solid black;
+  color: $primary-900;
+  @include p-footer-bold;
+  border-bottom: 1px solid $primary-900;
 }
 
 .footerSocialMedia {
@@ -70,11 +93,18 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   padding: 10px 0;
+  gap: 30px;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+    justify-content: start;
+    padding: 0;
+  }
 }
 
 .footerSocialMediaLink {
   text-decoration: none;
-  color: black;
+  color: $neutral-900;
 }
 
 .footerSocialMediaIcon {
@@ -88,15 +118,24 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 80px;
+
+  @media (max-width: $screen-md) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+  }
 }
 
 .footerBottomTitle {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  text-transform: uppercase;
+  @include caption-footer;
   margin: auto 0;
+  order: 1;
+  color: $neutral-900;
+
+  @media (max-width: $screen-md) {
+    order: 2;
+  }
 }
 
 .footerBottomLinksContainer {
@@ -105,14 +144,15 @@ footer {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  order: 2;
+
+  @media (max-width: $screen-md) {
+    order: 1;
+  }
 }
 
 .footerBottomLink {
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  text-transform: uppercase;
+  @include caption-regular-uppercase;
   text-decoration: none;
   color: black;
 }
