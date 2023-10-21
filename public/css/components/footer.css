@@ -1,6 +1,21 @@
 /*
 Application color theme.
  */
+/* 
+Screen breakpoints 
+*/
+/*
+Application color theme.
+ */
+/* 
+Screen breakpoints 
+*/
+/*
+Application fonts.
+ */
+/*
+Footer layout
+ */
 footer {
   height: fit-content;
   background-color: #fffcf5;
@@ -13,28 +28,62 @@ footer {
   align-items: start;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .footerContainerTop {
+    padding: 40px;
+    gap: 32px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+}
 
 .footerMessage {
-  padding: 10px 0;
+  padding: 0 10px;
   width: 23%;
+  gap: 16px;
+}
+@media (max-width: 1200px) {
+  .footerMessage {
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .footerMessage {
+    width: 100%;
+  }
 }
 
 .footerMessageHeader {
   font-family: "Inter", sans-serif;
-  font-size: 39px;
   font-weight: 600;
+  font-size: 39px;
   line-height: 47px;
   margin: 0;
   padding: 10px 0;
 }
+@media (max-width: 768px) {
+  .footerMessageHeader {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 38px;
+  }
+}
 
 .footerMessageParagraph {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 18px;
   margin: 0;
   padding: 10px 0;
+}
+@media (max-width: 768px) {
+  .footerMessageParagraph {
+    width: 90%;
+    padding: 0;
+  }
 }
 
 .footerActionLinks {
@@ -45,11 +94,17 @@ footer {
   grid-template-rows: auto auto auto;
   gap: 30px;
 }
+@media (max-width: 768px) {
+  .footerActionLinks {
+    width: 100%;
+    padding: 0;
+  }
+}
 
 .footerActionLinksItem {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 18px;
   margin: 0;
 }
@@ -57,12 +112,12 @@ footer {
 .footerActionLinksAnchor {
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #00081f;
   font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 16px;
-  font-weight: 600;
   line-height: 18px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #00081f;
 }
 
 .footerSocialMedia {
@@ -72,11 +127,19 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   padding: 10px 0;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .footerSocialMedia {
+    width: 100%;
+    justify-content: start;
+    padding: 0;
+  }
 }
 
 .footerSocialMediaLink {
   text-decoration: none;
-  color: black;
+  color: #060718;
 }
 
 .footerSocialMediaIcon {
@@ -91,14 +154,29 @@ footer {
   justify-content: space-between;
   padding: 10px 80px;
 }
+@media (max-width: 768px) {
+  .footerBottomContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+  }
+}
 
 .footerBottomTitle {
   font-family: "Inter", sans-serif;
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   margin: auto 0;
+  order: 1;
+  color: #060718;
+}
+@media (max-width: 768px) {
+  .footerBottomTitle {
+    order: 2;
+  }
 }
 
 .footerBottomLinksContainer {
@@ -107,13 +185,19 @@ footer {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  order: 2;
+}
+@media (max-width: 768px) {
+  .footerBottomLinksContainer {
+    order: 1;
+  }
 }
 
 .footerBottomLink {
   font-family: "Inter", sans-serif;
-  font-size: 12px;
   font-weight: 400;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 14px;
   text-transform: uppercase;
   text-decoration: none;
   color: black;

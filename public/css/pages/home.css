@@ -1,6 +1,18 @@
 /*
 Application color theme.
  */
+/* 
+Screen breakpoints 
+*/
+/*
+Application color theme.
+ */
+/* 
+Screen breakpoints 
+*/
+/*
+Application fonts.
+ */
 /*
 Home page layout
  */
@@ -15,6 +27,11 @@ Home page layout
   background-size: contain;
   background-position: right bottom;
 }
+@media (max-width: 576px) {
+  .home-landing-image {
+    background-image: none;
+  }
+}
 
 .home-landing-container {
   width: 40%;
@@ -25,37 +42,64 @@ Home page layout
   justify-content: center;
   gap: 24px;
 }
+@media (max-width: 1200px) {
+  .home-landing-container {
+    width: 70%;
+  }
+}
 @media (max-width: 768px) {
   .home-landing-container {
-    width: 80%;
-    padding: 0;
-    margin: auto;
+    width: 100%;
+    padding: 96px 40px 0px 40px;
     justify-content: start;
     padding-top: 30%;
+  }
+}
+@media (max-width: 576px) {
+  .home-landing-container {
+    min-height: 0;
   }
 }
 
 .home-landing-heading {
   font-family: "Inter", sans-serif;
-  font-size: 48px;
   font-weight: 700;
+  font-size: 48px;
   line-height: 56px;
   margin: 0;
 }
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .home-landing-heading {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
     font-size: 31px;
+    line-height: 38px;
   }
 }
 
 .home-landing-heading span {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 39px;
-  font-weight: 600;
   line-height: 47px;
 }
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .home-landing-heading span {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
     font-size: 31px;
+    line-height: 38px;
+  }
+}
+
+.home-section-landing-image {
+  display: none;
+}
+@media (max-width: 576px) {
+  .home-section-landing-image {
+    display: block;
+    width: 100%;
+    margin-top: 23px;
   }
 }
 
@@ -74,14 +118,14 @@ Home page layout
   text-decoration: none;
   width: fit-content;
   font-family: "Inter", sans-serif;
-  font-size: 0.9em;
   font-weight: 600;
+  font-size: 0.9em;
   line-height: 18px;
 }
 @media (max-width: 400px) {
   .home-button {
     padding: 10px 15px;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 }
 
@@ -93,13 +137,6 @@ Home page layout
 
 .home-button-numbered {
   color: #ffc107;
-}
-
-.heading-small {
-  /*
-  TODO: Should we make this a variable?
-   */
-  background: #121211;
 }
 
 .home-section-light {
@@ -156,8 +193,8 @@ Home page layout
 .heading-section {
   color: #a9aab1;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
   font-weight: 700;
+  font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
   margin: 0;
@@ -170,12 +207,14 @@ Home page layout
 .heading-section-sub {
   margin: 10px 0;
   font-family: "Inter", sans-serif;
-  font-size: 39px;
   font-weight: 600;
+  font-size: 39px;
   line-height: 47px;
 }
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .heading-section-sub {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
     font-size: 31px;
     line-height: 38px;
   }
@@ -183,20 +222,25 @@ Home page layout
 
 .home-section-paragraph {
   font-family: "Inter", sans-serif;
-  font-size: 20px;
   font-weight: 400;
+  font-size: 20px;
   line-height: 32px;
   margin: 0;
 }
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .home-section-paragraph {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 28px;
   }
 }
 
 .home-section-paragraph-bold {
+  font-family: "Inter", sans-serif;
   font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .home-section-paragraph-anchor {
@@ -211,7 +255,7 @@ Home page layout
   justify-content: center;
   gap: 40px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .home-about-container {
     width: auto;
     padding: 48px 40px 0 40px;
@@ -226,7 +270,7 @@ Home page layout
   align-items: center;
   padding: 192px 0 192px 80px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .home-section-dark-flex {
     padding: 0;
     flex-direction: column;
@@ -237,7 +281,7 @@ Home page layout
 .home-about-image {
   background-image: url("../img/open_data_day_curved.png");
   background-repeat: no-repeat;
-  background-size: 50% 70%;
+  background-size: 50% 75%;
   background-position: right center;
 }
 @media (min-width: 1700px) {
@@ -245,7 +289,7 @@ Home page layout
     background-size: 40% 80%;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1400px) {
   .home-about-image {
     background-size: 50% 60%;
   }
@@ -255,7 +299,7 @@ Home page layout
     background-size: 50% 50%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .home-about-image {
     background-image: none;
   }
@@ -263,16 +307,16 @@ Home page layout
 
 .home-section-action-image {
   display: none;
-  height: 80%;
+  margin-top: 40px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .home-section-action-image {
     display: block;
     height: 50vw;
     margin-bottom: 80px;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .home-section-action-image {
     display: block;
     height: 70vw;
@@ -283,7 +327,12 @@ Home page layout
 .home-services-container {
   padding: 0 80px 96px 80px;
 }
-@media (max-width: 930px) {
+@media (max-width: 992px) {
+  .home-services-container {
+    padding: 0 20px 96px 20px;
+  }
+}
+@media (max-width: 768px) {
   .home-services-container {
     padding: 48px 40px;
   }
@@ -296,10 +345,11 @@ Home page layout
   justify-content: space-between;
   gap: 24px;
 }
-@media (max-width: 930px) {
+@media (max-width: 768px) {
   .home-numbered-grid {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 40px;
   }
 }
 
@@ -314,8 +364,8 @@ Home page layout
 
 .home-numbered-header {
   font-family: "Inter", sans-serif;
-  font-size: 31px;
   font-weight: 700;
+  font-size: 31px;
   line-height: 38px;
   text-align: center;
   flex: 1;
@@ -323,8 +373,10 @@ Home page layout
   align-items: center;
   margin: 0;
 }
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .home-numbered-header {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
     font-size: 25px;
     line-height: 32px;
   }
@@ -332,11 +384,10 @@ Home page layout
 
 .home-numbered-paragraph {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 28px;
   text-align: center;
-  margin: 0 0 16px 0;
 }
 
 .home-projects-section {
@@ -347,7 +398,7 @@ Home page layout
   justify-content: space-between;
   gap: 30px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .home-projects-section {
     flex-direction: column;
     justify-content: center;
@@ -377,7 +428,6 @@ Home page layout
 
 .swiper {
   width: 100%;
-  height: fit-content;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -389,7 +439,6 @@ Home page layout
   flex-direction: column !important;
   justify-content: space-between !important;
   align-items: center !important;
-  width: 98% !important;
   padding: 0 1%;
 }
 
@@ -397,15 +446,20 @@ Home page layout
   width: 100%;
 }
 
+@media (max-width: 992px) {
+  .slide-content p {
+    margin-bottom: 10px;
+  }
+}
+
 .swiper-pagination {
   position: relative !important;
-  bottom: 0 !important;
 }
 
 .swiper-pagination-bullet {
   width: 15px !important;
   height: 15px !important;
-  background-color: #f7f7f8 !important;
+  background-color: #fffcf5 !important;
   opacity: 1 !important;
 }
 
@@ -431,7 +485,7 @@ Home page layout
   justify-content: space-between;
   gap: 60px;
 }
-@media (max-width: 930px) {
+@media (max-width: 992px) {
   .donate-section {
     flex-direction: column;
     padding: 64px 40px;
@@ -452,12 +506,14 @@ Home page layout
 .heading-large-section-sub {
   margin: 10px 0;
   font-family: "Inter", sans-serif;
-  font-size: 48px;
   font-weight: 600;
+  font-size: 48px;
   line-height: 56px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .heading-large-section-sub {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
     font-size: 31px;
     line-height: 38px;
   }
@@ -465,16 +521,33 @@ Home page layout
 
 .home-section-dark-paragraph {
   font-family: "Inter", sans-serif;
-  font-size: 24px;
   font-weight: 400;
-  line-height: 30px;
+  font-size: 24px;
+  line-height: 29px;
   margin: 0 0 30px 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .home-section-dark-paragraph {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 28px;
-    margin: 0 0 30px 0;
+  }
+}
+
+.home-section-dark-paragraph span {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 30px 0;
+}
+@media (max-width: 992px) {
+  .home-section-dark-paragraph span {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
