@@ -14,6 +14,7 @@ const eleventyConfig = config => {
   config.addPassthroughCopy('./public/')
   config.addPassthroughCopy('./node_modules/bootstrap/dist/')
   config.addDataExtension('yml', contents => yaml.load(contents))
+  config.addWatchTarget('./styles/')
   return {
     dir: {
       input: 'content',
