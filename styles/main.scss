@@ -1,15 +1,23 @@
-@import url("node_modules/bootstrap/dist/css/bootstrap.css");
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
+@import '/node_modules/swiper/swiper.css';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+@import 'layout/header';
+@import 'pages/home';
+@import "components/footer";
+@import "components/navigation-bar";
+
 /*
 Base layout styles for all pages. Includes the app theme. This file should be imported in the base layout file. Initialize Bootstrap.
  */
 * {
   font-family: "Inter", "Arial", sans-serif;
-}
-:root {
-  --secondary-50: #fffcf5;
-  --secondary-500: #ffc107;
-  --neutral-900: #060718;
 }
 
 body {

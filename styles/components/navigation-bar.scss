@@ -1,0 +1,120 @@
+@import "../abstracts/variables";
+/*
+Navigation bar.
+It is made up of three sections.
+- Left: Logo
+- Middle: Links with animated underline
+- Right: Dropdown link that displays extended section
+ */
+.navbar-toolbar {
+  height: 84px;
+  color: $secondary-50;
+  background: $neutral-900;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-toolbar-main {
+  container-type: inline-size;
+}
+
+.navbar-toolbar a:link {
+  color: $secondary-50;
+  text-decoration: none;
+}
+
+.navbar-toolbar a:visited {
+  color: $secondary-50;
+  text-decoration: none;
+}
+
+.navbar-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navbar-link-selected {
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .6em;
+}
+
+.navbar-link-selected a {
+  text-underline-offset: 16px;
+}
+
+.navbar-toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navbar-left-container {
+  display: inline-flex;
+}
+
+.navbar-left-section {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-middle-container {
+  display: inline-flex;
+}
+
+.navbar-middle-section {
+  display: inline-flex;
+  list-style: none;
+  margin: 20px;
+  column-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+
+.navbar-middle-section :hover {
+}
+
+.navbar-right-container {
+  display: inline-flex;
+}
+
+.navbar-right-section {
+  display: inline-flex;
+}
+
+.navbar-nested-parent-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.navbar-extended-desktop-button {
+}
+
+.navbar-toolbar-extended-mobile {
+}
+
+.navbar-toolbar-extended-desktop {
+}
+
+.navbar-extended-desktop-left-container {
+
+}
+
+.navbar-extended-desktop-left-section {
+
+}
+
+.navbar-extended-desktop-right-container {
+
+}
+
+.navbar-extended-desktop-right-section {
+
+}
