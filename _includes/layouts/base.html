@@ -11,15 +11,12 @@ Usage: Include `layout: layouts/base` in the Front Matter of a template file.
   <meta name="description" content="{{ description }}">
   <title>{{ title }}</title>
   <link rel="icon" href="/public/img/favicon.ico">
-  <!--  Load application CSS and Javascript -->
-  <link rel="stylesheet" href="/public/css/main.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Carousel Slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/public/css/components/navigation-bar.css">
+  <!--  Load application CSS -->
+  <link rel="stylesheet" href="/public/css/main.css">
+  <!-- Load application Javascript -->
   <script src="/public/js/app.js" type="module" async></script>
   <!--  SEO meta data-->
   <script type="application/ld+json">
@@ -38,17 +35,5 @@ Usage: Include `layout: layouts/base` in the Front Matter of a template file.
 <body>
 <!--Load page layout-->
 {{ content }}
-<!-- Carousel Slider -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      observer: true,
-      observeParents: true
-    },
-  });
-</script>
 </body>
 </html>

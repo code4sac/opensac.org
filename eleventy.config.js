@@ -12,7 +12,7 @@ const yaml = require('js-yaml')
 const eleventyConfig = config => {
   config.ignores.add('README.md')
   config.addPassthroughCopy('./public/')
-  config.addPassthroughCopy('./node_modules/bootstrap/dist/')
+  config.addPassthroughCopy('./node_modules/swiper/')
   config.addDataExtension('yml', contents => yaml.load(contents))
   config.addWatchTarget('./styles/')
   return {
