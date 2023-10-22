@@ -4,7 +4,7 @@
   "description": "Website for Open Sacramento",
   "private": true,
   "scripts": {
-    "start": "sass --watch styles:public/css & eleventy --serve",
+    "start": "concurrently \"eleventy --serve\" \"sass --watch styles:public/css\"",
     "build": "sass --quiet styles:public/css && eleventy --quiet",
     "test": "jest"
   },
@@ -30,6 +30,7 @@
     "sass": "^1.69.4"
   },
   "dependencies": {
+    "concurrently": "^8.2.2",
     "swiper": "^10.3.1"
   }
 }
