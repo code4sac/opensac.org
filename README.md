@@ -14,6 +14,8 @@ Code for Sacramento is a platform for civic innovation. As an open source organi
 #### Serve the Pages
 `npm start`
 
+> For help, see the [documentation](/documentation) folder.
+
 ### Hack Away
 
 With `npx @11ty/eleventy --serve` running, you should be able to access the site on [http://localhost:8080](http://localhost:8080)!
