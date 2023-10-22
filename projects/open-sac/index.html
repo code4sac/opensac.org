@@ -11,15 +11,12 @@ Usage: Include `layout: layouts/base` in the Front Matter of a template file.
   <meta name="description" content="">
   <title></title>
   <link rel="icon" href="/public/img/favicon.ico">
-  <!--  Load application CSS and Javascript -->
-  <link rel="stylesheet" href="/public/css/main.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Carousel Slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/public/css/components/navigation-bar.css">
+  <!--  Load application CSS -->
+  <link rel="stylesheet" href="/public/css/main.css">
+  <!-- Load application Javascript -->
   <script src="/public/js/app.js" type="module" async></script>
   <!--  SEO meta data-->
   <script type="application/ld+json">
@@ -46,38 +43,38 @@ Home layout with navigation bar and footer.
 Default application navigation bar.
 -->
 <nav class="navbar-toolbar">
-  <div class="container">
-  <div class="navbar-toolbar-content">
-    <div class="navbar-left-container">
-      <a class="navbar-left-section" href="/">
-        <img src="/public/img/Open Sac - Black Logo.png" alt="Open Sacramento logo" height="60" width="200">
-      </a>
-    </div>
-
-    <div class="navbar-middle-container">
-      <ul class="navbar-middle-section">
-        <li class="navbar-link">
-          <a href="/">Home</a>
-        </li>
-        <li class="navbar-link">
-          <a href="/about">About</a>
-        </li>
-        <li class="navbar-link">
-          <a href="/contact">Contact</a>
-        </li>
-        <li class="navbar-link">
-          <a href="#">Donate</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="navbar-right-container">
-      <div class="navbar-right-section">
-        <a href="#" class="navbar-nested-parent-link">
-          Get Involved
-          <img class="inline ml-1" src="/public/img/chevron-down.png" width="16" height="16">
+  <div class="navbar-toolbar-main">
+    <div class="navbar-toolbar-content">
+      <div class="navbar-left-container">
+        <a class="navbar-left-section" href="/">
+          <img src="/public/img/Open Sac - Black Logo.png" alt="Open Sacramento logo" height="60" width="200">
         </a>
       </div>
+
+      <div class="navbar-middle-container">
+        <ul class="navbar-middle-section">
+          <li class="navbar-link navbar-link-selected">
+            <a href="/">Home</a>
+          </li>
+          <li class="navbar-link">
+            <a href="/about">About</a>
+          </li>
+          <li class="navbar-link">
+            <a href="/contact">Contact</a>
+          </li>
+          <li class="navbar-link">
+            <a href="#">Donate</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-right-container">
+        <div class="navbar-right-section">
+          <a href="#" class="navbar-nested-parent-link">
+            Get Involved
+            <img class="inline ml-1" src="/public/img/chevron-down.png" width="16" height="16">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -89,7 +86,7 @@ Default application navigation bar.
 <!--    <ul>-->
 <!--      <li class="navbar-extended-mobile-section">-->
 <!--        <a href="/projects">Projects</a>-->
-<!--      <li/>-->
+<!--      </li>-->
 <!--      <li class="navbar-extended-mobile-section">-->
 <!--        <a href="/project-pitch">Pitch a Project</a>-->
 <!--      </li>-->
@@ -183,17 +180,5 @@ Default application footer.
 </footer>
   </div>
 </div>
-<!-- Carousel Slider -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      observer: true,
-      observeParents: true
-    },
-  });
-</script>
 </body>
 </html>
