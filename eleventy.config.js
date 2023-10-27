@@ -6,7 +6,8 @@ const yaml = require('js-yaml')
  * Supports:
  * - Yaml data files
  *
- * @parameter config Eleventy config
+ * @parameter config Eleventy configuration object.
+ * @return The return object is separate from the Eleventy configuration object.
  */
 const eleventyConfig = config => {
   config.ignores.add('README.md')
