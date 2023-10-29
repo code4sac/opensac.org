@@ -1,5 +1,5 @@
 import { g as getDocument } from '../shared/ssr-window.esm.mjs';
-import { j as isObject, e as elementChildren } from '../shared/utils.mjs';
+import { k as isObject, e as elementChildren } from '../shared/utils.mjs';
 
 function Thumb(_ref) {
   let {

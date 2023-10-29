@@ -57,6 +57,22 @@ interface SwiperContainerEventMap extends Omit<HTMLElementEventMap, 'click' | 'p
    * Event will be fired on navigation next button click
    */
   navigationnext: CustomEvent<[swiper: Swiper]>;/**
+   * Event will be fired on draggable scrollbar drag start
+   */
+  scrollbardragstart: CustomEvent<[swiper: Swiper, event: MouseEvent | TouchEvent | PointerEvent]>;
+
+  /**
+   * Event will be fired on draggable scrollbar drag move
+   */
+  scrollbardragmove: CustomEvent<[swiper: Swiper, event: MouseEvent | TouchEvent | PointerEvent]>;
+
+  /**
+   * Event will be fired on draggable scrollbar drag end
+   */
+  scrollbardragend: CustomEvent<[swiper: Swiper, event: MouseEvent | TouchEvent | PointerEvent]>;/**
+   * Event will be fired on zoom change
+   */
+  zoomchange: CustomEvent<[swiper: Swiper, scale: number, imageEl: HTMLElement, slideEl: HTMLElement]>;/**
    * Event will be fired after pagination rendered
    */
   paginationrender: CustomEvent<[swiper: Swiper, paginationEl: HTMLElement]>;
@@ -74,23 +90,7 @@ interface SwiperContainerEventMap extends Omit<HTMLElementEventMap, 'click' | 'p
   /**
    * Event will be fired on pagination show
    */
-  paginationshow: CustomEvent<[swiper: Swiper]>;/**
-   * Event will be fired on draggable scrollbar drag start
-   */
-  scrollbardragstart: CustomEvent<[swiper: Swiper, event: MouseEvent | TouchEvent | PointerEvent]>;
-
-  /**
-   * Event will be fired on draggable scrollbar drag move
-   */
-  scrollbardragmove: CustomEvent<[swiper: Swiper, event: MouseEvent | TouchEvent | PointerEvent]>;
-
-  /**
-   * Event will be fired on draggable scrollbar drag end
-   */
-  scrollbardragend: CustomEvent<[swiper: Swiper, event: MouseEvent | TouchEvent | PointerEvent]>;/**
-   * Event will be fired on zoom change
-   */
-  zoomchange: CustomEvent<[swiper: Swiper, scale: number, imageEl: HTMLElement, slideEl: HTMLElement]>;
+  paginationshow: CustomEvent<[swiper: Swiper]>;
 
   
   /**

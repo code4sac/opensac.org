@@ -20,7 +20,7 @@ function Autoplay(_ref) {
       enabled: false,
       delay: 3000,
       waitForTransition: true,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
       stopOnLastSlide: false,
       reverseDirection: false,
       pauseOnMouseEnter: false
@@ -31,17 +31,21 @@ function Autoplay(_ref) {
   let autoplayDelayTotal = params && params.autoplay ? params.autoplay.delay : 3000;
   let autoplayDelayCurrent = params && params.autoplay ? params.autoplay.delay : 3000;
   let autoplayTimeLeft;
-  let autoplayStartTime = new Date().getTime;
+  let autoplayStartTime = new Date().getTime();
   let wasPaused;
   let isTouched;
   let pausedByTouch;
   let touchStartTimeout;
   let slideChanged;
   let pausedByInteraction;
+  let pausedByPointerEnter;
   function onTransitionEnd(e) {
     if (!swiper || swiper.destroyed || !swiper.wrapperEl) return;
     if (e.target !== swiper.wrapperEl) return;
     swiper.wrapperEl.removeEventListener('transitionend', onTransitionEnd);
+    if (pausedByPointerEnter) {
+      return;
+    }
     resume();
   }
   const calcTimeLeft = () => {
@@ -126,6 +130,7 @@ function Autoplay(_ref) {
     return delay;
   };
   const start = () => {
+    autoplayStartTime = new Date().getTime();
     swiper.autoplay.running = true;
     run();
     emit('autoplayStart');
@@ -191,11 +196,13 @@ function Autoplay(_ref) {
   const onPointerEnter = e => {
     if (e.pointerType !== 'mouse') return;
     pausedByInteraction = true;
+    pausedByPointerEnter = true;
     if (swiper.animating || swiper.autoplay.paused) return;
     pause(true);
   };
   const onPointerLeave = e => {
     if (e.pointerType !== 'mouse') return;
+    pausedByPointerEnter = false;
     if (swiper.autoplay.paused) {
       resume();
     }
@@ -222,7 +229,6 @@ function Autoplay(_ref) {
     if (swiper.params.autoplay.enabled) {
       attachMouseEvents();
       attachDocumentEvents();
-      autoplayStartTime = new Date().getTime();
       start();
     }
   });
@@ -230,6 +236,18 @@ function Autoplay(_ref) {
     detachMouseEvents();
     detachDocumentEvents();
     if (swiper.autoplay.running) {
+      stop();
+    }
+  });
+  on('_freeModeStaticRelease', () => {
+    if (pausedByTouch || pausedByInteraction) {
+      resume();
+    }
+  });
+  on('_freeModeNoMomentumRelease', () => {
+    if (!swiper.params.autoplay.disableOnInteraction) {
+      pause(true, true);
+    } else {
       stop();
     }
   });

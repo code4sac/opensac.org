@@ -176,6 +176,13 @@ export interface SwiperOptions {
   createElements?: boolean;
 
   /**
+   * Event name prefix for all DOM events emitted by Swiper Element (web component)
+   *
+   * @default `swiper`
+   */
+  eventsPrefix?: string;
+
+  /**
    * CSS selector for focusable elements. Swiping will be disabled on such elements if they are "focused"
    *
    * @default 'input, select, option, textarea, button, video, label'
@@ -493,7 +500,7 @@ export interface SwiperOptions {
   touchMoveStopPropagation?: boolean;
 
   /**
-   * Enable to release Swiper events for swipe-back work in app. If set to `'prevent'` then it will prevent system swipe-back navigation instead
+   * Enable to release Swiper events for swipe-back work in app. If set to `'prevent'` then it will prevent system swipe-back navigation instead. This feature works only with "touch" events (and not pointer events), so it will work on iOS/Android devices and won't work on Windows devices with pointer (touch) events.
    *
    * @default false
    */
@@ -507,7 +514,7 @@ export interface SwiperOptions {
   edgeSwipeThreshold?: number;
 
   /**
-   * Enable to release touch events on slider edge position (beginning, end) to allow for further page scrolling
+   * Enable to release touch events on slider edge position (beginning, end) to allow for further page scrolling. This feature works only with "touch" events (and not pointer events), so it will work on iOS/Android devices and won't work on Windows devices with pointer events. Also `threshold` parameter must be set to `0`
    *
    * @default false
    */
@@ -621,7 +628,11 @@ export interface SwiperOptions {
   /**
    * Set to `true` to enable continuous loop mode
    *
-   * Because of nature of how the loop mode works (it will rearrange slides), total number of slides must be >= slidesPerView * 2
+   * Because of nature of how the loop mode works (it will rearrange slides), total number of slides must be:
+   *
+   * - more than or equal to `slidesPerView` + `slidesPerGroup`
+   * - even to `slidesPerGroup` (or use `loopAddBlankSlides` parameter)
+   * - even to `grid.rows` (or use `loopAddBlankSlides` parameter)
    *
    * @default false
    *
@@ -629,11 +640,20 @@ export interface SwiperOptions {
   loop?: boolean;
 
   /**
-   * Defines how many slides before end/beginning it should rearrange (loop) slides. If not specified, defaults to `slidesPerView`
+   * Automatically adds blank slides if you use Grid or `slidesPerGroup` and the total amount of slides is not even to `slidesPerGroup` or to `grid.rows`
    *
-   * @default null
+   *
+   * @default false
+   *
    */
-  loopedSlides?: number | null;
+  loopAddBlankSlides?: boolean;
+
+  /**
+   * Allows to increase amount of looped slides
+   *
+   * @default 0
+   */
+  loopAdditionalSlides?: number;
 
   /**
    * If enabled then slideNext/Prev will do nothing while slider is animating in loop mode
@@ -767,7 +787,7 @@ export interface SwiperOptions {
   slideActiveClass?: string;
 
   /**
-   * CSS class name of currently visible slide
+   * CSS class name of currently/partially visible slide
    *
    * @default 'swiper-slide-visible'
    *
@@ -776,6 +796,24 @@ export interface SwiperOptions {
    * @note Not supported in Swiper React/Vue
    */
   slideVisibleClass?: string;
+
+  /**
+   * CSS class name of fully (when whole slide is in the viewport) visible slide
+   *
+   * @default 'swiper-slide-fully-visible'
+   *
+   * @note Not supported in Swiper React/Vue
+   */
+  slideFullyVisibleClass?: string;
+
+  /**
+   * CSS class name of the blank slide added by the loop mode (when `loopAddBlankSlides` is enabled)
+   *
+   * @default 'swiper-slide-blank'
+   *
+   * @note Not supported in Swiper React/Vue
+   */
+  slideBlankClass?: string;
 
   /**
    * CSS class name of slide which is right after currently active slide

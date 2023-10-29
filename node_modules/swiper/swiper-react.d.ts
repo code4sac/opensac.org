@@ -87,6 +87,22 @@ type SwiperProps = Omit<
    * Event will be fired on navigation next button click
    */
   onNavigationNext?: (swiper: SwiperClass) => void;/**
+   * Event will be fired on draggable scrollbar drag start
+   */
+  onScrollbarDragStart?: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;
+
+  /**
+   * Event will be fired on draggable scrollbar drag move
+   */
+  onScrollbarDragMove?: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;
+
+  /**
+   * Event will be fired on draggable scrollbar drag end
+   */
+  onScrollbarDragEnd?: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;/**
+   * Event will be fired on zoom change
+   */
+  onZoomChange?: (swiper: SwiperClass, scale: number, imageEl: HTMLElement, slideEl: HTMLElement) => void;/**
    * Event will be fired after pagination rendered
    */
   onPaginationRender?: (swiper: SwiperClass, paginationEl: HTMLElement) => void;
@@ -104,23 +120,7 @@ type SwiperProps = Omit<
   /**
    * Event will be fired on pagination show
    */
-  onPaginationShow?: (swiper: SwiperClass) => void;/**
-   * Event will be fired on draggable scrollbar drag start
-   */
-  onScrollbarDragStart?: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;
-
-  /**
-   * Event will be fired on draggable scrollbar drag move
-   */
-  onScrollbarDragMove?: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;
-
-  /**
-   * Event will be fired on draggable scrollbar drag end
-   */
-  onScrollbarDragEnd?: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;/**
-   * Event will be fired on zoom change
-   */
-  onZoomChange?: (swiper: SwiperClass, scale: number, imageEl: HTMLElement, slideEl: HTMLElement) => void;
+  onPaginationShow?: (swiper: SwiperClass) => void;
     
   /**
    * Fired right after Swiper initialization.

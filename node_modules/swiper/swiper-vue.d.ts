@@ -252,7 +252,8 @@ declare const Swiper: DefineComponent<
       default: undefined;
     };
     loop: { type: BooleanConstructor; default: undefined };
-    loopedSlides: {
+    loopAddBlankSlides: { type: BooleanConstructor; default: undefined };
+    loopAdditionalSlides: {
       type: NumberConstructor;
       default: undefined;
     };
@@ -299,6 +300,14 @@ declare const Swiper: DefineComponent<
       default: undefined;
     };
     slideVisibleClass: {
+      type: StringConstructor;
+      default: undefined;
+    };
+    slideFullyVisibleClass: {
+      type: StringConstructor;
+      default: undefined;
+    };
+    slideBlankClass: {
       type: StringConstructor;
       default: undefined;
     };
@@ -481,6 +490,22 @@ declare const Swiper: DefineComponent<
    * Event will be fired on navigation next button click
    */
   navigationNext: (swiper: SwiperClass) => void;/**
+   * Event will be fired on draggable scrollbar drag start
+   */
+  scrollbarDragStart: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;
+
+  /**
+   * Event will be fired on draggable scrollbar drag move
+   */
+  scrollbarDragMove: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;
+
+  /**
+   * Event will be fired on draggable scrollbar drag end
+   */
+  scrollbarDragEnd: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;/**
+   * Event will be fired on zoom change
+   */
+  zoomChange: (swiper: SwiperClass, scale: number, imageEl: HTMLElement, slideEl: HTMLElement) => void;/**
    * Event will be fired after pagination rendered
    */
   paginationRender: (swiper: SwiperClass, paginationEl: HTMLElement) => void;
@@ -498,23 +523,7 @@ declare const Swiper: DefineComponent<
   /**
    * Event will be fired on pagination show
    */
-  paginationShow: (swiper: SwiperClass) => void;/**
-   * Event will be fired on draggable scrollbar drag start
-   */
-  scrollbarDragStart: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;
-
-  /**
-   * Event will be fired on draggable scrollbar drag move
-   */
-  scrollbarDragMove: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;
-
-  /**
-   * Event will be fired on draggable scrollbar drag end
-   */
-  scrollbarDragEnd: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;/**
-   * Event will be fired on zoom change
-   */
-  zoomChange: (swiper: SwiperClass, scale: number, imageEl: HTMLElement, slideEl: HTMLElement) => void;
+  paginationShow: (swiper: SwiperClass) => void;
     
   /**
    * Fired right after Swiper initialization.

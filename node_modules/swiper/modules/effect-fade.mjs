@@ -1,7 +1,7 @@
 import { e as effectInit } from '../shared/effect-init.mjs';
 import { e as effectTarget } from '../shared/effect-target.mjs';
 import { e as effectVirtualTransitionEnd } from '../shared/effect-virtual-transition-end.mjs';
-import { k as getSlideTransformEl } from '../shared/utils.mjs';
+import { l as getSlideTransformEl } from '../shared/utils.mjs';
 
 function EffectFade(_ref) {
   let {

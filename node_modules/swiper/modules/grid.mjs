@@ -23,7 +23,7 @@ function Grid(_ref) {
     }
     return spaceBetween;
   };
-  const initSlides = slidesLength => {
+  const initSlides = slides => {
     const {
       slidesPerView
     } = swiper.params;
@@ -31,6 +31,7 @@ function Grid(_ref) {
       rows,
       fill
     } = swiper.params.grid;
+    const slidesLength = swiper.virtual && swiper.params.virtual.enabled ? swiper.virtual.slides.length : slides.length;
     numFullColumns = Math.floor(slidesLength / rows);
     if (Math.floor(slidesLength / rows) === slidesLength / rows) {
       slidesNumberEvenToRows = slidesLength;
@@ -42,7 +43,17 @@ function Grid(_ref) {
     }
     slidesPerRow = slidesNumberEvenToRows / rows;
   };
-  const updateSlide = (i, slide, slidesLength, getDirectionLabel) => {
+  const unsetSlides = () => {
+    if (swiper.slides) {
+      swiper.slides.forEach(slide => {
+        if (slide.swiperSlideGridSet) {
+          slide.style.height = '';
+          slide.style[swiper.getDirectionLabel('margin-top')] = '';
+        }
+      });
+    }
+  };
+  const updateSlide = (i, slide, slides) => {
     const {
       slidesPerGroup
     } = swiper.params;
@@ -51,6 +62,7 @@ function Grid(_ref) {
       rows,
       fill
     } = swiper.params.grid;
+    const slidesLength = swiper.virtual && swiper.params.virtual.enabled ? swiper.virtual.slides.length : slides.length;
     // Set slides order
     let newSlideOrderIndex;
     let column;
@@ -79,9 +91,11 @@ function Grid(_ref) {
     }
     slide.row = row;
     slide.column = column;
-    slide.style[getDirectionLabel('margin-top')] = row !== 0 ? spaceBetween && `${spaceBetween}px` : '';
+    slide.style.height = `calc((100% - ${(rows - 1) * spaceBetween}px) / ${rows})`;
+    slide.style[swiper.getDirectionLabel('margin-top')] = row !== 0 ? spaceBetween && `${spaceBetween}px` : '';
+    slide.swiperSlideGridSet = true;
   };
-  const updateWrapperSize = (slideSize, snapGrid, getDirectionLabel) => {
+  const updateWrapperSize = (slideSize, snapGrid) => {
     const {
       centeredSlides,
       roundLengths
@@ -92,7 +106,9 @@ function Grid(_ref) {
     } = swiper.params.grid;
     swiper.virtualSize = (slideSize + spaceBetween) * slidesNumberEvenToRows;
     swiper.virtualSize = Math.ceil(swiper.virtualSize / rows) - spaceBetween;
-    swiper.wrapperEl.style[getDirectionLabel('width')] = `${swiper.virtualSize + spaceBetween}px`;
+    if (!swiper.params.cssMode) {
+      swiper.wrapperEl.style[swiper.getDirectionLabel('width')] = `${swiper.virtualSize + spaceBetween}px`;
+    }
     if (centeredSlides) {
       const newSlidesGrid = [];
       for (let i = 0; i < snapGrid.length; i += 1) {
@@ -130,6 +146,7 @@ function Grid(_ref) {
   on('update', onUpdate);
   swiper.grid = {
     initSlides,
+    unsetSlides,
     updateSlide,
     updateWrapperSize
   };

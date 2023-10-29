@@ -117,7 +117,8 @@ button.swiper-pagination-bullet {
 .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
 .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
-  transition: 200ms transform, 200ms top;
+  transition: 200ms transform,
+        200ms top;
 }
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -131,10 +132,12 @@ button.swiper-pagination-bullet {
 }
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transition: 200ms transform, 200ms left;
+  transition: 200ms transform,
+        200ms left;
 }
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transition: 200ms transform, 200ms right;
+  transition: 200ms transform,
+    200ms right;
 }
 /* Fraction */
 .swiper-pagination-fraction {

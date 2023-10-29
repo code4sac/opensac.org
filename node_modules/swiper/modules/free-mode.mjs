@@ -1,4 +1,4 @@
-import { d as now, i as elementTransitionEnd } from '../shared/utils.mjs';
+import { d as now, j as elementTransitionEnd } from '../shared/utils.mjs';
 
 function freeMode(_ref) {
   let {
@@ -219,6 +219,7 @@ function freeMode(_ref) {
       emit('_freeModeNoMomentumRelease');
     }
     if (!params.freeMode.momentum || timeDiff >= params.longSwipesMs) {
+      emit('_freeModeStaticRelease');
       swiper.updateProgress();
       swiper.updateActiveIndex();
       swiper.updateSlidesClasses();

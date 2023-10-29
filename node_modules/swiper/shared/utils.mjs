@@ -1,5 +1,12 @@
 import { a as getWindow, g as getDocument } from './ssr-window.esm.mjs';
 
+function classesToTokens(classes) {
+  if (classes === void 0) {
+    classes = '';
+  }
+  return classes.trim().split(' ').filter(c => !!c.trim());
+}
+
 function deleteProps(obj) {
   const object = obj;
   Object.keys(object).forEach(key => {
@@ -179,12 +186,20 @@ function elementChildren(element, selector) {
   }
   return [...element.children].filter(el => el.matches(selector));
 }
+function showWarning(text) {
+  try {
+    console.warn(text);
+    return;
+  } catch (err) {
+    // err
+  }
+}
 function createElement(tag, classes) {
   if (classes === void 0) {
     classes = [];
   }
   const el = document.createElement(tag);
-  el.classList.add(...(Array.isArray(classes) ? classes : [classes]));
+  el.classList.add(...(Array.isArray(classes) ? classes : classesToTokens(classes)));
   return el;
 }
 function elementOffset(el) {
@@ -271,4 +286,4 @@ function elementOuterSize(el, size, includeMargins) {
   return el.offsetWidth;
 }
 
-export { elementParents as a, elementOffset as b, createElement as c, now as d, elementChildren as e, elementOuterSize as f, elementIndex as g, getTranslate as h, elementTransitionEnd as i, isObject as j, getSlideTransformEl as k, elementStyle as l, elementNextAll as m, nextTick as n, elementPrevAll as o, animateCSSModeScroll as p, extend as q, deleteProps as r, setCSSProperty as s };
+export { elementParents as a, elementOffset as b, createElement as c, now as d, elementChildren as e, elementOuterSize as f, elementIndex as g, classesToTokens as h, getTranslate as i, elementTransitionEnd as j, isObject as k, getSlideTransformEl as l, elementStyle as m, nextTick as n, elementNextAll as o, elementPrevAll as p, animateCSSModeScroll as q, showWarning as r, setCSSProperty as s, extend as t, deleteProps as u };

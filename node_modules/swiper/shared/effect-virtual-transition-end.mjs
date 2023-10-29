@@ -1,4 +1,4 @@
-import { i as elementTransitionEnd } from './utils.mjs';
+import { j as elementTransitionEnd } from './utils.mjs';
 
 function effectVirtualTransitionEnd(_ref) {
   let {

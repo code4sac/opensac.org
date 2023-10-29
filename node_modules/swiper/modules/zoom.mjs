@@ -1,5 +1,5 @@
 import { a as getWindow } from '../shared/ssr-window.esm.mjs';
-import { e as elementChildren, a as elementParents, b as elementOffset, h as getTranslate } from '../shared/utils.mjs';
+import { e as elementChildren, a as elementParents, b as elementOffset, i as getTranslate } from '../shared/utils.mjs';
 
 function Zoom(_ref) {
   let {

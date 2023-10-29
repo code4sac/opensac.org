@@ -1,6 +1,7 @@
 import { g as getDocument } from '../shared/ssr-window.esm.mjs';
-import { c as createElement, n as nextTick, b as elementOffset } from '../shared/utils.mjs';
+import { h as classesToTokens, c as createElement, n as nextTick, b as elementOffset } from '../shared/utils.mjs';
 import { c as createElementIfNotDefined } from '../shared/create-element-if-not-defined.mjs';
+import { c as classesToSelector } from '../shared/classes-to-selector.mjs';
 
 function Scrollbar(_ref) {
   let {
@@ -258,6 +259,7 @@ function Scrollbar(_ref) {
     }
     if (!el && typeof params.el === 'string') {
       el = document.querySelectorAll(params.el);
+      if (!el.length) return;
     } else if (!el) {
       el = params.el;
     }
@@ -268,7 +270,7 @@ function Scrollbar(_ref) {
     el.classList.add(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
     let dragEl;
     if (el) {
-      dragEl = el.querySelector(`.${swiper.params.scrollbar.dragClass}`);
+      dragEl = el.querySelector(classesToSelector(swiper.params.scrollbar.dragClass));
       if (!dragEl) {
         dragEl = createElement('div', swiper.params.scrollbar.dragClass);
         el.append(dragEl);
@@ -282,14 +284,14 @@ function Scrollbar(_ref) {
       enableDraggable();
     }
     if (el) {
-      el.classList[swiper.enabled ? 'remove' : 'add'](swiper.params.scrollbar.lockClass);
+      el.classList[swiper.enabled ? 'remove' : 'add'](...classesToTokens(swiper.params.scrollbar.lockClass));
     }
   }
   function destroy() {
     const params = swiper.params.scrollbar;
     const el = swiper.scrollbar.el;
     if (el) {
-      el.classList.remove(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
+      el.classList.remove(...classesToTokens(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass));
     }
     disableDraggable();
   }
@@ -317,25 +319,25 @@ function Scrollbar(_ref) {
       el
     } = swiper.scrollbar;
     if (el) {
-      el.classList[swiper.enabled ? 'remove' : 'add'](swiper.params.scrollbar.lockClass);
+      el.classList[swiper.enabled ? 'remove' : 'add'](...classesToTokens(swiper.params.scrollbar.lockClass));
     }
   });
   on('destroy', () => {
     destroy();
   });
   const enable = () => {
-    swiper.el.classList.remove(swiper.params.scrollbar.scrollbarDisabledClass);
+    swiper.el.classList.remove(...classesToTokens(swiper.params.scrollbar.scrollbarDisabledClass));
     if (swiper.scrollbar.el) {
-      swiper.scrollbar.el.classList.remove(swiper.params.scrollbar.scrollbarDisabledClass);
+      swiper.scrollbar.el.classList.remove(...classesToTokens(swiper.params.scrollbar.scrollbarDisabledClass));
     }
     init();
     updateSize();
     setTranslate();
   };
   const disable = () => {
-    swiper.el.classList.add(swiper.params.scrollbar.scrollbarDisabledClass);
+    swiper.el.classList.add(...classesToTokens(swiper.params.scrollbar.scrollbarDisabledClass));
     if (swiper.scrollbar.el) {
-      swiper.scrollbar.el.classList.add(swiper.params.scrollbar.scrollbarDisabledClass);
+      swiper.scrollbar.el.classList.add(...classesToTokens(swiper.params.scrollbar.scrollbarDisabledClass));
     }
     destroy();
   };
