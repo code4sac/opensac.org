@@ -20,6 +20,4 @@ Code for Sacramento is a platform for civic innovation. As an open source organi
 
 With `npx @11ty/eleventy --serve` running, you should be able to access the site on [http://localhost:8080](http://localhost:8080)!
 
-For reference, here's an [awesome markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
 Contribute, change things, submit a pull request! We will all contribute.
