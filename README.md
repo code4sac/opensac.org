@@ -1,7 +1,7 @@
 opensac.org
 =====================
 
-Code for Sacramento is a platform for civic innovation. As an open source organization, you can fork our code including our website. Help us make the site better by [forking it](https://help.github.com/articles/fork-a-repo/), adding new content or features, and [submitting a pull request](https://help.github.com/articles/creating-a-pull-request/)!
+Code for Sacramento is a platform for civic innovation. As an open-source organization, you can fork our code including our website. Help us make the site better by [forking it](https://help.github.com/articles/fork-a-repo/), adding new content or features, and [submitting a pull request](https://help.github.com/articles/creating-a-pull-request/)!
 
 ### Installation
 
@@ -14,7 +14,7 @@ Code for Sacramento is a platform for civic innovation. As an open source organi
 #### Serve the Pages
 `npm start`
 
-> For help, see the [documentation](/documentation) folder.
+> For help, see the [documentation](/public/documentation) folder.
 
 ### Hack Away
 
