@@ -15,5 +15,16 @@ Base layout styles for all pages. Includes the app theme. This file should be im
  */
 
 body {
+  width: 100%;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.full-width {
+  width: 100%;
+  overflow: clip;
+}
+
+.hidden {
+  display: none;
 }
