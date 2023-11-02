@@ -1,16 +1,18 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 @import '/node_modules/swiper/swiper.css';
+
 /*
 Home page layout
  */
+
 .home-section-dark {
   background-color: $neutral-900;
   color: $neutral-50;
 }
 
 .home-landing-image {
-  background-image: url("../img/towerbridgenight.png");
+  background-image: url("/public/img/towerbridgenight.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;
@@ -216,7 +218,7 @@ Home page layout
 }
 
 .home-about-image {
-  background-image: url("../img/open_data_day_curved.png");
+  background-image: url("/public/img/open_data_day_curved.png");
   background-repeat: no-repeat;
   background-size: 50% 75%;
   background-position: right center;

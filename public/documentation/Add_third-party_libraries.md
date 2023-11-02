@@ -12,7 +12,7 @@ To use frontend libraries installed with NPM, first add a new pass-through copy 
 ```js
 eleventyConfig.addPassthroughCopy('./node_modules/bootstrap/dist/css/')
 ```
-See: [Eleventy config documentation](/documentation/eleventy-configuration.md)
+See: [Eleventy config documentation](/public/documentation/Eleventy_configuration.md)
 
 ### Add to HTML <head>
 

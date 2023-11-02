@@ -1,17 +1,14 @@
 ---
 layout: layouts/base
 ---
+
 <!--
 Home layout with navigation bar and footer.
 -->
-<div class="">
-  <div class="">
-    {% include "navigation-bar.html" %}
-  </div>
-  <div class="">
+<div class="full-width">
+  {% include "navigation-bar.html" %}
+  <div class="full-width">
     {{ content }}
   </div>
-  <div class="">
-    {% include "footer.html" %}
-  </div>
+  {% include "footer.html" %}
 </div>
