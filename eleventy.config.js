@@ -2,7 +2,7 @@ const yaml = require('js-yaml')
 
 /**
  * Configuration for Eleventy.
- * See: /documentation/eleventy-configuration.md
+ * See: /public/documentation/eleventy-configuration.md
  * Supports:
  * - Yaml data files
  *

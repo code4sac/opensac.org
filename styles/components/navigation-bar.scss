@@ -19,8 +19,13 @@ $toolbar_height: 84px;
   background: $neutral-900;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   z-index: 4;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   position: fixed;
-    box-sizing: border-box;
+  top: 0;
+
   a, .navbar-toolbar a:visited, .navbar-toolbar a:link {
     color: $secondary-50;
     text-decoration: none;
@@ -33,6 +38,10 @@ $toolbar_height: 84px;
     background: $neutral-900;
     box-sizing: border-box;
   }
+}
+
+.navbar-toolbar + div {
+  margin-top: $toolbar-height;
 }
 
 #navbar-toolbar-main {
@@ -70,13 +79,11 @@ $toolbar_height: 84px;
 
 .navbar-left-container {
   display: inline-flex;
-  height: $toolbar-height
 }
 
 .navbar-left-section {
   display: inline-flex;
   justify-content: center;
-  height: $toolbar_height;
   align-items: center;
 }
 
@@ -85,7 +92,6 @@ $toolbar_height: 84px;
 }
 
 .navbar-middle-section {
-  height: $toolbar_height;
   display: none;
   list-style-type: none;
   column-gap: 50px;
@@ -105,7 +111,6 @@ $toolbar_height: 84px;
 }
 
 .navbar-right-section {
-  height: $toolbar_height;
   display: inline-flex;
 }
 
@@ -116,11 +121,44 @@ $toolbar_height: 84px;
 #navbar-toolbar-extended {
   margin: 0;
   padding: 0;
-  background: $secondary-50;
-  color: black;
 }
 
-.navbar-toolbar-extended-desktop {
+.navbar-extended-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-extended-mobile-content ul::before {
+  content: ''
+}
+
+.navbar-extended-mobile-section li.active a {
+  color: $secondary-50;
+  background: $neutral-900;
+}
+
+.navbar-toolbar-extended {
+  margin: 0;
+  padding: 0;
+
+  color: $secondary-50;
+  background: $neutral-900;
+}
+
+.navbar-extended-desktop-container * {
+  color: black;
+  background: $secondary-50;
+}
+
+.navbar-extended-mobile-container {
+  * {
+    background: $neutral-900;
+  }
+
+  height: 100%;
+  color: $secondary-50;
+  background: $neutral-900;
 }
 
 .navbar-extended-desktop-left-container {
@@ -154,7 +192,7 @@ $toolbar_height: 84px;
 }
 
 .navbar-extended-mobile-section {
-  margin: 16px;
+  padding: 16px;
 }
 
 .navbar-extended-content {

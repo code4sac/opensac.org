@@ -33,6 +33,4 @@ eleventyConfig.addPassthroughCopy({
 The default data files are in JSON format. YAML files have features like comments. This support is provided with [js-yaml](https://github.com/nodeca/js-yaml) through an Eleventy data extension. See https://www.11ty.dev/docs/data-custom/.
 
 ### SASS
-The app uses the [eleventy-sass plugin](https://github.com/kentaroi/eleventy-sass) to build SCSS to CSS files at runtime.
-
-**Issue:** HTML files need to reference the CSS files, not the SCSS. Since the CSS file is not actually on the filesystem, your editor could give a warning that the file is not found.
+The app uses the [SASS CLI](https://github.com/sass/dart-sass) to build SCSS to CSS files.

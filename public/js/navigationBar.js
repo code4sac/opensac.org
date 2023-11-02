@@ -26,6 +26,7 @@ function handleNavbarChange(event) {
  */
 function handleNavbarExtend(event) {
   setLinkDestination()
+  document.getElementById('navbar-toolbar').style.overflow = 'visible'
   document.getElementById('navbar-toolbar-extended').classList.toggle('hidden')
 }
 
