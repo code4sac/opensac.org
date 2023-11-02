@@ -1,15 +1,14 @@
 import initializeNavigationBar from './navigationBar.js'
 
-/**
- * Home scripts.
- * Usage:
- * ```js
- * home()
- * ```
- */
 const home = () => {
+  /**
+   * Home scripts.
+   * Usage:
+   * ```js
+   * home()
+   * ```
+   */
   initializeNavigationBar()
-  console.log('Home layout loaded.')
 }
 
 export default home
