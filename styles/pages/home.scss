@@ -1,6 +1,6 @@
-@import "../abstracts/variables";
-@import "../abstracts/mixins";
-@import '/node_modules/swiper/swiper.css';
+@import "abstracts/variables";
+@import "abstracts/mixins";
+// @import '/node_modules/swiper/swiper.css';
 
 /*
 Home page layout
@@ -12,7 +12,7 @@ Home page layout
 }
 
 .home-landing-image {
-  background-image: url("/public/img/towerbridgenight.png");
+  background-image: url("/img/towerbridgenight.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;
@@ -64,7 +64,7 @@ Home page layout
   }
 }
 
-.home-section-landing-image{
+.home-section-landing-image {
   display: none;
 
   @media (max-width: $screen-sm) {
@@ -174,7 +174,7 @@ Home page layout
 .home-section-paragraph {
   @include subheading-regular;
   margin: 0;
-  
+
   @media (max-width: $screen-sm) {
     @include p3-regular;
   }
@@ -218,7 +218,7 @@ Home page layout
 }
 
 .home-about-image {
-  background-image: url("/public/img/open_data_day_curved.png");
+  background-image: url("/img/open_data_day_curved.png");
   background-repeat: no-repeat;
   background-size: 50% 75%;
   background-position: right center;
