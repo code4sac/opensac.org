@@ -16,17 +16,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Build Eleventy
+      - name: Build Next.js static site
         run: |
           npm install
           npm run build
       - name: Ignore Jekyll
         run: |
-          touch _site/.nojekyll
+          touch out/.nojekyll
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: _site
+          folder: out
           git-config-name: Automated
           git-config-email: hello@opensac.org
           branch: gh-pages
