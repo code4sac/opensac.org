@@ -25,9 +25,9 @@ export default function Home() {
     <HomeSectionLandingImage sectionType={SectionType.dark}></HomeSectionLandingImage>
     <HomeSectionDefault2 sectionType={SectionType.light}></HomeSectionDefault2>
     <HomeSectionAboutImage sectionType={SectionType.dark}></HomeSectionAboutImage>
-    <HomeSectionServices sectionType={SectionType.light}></HomeSectionServices>
-    <HomeSectionDefault sectionType={SectionType.dark}></HomeSectionDefault>
-    <HomeSectionProjects sectionType={SectionType.light}></HomeSectionProjects>
+    <HomeSectionServices sectionType={SectionType.dark}></HomeSectionServices>
+    <HomeSectionDefault sectionType={SectionType.light}></HomeSectionDefault>
+    <HomeSectionProjects sectionType={SectionType.dark}></HomeSectionProjects>
     <HomeSectionDonate sectionType={SectionType.dark}></HomeSectionDonate>
   </div>)
 }

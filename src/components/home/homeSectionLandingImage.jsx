@@ -8,7 +8,7 @@ import { SectionType } from "@/components/home/home";
 export default function HomeSectionLandingImage({ sectionType }) {
   return (
     <section className={`home-section-${SectionType.dark} home-landing-image`}>
-      <div className={`md:container md:mx-auto`}>
+      <div className={`home-landing-container`}>
         <h1 className={`home-landing-heading`}>
           <span>We are</span> <br />
           Open Sacramento
@@ -23,6 +23,10 @@ export default function HomeSectionLandingImage({ sectionType }) {
           <a href="" className={`home-button home-button-alt`}> View Projects</a>
         </div>
       </div>
+      <img
+        src="/img/towerbridgenight.png"
+        alt="Tower Bridge"
+        className={`home-section-landing-image`} />
     </section>
   )
 }
