@@ -1,3 +1,5 @@
+import "@/styles/pages/home.scss"
+
 /**
  * Home services section.
  * @returns {JSX.Element}

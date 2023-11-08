@@ -1,13 +1,14 @@
+'use client'
+import 'keen-slider/keen-slider.min.css'
+import { useKeenSlider } from "keen-slider/react"
+import React from "react"
+import "@/styles/pages/home.scss"
+
 /**
  * Home projects section.
  * @returns {JSX.Element}
  * @constructor
  */
-'use client'
-import 'keen-slider/keen-slider.min.css'
-import { useKeenSlider } from "keen-slider/react"
-import React from "react"
-
 export default function HomeSectionProjects({sectionType}) {
 
   const [currentSlide, setCurrentSlide] = React.useState(0)
