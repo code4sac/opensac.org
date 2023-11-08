@@ -1,3 +1,5 @@
+import "@/styles/pages/home.scss"
+
 /**
  * Home about image section.
  * @returns {JSX.Element}

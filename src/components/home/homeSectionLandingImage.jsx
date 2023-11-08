@@ -1,4 +1,5 @@
 import { SectionType } from "@/components/home/home";
+import "@/styles/pages/home.scss"
 
 /**
  * Home projects section.

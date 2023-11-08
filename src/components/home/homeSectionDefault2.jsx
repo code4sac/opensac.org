@@ -1,3 +1,5 @@
+import "@/styles/pages/home.scss"
+
 /**
  * Home page default section 2.
  * @returns {JSX.Element}
