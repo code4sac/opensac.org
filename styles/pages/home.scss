@@ -1,6 +1,5 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
-// @import '/node_modules/swiper/swiper.css';
 
 /*
 Home page layout
@@ -36,7 +35,7 @@ Home page layout
   }
 
   @media (max-width: $screen-md) {
-    width: 100%;
+    width: auto;
     padding: 96px 40px 0px 40px;
     justify-content: start;
     padding-top: 30%;
@@ -131,8 +130,6 @@ Home page layout
 .home-section-heading-underline::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
   height: 1px;
   width: 43px;
   border-bottom: 4px solid $neutral-900;
@@ -318,7 +315,7 @@ Home page layout
   justify-content: space-between;
   gap: 30px;
 
-  @media (max-width: $screen-xl) {
+  @media (max-width: 1300px) {
     flex-direction: column;
     justify-content: center;
     padding: 48px 40px;
@@ -344,23 +341,6 @@ Home page layout
   aspect-ratio: 2/1;
 }
 
-.swiper {
-  width: 100%;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  gap: 20px;
-}
-
-.swiper-slide {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding: 0 1%;
-  width: 98% !important;
-}
-
 .slide-content {
   width: 100%;
 }
@@ -371,29 +351,41 @@ Home page layout
   }
 }
 
-.swiper-pagination {
-  position: relative !important;
+.test {
+  margin: auto;
+  max-width: 100%;
+  @media (min-width: 1300px) {
+    max-width: 60%;
+  }
 }
 
-.swiper-pagination-bullet {
-  width: 15px !important;
-  height: 15px !important;
-  background-color: $secondary-50 !important;
-  opacity: 1 !important;
+.navigation-wrapper {
+  position: relative;
 }
 
-.swiper-pagination-bullet-active {
-  background: $secondary-500 !important;
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
 }
 
-.swiper-slide .slide-content {
-  opacity: 0;
-  transition: opacity 0s;
+.dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: $secondary-50;
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
 }
 
-.swiper-slide-active .slide-content {
-  opacity: 1;
-  transition: opacity 1s;
+.dot:focus {
+  outline: none;
+}
+
+.dot.active {
+  background: $secondary-500;
 }
 
 .donate-section {

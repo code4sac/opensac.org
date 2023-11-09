@@ -1,3 +1,5 @@
+import "@/styles/pages/home.scss"
+
 /**
  * Home about image section.
  * @returns {JSX.Element}
@@ -5,10 +7,10 @@
  */
 export default function HomeSectionAboutImage({ sectionType }) {
   return (
-    <section className={`home-section-${sectionType.dark} home-section-${sectionType.dark}-flex home-about-image`}>
+    <section className={`home-section-${sectionType} home-section-${sectionType}-flex home-about-image`}>
       <div className={`home-about-container`}>
         <div
-          className={`home-section-${sectionType.dark}-container home-section-heading-underline underline-alt md:container md:mx-auto`}>
+          className={`home-section-${sectionType}-container home-section-heading-underline underline-alt`}>
           <h1 className={`heading-section heading-section-alt`}>What we do</h1>
           <h2 className={`heading-section-sub`}>
             Building a Better Future <br />

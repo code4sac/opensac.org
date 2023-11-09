@@ -37,6 +37,6 @@
     "sass": "^1.69.5"
   },
   "dependencies": {
-    "swiper": "^11.0.3"
+    "keen-slider": "^6.8.6"
   }
 }
