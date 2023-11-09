@@ -1,22 +1,20 @@
-import 'styles/pages/home.scss'
+import AboutSectionLanding from "@/components/about/aboutSectionLanding";
+import AboutSectionCollage from "@/components/about/aboutSectionCollage";
+import AboutSectionMission from "@/components/about/aboutSectionMission";
+import AboutSectionTeam from "@/components/about/aboutSectionTeam";
+import AboutSectionOpportunities from "@/components/about/aboutSectionOpportunities";
+import "@/styles/pages/about.scss"
 
-/**
- * About page.
- * @returns {JSX.Element}
- * @constructor
- */
+// export const SectionType = {
+//   light: "light", dark: "dark",
+// };
+
 export default function About() {
-  return (
-    <>
-      <section className={''}>
-        < h1 > Connecting Civic-Minded Technologists</h1 >
-        <p>
-          We are a passionate and diverse group of technologists, developers, designers, and civic-minded individuals united
-          by a common goal: leveraging technology and open data to address civic challenges and enhance public services in the
-          Sacramento area. Our community thrives on collaboration, innovation, and a shared commitment to driving positive
-          change.
-        </p>
-      </section >
-    </>
-  )
+  return (<div className="">
+  <AboutSectionLanding></AboutSectionLanding>
+  <AboutSectionCollage/>
+  <AboutSectionMission/>
+  <AboutSectionTeam/>
+  <AboutSectionOpportunities/>
+  </div>)
 }
