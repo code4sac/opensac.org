@@ -3,7 +3,7 @@ export default function AboutSectionMission() {
         <section className={`about-section-dark about-section-mission`}>
         <div className={`mission-container`}>
           <div
-            className={`about-dark-heading-container about-heading-underline underline-alt`}
+            className={`about-dark-heading-container about-heading-underline about-underline-alt`}
           >
             <h1 className={`about-heading-section about-heading-section-alt`}>OUR MISSION</h1>
             <h2 className={`about-heading-section-sub`}>

@@ -38,6 +38,10 @@ About page layout
     border-bottom: 4px solid $neutral-900;
 }
 
+.about-underline-alt::after {
+    border-bottom: 4px solid $neutral-50;
+}
+
 .about-heading-section {
     color: $neutral-300;
     @include h1-section;

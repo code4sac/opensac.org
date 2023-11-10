@@ -4,7 +4,7 @@ export default function AboutSectionOpportunities() {
         <div className={`opportunities-container`}>
           <div className={`opportunities-intro-container`}>
             <div
-              className={`about-dark-heading-container about-heading-underline underline-alt`}
+              className={`about-dark-heading-container about-heading-underline about-underline-alt`}
             >
               <h1 className={`about-heading-section about-heading-section-alt`}>opportunities</h1>
               <h2 className={`about-heading-section-sub`}>
