@@ -1,5 +1,6 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
+@import "base/animations";
 
 /*
 Home page layout
@@ -82,6 +83,8 @@ Home page layout
 .home-button {
   color: $secondary-50;
   background-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
 
   border: solid $secondary-500 1px;
   border-radius: 6px;
@@ -90,12 +93,15 @@ Home page layout
   width: fit-content;
 
   @include button-regular;
+  @include dark-button-transition;
 }
 
 .home-button-alt {
   /* alternative colors */
   background-color: $secondary-500;
   color: $neutral-900;
+  
+  @include light-button-transition;
 }
 
 .home-button-numbered {
