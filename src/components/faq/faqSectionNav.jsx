@@ -7,28 +7,15 @@ import Link from "next/link";
  * @constructor
  */
 
-export default function faqSectionNav({ sectionType }) {
+export default function faqSectionNav({ sectionType, topics }) {
   return (
     <section className="faq-container">
       <nav className={`faq-nav faq-nav-${sectionType}`}>
-        <Link className="nav-link" href="#common-questions">
-          Common Questions
-        </Link>
-        <Link className="nav-link" href="#volunteer">
-          Volunteer
-        </Link>
-        <Link className="nav-link" href="#working-on-projects">
-          Working on Projects
-        </Link>
-        <Link className="nav-link" href="#pitching-a-project">
-          Pitching a Project
-        </Link>
-        <Link className="nav-link" href="#contact">
-          Contact
-        </Link>
-        <Link className="nav-link" href="#rules">
-          Rules
-        </Link>
+        {topics.map((item, key) => (
+          <Link key={key} className="nav-link" href={`#${item.url}`}>
+            {item.topic}
+          </Link>
+        ))}
       </nav>
     </section>
   );

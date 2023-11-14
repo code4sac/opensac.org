@@ -30,17 +30,29 @@ const FaqItems = function commonItems({ texts }) {
   );
 };
 
+const Topics = function commonItems({ texts }) {
+  return (
+    <div>
+      {texts.map((item, key) => (
+        <div key={key}>
+          <h4 id={item.url} className="faq-semiheader">
+            {item.topic}
+          </h4>
+          <FaqItems texts={item.questions} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export default function Faq(common) {
   return (
-    <main className="faq-main">
+    <div className="faq-main">
       <FaqSectionStart sectionType={SectionType.light} />
-      <FaqSectionNav sectionType={SectionType.light} />
+      <FaqSectionNav sectionType={SectionType.light} topics={texts.sections} />
       <section className="faq-container-margins">
-        <h4 className="faq-semiheader">Common Questions</h4>
-        <FaqItems texts={texts.common} />
-        <h4 className="faq-semiheader">Volunteer</h4>
-        <FaqItems texts={texts.vol} />
+        <Topics texts={texts.sections} />
       </section>
-    </main>
+    </div>
   );
 }
