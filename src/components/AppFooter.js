@@ -3,7 +3,6 @@ import '@/styles/components/footer.scss'
 /**
  * Default application footer.
  * @returns {JSX.Element}
- * @constructor
  */
 export default function AppFooter() {
   return (

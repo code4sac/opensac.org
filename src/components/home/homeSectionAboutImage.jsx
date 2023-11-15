@@ -1,9 +1,8 @@
-import "@/styles/pages/home.scss"
+import '@/styles/pages/home.scss'
 
 /**
  * Home about image section.
  * @returns {JSX.Element}
- * @constructor
  */
 export default function HomeSectionAboutImage({ sectionType }) {
   return (

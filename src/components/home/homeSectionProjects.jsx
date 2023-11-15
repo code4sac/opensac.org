@@ -1,15 +1,14 @@
 'use client'
 import 'keen-slider/keen-slider.min.css'
-import { useKeenSlider } from "keen-slider/react"
-import React from "react"
-import "@/styles/pages/home.scss"
+import { useKeenSlider } from 'keen-slider/react'
+import React from 'react'
+import '@/styles/pages/home.scss'
 
 /**
  * Home projects section.
  * @returns {JSX.Element}
- * @constructor
  */
-export default function HomeSectionProjects({sectionType}) {
+export default function HomeSectionProjects({ sectionType }) {
 
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = React.useState(false)
@@ -40,7 +39,7 @@ export default function HomeSectionProjects({sectionType}) {
         <a href="" className={`home-button home-button-alt`}>Find Projects</a>
       </div>
 
-      <div className='test'>
+      <div className="test">
         <div className="navigation-wrapper">
           <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide">
@@ -57,7 +56,7 @@ export default function HomeSectionProjects({sectionType}) {
               />
             </div>
             <div className="keen-slider__slide">
-            <div className="slide-content">
+              <div className="slide-content">
                 <h2 className="heading-section-sub">TrashAI</h2>
                 <p className="home-section-dark-paragraph">
                   Developing machine learning technology to identify trash in images.
@@ -70,7 +69,7 @@ export default function HomeSectionProjects({sectionType}) {
               />
             </div>
             <div className="keen-slider__slide">
-            <div className="slide-content">
+              <div className="slide-content">
                 <h2 className="heading-section-sub">TrashAI</h2>
                 <p className="home-section-dark-paragraph">
                   Developing machine learning technology to identify trash in images.

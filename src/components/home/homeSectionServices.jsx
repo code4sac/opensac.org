@@ -1,9 +1,8 @@
-import "@/styles/pages/home.scss"
+import '@/styles/pages/home.scss'
 
 /**
  * Home services section.
  * @returns {JSX.Element}
- * @constructor
  */
 export default function HomeSectionServices({ sectionType }) {
   return (

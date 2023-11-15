@@ -1,18 +1,17 @@
 "use client"
 
 import Link from 'next/link'
-import {useState} from 'react'
+import { useState } from 'react'
 import '@/styles/components/navigation-bar.scss'
-import {DropdownMenu} from '@/components/DropdownMenu'
+import { DropdownMenu } from '@/components/DropdownMenu'
 
 /**
  * Default application navigation bar.
  * @returns {JSX.Element}
- * @constructor
  */
 export default function AppNavbar() {
-    const [extendedMenuVisible, toggleExtendedMenu] = useState(false)
-    const onClick = () => toggleExtendedMenu(!extendedMenuVisible)
+  const [extendedMenuVisible, toggleExtendedMenu] = useState(false)
+  const onClick = () => toggleExtendedMenu(!extendedMenuVisible)
   return (
     <nav className="navbar-toolbar">
       <div className="navbar-toolbar-main">
@@ -43,7 +42,7 @@ export default function AppNavbar() {
           <div className="navbar-right-container">
             <div className="navbar-right-section">
               <div className="navbar-nested-parent-link">
-                <button type="button" onClick={onClick}> 
+                <button type="button" onClick={onClick}>
                   Get Involved
                   <img className="navbar-nested-parent-link-image" src="/img/chevron-down.png" width="16"
                     height="16" alt="Get involved navigation links" />
@@ -57,7 +56,7 @@ export default function AppNavbar() {
         <div className={'navbar-toolbar-extended'}>
           <DropdownMenu />
         </div>
-      : null}
+        : null}
     </nav>
   )
 }

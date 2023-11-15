@@ -1,5 +1,5 @@
-import "@/styles/components/not-found.scss";
-import Link from "next/link";
+import '@/styles/components/not-found.scss'
+import Link from 'next/link'
 
 export default function notFound() {
   return (
@@ -23,5 +23,5 @@ export default function notFound() {
         <p>Explore our site using the menu above.</p>
       </div>
     </section>
-  );
+  )
 }

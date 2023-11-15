@@ -1,11 +1,10 @@
-import "@/styles/pages/home.scss"
+import '@/styles/pages/home.scss'
 
 /**
  * Home page default section 2.
  * @returns {JSX.Element}
- * @constructor
  */
-export default function HomeSectionDefault2({sectionType}) {
+export default function HomeSectionDefault2({ sectionType }) {
   return (
     <section className={`home-section-${sectionType}`}>
       <div className={`home-section-${sectionType}-container home-section-heading-underline`}>
@@ -19,10 +18,10 @@ export default function HomeSectionDefault2({sectionType}) {
         <p className={`home-section-paragraph`}>
           Open Sacramento is
           <span className={`home-section-paragraph-bold`}> a community of technologists, developers, designers, and civic-minded
-        individuals </span>
+            individuals </span>
           who come together to use technology and open data to address civic
           challenges and improve public services in the Sacramento area.
-          <br/><br/>
+          <br /><br />
           We are passionate about fostering civic innovation and creating positive
           impact through technology and community engagement.
         </p>
