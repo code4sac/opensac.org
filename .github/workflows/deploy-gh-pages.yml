@@ -1,4 +1,4 @@
-name: Deploy Eleventy to GitHub pages
+name: Deploy Next.js static site to GitHub pages
 
 on:
   push:
