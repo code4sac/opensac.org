@@ -1,4 +1,4 @@
-import Pitch from '@/components/pitch/pitch'
+import Pitch from './pitch'
 
 export default function PitchPage() {
   return (

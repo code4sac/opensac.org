@@ -1,4 +1,4 @@
-import { SectionType } from '@/components/home/home'
+import { SectionType } from './home'
 import '@/styles/pages/home.scss'
 
 /**

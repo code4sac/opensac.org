@@ -2,7 +2,6 @@ import AppFooter from '@/components/AppFooter'
 import AppNavbar from '@/components/AppNavbar'
 import { Inter } from 'next/font/google'
 import './globals.scss'
-import '@/styles/styleguide.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

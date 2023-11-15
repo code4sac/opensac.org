@@ -1,7 +1,6 @@
-import './page.scss'
-import Home from '@/components/home/home'
+import Home from './home/home'
 
-export default function HomePage() {
+export default function DefaultPage() {
   return (
     <>
       <Home></Home>

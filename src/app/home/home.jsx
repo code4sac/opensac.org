@@ -1,11 +1,10 @@
-import HomeSectionDonate from '@/components/home/homeSectionDonate'
-import HomeSectionProjects from '@/components/home/homeSectionProjects'
-import HomeSectionDefault from '@/components/home/homeSectionDefault'
-import HomeSectionServices from '@/components/home/homeSectionServices'
-import HomeSectionDefault2 from '@/components/home/homeSectionDefault2'
-import HomeSectionAboutImage from '@/components/home/homeSectionAboutImage'
-import HomeSectionLandingImage from '@/components/home/homeSectionLandingImage'
-import '@/styles/pages/home.scss'
+import HomeSectionDonate from './homeSectionDonate'
+import HomeSectionProjects from './homeSectionProjects'
+import HomeSectionDefault from './homeSectionDefault'
+import HomeSectionServices from './homeSectionServices'
+import HomeSectionDefault2 from './homeSectionDefault2'
+import HomeSectionAboutImage from './homeSectionAboutImage'
+import HomeSectionLandingImage from './homeSectionLandingImage'
 
 /**
  * Section type. Displays light or dark themes.
