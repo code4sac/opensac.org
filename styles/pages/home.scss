@@ -37,7 +37,7 @@ Home page layout
   @media (max-width: $screen-md) {
     width: auto;
     padding: 96px 40px 0px 40px;
-    justify-content: start;
+    justify-content: flex-start;
     padding-top: 30%;
   }
 
@@ -217,19 +217,11 @@ Home page layout
 .home-about-image {
   background-image: url("/img/open_data_day_curved.png");
   background-repeat: no-repeat;
-  background-size: 50% 75%;
+  background-size: 45vw 40vw;
   background-position: right center;
 
   @media (min-width: 1700px) {
     background-size: 40% 80%;
-  }
-
-  @media (max-width: $screen-xxl) {
-    background-size: 50% 60%;
-  }
-
-  @media (max-width: $screen-xl) {
-    background-size: 50% 50%;
   }
 
   @media (max-width: $screen-lg) {

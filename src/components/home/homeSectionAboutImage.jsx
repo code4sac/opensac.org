@@ -22,8 +22,9 @@ export default function HomeSectionAboutImage({ sectionType }) {
           we transform ideas into tangible solutions that impact lives throughout
           the Sacramento area. Together, we drive innovation forward, building a
           future where open source technology empowers citizens and uplifts our
-          city.
-          <span className={`home-section-paragraph-bold`}>Join us in driving innovation through open-source tech and empowering our community!</span>
+          city. <span className={`home-section-paragraph-bold`}>
+            Join us in driving innovation through open-source tech and empowering our community!
+          </span>
         </p>
       </div>
       <img
