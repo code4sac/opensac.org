@@ -1,3 +1,53 @@
+# Old Data
+
+Data files from the old website codeforsac.org.
+
+### pastsupporters.yml
+
+```yaml
+- name: Trinity Technology Group
+  logo: trinity_technology_group.png
+  website: http://trinitytg.com/
+- name: Symsoft
+  logo: symsoft.png
+  website: http://www.symsoftsolutions.com/
+- name: Hacker Lab
+  logo: hacker_lab.png
+  website: http://hackerlab.org/
+- name: The Urban Hive
+  logo: the_urban_hive.png
+  website: http://www.theurbanhive.com/
+```
+
+### supporters.yml
+
+```yaml
+- name: City of Sacramento
+  logo: city_of_sacramento.png
+  website: http://www.cityofsacramento.org/
+```
+
+### featured-apps.yml
+
+```yaml
+# Featured apps
+- name: Open Budget Sacramento
+  description: Visualize where the money comes from and how it's spent. Drill into the details of income and spending.
+  image: openbudget.png
+  url: http://openbudgetsac.org/
+- name: Trash-AI
+  description: Developing machine learning technology to identify trash in images.
+  image: trashai.png
+  url: http://trashai.org/
+- name: Learning Blocks
+  description: API assisting the gathering and reporting of student grant data.
+  image: learningBlocks.png
+  url: https://github.com/code4sac/learning-blocks
+```
+
+### core_team.yml
+
+```yaml
 # Open Sacramento core team members
 # See: https://drive.google.com/drive/folders/0B5cI7rQXjIbbZS1lNWtjNUlvZFU?resourcekey=0-pkCVfUUUX-L6d2Rh274Agg
 - name: Dan Fey
@@ -39,3 +89,13 @@
   email: nate.bass@outlook.com
   twitter:
   linkedin: https://www.linkedin.com/in/natebassfish/
+```
+
+### bitly.yml
+
+```yaml
+# Bitly links used by application.
+# See: https://bitly.com
+- shortlink: "bit.ly/asdf"
+  name: "contact"
+```
