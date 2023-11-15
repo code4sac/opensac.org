@@ -45,8 +45,19 @@ $toolbar-height: 84px;
   flex-basis: 100%;
 }
 
-.navbar-nested-parent-link img {
+.navbar-nested-parent-link {
+button {
+color: $secondary-50;
+	background: none;
+	// color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+}
+img {
   margin-left: 2px;
+}
 }
 
 .navbar-link {
