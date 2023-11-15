@@ -1,4 +1,4 @@
-@import "abstracts/variables";
+@import "../abstracts/variables";
 
 @mixin dark-button-transition {
     transition: background-color 0.3s, color 0.3s;

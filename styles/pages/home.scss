@@ -1,6 +1,6 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
-@import "base/animations";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../base/animations";
 
 /*
 Home page layout
@@ -66,6 +66,7 @@ Home page layout
 
 .home-section-landing-image {
   display: none;
+  background: $hero-background-color;
 
   @media (max-width: $screen-sm) {
     display: block;

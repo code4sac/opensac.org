@@ -16,7 +16,7 @@ $toolbar-height: 84px;
   width: 100%;
   height: $toolbar-height;
   color: $secondary-50;
-  background: $neutral-900;
+  background: $hero-background-color;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   z-index: 4;
   // overflow: hidden;
@@ -122,9 +122,6 @@ $toolbar-height: 84px;
   display:block;
   flex-basis: 100%;
   background: $secondary-50;
-  * {
-  background: $secondary-50;
-  }
 }
 
 .navbar-extended-content ul {
@@ -148,13 +145,9 @@ $toolbar-height: 84px;
 }
 
 .navbar-extended-mobile-container {
-  * {
-    background: $neutral-900;
-  }
-
   height: 100%;
   color: $secondary-50;
-  background: $neutral-900;
+  background: $hero-background-color;
 }
 
 .navbar-extended-desktop-left-container {
