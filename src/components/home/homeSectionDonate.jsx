@@ -14,13 +14,13 @@ export default function HomeSectionDonate({sectionType}) {
       </div>
       <div className={`donate-section-paragraph-container`}>
         <p className={`home-section-${sectionType}-paragraph`}>
-          <span>Your support, whether through donations or volunteering,</span>is instrumental in driving positive
+          <span>Your support, whether through donations or volunteering,</span> is instrumental in driving positive
           change with Open Sacramento.<br/><br/><span>Donations fuel our technology</span>-driven initiatives that
-          address civic challenges, enhance public services, and amplify community voices.<br/><br/><span>When you volunteer, you actively contribute your skills</span>-
+          address civic challenges, enhance public services, and amplify community voices.<br/><br/><span> When you volunteer, you actively contribute your skills </span>-
           be it coding, designing, or any other expertise - to create tangible solutions that make a real
           impact.<br/><br/>Together, we shape a better future for our city, amplifying voices, enhancing services, and
           driving
-          innovation.<span>Join us today and be a catalyst for lasting, community-driven transformation!</span>
+          innovation.<span> Join us today and be a catalyst for lasting, community-driven transformation!</span>
         </p>
         <div className={`home-buttons-group`}>
           <a href="" className={`home-button home-button-numbered`}>Get Started</a>

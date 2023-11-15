@@ -14,14 +14,14 @@ footer {
   padding: 40px 80px;
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
 
   @media (max-width: $screen-md) {
     padding: 40px;
     gap: 32px;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
   }
 }
@@ -99,7 +99,7 @@ footer {
 
   @media (max-width: $screen-md) {
     width: 100%;
-    justify-content: start;
+    justify-content: flex-start;
     padding: 0;
   }
 }
