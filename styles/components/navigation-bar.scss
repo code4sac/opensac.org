@@ -42,6 +42,7 @@ $toolbar-height: 84px;
 
 .navbar-toolbar-main {
   display: block;
+  max-height: $toolbar-height;
   flex-basis: 100%;
 }
 

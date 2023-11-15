@@ -53,9 +53,11 @@ export default function AppNavbar() {
           </div>
         </div>
       </div>
-          <div className={'navbar-toolbar-extended'}>
-              {extendedMenuVisible ? <DropdownMenu /> : null}
-      </div>
+      {extendedMenuVisible ?
+        <div className={'navbar-toolbar-extended'}>
+          <DropdownMenu />
+        </div>
+      : null}
     </nav>
   )
 }
