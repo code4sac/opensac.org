@@ -9,7 +9,7 @@ It is made up of three sections.
 - Right: Dropdown link that displays extended section
  */
 
-$toolbar_height: 84px;
+$toolbar-height: 84px;
 
 .navbar-toolbar {
   @include h5-semi-bold;
@@ -19,12 +19,14 @@ $toolbar_height: 84px;
   background: $neutral-900;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   z-index: 4;
-  overflow: hidden;
+  // overflow: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: fixed;
   top: 0;
+  display: flex;
+  flex-wrap: wrap;
 
   a, .navbar-toolbar a:visited, .navbar-toolbar a:link {
     color: $secondary-50;
@@ -32,20 +34,15 @@ $toolbar_height: 84px;
     padding: 0;
     margin: 0;
   }
-
-  * {
-    color: $secondary-50;
-    background: $neutral-900;
-    box-sizing: border-box;
-  }
 }
 
 .navbar-toolbar + div {
   margin-top: $toolbar-height;
 }
 
-#navbar-toolbar-main {
-  container-type: inline-size;
+.navbar-toolbar-main {
+  display: block;
+  flex-basis: 100%;
 }
 
 .navbar-nested-parent-link img {
@@ -119,9 +116,15 @@ $toolbar_height: 84px;
 }
 
 
-#navbar-toolbar-extended {
+.navbar-toolbar-extended {
   margin: 0;
   padding: 0;
+  display:block;
+  flex-basis: 100%;
+  background: $secondary-50;
+  * {
+  background: $secondary-50;
+  }
 }
 
 .navbar-extended-content ul {
@@ -135,14 +138,6 @@ $toolbar_height: 84px;
 }
 
 .navbar-extended-mobile-section li.active a {
-  color: $secondary-50;
-  background: $neutral-900;
-}
-
-.navbar-toolbar-extended {
-  margin: 0;
-  padding: 0;
-
   color: $secondary-50;
   background: $neutral-900;
 }

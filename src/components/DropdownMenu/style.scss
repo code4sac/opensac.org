@@ -1,0 +1,146 @@
+@import "styles/abstract/variables.scss";
+
+.dropdown-menu {
+  align-items: center;
+  background-color: var(--secondarysecondary-50);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #ebeae5;
+  display: flex;
+  gap: 80px;
+  height: 240px;
+  justify-content: center;
+  padding: 40px 0px;
+  position: relative;
+  width: 1440px;
+}
+
+.dropdown-menu .div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: -12.5px;
+  margin-top: -12.5px;
+  padding: 20px 0px;
+  position: relative;
+  width: 257px;
+}
+
+.dropdown-menu .text-wrapper-2 {
+  color: #000000;
+  font-family: var(--heading-h4-semi-bold-font-family);
+  font-size: var(--heading-h4-semi-bold-font-size);
+  font-style: var(--heading-h4-semi-bold-font-style);
+  font-weight: var(--heading-h4-semi-bold-font-weight);
+  height: 37px;
+  letter-spacing: var(--heading-h4-semi-bold-letter-spacing);
+  line-height: var(--heading-h4-semi-bold-line-height);
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: 220px;
+}
+
+.dropdown-menu .p {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: $x-small;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: 235px;
+}
+
+.dropdown-menu .button-instance {
+  background-color: var(--secondarysecondary-300) !important;
+  border: 1px solid !important;
+  border-color: var(--secondarysecondary-500) !important;
+  flex: 0 0 auto !important;
+}
+
+.dropdown-menu .design-component-instance-node {
+  color: var(--neutralneutral-900) !important;
+}
+
+.dropdown-menu .button-2 {
+  background-color: var(--secondarysecondary-300) !important;
+  border: 1px solid !important;
+  border-color: var(--secondarysecondary-300) !important;
+  flex: 0 0 auto !important;
+}
+
+.dropdown-menu .div-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: -7.5px;
+  margin-top: -7.5px;
+  padding: 20px 0px;
+  position: relative;
+  width: 257px;
+}
+
+.dropdown-menu .flexcontainer {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-menu .text-i {
+  align-self: stretch;
+  color: var(--neutralneutral-900);
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: relative;
+}
+
+.dropdown-menu .span {
+  color: #060618;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.dropdown-menu .text-i-2 {
+  align-self: stretch;
+  color: var(--neutralneutral-900);
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: -14px;
+  position: relative;
+}
+
+.dropdown-menu .text-wrapper-3 {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.dropdown-menu .text-wrapper-4 {
+  font-weight: 600;
+}
+
+.dropdown-menu .for-any-questions {
+  color: var(--neutralneutral-900);
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

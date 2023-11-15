@@ -1,4 +1,5 @@
 import '@/styles/components/navigation-bar.scss'
+import {DropdownMenu} from '@/components/DropdownMenu'
 
 /**
  * Default application navigation bar.
@@ -46,6 +47,9 @@ export default function AppNavbar() {
           </div>
         </div>
       </div>
+          <div className={'navbar-toolbar-extended'}>
+              <DropdownMenu></DropdownMenu>
+          </div>
     </nav>
   )
 }
