@@ -1,11 +1,3 @@
-import "@/styles/pages/faq.scss";
-
-/**
- * Home page default section 2.
- * @returns {JSX.Element}
- * @constructor
- */
-
 export default function FaqSectionStart({ sectionType }) {
   return (
     <section className={`faq-section-${sectionType}`}>
@@ -24,5 +16,5 @@ export default function FaqSectionStart({ sectionType }) {
         </p>
       </div>
     </section>
-  );
+  )
 }

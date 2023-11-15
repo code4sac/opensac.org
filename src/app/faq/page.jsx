@@ -1,10 +1,9 @@
-import "styles/pages/faq.scss";
-import Faq from "@/components/faq/faq";
+import Faq from './faq'
 
 export default function FaqPage() {
   return (
     <>
       <Faq />
     </>
-  );
+  )
 }

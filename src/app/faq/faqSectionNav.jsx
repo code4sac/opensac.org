@@ -1,13 +1,6 @@
-import "@/styles/pages/faq.scss";
-import Link from "next/link";
+import Link from 'next/link'
 
-/**
- * Home page default section 2.
- * @returns {JSX.Element}
- * @constructor
- */
-
-export default function faqSectionNav({ sectionType, topics }) {
+export default function FaqSectionNav({ sectionType, topics }) {
   return (
     <section className="faq-container">
       <nav className={`faq-nav faq-nav-${sectionType}`}>
@@ -18,5 +11,5 @@ export default function faqSectionNav({ sectionType, topics }) {
         ))}
       </nav>
     </section>
-  );
+  )
 }

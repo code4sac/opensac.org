@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState } from 'react'
 
 export default function FaqAccordion(item) {
   const [isShowing, setIsShowing] = useState(false);
@@ -11,7 +11,7 @@ export default function FaqAccordion(item) {
 
   return (
     <section
-      className={isShowing ? "faq-question question-open" : "faq-question"}
+      className={isShowing ? 'faq-question question-open' : 'faq-question'}
       key={item.key}
     >
       <a onClick={toggle}>
@@ -19,5 +19,5 @@ export default function FaqAccordion(item) {
       </a>
       <p className="question-text">{item.text}</p>
     </section>
-  );
+  )
 }
