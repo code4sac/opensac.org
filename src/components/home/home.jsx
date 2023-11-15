@@ -21,7 +21,7 @@ export const SectionType = {
  * @constructor
  */
 export default function Home() {
-  return (<div className="">
+  return (<div className="home-page-container">
     <HomeSectionLandingImage sectionType={SectionType.dark}></HomeSectionLandingImage>
     <HomeSectionDefault2 sectionType={SectionType.light}></HomeSectionDefault2>
     <HomeSectionAboutImage sectionType={SectionType.dark}></HomeSectionAboutImage>
