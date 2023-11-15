@@ -2,7 +2,8 @@
 
 Data files from the old website codeforsac.org.
 
-pastsupporters.yml
+### pastsupporters.yml
+
 ```yaml
 - name: Trinity Technology Group
   logo: trinity_technology_group.png
@@ -18,14 +19,16 @@ pastsupporters.yml
   website: http://www.theurbanhive.com/
 ```
 
-supporters.yml
+### supporters.yml
+
 ```yaml
 - name: City of Sacramento
   logo: city_of_sacramento.png
   website: http://www.cityofsacramento.org/
 ```
 
-featured-apps.yml
+### featured-apps.yml
+
 ```yaml
 # Featured apps
 - name: Open Budget Sacramento
@@ -42,7 +45,8 @@ featured-apps.yml
   url: https://github.com/code4sac/learning-blocks
 ```
 
-core_team.yml
+### core_team.yml
+
 ```yaml
 # Open Sacramento core team members
 # See: https://drive.google.com/drive/folders/0B5cI7rQXjIbbZS1lNWtjNUlvZFU?resourcekey=0-pkCVfUUUX-L6d2Rh274Agg
@@ -87,7 +91,8 @@ core_team.yml
   linkedin: https://www.linkedin.com/in/natebassfish/
 ```
 
-bitly.yml
+### bitly.yml
+
 ```yaml
 # Bitly links used by application.
 # See: https://bitly.com
