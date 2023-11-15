@@ -22,6 +22,11 @@ Home page layout
   }
 }
 
+.home-landing-background {
+  background-color: $landing-background-color;
+  color: $neutral-50;
+}
+
 .home-landing-container {
   width: 40%;
   min-height: 721px;
@@ -30,6 +35,7 @@ Home page layout
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  color: $neutral-50;
 
   @media (max-width: $screen-xl) {
     width: 70%;
@@ -66,8 +72,6 @@ Home page layout
 
 .home-section-landing-image {
   display: none;
-  background: $hero-background-color;
-
   @media (max-width: $screen-sm) {
     display: block;
     width: 100%;

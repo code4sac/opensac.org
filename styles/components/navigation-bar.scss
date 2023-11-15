@@ -16,7 +16,7 @@ $toolbar-height: 84px;
   width: 100%;
   height: $toolbar-height;
   color: $secondary-50;
-  background: $hero-background-color;
+  background: $landing-background-color;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   z-index: 4;
   // overflow: hidden;
@@ -159,7 +159,7 @@ img {
 .navbar-extended-mobile-container {
   height: 100%;
   color: $secondary-50;
-  background: $hero-background-color;
+  background: $landing-background-color;
 }
 
 .navbar-extended-desktop-left-container {
