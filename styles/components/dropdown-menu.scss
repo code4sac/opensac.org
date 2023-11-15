@@ -1,0 +1,127 @@
+@import "../abstracts/variables.scss";
+@import "../abstracts/mixins";
+
+.dropdown-menu {
+  align-items: center;
+  background-color: $secondary-50;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #ebeae5;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  padding: 40px 0px;
+  width: auto;
+}
+
+.dropdown-menu .div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0px;
+  position: relative;
+  width: 257px;
+}
+
+.dropdown-menu .text-wrapper-2 {
+    @include h4-semi-bold;
+  color: $neutral-900;
+  position: relative;
+  white-space: nowrap;
+  width: 220px;
+}
+
+.dropdown-menu .p {
+  @include p1-regular;
+  color: $neutral-900;
+}
+
+.dropdown-menu .button-instance {
+  background-color: var(--secondarysecondary-300) !important;
+  border: 1px solid !important;
+  border-color: var(--secondarysecondary-500) !important;
+  flex: 0 0 auto !important;
+}
+
+.dropdown-menu .design-component-instance-node {
+  color: var(--neutralneutral-900) !important;
+}
+
+.dropdown-menu .button-2 {
+  background-color: var(--secondarysecondary-300) !important;
+  border: 1px solid !important;
+  border-color: var(--secondarysecondary-300) !important;
+  flex: 0 0 auto !important;
+}
+
+.dropdown-menu .div-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0px;
+  position: relative;
+  width: 257px;
+}
+
+.dropdown-menu .flexcontainer {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-menu .text-i {
+  align-self: stretch;
+  color: var(--neutralneutral-900);
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: relative;
+}
+
+.dropdown-menu .span {
+  color: #060618;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.dropdown-menu .text-i-2 {
+  align-self: stretch;
+  color: var(--neutralneutral-900);
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: relative;
+}
+
+.dropdown-menu .text-wrapper-3 {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.dropdown-menu .text-wrapper-4 {
+  font-weight: 600;
+}
+
+.dropdown-menu .for-any-questions {
+  color: var(--neutralneutral-900);
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

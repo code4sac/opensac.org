@@ -1,5 +1,6 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../base/animations";
 
 /*
 Home page layout
@@ -21,6 +22,11 @@ Home page layout
   }
 }
 
+.home-landing-background {
+  background-color: $landing-background-color;
+  color: $neutral-50;
+}
+
 .home-landing-container {
   width: 40%;
   min-height: 721px;
@@ -29,6 +35,7 @@ Home page layout
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  color: $neutral-50;
 
   @media (max-width: $screen-xl) {
     width: 70%;
@@ -65,11 +72,9 @@ Home page layout
 
 .home-section-landing-image {
   display: none;
-
   @media (max-width: $screen-sm) {
     display: block;
     width: 100%;
-    margin-top: 23px;
   }
 }
 
@@ -82,6 +87,8 @@ Home page layout
 .home-button {
   color: $secondary-50;
   background-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
 
   border: solid $secondary-500 1px;
   border-radius: 6px;
@@ -90,12 +97,15 @@ Home page layout
   width: fit-content;
 
   @include button-regular;
+  @include dark-button-transition;
 }
 
 .home-button-alt {
   /* alternative colors */
   background-color: $secondary-500;
   color: $neutral-900;
+  
+  @include light-button-transition;
 }
 
 .home-button-numbered {

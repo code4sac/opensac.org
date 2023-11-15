@@ -37,6 +37,7 @@
     "sass": "^1.69.5"
   },
   "dependencies": {
-    "keen-slider": "^6.8.6"
+    "keen-slider": "^6.8.6",
+    "prop-types": "^15.8.1"
   }
 }
