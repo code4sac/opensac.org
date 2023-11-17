@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "keen-slider": "^6.8.6",
+    "node": "^18.14.0",
     "prop-types": "^15.8.1"
   }
 }
