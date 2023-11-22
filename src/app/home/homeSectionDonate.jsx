@@ -1,5 +1,3 @@
-import '@/styles/pages/home.scss'
-
 /**
  * Home donate section.
  * @returns {JSX.Element}

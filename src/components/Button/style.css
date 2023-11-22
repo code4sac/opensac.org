@@ -2,7 +2,6 @@
   all: unset;
   align-items: flex-start;
   border-radius: 6px;
-  box-sizing: border-box;
   display: inline-flex;
   gap: 8px;
   position: relative;

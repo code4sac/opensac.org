@@ -1,5 +1,9 @@
 import Link from 'next/link'
 
+/**
+ * Frequently-asked questions page.
+ * @returns {JSX.Element}
+ */
 export default function FaqSectionNav({ sectionType, topics }) {
   return (
     <section className="faq-container">

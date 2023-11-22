@@ -1,6 +1,10 @@
 @import "../abstracts/variables.scss";
 @import "../abstracts/mixins";
 
+/*
+Navigation bar drop down menu.
+*/
+
 .dropdown-menu {
   align-items: center;
   background-color: $secondary-50;
@@ -26,7 +30,7 @@
 }
 
 .dropdown-menu .text-wrapper-2 {
-    @include h4-semi-bold;
+  @include h4-semi-bold;
   color: $neutral-900;
   position: relative;
   white-space: nowrap;

@@ -1,8 +1,8 @@
-@import "abstracts/variables";
-@import "abstracts/mixins";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 /*
-FAQ page layout
+FAQ page layout.
  */
 
 .faq-section-light {
@@ -172,6 +172,7 @@ FAQ page layout
   padding-top: 0px;
   padding-bottom: 20px;
   display: none;
+
   @media (max-width: $screen-md) {
     color: $neutral-800;
     @include p2-regular;

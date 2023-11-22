@@ -15,9 +15,10 @@ $secondary-500: #ffc107;
 $neutral-900: #060718;
 $primary-900: #00081f;
 $landing-background-color: #030303;
+$navbar-color: #000000;
 
 /* 
-Screen breakpoints
+Screen breakpoints.
 */
 $screen-xs: 400px;
 $screen-sm: 576px;
@@ -25,3 +26,8 @@ $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 $screen-xxl: 1400px;
+
+/* 
+Layout variables.
+*/
+$toolbar-height: 84px;
