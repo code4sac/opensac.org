@@ -42,7 +42,7 @@ Home page layout
 
   @media (max-width: $screen-md) {
     width: auto;
-    padding: 96px 40px 0px 40px;
+    padding: 96px 40px 60px 40px;
     justify-content: flex-start;
     padding-top: 30%;
   }
@@ -103,7 +103,8 @@ Home page layout
   /* alternative colors */
   background-color: $secondary-500;
   color: $neutral-900;
-  
+  position: relative;
+
   @include light-button-transition;
 }
 
