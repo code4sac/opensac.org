@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 /**
- * Frequently-asked questions page.
+ * Frequently-asked questions menu.
  * @returns {JSX.Element}
  */
 export default function FaqAccordion(item) {

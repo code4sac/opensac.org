@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 /**
- * Frequently-asked questions page.
+ * Frequently-asked questions navigation section.
  * @returns {JSX.Element}
  */
 export default function FaqSectionNav({ sectionType, topics }) {

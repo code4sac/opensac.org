@@ -27,7 +27,6 @@ export default function AppNavbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-
   return (
     <>
       <nav className={'navbar-toolbar'} style={{ backgroundColor: `rgba(0,0,0, ${opacity})` }}>
