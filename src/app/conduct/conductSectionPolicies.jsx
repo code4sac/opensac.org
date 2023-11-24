@@ -1,6 +1,6 @@
 export default function conductSectionPolicies() {
     return (
-      <section>
+      <section className={`conduct-dark-theme`}>
         <div className={`conduct-policy-landing-container conduct-dark-theme`}>
             <div className={`conduct-section-heading-container conduct-heading-underline underline-alt`}>
                 <h1 className={`conduct-heading-section conduct-heading-section-alt`}>anti-harassment policy</h1>
@@ -19,7 +19,7 @@ export default function conductSectionPolicies() {
             </p>
         </div>
 
-        <div className={`conduct-list-container conduct-dark-theme`}>
+        <div className={`conduct-policy-body-container`}>
           <h3 className={`conduct-sub-heading`}>
             Open Sacramento fosters a community that:
           </h3>

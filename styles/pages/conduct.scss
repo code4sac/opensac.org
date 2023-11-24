@@ -27,13 +27,16 @@ conduct page layout
     gap: 24px;
 
     @media (max-width: $screen-md) {
+      padding: 96px 60px;
+    }
+
+    @media (max-width: $screen-md) {
       padding: 48px 40px;
       flex-direction: column;
     }
 }
 
 .conduct-section-heading-container {
-    width: 50%;
     position: relative;
     width: 100%;
 }
@@ -45,6 +48,11 @@ conduct page layout
     align-items: center;
     justify-content: center;
     gap: 30px;
+
+    @media (max-width: $screen-md) {
+        padding: 0px 25px 48px 25px;
+        gap: 24px;
+    }
 }
 
 .conduct-heading-underline::after {
@@ -117,6 +125,12 @@ conduct page layout
     justify-content: flex-start;
     gap: 30px;
     width: 100%;
+
+    @media (max-width: $screen-md) {
+        gap: 16px;
+        padding: 0;
+        align-items: flex-start;
+    }
 }
 
 .conduct-item-image {
@@ -149,11 +163,33 @@ conduct page layout
     align-items: center;
     justify-content: center;
     gap: 24px;
+
+    @media (max-width: $screen-md) {
+        padding: 48px 40px 0px 40px;
+    }
+}
+
+.conduct-policy-body-container {
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    @media (max-width: $screen-md) {
+        padding: 48px 40px;
+        gap: 40px;
+    }
 }
 
 // Email template
 .conduct-email-header-container {
     padding: 48px 80px 24px 80px;
+
+    @media (max-width: $screen-md) {
+        padding: 48px 25px 0px 25px;
+    }
 }
 
 .conduct-email-template-container{
@@ -161,4 +197,8 @@ conduct page layout
     flex-direction: column;
     gap: 10px;
     padding: 20px 80px 40px 80px;
+
+    @media (max-width: $screen-md) {
+        padding: 32px 25px 48px 25px;
+    }
 }
