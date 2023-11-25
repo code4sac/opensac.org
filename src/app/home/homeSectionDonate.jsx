@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * Home donate section.
  * @returns {JSX.Element}
@@ -20,8 +22,8 @@ export default function HomeSectionDonate({ sectionType }) {
           innovation.<span> Join us today and be a catalyst for lasting, community-driven transformation!</span>
         </p>
         <div className={`home-buttons-group`}>
-          <a href="" className={`home-button home-button-numbered`}>Get Started</a>
-          <a href="" className={`home-button home-button-alt`}>Donate</a>
+          <Link href="/get-started" className={`home-button home-button-numbered`}>Get Started</Link>
+          <Link href="" className={`home-button home-button-alt`}>Donate</Link>
         </div>
       </div>
     </section>
