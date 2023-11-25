@@ -107,6 +107,13 @@ Application fonts.
   line-height: 24px;
 }
 
+@mixin p2-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 @mixin p3-bold {
   font-weight: 700;
   font-size: 18px;
