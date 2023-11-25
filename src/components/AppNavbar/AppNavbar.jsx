@@ -67,7 +67,7 @@ export default function AppNavbar({ extended = false, fade = false }) {
           <div className={'navbar-toolbar-content'}>
             <div className={'navbar-left-container'}>
               <Link className={'navbar-left-section'} href="/">
-                <img src="/img/Open Sac - Black Logo.png" alt="Open Sacramento logo" height="60" width="200" />
+                <img src="/img/opensac_logo_dark_01.png" alt="Open Sacramento logo" height="60" width="200" />
               </Link>
             </div>
 
@@ -89,25 +89,25 @@ export default function AppNavbar({ extended = false, fade = false }) {
               </ul>
             </div>
 
-            <div className={`navbar-right-container  ${extendedMenuVisible ? 'navbar-extend-background-active' : 'navbar-extend-background-inactive'}`} >
-              <div className={`navbar-right-section`} >
-                <div className={`navbar-nested-parent-link`} >
-                  <button type="button" onClick={onClickExtendMenu}>
-                    Get Involved
+            <div className={`navbar-right-container ${extendedMenuVisible ? 'navbar-extend-background-active' : 'navbar-extend-background-inactive'}`}>
+              <div className={`navbar-right-section`}>
+                <div className={`navbar-nested-parent-link`}>
+                  <button className={`${extendedMenuVisible ? 'navbar-extended-button-extended' : 'navbar-extended-button'}`} type="button" alt="Extend navigation bar." onClick={onClickExtendMenu}>
+                    <span className="navbar-extend-button-text">Get Involved</span>
                   </button>
                 </div>
-              </div >
-            </div >
-          </div >
-        </div >
+              </div>
+            </div>
+          </div>
+        </div>
         {
           extendedMenuVisible ?
             <div className={'navbar-toolbar-extended'}>
-              < DropdownMenu visible={extendedMenuVisible} />
-            </div >
+              <DropdownMenu visible={extendedMenuVisible} />
+            </div>
             : null
         }
-      </nav >
+      </nav>
     </div>
   )
 }

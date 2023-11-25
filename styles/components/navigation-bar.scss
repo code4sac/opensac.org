@@ -138,24 +138,51 @@ It is made up of three sections.
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}
+  background: $navbar-color url("/img/navbar/menu_hamburger_light.svg");
+  background-position: center right;
+  background-repeat: no-repeat;
 
-.navbar-nested-parent-link {
-  button {
-    background: transparent url("/img/chevron-down.png");
-    background-position: center right;
-    background-repeat: no-repeat;
-    border: none;
-    padding: 0 20px 0 0;
-    font: inherit;
-    outline: inherit;
-    cursor: pointer;
+  @media screen and (min-width: $screen-md) {
+    background: transparent;
   }
 }
 
-.navbar-extend-background-inactive {
+.navbar-extend-button-text {
+  @media screen and (min-width: $screen-md) {
+    color: inherit;
+    display: inline;
+  }
+}
+
+.navbar-nested-parent-link {
+  background: transparent;
+
   button {
-    color: $secondary-500 !important;
+    border: none;
+    font: inherit;
+    outline: inherit;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    button {
+      padding: 0 20px 0 0;
+      color: $secondary-500;
+    }
+
+    .navbar-extended-button {
+      background: transparent url("/img/navbar/chevron_down.png");
+      background-position: center right;
+      background-repeat: no-repeat;
+    }
+
+    .navbar-extended-button-extended {
+      background: transparent url("/img/navbar/chevron_up.png");
+      background-position: center right;
+      background-repeat: no-repeat;
+    }
   }
 }
 
