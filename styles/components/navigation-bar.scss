@@ -10,8 +10,14 @@ It is made up of three sections.
 - Right: Dropdown link that displays extended section
  */
 
+// Background behind the navbar. It requires the navbar to be transparent and offset page content. By default, this is not shown; it is overridden by the navbar-toolbar background color. 
 .navbar-background {
   background: $landing-background-color;
+
+  // Add margin to first element after navbar. This offsets the page content.
+  +* {
+    margin-top: $toolbar-height;
+  }
 }
 
 .navbar-toolbar {
@@ -39,30 +45,10 @@ It is made up of three sections.
   }
 }
 
-.navbar-toolbar+div {
-  margin-top: $toolbar-height;
-}
-
 .navbar-toolbar-main {
   display: block;
   max-height: $toolbar-height;
   flex-basis: 100%;
-}
-
-.navbar-nested-parent-link {
-  button {
-    color: $secondary-50;
-    background: none;
-    // color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    outline: inherit;
-  }
-
-  img {
-    margin-left: 2px;
-  }
 }
 
 .navbar-link {
@@ -83,11 +69,11 @@ It is made up of three sections.
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 16px;
 }
 
 .navbar-left-container {
   display: inline-flex;
+  padding: 10px 16px;
 }
 
 .navbar-left-section {
@@ -98,6 +84,7 @@ It is made up of three sections.
 
 .navbar-middle-container {
   display: inline-flex;
+  padding: 10px 0;
 }
 
 .navbar-middle-section {
@@ -114,17 +101,17 @@ It is made up of three sections.
 }
 
 .one~.navbar-underline {
-  margin-left: -85%;
+  margin-left: -86%;
   display: block;
 }
 
 .two~.navbar-underline {
-  margin-left: -33%;
+  margin-left: -34%;
   display: block;
 }
 
 .three~.navbar-underline {
-  margin-left: 24%;
+  margin-left: 23%;
   display: block;
 }
 
@@ -143,10 +130,41 @@ It is made up of three sections.
 
 .navbar-right-container {
   display: inline-flex;
+  height: $toolbar-height;
+  padding: 10px 16px;
 }
 
 .navbar-right-section {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nested-parent-link {
+  button {
+    background: transparent url("/img/chevron-down.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 0 20px 0 0;
+    font: inherit;
+    outline: inherit;
+    cursor: pointer;
+  }
+}
+
+.navbar-extend-background-inactive {
+  button {
+    color: $secondary-500 !important;
+  }
+}
+
+.navbar-extend-background-active {
+  background: $secondary-50;
+
+  button {
+    color: $neutral-900;
+  }
 }
 
 .navbar-toolbar-extended {
