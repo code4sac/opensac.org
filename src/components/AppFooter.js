@@ -1,4 +1,5 @@
 import '@/styles/components/footer.scss'
+import Link from 'next/link'
 
 /**
  * Default application footer.
@@ -16,35 +17,35 @@ export default function AppFooter() {
 
         <div className="footerActionLinks">
           <p className="footerActionLinksItem">
-            Join us for our weekly meetings on <a href="/" className="footerActionLinksAnchor">meetup.</a>
+            Join us for our weekly meetings on <Link href="/" className="footerActionLinksAnchor">meetup.</Link>
           </p>
           <p className="footerActionLinksItem">
-            See our <a href="/" className="footerActionLinksAnchor">projects.</a>
+            See our <Link href="/" className="footerActionLinksAnchor">projects.</Link>
           </p>
           <p className="footerActionLinksItem">
-            For any questions, visit our <a href="/" className="footerActionLinksAnchor">FAQs.</a>
+            For any questions, visit our <Link href="/" className="footerActionLinksAnchor">FAQs.</Link>
           </p>
         </div>
 
         <div className="footerSocialMedia">
-          <a href="/" className="footerSocialMediaLink">
+          <Link href="/" className="footerSocialMediaLink">
             <img src="/img/socialmedia/facebook.svg" alt="Facebook" className="footerSocialMediaIcon" />
-          </a>
-          <a href="/" className="footerSocialMediaLink">
+          </Link>
+          <Link href="/" className="footerSocialMediaLink">
             <img src="/img/socialmedia/twitter.svg" alt="X" className="footerSocialMediaIcon" />
-          </a>
-          <a href="/" className="footerSocialMediaLink">
+          </Link>
+          <Link href="/" className="footerSocialMediaLink">
             <img src="/img/socialmedia/youtube.svg" alt="Youtube" className="footerSocialMediaIcon" />
-          </a>
+          </Link>
         </div>
       </div>
 
       <div className="footerBottomContainer">
         <div className="footerBottomTitle">Open Sacramento</div>
         <div className="footerBottomLinksContainer">
-          <a href="/" className="footerBottomLink">get started</a>
-          <a href="/" className="footerBottomLink">our team</a>
-          <a href="/" className="footerBottomLink">code of conduct</a>
+          <Link href="/get-started" className="footerBottomLink">get started</Link>
+          <Link href="/" className="footerBottomLink">our team</Link>
+          <Link href="/" className="footerBottomLink">code of conduct</Link>
         </div>
       </div>
     </footer>
