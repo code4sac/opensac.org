@@ -22,6 +22,7 @@ function setOpacity(currentScrollHeight) {
  */
 export default function AppNavbar({ extended = false, fade = false }) {
   const [extendedMenuVisible, showExtendedMenu] = useState(false)
+  const [previousURL, setPreviousURL] = useState('/')
   const [fadeLayout, setFadeLayout] = useState(fade)
   const [currentScrollHeight, setCurrentScrollHeight] = useState(9999)
   const onClickExtendMenu = () => showExtendedMenu(!extendedMenuVisible)
@@ -40,6 +41,11 @@ export default function AppNavbar({ extended = false, fade = false }) {
       default:
         if (fadeLayout == true && extendedMenuVisible == false) setFadeLayout(false)
     }
+  }
+
+  if (websiteURL !== previousURL) {
+    showExtendedMenu(false)
+    setPreviousURL(websiteURL)
   }
 
   useEffect(() => {
@@ -97,7 +103,7 @@ export default function AppNavbar({ extended = false, fade = false }) {
         {
           extendedMenuVisible ?
             <div className={'navbar-toolbar-extended'}>
-              < DropdownMenu />
+              < DropdownMenu visible={extendedMenuVisible} />
             </div >
             : null
         }
