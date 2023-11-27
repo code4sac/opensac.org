@@ -9,7 +9,7 @@ import Link from 'next/link'
 const DropdownMenu = (visible = false) => {
   function hide() {
     visible = false
-  }                           
+  }
   return (
     <div className="dropdown-menu" style={visible ? {} : { display: 'none' }}>
       <div className="section-item">
@@ -21,7 +21,7 @@ const DropdownMenu = (visible = false) => {
         <Link href="get-started" className="dropdown-button" onClick={hide}>Get Started</Link>
       </div>
       <div className="section-item">
-        <div className="text-wrapper-2">Project</div>
+        <div className="text-wrapper-2">Projects</div>
         <p className="section-content">
           Explore our projects and discover how you can contribute your skills to drive innovation and create positive
           change.
