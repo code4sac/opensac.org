@@ -24,14 +24,16 @@ export default function ContactSectionMission() {
           Check out our weekly meetings on our <a href="/" className="contactActionLinksAnchor">meetup page.</a>
         </p>
       </div>
-      {/* <img
-        src="/img/open_data_day_curved.png"
-        alt="Open Data Day"
-        className={`contact-action-image`}
-      /> */}
-      <div>
-        hello
-      </div>
+          <form>
+            <div class='name-holder'>
+              <div class='name-input'><lable for='fname'>First Name</lable><input type='text' id='fname' placeholder='John'></input></div>
+              <div class='name-input'><lable for='lname'>Last Name</lable><input type='text' id='lname' placeholder='Smith'></input></div>
+            </div>
+            <div class='name-input'><lable for='email'>Email</lable> <input type='text' id='email' placeholder='example@email.com'></input></div>
+            <div class='name-input'><lable for='subject'>Subject</lable> <input type='text' id='subject' placeholder='Write your subject..'></input></div>
+            <div class='name-input'><lable for='message'>Message</lable><input type='text' id='message' placeholder='Write your message..'></input></div>
+            <input type='submit' value="Submit"></input>
+          </form>
     </section>
   )
 }

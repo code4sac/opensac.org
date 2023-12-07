@@ -111,11 +111,7 @@ contact page layout
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 192px 0 192px 80px;
-    // background-image: url("/img/open_data_day_curved.png");
-    // background-repeat: no-repeat;
-    // background-size: 45vw 40vw;
-    // background-position: right center;
+    padding: 192px 80px 192px 80px;
 
     @media (min-width: 1700px) {
       background-size: 40% 80%;
@@ -143,23 +139,6 @@ contact page layout
     }
 }
 
-.contact-action-image {
-    display: none;
-    margin-top: 40px;
-
-    @media (max-width: $screen-lg) {
-      display: block;
-      height: 50vw;
-      margin-bottom: 80px;
-    }
-
-    @media (max-width: $screen-md) {
-      display: block;
-      height: 70vw;
-      margin-bottom: 80px;
-    }
-}
-
 .contactActionLinksAnchor {
     cursor: pointer;
     color: var(--secondary-secondary-500, #FFC107);
@@ -171,3 +150,52 @@ contact page layout
     text-decoration-line: underline;
 
   }
+.name-holder {
+  display: flex;
+}
+.name-input{
+  display: flex;
+  flex:1 1 100;
+  flex-direction: column;
+  padding-bottom: 10px;
+  width: 100%;
+}
+form{
+  // overflow: hidden;
+  // display: flex;
+  // flex-wrap: wrap;
+  width: 65vh;
+}
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px; /* Add padding to input fields for better visual appearance */
+  margin-top: 5px; /* Adjust margin for better spacing */
+  color:var(--shade-white, #FFF);
+  // font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1px; /* 142.857% */
+
+  background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value as needed */
+  border-radius: 4px;
+border: 1px solid var(--shade-white, #FFF);
+// align-self: stretch;
+}
+
+input::placeholder {
+  color: var(--shade-white, #FFF); /* Set the desired placeholder text color */
+  /* Paragraph/P1/Regular */
+  // font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1px; /* 142.857% */
+}
+label {
+  margin-bottom: 5px; /* Add some space below labels */
+}
+#message{
+  min-height: 10vh;
+}
