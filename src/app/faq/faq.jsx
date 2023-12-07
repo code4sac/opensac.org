@@ -2,7 +2,6 @@ import FaqSectionStart from './faqSectionStart'
 import FaqSectionNav from './faqSectionNav'
 import FaqAccordion from './faqAccordion'
 import faqTexts from './faqText'
-import '@/styles/pages/faq.scss'
 
 /**
  * Section type. Displays light or dark themes.
@@ -41,7 +40,7 @@ const Topics = function commonItems({ texts }) {
 }
 
 /**
- * Frequently-asked questions.
+ * Frequently-asked questions page.
  * @returns {JSX.Element}
  */
 export default function Faq(common) {

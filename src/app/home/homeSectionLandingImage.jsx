@@ -1,5 +1,4 @@
-import { SectionType } from './home'
-import '@/styles/pages/home.scss'
+import Link from "next/link";
 
 /**
  * Home projects section.
@@ -20,8 +19,8 @@ export default function HomeSectionLandingImage({ sectionType }) {
             better future!
           </p>
           <div className={`home-buttons-group`}>
-            <a href="" className={`home-button`}>Get Started</a>
-            <a href="" className={`home-button home-button-alt`}> View Projects</a>
+            <Link href="/get-started" className={`home-button`}>Get Started</Link>
+            <Link href="" className={`home-button home-button-alt`}>View Projects</Link>
           </div>
         </div>
       </section>
