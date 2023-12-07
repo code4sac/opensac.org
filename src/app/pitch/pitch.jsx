@@ -1,7 +1,5 @@
 import PitchSectionLanding from './pitchSectionLanding'
 import PitchSectionInstructions from './pitchSectionInstructions'
-import '@/styles/pages/pitch.scss'
-import '@/styles/pages/about.scss'
 
 /**
  * Page for information about how to pitch a project.

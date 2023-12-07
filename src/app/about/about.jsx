@@ -3,7 +3,6 @@ import AboutSectionCollage from './aboutSectionCollage'
 import AboutSectionMission from './aboutSectionMission'
 import AboutSectionTeam from './aboutSectionTeam'
 import AboutSectionOpportunities from './aboutSectionOpportunities'
-import '@/styles/pages/about.scss'
 
 /**
  * About page.

@@ -2,7 +2,6 @@
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 import React from 'react'
-import '@/styles/pages/home.scss'
 
 /**
  * Home projects section.

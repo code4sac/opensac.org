@@ -1,13 +1,17 @@
-"use client";
+'use client'
 
 import { useState } from 'react'
 
+/**
+ * Frequently-asked questions menu.
+ * @returns {JSX.Element}
+ */
 export default function FaqAccordion(item) {
-  const [isShowing, setIsShowing] = useState(false);
+  const [isShowing, setIsShowing] = useState(false)
 
   const toggle = () => {
-    setIsShowing(!isShowing);
-  };
+    setIsShowing(!isShowing)
+  }
 
   return (
     <section
