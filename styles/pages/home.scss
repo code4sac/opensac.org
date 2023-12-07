@@ -5,6 +5,10 @@
 /*
 Home page layout.
  */
+ .home-section-grey {
+  background-color: $neutral-500;
+  color: $secondary-50;
+ }
 
 .home-section-dark {
   background-color: $neutral-900;
@@ -391,6 +395,36 @@ Home page layout.
   background: $secondary-500;
 }
 
+.partnership-section {
+  padding: 64px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  @media (max-width: $screen-lg) {
+    flex-direction: column;
+    padding: 64px 40px;
+  }
+}
+
+.partnership-section-paragraph-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-section-heading-underline-partnership::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 93px;
+  border-bottom: 4px solid $secondary-50;
+  margin-bottom: 20px;
+}
+
+
 .donate-section {
   padding: 64px 80px;
   display: flex;
@@ -440,4 +474,26 @@ Home page layout.
   @media (max-width: $screen-lg) {
     @include p3-bold;
   }
+}
+
+.home-projects-section-partnerships {
+  padding: 96px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  @media (max-width: $screen-md) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 40px;
+    gap: 60px;
+  }
+}
+
+.home-numbered-paragraph-partnerships {
+  @include p3-regular;
+  text-align: left;
+  margin-top: 24px;
 }
