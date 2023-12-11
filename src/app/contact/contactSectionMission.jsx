@@ -26,13 +26,13 @@ export default function ContactSectionMission() {
       </div>
           <form>
             <div class='name-holder'>
-              <div class='name-input'><lable for='fname'>First Name</lable><input type='text' id='fname' placeholder='John'></input></div>
-              <div class='name-input'><lable for='lname'>Last Name</lable><input type='text' id='lname' placeholder='Smith'></input></div>
+              <div class='form-input name-input'><lable for='fname'>First Name</lable><input type='text' id='fname' placeholder='John'></input></div>
+              <div class='form-input'><lable for='lname'>Last Name</lable><input type='text' id='lname' placeholder='Smith'></input></div>
             </div>
-            <div class='name-input'><lable for='email'>Email</lable> <input type='text' id='email' placeholder='example@email.com'></input></div>
-            <div class='name-input'><lable for='subject'>Subject</lable> <input type='text' id='subject' placeholder='Write your subject..'></input></div>
-            <div class='name-input'><lable for='message'>Message</lable><input type='text' id='message' placeholder='Write your message..'></input></div>
-            <input type='submit' value="Submit"></input>
+            <div class='form-input'><lable for='email'>Email</lable> <input type='text' id='email' placeholder='example@email.com'></input></div>
+            <div class='form-input'><lable for='subject'>Subject</lable> <input type='text' id='subject' placeholder='Write your subject..'></input></div>
+            <div class='form-input'><lable for='message'>Message</lable><input type='text' id='message' placeholder='Write your message..'></input></div>
+            <input class='form-submit' type='submit' value="Send Message"></input>
           </form>
     </section>
   )

@@ -153,18 +153,39 @@ contact page layout
 .name-holder {
   display: flex;
 }
-.name-input{
+.form-input{
   display: flex;
   flex:1 1 100;
   flex-direction: column;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   width: 100%;
+}
+
+.name-input{
+  padding-right: 10px
+}
+
+.form-submit{
+  border-radius: 6px;
+  background: var(--primary-primary-500, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #245BFF);
+  border: #245BFF;
+  display: flex;
+padding: 16px 24px;
+align-items: flex-start;
+gap: 8px;
+max-width: 160px;
+color: var(--shade-white, #FFF);
+// font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 18px; /* 112.5% */
 }
 form{
   // overflow: hidden;
   // display: flex;
   // flex-wrap: wrap;
-  width: 65vh;
+  width: 90vh;
 }
 input {
   width: 100%;
