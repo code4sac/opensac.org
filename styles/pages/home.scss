@@ -420,7 +420,7 @@ Home page layout.
   position: absolute;
   height: 1px;
   width: 93px;
-  border-bottom: 4px solid $secondary-50;
+  border-bottom: 8px solid $secondary-50;
   margin-bottom: 20px;
 }
 
@@ -477,12 +477,12 @@ Home page layout.
 }
 
 .home-projects-section-partnerships {
-  padding: 96px 80px;
+  padding: 64px 32px 64px 32px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
+  align-content: flex-start;
+  gap: 48px;
 
   @media (max-width: $screen-md) {
     flex-direction: column;
