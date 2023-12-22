@@ -1,19 +1,19 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 /**
  * Frequently-asked questions navigation section.
  * @returns {JSX.Element}
  */
-export default function FaqSectionNav({ sectionType, topics }) {
+export default function FaqSectionNav({ topics, sectionType }) {
   return (
     <section className="faq-container">
       <nav className={`faq-nav faq-nav-${sectionType}`}>
-        {topics.map((item, key) => (
-          <Link key={key} className="nav-link" href={`#${item.url}`}>
-            {item.topic}
+        {topics.map((item) => (
+          <Link key={item.slug} className="nav-link" href={`#${item.slug}`}>
+            {item.text}
           </Link>
         ))}
       </nav>
     </section>
-  )
+  );
 }

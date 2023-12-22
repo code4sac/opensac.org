@@ -104,6 +104,7 @@ FAQ page layout.
   text-decoration: none;
   margin-right: 20px;
   display: inline-block;
+  padding: 5px 0;
 
   @media (max-width: $screen-lg) {
     font-size: 16px;
@@ -116,16 +117,23 @@ FAQ page layout.
   }
 }
 
-.faq-semiheader {
+.faq-container-margins h3 {
   @include h4-semi-bold;
+  padding: 40px 0;
+  margin-top: 40px;
 
   @media (max-width: $screen-md) {
     @include h5-semi-bold;
   }
 }
 
-.faq-question-semiheader {
+.faq-container-margins h3:first-child {
+  margin-top: 0px;
+}
+
+.faq-container-margins h4 {
   @include h5-semi-bold;
+  padding: 24px 0;
 
   @media (max-width: $screen-md) {
     font-size: 16px;
@@ -133,19 +141,29 @@ FAQ page layout.
   }
 }
 
-.faq-question {
+.faq-question,
+details {
   border-top: 1px solid $neutral-400;
   padding: 0 20px;
 }
 
-.faq-question a {
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question a,
+details h4 {
   position: relative;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.faq-question a::after {
+.faq-question a::after,
+details h4::after {
   content: "";
   flex-shrink: 0;
   margin-left: auto;
@@ -156,22 +174,23 @@ FAQ page layout.
   background-position: center;
   height: 44px;
   width: 44px;
-  // padding: 10px;
+  padding: 10px;
 }
 
-.faq-question.question-open a::after {
+.faq-question.question-open a::after,
+details[open] h4::after {
   content: "";
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 12H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
 }
 
-.question-text {
+.question-text,
+details p {
   @include p3-regular;
   max-width: 1060px;
   color: $neutral-900;
   margin: 0;
   padding-top: 0px;
   padding-bottom: 20px;
-  display: none;
 
   @media (max-width: $screen-md) {
     color: $neutral-800;

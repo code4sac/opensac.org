@@ -20,6 +20,11 @@ body {
   background: $navbar-color;
 }
 
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
 .full-width {
   width: 100%;
   overflow: clip;
