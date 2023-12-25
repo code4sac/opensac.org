@@ -14,11 +14,15 @@ export default function FaqSectionStart({ sectionType }) {
 
       <div className={`faq-section-${sectionType}-container`}>
         <p className="faq-section-paragraph">
-          Find answers to common queries about Code for Sacramento, our
-          initiatives, and how you can get involved. If you have any additional
-          questions, feel free to contact us for more information.
+          Welcome to our FAQ page, designed to provide you with quick and
+          informative answers to commonly asked questions about Open Sacramento.
+          Whether you're curious about volunteering, projects, collaborations,
+          or more, we've compiled a list of queries to guide you through our
+          mission, initiatives, and how you can get involved. Browse through the
+          questions to find the information you need and embark on a journey of
+          civic engagement, innovation, and community empowerment.
         </p>
       </div>
     </section>
-  )
+  );
 }

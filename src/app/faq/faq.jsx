@@ -1,56 +1,54 @@
-import FaqSectionStart from './faqSectionStart'
-import FaqSectionNav from './faqSectionNav'
-import FaqAccordion from './faqAccordion'
-import faqTexts from './faqText'
+import FaqSectionStart from "./faqSectionStart";
+import FaqSectionNav from "./faqSectionNav";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import fs from "fs";
+import path from "path";
+import MDXComponents from "./MDXComponents";
 
 /**
  * Section type. Displays light or dark themes.
  * @type {{light: string, dark: string}}
  */
 export const SectionType = {
-  light: 'light',
-  dark: 'dark',
+  light: "light",
+  dark: "dark",
+};
+
+function extractToc(content) {
+  const headers = [];
+  const headerRegex = /^###\s+(.+)$/gm;
+  let match;
+  while ((match = headerRegex.exec(content)) !== null) {
+    const text = match[1];
+    const slug = text.toLowerCase().replace(/\s/g, "_");
+    headers.push({ text, slug });
+  }
+  return headers;
 }
 
-const texts = JSON.parse(JSON.stringify(faqTexts))
+const rootDir = path.join(process.cwd(), "src", "app", "faq");
 
-const FaqItems = function commonItems({ texts }) {
-  return (
-    <div>
-      {texts.map((item, key) => (
-        <FaqAccordion key={key} title={item.title} text={item.text} />
-      ))}
-    </div>
-  )
-}
-
-const Topics = function commonItems({ texts }) {
-  return (
-    <div>
-      {texts.map((item, key) => (
-        <div key={key}>
-          <h4 id={item.url} className='faq-semiheader'>
-            {item.topic}
-          </h4>
-          <FaqItems texts={item.questions} />
-        </div>
-      ))}
-    </div>
-  )
+function fetchMdx() {
+  const filePath = path.join(rootDir, "faqMDXTexts.mdx");
+  const fileContent = fs.readFileSync(filePath, { encoding: "utf-8" });
+  const tableOfContents = extractToc(fileContent);
+  return { fileContent, tableOfContents };
 }
 
 /**
  * Frequently-asked questions page.
  * @returns {JSX.Element}
  */
-export default function Faq(common) {
+export default function Faq() {
+  const { fileContent, tableOfContents } = fetchMdx();
+
   return (
     <div className="faq-main">
       <FaqSectionStart sectionType={SectionType.light} />
-      <FaqSectionNav sectionType={SectionType.light} topics={texts.sections} />
+      <FaqSectionNav sectionType={SectionType.light} topics={tableOfContents} />
       <section className="faq-container-margins">
-        <Topics texts={texts.sections} />
+        <MDXRemote source={fileContent} components={MDXComponents} />
       </section>
     </div>
-  )
+  );
 }
