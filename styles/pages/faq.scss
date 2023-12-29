@@ -128,7 +128,7 @@ FAQ page layout.
 }
 
 .faq-container-margins h3:first-child {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .faq-container-margins h4 {
@@ -150,6 +150,7 @@ details {
 details > summary {
   list-style: none;
 }
+
 details > summary::-webkit-details-marker {
   display: none;
 }
@@ -189,7 +190,7 @@ details p {
   max-width: 1060px;
   color: $neutral-900;
   margin: 0;
-  padding-top: 0px;
+  padding-top: 0;
   padding-bottom: 20px;
 
   @media (max-width: $screen-md) {

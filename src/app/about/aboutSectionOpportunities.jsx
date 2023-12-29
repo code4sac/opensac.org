@@ -24,10 +24,10 @@ export default function AboutSectionOpportunities() {
           </p>
         </div>
         <div className={`opportunities-get-started`}>
-          <img src="/img/about/rectangle.png" alt="rectangle" />
+          <img src="/img/about/rectangle.png" alt="rectangle"/>
           <p className={`opportunities-anchor`}>
             Not a volunteer yet?
-            <br />
+            <br/>
             <a href="">Get Started</a>
           </p>
         </div>
@@ -82,10 +82,10 @@ export default function AboutSectionOpportunities() {
       </div>
 
       <div className={`get-started-bottom`}>
-        <img src="/img/about/rectangle.png" alt="rectangle" />
+        <img src="/img/about/rectangle.png" alt="rectangle"/>
         <p className={`opportunities-anchor-bottom`}>
           Not a volunteer yet?
-          <br />
+          <br/>
           <a href="">Get Started</a>
         </p>
       </div>

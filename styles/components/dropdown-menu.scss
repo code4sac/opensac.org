@@ -23,7 +23,7 @@ Navigation bar drop down menu.
   display: block;
   width: fit-content;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 14px !important;
   line-height: 16px;
   background-color: $secondary-300 !important;
   border: 1px solid $secondary-500 !important;
@@ -91,10 +91,10 @@ Navigation bar drop down menu.
 }
 
 @media (min-width: $screen-lg) {
-.navbar-extended-desktop-section-item {
-  max-width: max-content;
-  padding: 0 20px;
-}
+  .navbar-extended-desktop-section-item {
+    max-width: max-content;
+    padding: 0 20px;
+  }
   .navbar-extended-desktop-container {
     width: 100%;
     display: grid;
@@ -116,9 +116,9 @@ Navigation bar drop down menu.
   }
 
   .navbar-extended-desktop-section-item {
-  max-width: 257px;
-  display: block;
-}
+    max-width: 257px;
+    display: block;
+  }
   .dropdown-menu > *:nth-child(3n-1) {
 
   }

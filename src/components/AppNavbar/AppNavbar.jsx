@@ -3,11 +3,11 @@
 import {useEffect, useState} from 'react'
 import Link from 'next/link'
 import {usePathname} from 'next/navigation'
-import DropdownMenu from './DropdownMenu'
+import ExtendedNavbarMenu from './ExtendedNavbarMenu'
 
 /**
- * Set toolbar opacity. Based on the scroll y axis.
- * @param {number} currentScrollHeight 
+ * Set toolbar opacity. Based on the scroll y-axis.
+ * @param {number} currentScrollHeight
  * @returns {number} opacity Ranges from 0 to 1.
  */
 function setOpacity(currentScrollHeight) {
@@ -55,12 +55,14 @@ export default function AppNavbar() {
   }, [websiteURL])
   return (
     <div className='navbar-background'>
-      <nav className={`navbar-toolbar`} style={fadeLayout && !extendedMenuVisible ? { backgroundColor: `rgba(0,0,0, ${backgroundOpacity})` } : { backgroundColor: 'inherit' }}>
+      <nav className={`navbar-toolbar`}
+           style={fadeLayout && !extendedMenuVisible ? {backgroundColor: `rgba(0,0,0, ${backgroundOpacity})`} : {backgroundColor: 'inherit'}}>
         <div className={'navbar-toolbar-main'}>
           <div className={'navbar-toolbar-content container-xxl'}>
             <div className={'navbar-left-container'}>
               <Link className={'navbar-left-section'} href="/">
-                <img src="/img/logo_opensac_black_transparent_2.png" alt="Open Sacramento logo" height="60" width="220" />
+                <img src="/img/logo_opensac_black_transparent_2.png" alt="Open Sacramento logo" height="60"
+                     width="200"/>
               </Link>
             </div>
 
@@ -78,15 +80,20 @@ export default function AppNavbar() {
                 <li className={`navbar-link`}>
                   <Link href="#">Donate</Link>
                 </li>
-                <hr className={'navbar-underline'} />
+                <hr className={'navbar-underline'}/>
               </ul>
             </div>
 
-            <div className={`navbar-right-container ${extendedMenuVisible ? 'navbar-extend-background-active' : 'navbar-extend-background-inactive'}`}>
-              <div className={`navbar-right-section`} onClick={() => {showExtendedMenu(!extendedMenuVisible)}}>
+            <div
+              className={`navbar-right-container ${extendedMenuVisible ? 'navbar-extend-background-active' : 'navbar-extend-background-inactive'}`}>
+              <div className={`navbar-right-section`} onClick={() => {
+                showExtendedMenu(!extendedMenuVisible)
+              }}>
                 <div className={`navbar-nested-parent-link`}>
-                  <div className={`${extendedMenuVisible ? 'navbar-toggle-extend-button-extended' : 'navbar-toggle-extend-button'}`} type="button" alt="Extend navigation bar.">
-                    <span className={`navbar-extend-button-text ${extendedMenuVisible ? 'navbar-extend-button-text-extended' : null}`}>Get Involved</span>
+                  <div
+                    className={`${extendedMenuVisible ? 'navbar-toggle-extend-button-extended' : 'navbar-toggle-extend-button'}`}>
+                    <span
+                      className={`navbar-extend-button-text ${extendedMenuVisible ? 'navbar-extend-button-text-extended' : null}`}>Get Involved</span>
                   </div>
                 </div>
               </div>
@@ -96,7 +103,7 @@ export default function AppNavbar() {
         {
           extendedMenuVisible ?
             <div className={'navbar-toolbar-extended'}>
-              <DropdownMenu visible={extendedMenuVisible} />
+              <ExtendedNavbarMenu visible={extendedMenuVisible} />
             </div>
             : null
         }

@@ -5,10 +5,10 @@
 /*
 Home page layout.
  */
- .home-section-grey {
+.home-section-grey {
   background-color: $neutral-500;
   color: $secondary-50;
- }
+}
 
 .home-section-dark {
   background-color: $neutral-900;
@@ -47,9 +47,8 @@ Home page layout.
 
   @media (max-width: $screen-md) {
     width: auto;
-    padding: 96px 40px 60px 40px;
     justify-content: flex-start;
-    padding-top: 30%;
+    padding: 30% 40px 60px;
   }
 
   @media (max-width: $screen-sm) {
@@ -331,7 +330,6 @@ Home page layout.
 
 .home-projects-info-container {
   width: 50%;
-  display: block;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

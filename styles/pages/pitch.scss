@@ -196,7 +196,7 @@ Pitch page layout.
   gap: 40px;
 
   @media (max-width: $screen-xs) {
-    gap: 0px;
+    gap: 0;
   }
 }
 

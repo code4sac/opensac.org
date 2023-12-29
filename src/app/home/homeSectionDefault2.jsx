@@ -2,7 +2,7 @@
  * Home page default section 2.
  * @returns {JSX.Element}
  */
-export default function HomeSectionDefault2({ sectionType }) {
+export default function HomeSectionDefault2({sectionType}) {
   return (
     <section className={`home-section-${sectionType}`}>
       <div className={`home-section-${sectionType}-container home-section-heading-underline`}>
@@ -19,7 +19,7 @@ export default function HomeSectionDefault2({ sectionType }) {
             individuals </span>
           who come together to use technology and open data to address civic
           challenges and improve public services in the Sacramento area.
-          <br /><br />
+          <br/><br/>
           We are passionate about fostering civic innovation and creating positive
           impact through technology and community engagement.
         </p>

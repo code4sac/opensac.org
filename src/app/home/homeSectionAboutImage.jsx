@@ -2,7 +2,7 @@
  * Home about image section.
  * @returns {JSX.Element}
  */
-export default function HomeSectionAboutImage({ sectionType }) {
+export default function HomeSectionAboutImage({sectionType}) {
   return (
     <section className={`home-section-${sectionType} home-section-${sectionType}-flex home-about-image`}>
       <div className={`home-about-container`}>
@@ -10,7 +10,7 @@ export default function HomeSectionAboutImage({ sectionType }) {
           className={`home-section-${sectionType}-container home-section-heading-underline underline-alt`}>
           <h1 className={`heading-section heading-section-alt`}>What we do</h1>
           <h2 className={`heading-section-sub`}>
-            Building a Better Future <br />
+            Building a Better Future <br/>
             in Sacramento
           </h2>
         </div>
@@ -27,7 +27,7 @@ export default function HomeSectionAboutImage({ sectionType }) {
       <img
         src="/img/open_data_day_curved.png"
         alt="Open Data Day"
-        className={`home-section-action-image`} />
+        className={`home-section-action-image`}/>
     </section>
   )
 }

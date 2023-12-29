@@ -10,6 +10,6 @@ export default function Contact() {
   return (<div className="">
     <ContactSectionLanding></ContactSectionLanding>
 
-    <ContactSectionMission />
+    <ContactSectionMission/>
   </div>)
 }

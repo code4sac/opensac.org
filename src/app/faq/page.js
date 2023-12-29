@@ -4,7 +4,7 @@ import "@/styles/pages/faq.scss";
 export default function FaqPage() {
   return (
     <>
-      <Faq />
+      <Faq/>
     </>
   );
 }

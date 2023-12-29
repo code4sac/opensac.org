@@ -2,7 +2,7 @@
  * Frequently-asked questions start section.
  * @returns {JSX.Element}
  */
-export default function FaqSectionStart({ sectionType }) {
+export default function FaqSectionStart({sectionType}) {
   return (
     <section className={`faq-section-${sectionType}`}>
       <div

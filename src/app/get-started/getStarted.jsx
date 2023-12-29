@@ -8,8 +8,8 @@ import GetStartedSectionInstructions from './getStartedSectionInstructions'
 export default function GetStarted() {
   return (
     <div className="">
-      <GetStartedSectionLanding />
-      <GetStartedSectionInstructions />
+      <GetStartedSectionLanding/>
+      <GetStartedSectionInstructions/>
     </div>
   )
 }

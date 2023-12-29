@@ -138,9 +138,7 @@ It is made up of three sections.
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: $navbar-color url("/img/navbar/menu_hamburger_light.svg");
-  background-position: center right;
-  background-repeat: no-repeat;
+  background: url("/img/navbar/menu_hamburger_light.svg") no-repeat center right;
 
   @media screen and (min-width: $screen-lg) {
     background: transparent;
@@ -197,9 +195,7 @@ It is made up of three sections.
 
 .navbar-extend-background-active {
   .navbar-right-section {
-    background: $navbar-color url("/img/navbar/menu_x.png");
-    background-position: center right;
-    background-repeat: no-repeat;
+    background: url("/img/navbar/menu_x.png") no-repeat center right;
   }
 
   @media screen and (min-width: $screen-lg) {

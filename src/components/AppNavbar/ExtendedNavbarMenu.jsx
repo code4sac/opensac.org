@@ -6,7 +6,7 @@ import Link from 'next/link'
  * Dropdown menu for navbar.
  * @returns {JSX.Element}
  */
-const DropdownMenu = (visible = false) => {
+const ExtendedNavbarMenu = (visible) => {
   function hide() {
     visible = false
   }
@@ -53,4 +53,4 @@ const DropdownMenu = (visible = false) => {
   )
 }
 
-export default DropdownMenu
+export default ExtendedNavbarMenu

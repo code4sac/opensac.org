@@ -7,10 +7,10 @@ import '@/styles/pages/conduct.scss'
 export default function Conduct() {
   return (
     <div className="">
-      <ConductSectionLanding />
-      <ConductSectionBullets />
-      <ConductSectionPolicies />
-      <ConductSectionEmail />
+      <ConductSectionLanding/>
+      <ConductSectionBullets/>
+      <ConductSectionPolicies/>
+      <ConductSectionEmail/>
     </div>
   )
 }

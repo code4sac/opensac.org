@@ -4,13 +4,13 @@ import Link from "next/link";
  * Home projects section.
  * @returns {JSX.Element}
  */
-export default function HomeSectionLandingImage({ sectionType }) {
+export default function HomeSectionLandingImage() {
   return (
     <div className={'home-landing-background'}>
       <section className={`home-landing-image`}>
         <div className={`home-landing-container`}>
           <h1 className={`home-landing-heading`}>
-            <span>We are</span> <br />
+            <span>We are</span> <br/>
             Open Sacramento
           </h1>
           <p className={`home-section-paragraph`}>

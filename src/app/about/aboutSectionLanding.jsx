@@ -17,7 +17,8 @@ export default function AboutSectionLanding() {
           <span className={`about-section-paragraph-bold`}>
             We are a passionate and diverse group of technologists, developers, designers, and
             civic-minded individuals united by a common goal:
-          </span> leveraging technology and open data to address civic challenges and enhance public services in the Sacramento area.
+          </span> leveraging technology and open data to address civic challenges and enhance public services in the
+          Sacramento area.
           Our community thrives on collaboration, innovation, and a shared commitment to driving positive change.
         </p>
       </div>

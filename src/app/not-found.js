@@ -15,9 +15,9 @@ export default function notFound() {
           <h4>404 Page Not Found</h4>
           <p>
             Looks like this page hasn't been developed yet.
-            <br />
+            <br/>
             Would you like to join and be a part of creating it?
-            <br />
+            <br/>
             <Link
               href="https://github.com/code4sac/opensac.org"
               className="not-found-link"

@@ -8,8 +8,8 @@ import PitchSectionInstructions from './pitchSectionInstructions'
 export default function Pitch() {
   return (
     <div className="">
-      <PitchSectionLanding />
-      <PitchSectionInstructions />
+      <PitchSectionLanding/>
+      <PitchSectionInstructions/>
     </div>
   )
 }

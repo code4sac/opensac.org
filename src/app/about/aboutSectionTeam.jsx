@@ -14,7 +14,8 @@ export default function AboutSectionTeam() {
         </div>
         <p className={`team-paragraph`}>
           Open Sacramento is powered by a volunteer Core Team that orchestrates events, fosters strategic partnerships,
-          and ensures seamless communication among cross-functional project teams. Our dedicated team members bring diverse skills and expertise to the table,
+          and ensures seamless communication among cross-functional project teams. Our dedicated team members bring
+          diverse skills and expertise to the table,
           all with a shared passion for civic tech and community empowerment.
         </p>
       </div>
@@ -22,7 +23,7 @@ export default function AboutSectionTeam() {
       <div className={`team-members-container`}>
         <div className={`team-cards-grid`}>
           <div className={`team-grid-item`}>
-            <img src="/img/about/member.png" alt="Team Member Name" />
+            <img src="/img/about/member.png" alt="Team Member Name"/>
             <div className={`member-info-container`}>
               <div className={`member-name-container`}>
                 <h2 className={`member-name`}>Full Name</h2>
@@ -33,7 +34,7 @@ export default function AboutSectionTeam() {
           </div>
 
           <div className={`team-grid-item`}>
-            <img src="/img/about/member2.png" alt="Team Member Name" />
+            <img src="/img/about/member2.png" alt="Team Member Name"/>
             <div className={`member-info-container`}>
               <div className={`member-name-container`}>
                 <h2 className={`member-name`}>Full Name</h2>
@@ -44,7 +45,7 @@ export default function AboutSectionTeam() {
           </div>
 
           <div className={`team-grid-item`}>
-            <img src="/img/about/member3.png" alt="Team Member Name" />
+            <img src="/img/about/member3.png" alt="Team Member Name"/>
             <div className={`member-info-container`}>
               <div className={`member-name-container`}>
                 <h2 className={`member-name`}>Full Name</h2>
@@ -55,7 +56,7 @@ export default function AboutSectionTeam() {
           </div>
 
           <div className={`team-grid-item`}>
-            <img src="/img/about/member4.png" alt="Team Member Name" />
+            <img src="/img/about/member4.png" alt="Team Member Name"/>
             <div className={`member-info-container`}>
               <div className={`member-name-container`}>
                 <h2 className={`member-name`}>Full Name</h2>
@@ -66,7 +67,7 @@ export default function AboutSectionTeam() {
           </div>
 
           <div className={`team-grid-item`}>
-            <img src="/img/about/member5.png" alt="Team Member Name" />
+            <img src="/img/about/member5.png" alt="Team Member Name"/>
             <div className={`member-info-container`}>
               <div className={`member-name-container`}>
                 <h2 className={`member-name`}>Full Name</h2>
@@ -77,7 +78,7 @@ export default function AboutSectionTeam() {
           </div>
 
           <div className={`team-grid-item`}>
-            <img src="/img/about/member6.png" alt="Team Member Name" />
+            <img src="/img/about/member6.png" alt="Team Member Name"/>
             <div className={`member-info-container`}>
               <div className={`member-name-container`}>
                 <h2 className={`member-name`}>Full Name</h2>

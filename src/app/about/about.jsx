@@ -11,9 +11,9 @@ import AboutSectionOpportunities from './aboutSectionOpportunities'
 export default function About() {
   return (<div className="">
     <AboutSectionLanding></AboutSectionLanding>
-    <AboutSectionCollage />
-    <AboutSectionMission />
-    <AboutSectionTeam />
-    <AboutSectionOpportunities />
+    <AboutSectionCollage/>
+    <AboutSectionMission/>
+    <AboutSectionTeam/>
+    <AboutSectionOpportunities/>
   </div>)
 }

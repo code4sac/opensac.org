@@ -21,7 +21,7 @@ export default function PitchSectionInstructions() {
 
         <div className={`pitch-instructions-steps-container`}>
           <div className={`pitch-instructions-step-container`}>
-            <img src="/img/1.png" alt="Step 1" className={`pitch-step-image`} />
+            <img src="/img/1.png" alt="Step 1" className={`pitch-step-image`}/>
             <div className={`pitch-step-container`}>
               <h3 className={`pitch-step-header`}>Check Eligibility</h3>
               <div className={`pitch-step-paragraph`}>
@@ -29,7 +29,7 @@ export default function PitchSectionInstructions() {
                 its alignment with our mission and principles.
                 Please review the following conditions to ensure your project falls within our scope:
                 <ol>
-                  <li>Open Source </li>
+                  <li>Open Source</li>
                   <li>Free to Distribute</li>
                   <li>Non-Profit</li>
                   <li>Community-Benefiting</li>
@@ -40,20 +40,20 @@ export default function PitchSectionInstructions() {
           </div>
 
           <div className={`pitch-instructions-step-container`}>
-            <img src="/img/2.png" alt="Step 2" className={`pitch-step-image`} />
+            <img src="/img/2.png" alt="Step 2" className={`pitch-step-image`}/>
             <div className={`pitch-step-container`}>
               <h3 className={`pitch-step-header`}>Review our Code of Conduct</h3>
               <p className={`pitch-step-paragraph`}>
                 Familiarize yourself with our Code of Conduct, which outlines the principles and expectations
                 guiding our community. We value respectful and inclusive interactions to create a positive
                 environment for everyone. Please read and understand <a href="/" className="pitch-step-anchor">our
-                  guidelines</a> for a positive experience.
+                guidelines</a> for a positive experience.
               </p>
             </div>
           </div>
 
           <div className={`pitch-instructions-step-container`}>
-            <img src="/img/3.png" alt="Step 3" className={`pitch-step-image`} />
+            <img src="/img/3.png" alt="Step 3" className={`pitch-step-image`}/>
             <div className={`pitch-step-container`}>
               <h3 className={`pitch-step-header`}>Complete Project Form</h3>
               <p className={`pitch-step-paragraph`}>
@@ -66,7 +66,7 @@ export default function PitchSectionInstructions() {
           </div>
 
           <div className={`pitch-instructions-step-container`}>
-            <img src="/img/4.png" alt="Step 4" className={`pitch-step-image`} />
+            <img src="/img/4.png" alt="Step 4" className={`pitch-step-image`}/>
             <div className={`pitch-step-container`}>
               <h3 className={`pitch-step-header`}>Attend Weekly Meetings (optional)</h3>
               <p className={`pitch-step-paragraph`}>
@@ -79,7 +79,7 @@ export default function PitchSectionInstructions() {
           </div>
 
           <div className={`pitch-instructions-step-container`}>
-            <img src="/img/5.png" alt="Step 5" className={`pitch-step-image`} />
+            <img src="/img/5.png" alt="Step 5" className={`pitch-step-image`}/>
             <div className={`pitch-step-container`}>
               <h3 className={`pitch-step-header`}>Await Decision</h3>
               <p className={`pitch-step-paragraph`}>
@@ -94,10 +94,10 @@ export default function PitchSectionInstructions() {
 
       <div className={`pitch-sidebar-container`}>
         <div className={`get-started`}>
-          <img src="/img/about/rectangle.png" alt="rectangle" />
+          <img src="/img/about/rectangle.png" alt="rectangle"/>
           <p className={`get-started-anchor`}>
             Not a volunteer yet?
-            <br />
+            <br/>
             <a href="/">Get Started</a>
           </p>
         </div>

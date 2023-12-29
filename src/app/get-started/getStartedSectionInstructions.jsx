@@ -25,13 +25,13 @@ export default function GetStartedSectionInstructions() {
         <div className={`instructions-steps-container`}>
           {instructions.map((item, index) => (
             <div className={`instructions-step-container`} key={index}>
-              <img src={`/img/${item.id}.png`} alt={`Step ${item.id}`} className={`step-image`} />
+              <img src={`/img/${item.id}.png`} alt={`Step ${item.id}`} className={`step-image`}/>
               <div className={`step-container`}>
                 <h3 className={`step-header`}>{item.title}</h3>
                 <p className={`step-paragraph`}>
                   {item.body} {item.id === 4 && (
-                    <a href="/" className="step-anchor">Project Form </a>
-                  )}
+                  <a href="/" className="step-anchor">Project Form </a>
+                )}
                 </p>
               </div>
             </div>
@@ -41,10 +41,10 @@ export default function GetStartedSectionInstructions() {
 
       <div className={`sidebar-container`}>
         <div className={`get-started`}>
-          <img src="/img/about/rectangle.png" alt="rectangle" />
+          <img src="/img/about/rectangle.png" alt="rectangle"/>
           <p className={`get-started-anchor`}>
             Not a volunteer yet?
-            <br />
+            <br/>
             <a href="/">Get Started</a>
           </p>
         </div>

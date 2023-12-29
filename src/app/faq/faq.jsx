@@ -1,6 +1,6 @@
 import FaqSectionStart from "./faqSectionStart";
 import FaqSectionNav from "./faqSectionNav";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import {MDXRemote} from "next-mdx-remote/rsc";
 import fs from "fs";
 import path from "path";
 import MDXComponents from "./MDXComponents";
@@ -21,7 +21,7 @@ function extractToc(content) {
   while ((match = headerRegex.exec(content)) !== null) {
     const text = match[1];
     const slug = text.toLowerCase().replace(/\s/g, "_");
-    headers.push({ text, slug });
+    headers.push({text, slug});
   }
   return headers;
 }
@@ -30,9 +30,9 @@ const rootDir = path.join(process.cwd(), "src", "app", "faq");
 
 function fetchMdx() {
   const filePath = path.join(rootDir, "faqMDXTexts.mdx");
-  const fileContent = fs.readFileSync(filePath, { encoding: "utf-8" });
+  const fileContent = fs.readFileSync(filePath, {encoding: "utf-8"});
   const tableOfContents = extractToc(fileContent);
-  return { fileContent, tableOfContents };
+  return {fileContent, tableOfContents};
 }
 
 /**
@@ -40,14 +40,14 @@ function fetchMdx() {
  * @returns {JSX.Element}
  */
 export default function Faq() {
-  const { fileContent, tableOfContents } = fetchMdx();
+  const {fileContent, tableOfContents} = fetchMdx();
 
   return (
     <div className="faq-main">
-      <FaqSectionStart sectionType={SectionType.light} />
-      <FaqSectionNav sectionType={SectionType.light} topics={tableOfContents} />
+      <FaqSectionStart sectionType={SectionType.light}/>
+      <FaqSectionNav sectionType={SectionType.light} topics={tableOfContents}/>
       <section className="faq-container-margins">
-        <MDXRemote source={fileContent} components={MDXComponents} />
+        <MDXRemote source={fileContent} components={MDXComponents}/>
       </section>
     </div>
   );

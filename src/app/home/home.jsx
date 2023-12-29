@@ -24,13 +24,13 @@ export const SectionType = {
 export default function Home() {
   return (
     <div className="home-page-container">
-    <HomeSectionLandingImage sectionType={SectionType.dark}></HomeSectionLandingImage>
-    <HomeSectionDefault2 sectionType={SectionType.light}></HomeSectionDefault2>
-    <HomeSectionAboutImage sectionType={SectionType.dark}></HomeSectionAboutImage>
-    <HomeSectionServices sectionType={SectionType.dark}></HomeSectionServices>
-    <HomeSectionDefault sectionType={SectionType.light}></HomeSectionDefault>
-    <HomeSectionProjects sectionType={SectionType.dark}></HomeSectionProjects>
-    <HomeSectionPartnership sectionType={SectionType.grey}></HomeSectionPartnership>
-    <HomeSectionDonate sectionType={SectionType.dark}></HomeSectionDonate>
-  </div>)
+      <HomeSectionLandingImage sectionType={SectionType.dark}></HomeSectionLandingImage>
+      <HomeSectionDefault2 sectionType={SectionType.light}></HomeSectionDefault2>
+      <HomeSectionAboutImage sectionType={SectionType.dark}></HomeSectionAboutImage>
+      <HomeSectionServices sectionType={SectionType.dark}></HomeSectionServices>
+      <HomeSectionDefault sectionType={SectionType.light}></HomeSectionDefault>
+      <HomeSectionProjects sectionType={SectionType.dark}></HomeSectionProjects>
+      <HomeSectionPartnership sectionType={SectionType.grey}></HomeSectionPartnership>
+      <HomeSectionDonate sectionType={SectionType.dark}></HomeSectionDonate>
+    </div>)
 }
