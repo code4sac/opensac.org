@@ -15,7 +15,7 @@ It is made up of three sections.
   background: $landing-background-color;
 
   // Add margin to first element after navbar. This offsets the page content.
-  +* {
+  + * {
     margin-top: $toolbar-height;
   }
 }
@@ -24,16 +24,16 @@ It is made up of three sections.
   @include h5-semi-bold;
   width: 100%;
   height: $toolbar-height;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
   color: $secondary-50;
   background: $navbar-color;
   box-shadow: 0 4px 4px 0 rgba($navbar-color, 0.25);
-  z-index: 4;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-wrap: wrap;
 
   a,
   .navbar-toolbar a:visited,
@@ -46,9 +46,17 @@ It is made up of three sections.
 }
 
 .navbar-toolbar-main {
-  display: block;
-  max-height: $toolbar-height;
-  flex-basis: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-toolbar-content {
+  max-width: 1320px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-link {
@@ -60,15 +68,6 @@ It is made up of three sections.
 
 .navbar-link-selected {
   font-weight: bold;
-  // text-decoration: underline;
-  // text-decoration-thickness: 2px;
-  // text-underline-offset: .6em;
-}
-
-.navbar-toolbar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .navbar-left-container {
@@ -95,22 +94,22 @@ It is made up of three sections.
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: $screen-md) {
+  @media screen and (min-width: $screen-lg) {
     display: inline-flex;
   }
 }
 
-.one~.navbar-underline {
+.one ~ .navbar-underline {
   margin-left: -86%;
   display: block;
 }
 
-.two~.navbar-underline {
+.two ~ .navbar-underline {
   margin-left: -34%;
   display: block;
 }
 
-.three~.navbar-underline {
+.three ~ .navbar-underline {
   margin-left: 23%;
   display: block;
 }
@@ -135,6 +134,7 @@ It is made up of three sections.
 }
 
 .navbar-right-section {
+  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -142,90 +142,39 @@ It is made up of three sections.
   background-position: center right;
   background-repeat: no-repeat;
 
-  @media screen and (min-width: $screen-md) {
+  @media screen and (min-width: $screen-lg) {
     background: transparent;
   }
 }
 
-.navbar-extend-button-text {
-  @media screen and (min-width: $screen-md) {
-    color: inherit;
-    display: inline;
-  }
+.navbar-extended-button {
+  border: none;
+  font: inherit;
+  outline: inherit;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
 }
+
 
 .navbar-nested-parent-link {
   background: transparent;
 
   button {
-    border: none;
-    font: inherit;
-    outline: inherit;
-    cursor: pointer;
-    background: transparent;
-    color: transparent;
-  }
-
-  @media screen and (min-width: $screen-md) {
-    button {
-      padding: 0 20px 0 0;
-      color: $secondary-500;
-    }
-
-    .navbar-extended-button {
-      background: transparent url("/img/navbar/chevron_down.png");
-      background-position: center right;
-      background-repeat: no-repeat;
-    }
-
-    .navbar-extended-button-extended {
-      background: transparent url("/img/navbar/chevron_up.png");
-      background-position: center right;
-      background-repeat: no-repeat;
-    }
-  }
-}
-
-.navbar-extend-background-active {
-  background: $secondary-50;
-
-  button {
-    color: $neutral-900;
+    background-color: $navbar-color;
   }
 }
 
 .navbar-toolbar-extended {
   margin: 0;
   padding: 0;
-  display: block;
+  display: flex;
   flex-basis: 100%;
-  background: $secondary-50;
-}
-
-.navbar-extended-content ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-extended-mobile-content ul::before {
-  content: ''
-}
-
-.navbar-extended-mobile-section li.active a {
-  color: $secondary-50;
-  background: $neutral-900;
-}
-
-.navbar-extended-desktop-container * {
-  color: black;
-  background: $secondary-50;
-}
-
-.navbar-extended-mobile-container {
-  height: 100%;
-  color: $secondary-50;
-  background: $landing-background-color;
+  justify-content: center;
+  background-color: $secondary-50;
+  border-color: #ebeae5;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
 .navbar-extended-parent-link {
@@ -242,6 +191,42 @@ It is made up of three sections.
   }
 }
 
-.navbar-extended-mobile-section {
-  padding: 16px;
+.navbar-extend-button-text {
+  visibility: hidden;
+}
+
+.navbar-extend-background-active {
+  .navbar-right-section {
+    background: $navbar-color url("/img/navbar/menu_x.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    background: $secondary-50;
+    color: $neutral-900;
+    .navbar-right-section {
+      background: inherit;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .navbar-extend-button-text {
+    visibility: visible;
+    color: inherit;
+    display: inline;
+  }
+
+  .navbar-toggle-extend-button {
+    background: transparent url("/img/navbar/chevron_down.png") no-repeat center right;
+    padding: 0 20px 0 0;
+    color: $secondary-500;
+  }
+
+  .navbar-toggle-extend-button-extended {
+    background: transparent url("/img/navbar/chevron_up.png") no-repeat center right;
+    padding: 0 20px 0 0;
+    color: $neutral-900;
+  }
 }
