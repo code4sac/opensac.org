@@ -103,7 +103,7 @@ export default function AppNavbar() {
         {
           extendedMenuVisible ?
             <div className={'navbar-toolbar-extended'}>
-              <ExtendedNavbarMenu visible={extendedMenuVisible} />
+              <ExtendedNavbarMenu visible={extendedMenuVisible}/>
             </div>
             : null
         }

@@ -2,16 +2,12 @@
 @import "../abstracts/mixins";
 
 /*
-Navigation bar drop down menu.
+Navigation bar extended drop down menu.
 */
 
 .dropdown-menu {
   max-width: 1320px;
   width: 100%;
-
-  a {
-    color: $neutral-900 !important;
-  }
 }
 
 .navbar-extended-desktop-section-item {
@@ -82,12 +78,47 @@ Navigation bar drop down menu.
 .navbar-extended-desktop-container {
   padding: 40px 0;
   display: none;
+
+  a {
+    color: $neutral-900 !important;
+  }
+}
+
+.navbar-mobile-content-02 {
+  display: none !important;
+}
+
+.navbar-extended-mobile-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.navbar-extended-mobile-content-button-01 {
+  background: transparent url("/img/navbar/menu_chevron_right.png") no-repeat center right;
+  padding: 0 18px 0 0;
+  color: $secondary-500;
+  cursor: pointer;
+}
+
+.navbar-extended-mobile-content-button-02 {
+  background: transparent url("/img/navbar/menu_chevron_left.png") no-repeat center left;
+  padding: 0 0 0 17px;
+  color: $secondary-500;
+  cursor: pointer;
+}
+
+.mobile-nav-link {
+  flex-basis: 100%;
+  @include h5-semi-bold;
 }
 
 .navbar-extended-mobile-container {
   height: 100%;
-  color: $secondary-50;
-  background: $landing-background-color;
+  color: $secondary-50 !important;
+  background: $neutral-900 !important;
+  padding: 16px;
 }
 
 @media (min-width: $screen-lg) {
@@ -118,18 +149,6 @@ Navigation bar drop down menu.
   .navbar-extended-desktop-section-item {
     max-width: 257px;
     display: block;
-  }
-  .dropdown-menu > *:nth-child(3n-1) {
-
-  }
-
-  .dropdown-menu > *:nth-child(3n) {
-  }
-
-  .dropdown-menu > *:nth-child(3n-1):nth-last-of-type(1) {
-  }
-
-  .dropdown-menu > *:nth-child(3n-2):nth-last-of-type(1) {
   }
 }
 

@@ -1,5 +1,5 @@
-import React from 'react'
-import '@/styles/components/dropdown-menu.scss'
+import React, {useState} from 'react'
+import '@/styles/components/extended-menu.scss'
 import Link from 'next/link'
 
 /**
@@ -11,9 +11,33 @@ const ExtendedNavbarMenu = (visible) => {
     visible = false
   }
 
+  const [mobileNavPosition, toggleMobileNavPosition] = useState(false)
+
   return (
     <div className="dropdown-menu" style={visible ? {} : {display: 'none'}}>
       <div className={'navbar-extended-mobile-container'}>
+        <div className={`navbar-extended-mobile-content`} style={mobileNavPosition ? {display: 'none'} : {}}>
+          <Link className={'mobile-nav-link'} href="/">Home</Link>
+          <Link className={'mobile-nav-link'} href="/about">About</Link>
+          <Link className={'mobile-nav-link'} href="/contact">Contact</Link>
+          <Link className={'mobile-nav-link'} href="#">Donate</Link>
+          <div>
+           <span className={'navbar-extended-mobile-content-button-01'}
+                 onClick={() => toggleMobileNavPosition(!mobileNavPosition)}>Get Involved</span>
+          </div>
+        </div>
+        <div className={'navbar-extended-mobile-content'} style={!mobileNavPosition ? {display: 'none'} : {}}>
+          <Link className={'mobile-nav-link'} href="/get-started">Get Started</Link>
+          <Link className={'mobile-nav-link'} href="/projects">Projects</Link>
+          <Link className={'mobile-nav-link'} href="/pitch">Pitch a Project</Link>
+          <Link className={'mobile-nav-link'} href="https://www.meetup.com/code4sac/">Meetup</Link>
+          <Link className={'mobile-nav-link'} href="/faq">FAQs</Link>
+          <div>
+           <span className={'navbar-extended-mobile-content-button-02'}
+                 onClick={() => toggleMobileNavPosition(!mobileNavPosition)}>Back</span>
+          </div>
+        </div>
+
       </div>
       <div className={'navbar-extended-desktop-container container-xxl'}>
         <div className="navbar-extended-desktop-section-item">

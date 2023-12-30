@@ -169,10 +169,7 @@ It is made up of three sections.
   display: flex;
   flex-basis: 100%;
   justify-content: center;
-  background-color: $secondary-50;
-  border-color: #ebeae5;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  box-shadow: 0 4px 4px 0 rgba($navbar-color, 0.25);
 }
 
 .navbar-extended-parent-link {
@@ -208,6 +205,13 @@ It is made up of three sections.
 }
 
 @media screen and (min-width: $screen-lg) {
+  .navbar-toolbar-extended {
+    background-color: $secondary-50;
+    border-color: #ebeae5;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
   .navbar-extend-button-text {
     visibility: visible;
     color: inherit;
