@@ -44,5 +44,8 @@
     "keen-slider": "^6.8.6",
     "next-mdx-remote": "^4.4.1",
     "prop-types": "^15.8.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
