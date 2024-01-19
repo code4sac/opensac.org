@@ -74,9 +74,11 @@ contact page layout
 .contact-section-paragraph {
   @include subheading-regular;
   margin: 0;
+  max-width: 60%;
 
   @media (max-width: $screen-sm) {
     @include p3-regular;
+    max-width: 100%;
   }
 }
 
@@ -115,7 +117,14 @@ contact page layout
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: $secondary-900;
+
+  // height: 80vh;
+
+
+.contact-mission-padding{
   padding: 192px 80px 192px 80px;
+}
 
   @media (min-width: 1700px) {
     background-size: 40% 80%;
@@ -129,12 +138,14 @@ contact page layout
   }
 }
 
-.mission-container {
-  width: 40%;
+.contact-mission-container {
+  min-width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+  background-color: $neutral-900;
+  color: $neutral-50;
 
   @media (max-width: $screen-lg) {
     width: auto;
@@ -155,79 +166,39 @@ contact page layout
 
 }
 
-.name-holder {
-  display: flex;
+.form-holder{
+  background-color: $secondary-900;
+  min-width: 50vh;
+  color: var(--Neutral-Neutral-50, #F7F7F8);
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 166.667% */
+width: 100%;
+height: auto;
+padding: 80px 88px 80px 88px;
 }
+
+// .TextField.Mui-selected {
+//   color:white
+// }
+// .MuiInputLabel-root{
+//   color: 'white'
+// }
+// .MuiInput-input{
+//   color: 'white'
+// }
+// .MuiInput-underline:before{
+//   borderBottom: '2px solid white', // Default underline color
+// }
+// .MuiInputLabel-root.Mui-focused{
+//   color: 'white', // Label color when input is focused
+// }
+// .MuiInput-underline.Mui-focused:after{
+//   borderBottom: '2px solid white', // Underline color when input is focused
+// }
 
 .form-input {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding-bottom: 20px;
-  width: 100%;
-}
-
-.name-input {
-  padding-right: 10px
-}
-
-.form-submit {
-  border-radius: 6px;
-  background: var(--primary-primary-500);
-  //background: var(--primary-primary-500, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #245BFF);
-  border: #245BFF;
-  display: flex;
-  padding: 16px 24px;
-  align-items: flex-start;
-  gap: 8px;
-  max-width: 160px;
-  color: var(--shade-white, #FFF);
-  // font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 18px; /* 112.5% */
-}
-
-form {
-  // overflow: hidden;
-  // display: flex;
-  // flex-wrap: wrap;
-  width: 90vh;
-}
-
-input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 8px; /* Add padding to input fields for better visual appearance */
-  margin-top: 5px; /* Adjust margin for better spacing */
-  color: var(--shade-white, #FFF);
-  // font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 142.857% */
-
-  background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value as needed */
-  border-radius: 4px;
-  border: 1px solid var(--shade-white, #FFF);
-  // align-self: stretch;
-}
-
-input::placeholder {
-  color: var(--shade-white, #FFF); /* Set the desired placeholder text color */
-  /* Paragraph/P1/Regular */
-  // font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 142.857% */
-}
-
-label {
-  margin-bottom: 5px; /* Add some space below labels */
-}
-
-#message {
-  min-height: 10vh;
+  margin-bottom: 30px;
 }
