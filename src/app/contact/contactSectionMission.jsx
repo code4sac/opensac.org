@@ -1,11 +1,16 @@
+import * as React from 'react';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 /**
  * contact mission section.
  * @returns {JSX.Element}
  */
 export default function ContactSectionMission() {
   return (
-    <section className={`contact-section-dark contact-section-mission`}>
-      <div className={`mission-container`}>
+    // <section className={`contact-section-dark contact-section-mission`}>
+    <section className={`contact-section-mission`}>
+      <div className={`contact-mission-container contact-mission-padding`}>
         <div
           className={`contact-dark-heading-container contact-heading-underline contact-underline-alt`}
         >
@@ -26,26 +31,178 @@ export default function ContactSectionMission() {
           Check out our weekly meetings on our <a href="/" className="contactActionLinksAnchor">meetup page.</a>
         </p>
       </div>
-      <form>
-        <div className='name-holder'>
-          <div className='form-input name-input'>
+      <div className='form-holder mission-container'>
+        <form>
+          {/* <div className='name-holder'>
+            <div className='form-input name-input'>
             <lable for='fname'>First Name</lable>
             <input type='text' id='fname' placeholder='John'></input></div>
-          <div className='form-input'>
+            <div className='form-input'>
             <lable for='lname'>Last Name</lable>
             <input type='text' id='lname' placeholder='Smith'></input></div>
-        </div>
-        <div className='form-input'>
-          <lable for='email'>Email</lable>
-          <input type='text' id='email' placeholder='example@email.com'></input></div>
-        <div className='form-input'>
-          <lable for='subject'>Subject</lable>
-          <input type='text' id='subject' placeholder='Write your subject..'></input></div>
-        <div className='form-input'>
-          <lable for='message'>Message</lable>
-          <input type='text' id='message' placeholder='Write your message..'></input></div>
-        <input className='form-submit' type='submit' value="Send Message"></input>
-      </form>
+            </div>
+            <div className='form-input'>
+            <lable for='email'>Email</lable>
+            <input type='text' id='email' placeholder='example@email.com'></input></div>
+            <div className='form-input'>
+            <lable for='subject'>Subject</lable>
+            <input type='text' id='subject' placeholder='Write your subject..'></input></div>
+            <div className='form-input'>
+            <lable for='message'>Message</lable>
+            <input type='text' id='message' placeholder='Write your message..'></input></div>
+          <input className='form-submit' type='submit' value="Send Message"></input> */}
+
+          <div className='name-holder form-input'>
+            <TextField
+              id="standard-helperText"
+              label="First Name"
+              // defaultValue="John"
+              placeholder='John'
+              variant="standard"
+              margin='dense'
+              sx={{
+                width: '45%',
+                marginRight: '10%',
+                '& .MuiInputLabel-root': {
+                  color: 'white'
+                },
+                '& .MuiInput-input': {
+                  color: 'white'
+                },
+                '& .MuiInput-underline:before': {
+                  borderBottom: '2px solid white', // Default underline color
+                },
+                '& .MuiInputLabel-root.Mui-focused': {
+                  color: 'white', // Label color when input is focused
+                },
+                '& .MuiInput-underline.Mui-focused:after': {
+                  borderBottom: '2px solid white', // Underline color when input is focused
+                },
+              }}
+            />
+            <TextField
+              id="standard-helperText"
+              label="Last Name"
+              // defaultValue="John"
+              placeholder='Smith'
+              variant="standard"
+              margin='dense'
+              sx={{
+                width: '45%',
+                '& .MuiInputLabel-root': {
+                  color: 'white'
+                },
+                '& .MuiInput-input': {
+                  color: 'white'
+                },
+                '& .MuiInput-underline:before': {
+                  borderBottom: '2px solid white', // Default underline color
+                },
+                '& .MuiInputLabel-root.Mui-focused': {
+                  color: 'white', // Label color when input is focused
+                },
+                '& .MuiInput-underline.Mui-focused:after': {
+                  borderBottom: '2px solid white', // Underline color when input is focused
+                },
+              }}
+            />
+          </div>
+          <div className='form-input'>
+            <TextField
+              id="standard-helperText"
+              label="Email"
+              // defaultValue="John"
+              placeholder='Example@email.com'
+              variant="standard"
+              margin='dense'
+              fullWidth
+              sx={{
+                '& .MuiInputLabel-root': {
+                  color: 'white'
+                },
+                '& .MuiInput-input': {
+                  color: 'white'
+                },
+                '& .MuiInput-underline:before': {
+                  borderBottom: '2px solid white', // Default underline color
+                },
+                '& .MuiInputLabel-root.Mui-focused': {
+                  color: 'white', // Label color when input is focused
+                },
+                '& .MuiInput-underline.Mui-focused:after': {
+                  borderBottom: '2px solid white', // Underline color when input is focused
+                },
+              }}
+            />
+          </div>
+          <div className='form-input'>
+            <TextField
+              id="standard-helperText"
+              label="Subject"
+              // defaultValue="John"
+              placeholder='Write  your subject...'
+              variant="standard"
+              margin='dense'
+              fullWidth
+              sx={{
+                '& .MuiInputLabel-root': {
+                  color: 'white'
+                },
+                '& .MuiInput-input': {
+                  color: 'white'
+                },
+                '& .MuiInput-underline:before': {
+                  borderBottom: '2px solid white', // Default underline color
+                },
+                '& .MuiInputLabel-root.Mui-focused': {
+                  color: 'white', // Label color when input is focused
+                },
+                '& .MuiInput-underline.Mui-focused:after': {
+                  borderBottom: '2px solid white', // Underline color when input is focused
+                },
+              }}
+            />
+          </div>
+          <div className='form-input'>
+            <TextField
+              id="standard-multiline-static"
+              label="Body"
+              multiline
+              rows={1}
+              placeholder="Write your message..."
+              variant="standard"
+              margin='dense'
+              fullWidth
+              sx={{
+                '& .MuiInputLabel-root': {
+                  color: 'white',
+                },
+                '& .MuiInput-input': {
+                  color: 'white',
+                },
+                '& .MuiInput-underline:before': {
+                  borderBottom: '2px solid white', // Default underline color
+                },
+                '& .MuiInputLabel-root.Mui-focused': {
+                  color: 'white', // Label color when input is focused
+                },
+                '& .MuiInput-underline.Mui-focused:after': {
+                  borderBottom: '2px solid white', // Underline color when input is focused
+                },
+              }}
+            />
+          </div>
+          <Button variant="contained" size="large" sx={{
+            whiteSpace: 'nowrap',
+            background: 'white',
+            color: 'black',
+            marginLeft: '80%'
+          }}>
+            Send Message
+          </Button>
+
+        </form>
+      </div>
     </section>
   )
 }
