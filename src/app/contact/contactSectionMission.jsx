@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
@@ -53,7 +52,7 @@ export default function ContactSectionMission() {
             <input type='text' id='message' placeholder='Write your message..'></input></div>
           <input className='form-submit' type='submit' value="Send Message"></input> */}
 
-          <div className='name-holder form-input' >
+          <div className='name-holder form-input'>
             <TextField
               id="standard-helperText"
               label="First Name"
@@ -80,8 +79,8 @@ export default function ContactSectionMission() {
                   borderBottom: '2px solid white', // Underline color when input is focused
                 },
               }}
-              />
-              <TextField
+            />
+            <TextField
               id="standard-helperText"
               label="Last Name"
               // defaultValue="John"
@@ -106,10 +105,10 @@ export default function ContactSectionMission() {
                   borderBottom: '2px solid white', // Underline color when input is focused
                 },
               }}
-              />
-            </div>
-            <div className='form-input'>
-              <TextField
+            />
+          </div>
+          <div className='form-input'>
+            <TextField
               id="standard-helperText"
               label="Email"
               // defaultValue="John"
@@ -134,10 +133,10 @@ export default function ContactSectionMission() {
                   borderBottom: '2px solid white', // Underline color when input is focused
                 },
               }}
-              />
-            </div>
-            <div className='form-input'>
-              <TextField
+            />
+          </div>
+          <div className='form-input'>
+            <TextField
               id="standard-helperText"
               label="Subject"
               // defaultValue="John"
@@ -162,10 +161,10 @@ export default function ContactSectionMission() {
                   borderBottom: '2px solid white', // Underline color when input is focused
                 },
               }}
-              />
+            />
           </div>
-            <div className='form-input'>
-              <TextField
+          <div className='form-input'>
+            <TextField
               id="standard-multiline-static"
               label="Body"
               multiline
@@ -192,14 +191,15 @@ export default function ContactSectionMission() {
                 },
               }}
             />
-        </div>
-        <Button variant="contained" size="large" sx={{
-          background: 'white',
-          color: 'black',
-          marginLeft:'80%'
-        }}>
-          Send Message
-        </Button>
+          </div>
+          <Button variant="contained" size="large" sx={{
+            whiteSpace: 'nowrap',
+            background: 'white',
+            color: 'black',
+            marginLeft: '80%'
+          }}>
+            Send Message
+          </Button>
 
         </form>
       </div>

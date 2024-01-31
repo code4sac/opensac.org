@@ -118,13 +118,11 @@ contact page layout
   justify-content: space-between;
   align-items: center;
   background-color: $secondary-900;
-
   // height: 80vh;
 
-
-.contact-mission-padding{
-  padding: 192px 80px 192px 80px;
-}
+  .contact-mission-padding {
+    padding: 0 80px 0 80px;
+  }
 
   @media (min-width: 1700px) {
     background-size: 40% 80%;
