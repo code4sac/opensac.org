@@ -1,4 +1,4 @@
-const Heading3 = ({children}) => {
+const Heading3 = ({ children }) => {
   const idText = children.replace(/ /g, "_").toLowerCase();
 
   return <h3 id={idText}>{children}</h3>;
