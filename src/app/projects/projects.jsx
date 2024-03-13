@@ -42,32 +42,12 @@ function fetchMdx() {
 export default function Projects() {
   const { fileContent, tableOfContents } = fetchMdx();
 
-  const tags = [{
-    id:1,
-    url:'',
-    text:'html'
-  }, {
-    id:1,
-    url:'',
-    text:'html'
-  }]
-
   return (
     <>
       <div className="projects-main">
         <ProjectsSectionStart
           sectionType={SectionType.light}
         ></ProjectsSectionStart>
-        <ProjectCard
-          sectionType={SectionType.light}
-          projectTitle='OpenSac.org'
-          projectText='Website for Open Sac'
-          imgUrl=''
-          pageUrl=''
-          githubUrl='https://github.com/code4sac/opensac.org'
-          tags={tags}
-          lastUpdatedTimestamp='Thu Sept 21, 8:00pm'
-        ></ProjectCard>
         <section className="projects-container-margins">
           <MDXRemote source={fileContent} components={MDXComponents} />
         </section>
