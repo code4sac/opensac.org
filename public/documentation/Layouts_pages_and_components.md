@@ -1,6 +1,6 @@
 # Application Layouts, Pages, and Components for the Open Sacramento Website
 
-Reusable components and layouts are in the [_includes](/_includes) folder. The pages for the website are in the [content](/content) folder.
+Reusable components and layouts are in the [components](/src/components/) folder. The pages for the website are in the [app](/src/app/) folder.
 
 ## Application Navbar
 

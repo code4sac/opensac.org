@@ -1,10 +1,14 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
-@import '/node_modules/swiper/swiper.css';
+@import "../base/animations";
 
 /*
-Home page layout
+Home page layout.
  */
+.home-section-grey {
+  background-color: $neutral-500;
+  color: $secondary-50;
+}
 
 .home-section-dark {
   background-color: $neutral-900;
@@ -12,7 +16,7 @@ Home page layout
 }
 
 .home-landing-image {
-  background-image: url("/public/img/towerbridgenight.png");
+  background-image: url("/img/towerbridgenight.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;
@@ -20,6 +24,11 @@ Home page layout
   @media (max-width: $screen-sm) {
     background-image: none;
   }
+}
+
+.home-landing-background {
+  background-color: $landing-background-color;
+  color: $neutral-50;
 }
 
 .home-landing-container {
@@ -30,16 +39,16 @@ Home page layout
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  color: $neutral-50;
 
   @media (max-width: $screen-xl) {
     width: 70%;
   }
 
   @media (max-width: $screen-md) {
-    width: 100%;
-    padding: 96px 40px 0px 40px;
-    justify-content: start;
-    padding-top: 30%;
+    width: auto;
+    justify-content: flex-start;
+    padding: 30% 40px 60px;
   }
 
   @media (max-width: $screen-sm) {
@@ -64,13 +73,12 @@ Home page layout
   }
 }
 
-.home-section-landing-image{
+.home-section-landing-image {
   display: none;
 
   @media (max-width: $screen-sm) {
     display: block;
     width: 100%;
-    margin-top: 23px;
   }
 }
 
@@ -83,6 +91,7 @@ Home page layout
 .home-button {
   color: $secondary-50;
   background-color: transparent;
+  cursor: pointer;
 
   border: solid $secondary-500 1px;
   border-radius: 6px;
@@ -91,12 +100,15 @@ Home page layout
   width: fit-content;
 
   @include button-regular;
+  @include dark-button-transition;
 }
 
 .home-button-alt {
   /* alternative colors */
   background-color: $secondary-500;
   color: $neutral-900;
+
+  @include light-button-transition;
 }
 
 .home-button-numbered {
@@ -131,8 +143,6 @@ Home page layout
 .home-section-heading-underline::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
   height: 1px;
   width: 43px;
   border-bottom: 4px solid $neutral-900;
@@ -174,7 +184,7 @@ Home page layout
 .home-section-paragraph {
   @include subheading-regular;
   margin: 0;
-  
+
   @media (max-width: $screen-sm) {
     @include p3-regular;
   }
@@ -218,21 +228,13 @@ Home page layout
 }
 
 .home-about-image {
-  background-image: url("/public/img/open_data_day_curved.png");
+  background-image: url("/img/open_data_day_curved.png");
   background-repeat: no-repeat;
-  background-size: 50% 75%;
+  background-size: 45vw 40vw;
   background-position: right center;
 
   @media (min-width: 1700px) {
     background-size: 40% 80%;
-  }
-
-  @media (max-width: $screen-xxl) {
-    background-size: 50% 60%;
-  }
-
-  @media (max-width: $screen-xl) {
-    background-size: 50% 50%;
   }
 
   @media (max-width: $screen-lg) {
@@ -318,7 +320,7 @@ Home page layout
   justify-content: space-between;
   gap: 30px;
 
-  @media (max-width: $screen-xl) {
+  @media (max-width: 1300px) {
     flex-direction: column;
     justify-content: center;
     padding: 48px 40px;
@@ -328,7 +330,6 @@ Home page layout
 
 .home-projects-info-container {
   width: 50%;
-  display: block;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -344,22 +345,6 @@ Home page layout
   aspect-ratio: 2/1;
 }
 
-.swiper {
-  width: 100%;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  gap: 20px;
-}
-
-.swiper-slide {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding: 0 1%;
-}
-
 .slide-content {
   width: 100%;
 }
@@ -370,30 +355,73 @@ Home page layout
   }
 }
 
-.swiper-pagination {
-  position: relative !important;
+.test {
+  margin: auto;
+  max-width: 100%;
+
+  @media (min-width: 1300px) {
+    max-width: 60%;
+  }
 }
 
-.swiper-pagination-bullet {
-  width: 15px !important;
-  height: 15px !important;
-  background-color: $secondary-50 !important;
-  opacity: 1 !important;
+.navigation-wrapper {
+  position: relative;
 }
 
-.swiper-pagination-bullet-active {
-  background: $secondary-500 !important;
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
 }
 
-.swiper-slide .slide-content {
-  opacity: 0;
-  transition: opacity 0s;
+.dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: $secondary-50;
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
 }
 
-.swiper-slide-active .slide-content {
-  opacity: 1;
-  transition: opacity 1s;
+.dot:focus {
+  outline: none;
 }
+
+.dot.active {
+  background: $secondary-500;
+}
+
+.partnership-section {
+  padding: 64px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  @media (max-width: $screen-lg) {
+    flex-direction: column;
+    padding: 64px 40px;
+  }
+}
+
+.partnership-section-paragraph-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-section-heading-underline-partnership::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 93px;
+  border-bottom: 8px solid $secondary-50;
+  margin-bottom: 20px;
+}
+
 
 .donate-section {
   padding: 64px 80px;
@@ -444,4 +472,26 @@ Home page layout
   @media (max-width: $screen-lg) {
     @include p3-bold;
   }
+}
+
+.home-projects-section-partnerships {
+  padding: 64px 32px 64px 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: flex-start;
+  gap: 48px;
+
+  @media (max-width: $screen-md) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 40px;
+    gap: 60px;
+  }
+}
+
+.home-numbered-paragraph-partnerships {
+  @include p3-regular;
+  text-align: left;
+  margin-top: 24px;
 }

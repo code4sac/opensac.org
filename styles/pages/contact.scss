@@ -1,0 +1,202 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+/*
+contact page layout
+ */
+.contact-section-landing {
+  color: $neutral-900;
+  background-color: $secondary-50;
+  padding: 96px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  @media (max-width: $screen-md) {
+    padding: 48px 40px;
+    flex-direction: column;
+  }
+}
+
+.contact-section-light-container {
+  width: 50%;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+}
+
+.contact-heading-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 43px;
+  border-bottom: 4px solid $neutral-900;
+}
+
+.contact-sub-heading {
+  @include h1-semi-bold;
+  margin: 10px 0;
+
+  @media (max-width: $screen-sm) {
+    @include h1-small-semi-bold;
+  }
+}
+
+.contact-underline-alt::after {
+  border-bottom: 4px solid $neutral-50;
+}
+
+.contact-heading-section {
+  color: $neutral-300;
+  @include h1-section;
+  margin: 0;
+}
+
+.contact-heading-section-alt {
+  color: $secondary-500;
+}
+
+.contact-heading-section-sub {
+  margin: 10px 0;
+  @include h2-semi-bold;
+
+  @media (max-width: $screen-sm) {
+    @include h3-semi-bold;
+  }
+}
+
+.contact-section-paragraph {
+  @include subheading-regular;
+  margin: 0;
+  max-width: 60%;
+
+  @media (max-width: $screen-sm) {
+    @include p3-regular;
+    max-width: 100%;
+  }
+}
+
+.contact-section-paragraph-bold {
+  @include subheading-bold;
+}
+
+.contact-light-section {
+  padding: 7%;
+  background-color: $secondary-50;
+
+  @media (max-width: $screen-md) {
+    padding: 16px;
+  }
+}
+
+.contact-heading-container {
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+}
+
+.contact-section-dark {
+  background-color: $neutral-900;
+  color: $neutral-50;
+}
+
+.contact-dark-heading-container {
+  position: relative;
+}
+
+.contact-section-mission {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $secondary-900;
+  // height: 80vh;
+
+  .contact-mission-padding {
+    padding: 0 80px 0 80px;
+  }
+
+  @media (min-width: 1700px) {
+    background-size: 40% 80%;
+  }
+
+  @media (max-width: $screen-lg) {
+    //   background-image: none;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.contact-mission-container {
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  background-color: $neutral-900;
+  color: $neutral-50;
+
+  @media (max-width: $screen-lg) {
+    width: auto;
+    padding: 48px 40px 0 40px;
+    margin: auto;
+  }
+}
+
+.contactActionLinksAnchor {
+  cursor: pointer;
+  color: var(--secondary-secondary-500, #FFC107);
+  // font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  text-decoration-line: underline;
+
+}
+
+.form-holder{
+  background-color: $secondary-900;
+  min-width: 50vh;
+  color: var(--Neutral-Neutral-50, #F7F7F8);
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 166.667% */
+width: 100%;
+height: auto;
+padding: 80px 88px 80px 88px;
+}
+
+// .TextField.Mui-selected {
+//   color:white
+// }
+// .MuiInputLabel-root{
+//   color: 'white'
+// }
+// .MuiInput-input{
+//   color: 'white'
+// }
+// .MuiInput-underline:before{
+//   borderBottom: '2px solid white', // Default underline color
+// }
+// .MuiInputLabel-root.Mui-focused{
+//   color: 'white', // Label color when input is focused
+// }
+// .MuiInput-underline.Mui-focused:after{
+//   borderBottom: '2px solid white', // Underline color when input is focused
+// }
+
+.form-input {
+  margin-bottom: 30px;
+}

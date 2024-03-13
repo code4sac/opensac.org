@@ -1,5 +1,6 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
+@import "../base/animations.scss";
 
 /*
 Navigation bar.
@@ -9,46 +10,53 @@ It is made up of three sections.
 - Right: Dropdown link that displays extended section
  */
 
-$toolbar_height: 84px;
+// Background behind the navbar. It requires the navbar to be transparent and offset page content. By default, this is not shown; it is overridden by the navbar-toolbar background color. 
+.navbar-background {
+  background: $landing-background-color;
+
+  // Add margin to first element after navbar. This offsets the page content.
+  + * {
+    margin-top: $toolbar-height;
+  }
+}
 
 .navbar-toolbar {
   @include h5-semi-bold;
   width: 100%;
   height: $toolbar-height;
-  color: $secondary-50;
-  background: $neutral-900;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  z-index: 4;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   position: fixed;
   top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  color: $secondary-50;
+  background: $navbar-color;
+  box-shadow: 0 4px 4px 0 rgba($navbar-color, 0.25);
 
-  a, .navbar-toolbar a:visited, .navbar-toolbar a:link {
+  a,
+  .navbar-toolbar a:visited,
+  .navbar-toolbar a:link {
     color: $secondary-50;
     text-decoration: none;
     padding: 0;
     margin: 0;
   }
-
-  * {
-    color: $secondary-50;
-    background: $neutral-900;
-    box-sizing: border-box;
-  }
 }
 
-.navbar-toolbar + div {
-  margin-top: $toolbar-height;
+.navbar-toolbar-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-#navbar-toolbar-main {
-  container-type: inline-size;
-}
-.navbar-nested-parent-link img {
-  margin-left: 2px;
+.navbar-toolbar-content {
+  max-width: 1320px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-link {
@@ -60,25 +68,11 @@ $toolbar_height: 84px;
 
 .navbar-link-selected {
   font-weight: bold;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: .6em;
-}
-
-.navbar-link-selected a:active {
-  text-underline-offset: 16px;
-}
-
-.navbar-toolbar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 16px;
-
 }
 
 .navbar-left-container {
   display: inline-flex;
+  padding: 10px 16px;
 }
 
 .navbar-left-section {
@@ -89,92 +83,93 @@ $toolbar_height: 84px;
 
 .navbar-middle-container {
   display: inline-flex;
+  padding: 10px 0;
 }
 
 .navbar-middle-section {
   display: none;
+  position: relative;
   list-style-type: none;
   column-gap: 50px;
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: $screen-md) {
+  @media screen and (min-width: $screen-lg) {
     display: inline-flex;
   }
 }
 
-.navbar-middle-section :hover {
+.one ~ .navbar-underline {
+  margin-left: -86%;
+  display: block;
+}
+
+.two ~ .navbar-underline {
+  margin-left: -34%;
+  display: block;
+}
+
+.three ~ .navbar-underline {
+  margin-left: 23%;
+  display: block;
+}
+
+.navbar-underline {
+  display: none;
+  position: absolute;
+  top: 120%;
+  height: 2px;
+  width: 80px;
+  margin: 0;
+  background: $secondary-50;
+  border: none;
+  transition: .3s ease-in-out;
+  float: left;
 }
 
 .navbar-right-container {
   display: inline-flex;
+  height: $toolbar-height;
+  padding: 10px 16px;
 }
 
 .navbar-right-section {
+  cursor: pointer;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/img/navbar/menu_hamburger_light.svg") no-repeat center right;
+
+  @media screen and (min-width: $screen-lg) {
+    background: transparent;
+  }
 }
 
-.navbar-extended-desktop-button {
+.navbar-extended-button {
+  border: none;
+  font: inherit;
+  outline: inherit;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
 }
 
 
-#navbar-toolbar-extended {
-  margin: 0;
-  padding: 0;
-}
+.navbar-nested-parent-link {
+  background: transparent;
 
-.navbar-extended-content ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-extended-mobile-content ul::before {
-  content: ''
-}
-
-.navbar-extended-mobile-section li.active a {
-  color: $secondary-50;
-  background: $neutral-900;
+  button {
+    background-color: $navbar-color;
+  }
 }
 
 .navbar-toolbar-extended {
   margin: 0;
   padding: 0;
-
-  color: $secondary-50;
-  background: $neutral-900;
-}
-
-.navbar-extended-desktop-container * {
-  color: black;
-  background: $secondary-50;
-}
-
-.navbar-extended-mobile-container {
-  * {
-    background: $neutral-900;
-  }
-
-  height: 100%;
-  color: $secondary-50;
-  background: $neutral-900;
-}
-
-.navbar-extended-desktop-left-container {
-
-}
-
-.navbar-extended-desktop-left-section {
-
-}
-
-.navbar-extended-desktop-right-container {
-
-}
-
-.navbar-extended-desktop-right-section {
-
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  box-shadow: 0 4px 4px 0 rgba($navbar-color, 0.25);
 }
 
 .navbar-extended-parent-link {
@@ -183,17 +178,55 @@ $toolbar_height: 84px;
   align-items: center;
   width: 200px;
 
-  a, a:visited, a:link, a:active {
+  a,
+  a:visited,
+  a:link,
+  a:active {
     color: $secondary-500;
   }
 }
 
-.navbar-nested-extended-link-image {
+.navbar-extend-button-text {
+  visibility: hidden;
 }
 
-.navbar-extended-mobile-section {
-  padding: 16px;
+.navbar-extend-background-active {
+  .navbar-right-section {
+    background: url("/img/navbar/menu_x.png") no-repeat center right;
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    background: $secondary-50;
+    color: $neutral-900;
+    .navbar-right-section {
+      background: inherit;
+    }
+  }
 }
 
-.navbar-extended-content {
+@media screen and (min-width: $screen-lg) {
+  .navbar-toolbar-extended {
+    background-color: $secondary-50;
+    border-color: #ebeae5;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
+  .navbar-extend-button-text {
+    visibility: visible;
+    color: inherit;
+    display: inline;
+  }
+
+  .navbar-toggle-extend-button {
+    background: transparent url("/img/navbar/chevron_down.png") no-repeat center right;
+    padding: 0 20px 0 0;
+    color: $secondary-500;
+  }
+
+  .navbar-toggle-extend-button-extended {
+    background: transparent url("/img/navbar/chevron_up.png") no-repeat center right;
+    padding: 0 20px 0 0;
+    color: $neutral-900;
+  }
 }
