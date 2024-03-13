@@ -1,8 +1,6 @@
 opensac.org
 =====================
 
-Dan's Change
-
 Code for Sacramento is a platform for civic innovation. As an open-source organization, you can fork our code including our website. Help us make the site better by [forking it](https://help.github.com/articles/fork-a-repo/), adding new content or features, and [submitting a pull request](https://help.github.com/articles/creating-a-pull-request/)!
 
 ### Installation
