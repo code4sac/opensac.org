@@ -46,6 +46,8 @@
     "@types/mdx": "^2.0.10",
     "keen-slider": "^6.8.6",
     "next-mdx-remote": "^4.4.1",
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "swr": "^2.2.5",
+    "yaml": "^2.4.1"
   }
 }
