@@ -1,5 +1,6 @@
 "use client";
 import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
+import { fetchJson } from "@/utils/fetcher";
 import useSWR from "swr";
 import * as yaml from "yaml";
 
