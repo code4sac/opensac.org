@@ -205,15 +205,23 @@ details p {
 }
 
 /* ProjectCard Selectors */
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .project-card-container {
   display: flex; 
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px;
+  padding: 12px;
+  width: 33%;
+  min-width: 300px;
 }
 
 .project-card-img-container {
   position: relative;
+  margin-bottom: -6px;
 }
 .project-card-img-status {
   position: relative;
@@ -224,16 +232,17 @@ details p {
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  top: 80px;
-  left: 80px;
+  top: 40px;
+  left: 10%;
 }
 .project-card-img{
   border-radius: 20px;
-  max-width: 100%;
+  width: 100%;
 }
 .project-card-tags{
   display: flex;
   flex-direction: row;
+  margin-bottom: -6px;
 }
 
 .project-card-tag {
@@ -246,10 +255,14 @@ details p {
   color: white;
 }
 .project-card-heading{
+  margin-bottom: -16px;
+  
 }
 .project-card-last-updated{
   font-size: 14px;
   color: $neutral-700;
+  margin-top: -8px;
+  margin-bottom: -6px;
 }
 
 .project-card-buttons-container{
@@ -268,6 +281,8 @@ details p {
   padding: 16px 24px;
   text-decoration: none;
   width: fit-content;
+  height: fit-content;
+  white-space: nowrap;
 
   @include button-regular;
   @include button-transition($vivid-blue, white);
@@ -283,6 +298,8 @@ details p {
   padding: 16px 24px;
   text-decoration: none;
   width: fit-content;
+  height: fit-content;
+  white-space: nowrap;
 
   @include button-regular;
   @include dark-button-transition;

@@ -41,16 +41,26 @@ function fetchMdx() {
  */
 export default function Projects() {
   const { fileContent, tableOfContents } = fetchMdx();
-
+  const tags = [
+    {
+      id: 1,
+      url: "",
+      text: "html",
+    },
+    {
+      id: 1,
+      url: "",
+      text: "css",
+    },
+  ];
   return (
     <>
       <div className="projects-main">
         <ProjectsSectionStart
           sectionType={SectionType.light}
         ></ProjectsSectionStart>
-        <section className="projects-container-margins">
-          <MDXRemote source={fileContent} components={MDXComponents} />
-        </section>
+        <div className = "project-cards-container">
+        </div>
       </div>
     </>
   );
