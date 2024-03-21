@@ -19,7 +19,7 @@ const fetcher = (...args) =>
     .then(fetchGithubSingleProject);
 
 /**
- * Page for information about how to pitch a project.
+ * Page for displaying a single project
  *
  * @returns {JSX.Element}
  */
@@ -27,7 +27,7 @@ export default function SingleProject({ githubFullName }) {
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/repos/${githubFullName}`,
     fetcher,
-    { shouldRetryOnError: false } // Auto retries quickly exhause unauthenticated api requests to github, which breaks the page
+    { shouldRetryOnError: false } // Auto retries quickly exhaust unauthenticated api requests to github, which breaks the page
   );
 
   if (error) return <div>failed to load</div>;

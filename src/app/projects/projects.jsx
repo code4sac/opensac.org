@@ -26,7 +26,7 @@ export default function Projects({ githubOwner }) {
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/orgs/${githubOwner}/repos?per_page=20&sort=updated&direction=desc`,
     fetcher,
-    { shouldRetryOnError: false } // Auto retries quickly exhause unauthenticated api requests to github, which breaks the page
+    { shouldRetryOnError: false } // Auto retries quickly exhaust unauthenticated api requests to github, which breaks the page
   );
 
   if (error) return <div>failed to load</div>;
