@@ -214,6 +214,7 @@ details p {
   display: flex; 
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   padding: 12px;
   width: 33%;
   min-width: 300px;
@@ -222,6 +223,7 @@ details p {
 .project-card-img-container {
   position: relative;
   margin-bottom: -6px;
+  max-height: 100%;
 }
 .project-card-img-status {
   position: relative;
@@ -232,12 +234,13 @@ details p {
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  top: 40px;
+  top: 25%;
   left: 10%;
 }
 .project-card-img{
   border-radius: 20px;
   width: 100%;
+  max-height: 100%;
 }
 .project-card-tags{
   display: flex;
