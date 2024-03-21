@@ -1,12 +1,13 @@
-import Projects from './projects'
-import '@/styles/pages/projects.scss'
-import '@/styles/pages/about.scss'
-import '@/styles/pages/faq.scss'
+import { githubOwner } from "@/constants";
+import "@/styles/pages/about.scss";
+import "@/styles/pages/faq.scss";
+import "@/styles/pages/projects.scss";
+import Projects from "./projects";
 
-export default function ProjectsPage() {
+export default function Page() {
   return (
     <>
-      <Projects></Projects>
+      <Projects githubOwner={githubOwner}></Projects>
     </>
-  )
+  );
 }

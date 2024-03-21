@@ -1,8 +1,8 @@
 "use client";
 import { jsonResponse } from "@/utils/response";
 import useSWR from "swr";
-import { fetchGithubProjectData } from "./github";
-import ProjectsSectionStart from "./projectsSectionStart";
+import { fetchGithubSingleProject } from "../github";
+import SingleProjectsSectionStart from "./singleProjectsSectionStart";
 
 /**
  * Section type. Displays light or dark themes.
@@ -16,15 +16,16 @@ export const SectionType = {
 const fetcher = (...args) =>
   fetch(...args)
     .then(jsonResponse)
-    .then(fetchGithubProjectData);
+    .then(fetchGithubSingleProject);
 
 /**
  * Page for information about how to pitch a project.
+ *
  * @returns {JSX.Element}
  */
-export default function Projects({ githubOwner }) {
+export default function SingleProject({ githubFullName }) {
   const { data, error, isLoading } = useSWR(
-    `https://api.github.com/orgs/${githubOwner}/repos?per_page=20&sort=updated&direction=desc`,
+    `https://api.github.com/repos/${githubFullName}`,
     fetcher,
     { shouldRetryOnError: false } // Auto retries quickly exhause unauthenticated api requests to github, which breaks the page
   );
@@ -37,9 +38,10 @@ export default function Projects({ githubOwner }) {
   return (
     <>
       <div className="projects-main">
-        <ProjectsSectionStart
-          sectionType={SectionType.light}
-        ></ProjectsSectionStart>
+        <SingleProjectsSectionStart
+          sectionType={SectionType.dark}
+          data={data}
+        ></SingleProjectsSectionStart>
       </div>
     </>
   );
