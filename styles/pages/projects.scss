@@ -316,12 +316,12 @@ details p {
   @include dark-button-transition;
 }
 
-
 .project-heading-section {
   color: $neutral-300;
   @include h1-section;
   margin: 0;
 }
+
 .project-heading-section-alt {
   color: $secondary-500;
 }
