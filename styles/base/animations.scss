@@ -1,11 +1,21 @@
 @import "../abstracts/variables";
 
+@mixin button-transition ($background, $text){
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: $background;
+    color: $text;
+  }
+
+}
+
 @mixin dark-button-transition {
   transition: background-color 0.3s, color 0.3s;
 
   &:hover {
     background-color: $secondary-500;
-    color: $neutral-900;
+    color: $neutral-700;
   }
 }
 

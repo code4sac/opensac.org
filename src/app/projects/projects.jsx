@@ -1,5 +1,6 @@
 "use client";
 import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
+import ProjectCard from "@/app/projects/projectCard"
 import { fetchJson } from "@/utils/fetcher";
 import useSWR from "swr";
 import * as yaml from "yaml";
@@ -28,13 +29,64 @@ export default function Projects() {
   if (isLoading) return <div>loading...</div>;
 
   console.dir(data); // TODO use this data to populate ProjectCards once the component is created.  Remove this log once it is hooked up.
-
   return (
     <>
-      <div className="faq-main">
+      <div className="projects-main">
         <ProjectsSectionStart
           sectionType={SectionType.light}
         ></ProjectsSectionStart>
+        <div className = "project-cards-container">
+          <ProjectCard
+          sectionType={SectionType.light}
+          projectTitle='OpenSac.org'
+          projectText='Website for Open Sac'
+          imgUrl='/img/about/towerbridgeside.png'
+          pageUrl=''
+          githubUrl='https://github.com/code4sac/opensac.org'
+          tags= {["html", "html"]}
+          lastUpdatedTimestamp='Thu Sept 21, 8:00pm'
+        ></ProjectCard>
+        <ProjectCard
+          sectionType={SectionType.light}
+          projectTitle='OpenSac.org'
+          projectText='Website for Open Sac'
+          imgUrl='/img/projects/opensac.png'
+          pageUrl=''
+          githubUrl='https://github.com/code4sac/opensac.org'
+          tags= {["html", "html"]}
+          lastUpdatedTimestamp='Thu Sept 21, 8:00pm'
+        ></ProjectCard>
+        <ProjectCard
+          sectionType={SectionType.light}
+          projectTitle='OpenSac.org'
+          projectText='Website for Open Sac'
+          imgUrl='/img/about/towerbridgeside.png'
+          pageUrl=''
+          githubUrl='https://github.com/code4sac/opensac.org'
+          tags= {["html", "html"]}
+          lastUpdatedTimestamp='Thu Sept 21, 8:00pm'
+        ></ProjectCard>
+        <ProjectCard
+          sectionType={SectionType.light}
+          projectTitle='OpenSac.org'
+          projectText='Website for Open Sac'
+          imgUrl='/img/projects/opensac.png'
+          pageUrl=''
+          githubUrl='https://github.com/code4sac/opensac.org'
+          tags= {["html", "html"]}
+          lastUpdatedTimestamp='Thu Sept 21, 8:00pm'
+        ></ProjectCard>
+        <ProjectCard
+          sectionType={SectionType.light}
+          projectTitle='OpenSac.org'
+          projectText='Website for Open Sac'
+          imgUrl='/img/about/towerbridgeside.png'
+          pageUrl=''
+          githubUrl='https://github.com/code4sac/opensac.org'
+          tags= {["html", "html"]}
+          lastUpdatedTimestamp='Thu Sept 21, 8:00pm'
+        ></ProjectCard>
+        </div>
       </div>
     </>
   );
