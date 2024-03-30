@@ -55,6 +55,7 @@ export const fetchGithubSingleProject = async (ghResponse) => {
 const mapGhData = (ghResponse) => ({
   id: ghResponse.id,
   homepage: ghResponse.homepage,
+  name: ghResponse.name,
   full_name: ghResponse.full_name,
   html_url: ghResponse.html_url,
   api_url: ghResponse.url,

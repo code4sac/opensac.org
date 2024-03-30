@@ -48,7 +48,7 @@ export default function Projects({ githubOwner }) {
               projectTitle={project.meta.title}
               projectText={project.meta.description}
               imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
-              pageUrl={project.homepage}
+              pageUrl={`/projects/${project.name}`}
               githubUrl={project.html_url}
               tags={project.meta.tags.split(",")}
               lastUpdatedTimestamp={moment(project.updated_at)}
