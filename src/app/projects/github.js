@@ -1,3 +1,4 @@
+import { githubOwner, githubProject } from "@/constants";
 import * as yaml from "yaml";
 
 /**
@@ -120,6 +121,15 @@ screenshots:
  * @returns 
  */
 const fetchMetaFile = async (ghFullName) => {
+  console.dir(`${ghFullName}/${githubProject}`)
+  console.dir(localMetaYaml)
+  if (
+    ghFullName === `${githubOwner}/${githubProject}` &&
+    process.env.NODE_ENV === "development"
+  ) {
+    return localMetaYaml;
+  }
+
   const metaResponse = await fetch(
     `https://raw.githubusercontent.com/${ghFullName}/main/${metaFile}`
   );
@@ -132,3 +142,54 @@ const fetchMetaFile = async (ghFullName) => {
 
   return yaml.parse(textReponse);
 };
+
+const localMetaYaml = yaml.parse(`
+title: OpenSac.org
+project_type: website
+project_status: active
+description: The Open Sacramento website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Sacramento area and beyond through technology
+image_url: opensac.jpg
+project_partner: Dan Fey
+project_lead: Brianda Hernandez
+technical_lead: Nate Bass
+lead_designer: Help Needed
+tags: html,css,javascript,react,github,figma
+contributing:
+  designer:
+    difficulty: easy
+    technologies: Figma
+    ways_to_contribute: improve existing designs, design new pages
+  developer:
+    difficulty: easy
+    frontend: html,css,javascript,react
+    backend: n/a
+    ways_to_contribute: Bug fixing, testing, maintenance; see issues on github
+  project_manager:
+    difficulty: easy
+    technologies: github, slack
+    ways_to_contribute: organize and create issues & milestones, work with team members to stay and track and remove roadblocks
+roadmap:
+  research:
+    time_range: July 1, 2023 - August 31, 2023
+    objective: Understand what we want from the new website
+    outcome: Goals and direction for design and development
+  design:
+    time_range: September 1, 2023 - October 5, 2023
+    objective: Create and iterate on figma designs for the website
+    outcome: Completed figma desgins for all pages, enabling development to begin
+  development:
+    time_range: October 6, 2023 - April 1, 2023
+    objective: Create react application reflecting figma designs
+    outcome: Completed code for website reflecting the figma designs
+  deployment:
+    time_range: April 2, 2023 - April 9, 2023
+    objective: Deploy react application to opensac.org
+    outcome: Live hosted opensac.org website
+  launch:
+    time_range: April 10, 2023 - April 24, 2023
+    objective: Raise awareness of new website and branding on social media
+    outcome: People interested in Code for Sacramento are now aware of OpenSac.org
+resources:
+screenshots:
+  - opensac.jpg
+`);
