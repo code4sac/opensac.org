@@ -1,8 +1,10 @@
 "use client";
+import ProjectCard from "@/app/projects/projectCard";
+import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
 import { jsonResponse } from "@/utils/response";
+import moment from "moment";
 import useSWR from "swr";
 import { fetchGithubProjectData } from "./github";
-import ProjectsSectionStart from "./projectsSectionStart";
 
 /**
  * Section type. Displays light or dark themes.
@@ -33,13 +35,26 @@ export default function Projects({ githubOwner }) {
   if (isLoading) return <div>loading...</div>;
 
   console.dir(data); // TODO use this data to populate ProjectCards once the component is created.  Remove this log once it is hooked up.
-
   return (
     <>
       <div className="projects-main">
         <ProjectsSectionStart
           sectionType={SectionType.light}
         ></ProjectsSectionStart>
+        <div className="project-cards-container">
+          {data.map((project) => (
+            <ProjectCard
+              sectionType={SectionType.light}
+              projectTitle={project.meta.title}
+              projectText={project.meta.description}
+              imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
+              pageUrl={project.homepage}
+              githubUrl={project.html_url}
+              tags={project.meta.tags.split(",")}
+              lastUpdatedTimestamp={moment(project.updated_at)}
+            ></ProjectCard>
+          ))}
+        </div>
       </div>
     </>
   );

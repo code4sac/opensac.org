@@ -1,11 +1,12 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
+@import "../base/animations";
 
 /*
 FAQ page layout.
  */
 
-.faq-section-light {
+.projects-section-light {
   color: $neutral-900;
   background-color: $secondary-50;
   padding: 96px 80px;
@@ -21,7 +22,7 @@ FAQ page layout.
   }
 }
 
-.faq-section-light-container {
+.projects-section-light-container {
   width: 50%;
   position: relative;
 
@@ -30,7 +31,7 @@ FAQ page layout.
   }
 }
 
-.faq-section-heading-underline::after {
+.projects-section-heading-underline::after {
   content: "";
   position: absolute;
   height: 1px;
@@ -38,17 +39,17 @@ FAQ page layout.
   border-bottom: 4px solid $neutral-900;
 }
 
-.faq-heading-section {
+.projects-heading-section {
   color: $neutral-300;
   @include h1-section;
   margin: 0;
 }
 
-.faq-heading-section-alt {
+.projects-heading-section-alt {
   color: $secondary-500;
 }
 
-.faq-heading-section-sub {
+.projects-heading-section-sub {
   margin: 10px 0;
   max-width: 450px;
   @include h2-semi-bold;
@@ -58,7 +59,7 @@ FAQ page layout.
   }
 }
 
-.faq-section-paragraph {
+.projects-section-paragraph {
   @include p3-regular;
   margin: 0;
 
@@ -67,13 +68,13 @@ FAQ page layout.
   }
 }
 
-.faq-main {
+.projects-main {
   background-color: $secondary-50;
   padding-bottom: 50px;
   border-bottom: 1px solid $neutral-900;
 }
 
-.faq-container-margins {
+.projects-container-margins {
   margin: 0 80px;
 
   @media (max-width: $screen-md) {
@@ -81,7 +82,7 @@ FAQ page layout.
   }
 }
 
-.faq-nav-light {
+.projects-nav-light {
   color: $neutral-900;
   border: 1px solid $primary-500;
   border-left: none;
@@ -93,12 +94,12 @@ FAQ page layout.
   }
 }
 
-.faq-nav {
+.projects-nav {
   justify-content: left;
   padding: 20px;
 }
 
-.faq-nav a {
+.projects-nav a {
   @include nav-semi-bold;
   color: $primary-500;
   text-decoration: none;
@@ -117,7 +118,7 @@ FAQ page layout.
   }
 }
 
-.faq-container-margins h3 {
+.projects-container-margins h3 {
   @include h4-semi-bold;
   padding: 40px 0;
   margin-top: 40px;
@@ -127,11 +128,11 @@ FAQ page layout.
   }
 }
 
-.faq-container-margins h3:first-child {
+.projects-container-margins h3:first-child {
   margin-top: 0;
 }
 
-.faq-container-margins h4 {
+.projects-container-margins h4 {
   @include h5-semi-bold;
   padding: 24px 0;
 
@@ -141,7 +142,7 @@ FAQ page layout.
   }
 }
 
-.faq-question,
+.projects-question,
 details {
   border-top: 1px solid $neutral-400;
   padding: 0 20px;
@@ -155,7 +156,7 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
-.faq-question a,
+.projects-question a,
 details h4 {
   position: relative;
   display: flex;
@@ -163,7 +164,7 @@ details h4 {
   cursor: pointer;
 }
 
-.faq-question a::after,
+.projects-question a::after,
 details h4::after {
   content: "";
   flex-shrink: 0;
@@ -178,7 +179,7 @@ details h4::after {
   padding: 10px;
 }
 
-.faq-question.question-open a::after,
+.projects-question.question-open a::after,
 details[open] h4::after {
   content: "";
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 12H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
@@ -202,6 +203,119 @@ details p {
 .question-open .question-text {
   display: block;
 }
+
+/* ProjectCard Selectors */
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card-container {
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 12px;
+  width: 33%;
+  min-width: 300px;
+}
+
+.project-card-img-container {
+  position: relative;
+  margin-bottom: -6px;
+  width: 100%;
+  padding-bottom: 75%;
+}
+.project-card-img-status {
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  top: 85%;
+  left: 8%;
+  z-index: 1000;
+}
+.project-card-img{
+  border-radius: 20px;
+  position:absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.project-card-tags{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -6px;
+}
+
+.project-card-tag {
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: $primary-500;
+  color: white;
+}
+.project-card-heading{
+  margin-bottom: -16px;
+  
+}
+.project-card-last-updated{
+  font-size: 14px;
+  color: $neutral-700;
+  margin-top: -8px;
+  margin-bottom: -6px;
+}
+
+.project-card-buttons-container{
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+}
+
+.project-card-button-dark{
+  color: $secondary-50;
+  background-color: $primary-500;
+  cursor: pointer;
+
+  border: solid $primary-500 1px;
+  border-radius: 6px;
+  padding: 16px 24px;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  white-space: nowrap;
+
+  @include button-regular;
+  @include button-transition($vivid-blue, white);
+}
+
+.project-card-button-light{
+  color: $primary-500;
+  background-color: transparent;
+  cursor: pointer;
+
+  border: solid $primary-500 1px;
+  border-radius: 6px;
+  padding: 16px 24px;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  white-space: nowrap;
+
+  @include button-regular;
+  @include dark-button-transition;
+}
+
 
 .project-heading-section {
   color: $neutral-300;
