@@ -325,3 +325,13 @@ details p {
 .project-heading-section-alt {
   color: $secondary-500;
 }
+
+/* Single Project Selectors */
+.project-section-dark {
+  color: $neutral-900;
+  background-color: $secondary-50;
+}
+
+.list-horizontal-container {
+  display: flex;
+}

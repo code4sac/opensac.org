@@ -2,6 +2,9 @@ title: OpenSac.org
 project_type: website
 project_status: active
 description: The Open Sacramento website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Sacramento area and beyond through technology
+comments: This is a great project for new members to get used to working one issues and tasks. It is one of the more approachable projects.
+communications: Slack
+channels: \#proj-c4s-codeforsacorg
 image_url: opensac.jpg
 project_partner: Dan Fey
 project_lead: Brianda Hernandez
@@ -17,6 +20,9 @@ contributing:
     difficulty: easy
     frontend: html,css,javascript,react
     backend: n/a
+    technologies: To be announced
+    version_control: Github
+    repo: /opensac
     ways_to_contribute: Bug fixing, testing, maintenance; see issues on github
   project_manager:
     difficulty: easy
@@ -43,6 +49,13 @@ roadmap:
     time_range: April 10, 2023 - April 24, 2023
     objective: Raise awareness of new website and branding on social media
     outcome: People interested in Code for Sacramento are now aware of OpenSac.org
+  objective: This is the opportunity where you can put any valuable information about our project's current progress or goals.
+  comments: This is the opportunity where you can put any valuable information about the project. This helps in keeping everyone well-informed about our project's status and future plans. Please take a moment to review where the project stands, including what has been accomplished and what's in progress. Our project goals and deadlines are clearly defined to ensure we stay on track.
+  outcome: This is the opportunity where you can put the expected outcome of the project.
 resources:
+  documentation:
+  tutorials:
+  meeting_times: Scheduled for Wednesdays at 6:30 PM and listed on Meetup.
+  office_hours: Saturdays at 3:00 PM (Posted on Slack)
 screenshots:
   - opensac.jpg

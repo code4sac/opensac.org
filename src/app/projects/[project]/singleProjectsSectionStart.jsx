@@ -1,6 +1,7 @@
 import { upperFirst } from "@/utils/string";
 import Link from "next/link";
 
+
 /**
  * Single project start section.
  *
@@ -9,6 +10,8 @@ import Link from "next/link";
 export default function SingleProjectsSectionStart({ sectionType, data }) {
   return (
     <section className={`project-section-${sectionType}`}>
+      <div className = {'list-horizontal-container'}>
+      <div className = {`project-section-${sectionType}-container`}>
       <div
         className={`project-section-${sectionType}-container project-section-heading-underline`}
       >
@@ -26,7 +29,7 @@ export default function SingleProjectsSectionStart({ sectionType, data }) {
         <p className="project-section-paragraph">{data.updated_at}</p>
         <div className={`home-buttons-group`}>
           <Link
-            href={data.html_url}
+            href={data.html_url} // source code
             target="_blank"
             className={`home-button home-button-alt`}
           >
@@ -36,6 +39,12 @@ export default function SingleProjectsSectionStart({ sectionType, data }) {
             Get Started
           </Link>
         </div>
+      </div>
+      </div>
+      <img 
+          className='single-project-image' 
+          src = {`https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url}`}>
+      </img>
       </div>
     </section>
   );
