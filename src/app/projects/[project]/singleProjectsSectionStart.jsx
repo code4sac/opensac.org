@@ -13,7 +13,7 @@ export default function SingleProjectsSectionStart({ sectionType, data }) {
       <div className = {'list-horizontal-container'}>
       <div className = {`project-section-${sectionType}-container`}>
       <div
-        className={`project-section-${sectionType}-container project-section-heading-underline`}
+        className={`project-section-${sectionType}-container project-heading-section-underline`}
       >
         <h2 className="project-heading-section project-heading-section-alt">
           {data.meta.project_type.toUpperCase()}

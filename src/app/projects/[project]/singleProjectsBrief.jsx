@@ -3,31 +3,32 @@ import { upperFirst } from "@/utils/string";
 export default function SingleProjectsBrief({ sectionType, data }) {
   return (
     <>
-      <section className={`project-section-${sectionType}`}>
-        <div className="single-projects-info-container">
+      <section id="project-brief" className={`project-section-${sectionType}`}>
+        <h2 className="project-heading-section">Project Brief</h2>
+        <div className="project-info-container">
           <p>Status</p> <p>{upperFirst(data.meta.project_status)}</p>
         </div>
-        <div className="single-projects-info-container">
-          <p>Description</p> <p>{data.meta.description}</p>
+        <div className="project-info-container">
+          <p >Description</p> <p>{data.meta.description}</p>
         </div>
-        <div className="single-projects-info-container">
+        <div className="project-info-container">
           <p>Comments</p> <p>{upperFirst(data.meta.project_status)}</p>
         </div>
-        <div className="single-projects-info-container">
+        <div className="project-info-container">
           <p>Communications</p> <p>{data.meta.communications}</p>
           <p>Channels</p>
           <p>{data.meta.channels}</p>
         </div>
-        <div className="single-projects-info-container">
+        <div className="project-info-container">
           <p>Project Partner</p> <p>{data.meta.project_partner}</p>
         </div>
-        <div className="single-projects-info-container">
+        <div className="project-info-container">
           <p>Project Lead</p> <p>{data.meta.technical_lead}</p>
         </div>
-        <div className="single-projects-info-container">
+        <div className="project-info-container">
           <p>Technical Lead</p> <p>{data.meta.technical_lead}</p>
         </div>
-        <div className="single-projects-info-container">
+        <div className="project-info-container">
           <p>Lead Designer</p> <p>{data.meta.lead_designer}</p>
         </div>
       </section>

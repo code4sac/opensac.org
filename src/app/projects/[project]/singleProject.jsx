@@ -8,6 +8,7 @@ import SingleProjectsBrief from "./singleProjectsBrief";
 import SingleProjectsScreenshots from "./singleProjectsScreenshots";
 import SingleProjectsRoadmap from "./singleProjectsRoadmap";
 import SingleProjectsContribute from "./singleProjectsContribute";
+import SingleProjectsDeveloper from "./singleProjectsDeveloper";
 import SingleProjectsResources from "./singleProjectsResources";
 import SingleProjectsVolunteer from "./singleProjectsVolunteer";
 import Link from "next/link";
@@ -57,71 +58,38 @@ export default function SingleProject({ githubFullName }) {
         <Link href="#screenshots">Screenshots</Link>
         <Link href="#roadmap">Roadmap</Link>
         <Link href="#how-to-contribute">How to Contribute</Link>
+        <Link href="#developer">Developer</Link>
         <Link href="#resources">Resources</Link>
         <Link href="#how-to-volunteer">How to Volunteer</Link>
       </div>
       <SingleProjectsBrief
-        id="project-brief"
         sectionType={SectionType.dark}
         data={data}
       ></SingleProjectsBrief>
       <SingleProjectsScreenshots
-        id="screenshots"
         sectionType={SectionType.dark}
         data={data}
       ></SingleProjectsScreenshots>
       <SingleProjectsRoadmap
-        id="roadmap"
         sectionType={SectionType.dark}
         data={data}
       ></SingleProjectsRoadmap>
       <SingleProjectsContribute
-        id="how-to-contribute"
         sectionType={SectionType.dark}
         data={data}
       ></SingleProjectsContribute>
+      <SingleProjectsDeveloper
+      sectionType={SectionType.dark}
+      data={data}
+      ></SingleProjectsDeveloper>
       <SingleProjectsResources
-        id="resources"
         sectionType={SectionType.dark}
         data={data}
       ></SingleProjectsResources>
       <SingleProjectsVolunteer
-        id="how-to-volunteer"
         sectionType={SectionType.dark}
         data={data}
       ></SingleProjectsVolunteer>
     </>
   );
 }
-
-/* 
-        Project Brief
-          status
-          Description
-          comments
-          communications
-          channels
-          project partner
-          project lead
-          lead designer
-        Screenshots
-          Explore our project through screenshots, providing visual insights into its design and functionality
-        Roadmap
-          research, design, development, deployment, launch
-          objective, comments, outcome
-        How to Contribute
-          Get involved as (developer designer other)
-        Other
-          difficulty
-          documentation
-          meetings
-          technologies
-          version control
-          repo
-          ways to contribute
-        Resources
-          Documentation
-          tutorial 1, 2, 3
-          meeting times
-          office hours
-      Why join project? */
