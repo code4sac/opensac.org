@@ -17,13 +17,13 @@ export default function SingleProjectsResources({ sectionType, data }) {
         <p>Documentation</p>{" "}
         {(() => {
           if (data.meta.resources.documentation) {
-            <Link href={data.meta.resources.documentation}>Download</Link>;
+            return <Link href={data.meta.resources.documentation}>Download</Link>;
           }
         })()}
         {(() => {
           if (data.meta.resources.tutorials) {
             let tutorialCounter = 1;
-            data.meta.resources.tutorials.map((link) => (
+            return data.meta.resources.tutorials.map((link) => (
               <>
                 <p>Tutorial {tutorialCounter++}</p>
                 <Link key={link} href={link}>
