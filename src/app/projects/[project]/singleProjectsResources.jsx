@@ -22,6 +22,7 @@ export default function SingleProjectsResources({ sectionType, data }) {
         })()}
         {(() => {
           if (data.meta.resources.tutorials) {
+            let tutorialCounter = 1;
             data.meta.resources.tutorials.map((link) => (
               <>
                 <p>Tutorial {tutorialCounter++}</p>
