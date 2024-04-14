@@ -41,7 +41,7 @@ export default function ProjectsSectionStart({ sectionType }) {
         <div className="meeting-card-container">
           <a className="meeting-card-link" href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">
             <span>Go to meetup</span>
-            <img src="./img/card-meeting/arrow-right.svg" alt="" />
+            <img src="./img/meeting-card/arrow-right.svg" alt="Arrow right." />
           </a>
         </div>
       </div>
