@@ -5,30 +5,32 @@
 /*
 FAQ page layout.
  */
-
 .projects-section-light {
   color: $neutral-900;
   background-color: $secondary-50;
   padding: 96px 80px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 24px;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-lg) {
     padding: 48px 40px;
     flex-direction: column;
   }
 }
 
-.projects-section-light-container {
-  width: 50%;
-  position: relative;
+.projects-section-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
-  @media (max-width: $screen-md) {
-    width: 100%;
+  @media (min-width: $screen-lg) {
+    max-width: 50%;
   }
+}
+
+.projects-section-light-container {
+  position: relative;
 }
 
 .projects-section-heading-underline::after {
@@ -65,6 +67,82 @@ FAQ page layout.
 
   @media (max-width: $screen-sm) {
     @include p2-regular;
+  }
+}
+
+.meeting-card {
+  border-top: 1px solid $neutral-500;
+  border-bottom: 1px solid $neutral-500;
+
+  ul {
+    padding: 20px 0px;
+    border-top: 1px solid $neutral-500;
+    border-bottom: 1px solid $neutral-500;
+    width: 100%;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    li {
+      &:first-child {
+        list-style-image: url('/img/meeting-card/calender.svg');
+      }
+
+      &:nth-child(2) {
+        list-style-image: url('/img/meeting-card/clock.svg');
+      }
+
+      &:nth-child(3) {
+        list-style-image: url('/img/meeting-card/document-txt.svg');
+      }
+    }
+  }
+
+  .meeting-card-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+  }
+
+  .meeting-card-heading {
+    @include p3-bold;
+  }
+
+  .meeting-card-list-item-text {
+    @include p3-regular;
+    position: relative;
+    top: -5px;
+  }
+
+  .meeting-card-link {
+    @include p3-semi-bold;
+    color: $neutral-900;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    margin-left: 5px;
+  }
+
+  @media (min-width: $screen-xs) {
+    .meeting-card-list-item-text {
+      margin-left: 10px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    border: 1px solid $neutral-500;
+    border-radius: 20px;
+    min-width: 402px;
+    max-width: 402px;
+
+    .meeting-card-container,
+    ul {
+      padding: 20px 40px;
+    }
   }
 }
 
@@ -148,11 +226,11 @@ details {
   padding: 0 20px;
 }
 
-details > summary {
+details>summary {
   list-style: none;
 }
 
-details > summary::-webkit-details-marker {
+details>summary::-webkit-details-marker {
   display: none;
 }
 
@@ -211,7 +289,7 @@ details p {
 }
 
 .project-card-container {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -226,6 +304,7 @@ details p {
   width: 100%;
   padding-bottom: 75%;
 }
+
 .project-card-img-status {
   position: relative;
   text-align: center;
@@ -239,9 +318,10 @@ details p {
   left: 8%;
   z-index: 1000;
 }
-.project-card-img{
+
+.project-card-img {
   border-radius: 20px;
-  position:absolute;
+  position: absolute;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -250,7 +330,8 @@ details p {
   left: 0;
   right: 0;
 }
-.project-card-tags{
+
+.project-card-tags {
   display: flex;
   flex-direction: row;
   margin-bottom: -6px;
@@ -265,24 +346,26 @@ details p {
   background-color: $primary-500;
   color: white;
 }
-.project-card-heading{
+
+.project-card-heading {
   margin-bottom: -16px;
-  
+
 }
-.project-card-last-updated{
+
+.project-card-last-updated {
   font-size: 14px;
   color: $neutral-700;
   margin-top: -8px;
   margin-bottom: -6px;
 }
 
-.project-card-buttons-container{
+.project-card-buttons-container {
   width: fit-content;
   display: flex;
   gap: 20px;
 }
 
-.project-card-button-dark{
+.project-card-button-dark {
   color: $secondary-50;
   background-color: $primary-500;
   cursor: pointer;
@@ -299,7 +382,7 @@ details p {
   @include button-transition($vivid-blue, white);
 }
 
-.project-card-button-light{
+.project-card-button-light {
   color: $primary-500;
   background-color: transparent;
   cursor: pointer;
@@ -327,11 +410,41 @@ details p {
 }
 
 /* Single Project Selectors */
+.white-text {
+  color: $secondary-50;
+}
 .project-section-dark {
-  color: $neutral-900;
-  background-color: $secondary-50;
+  color: $neutral-200;
+  background-color: $neutral-900;
 }
 
-.list-horizontal-container {
+.project-info-container {
   display: flex;
+  gap: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.project-paragraph {
+
+}
+
+.project-info-line-top {
+  border-top: 1px solid;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+}
+
+.project-heading {
+  white-space: nowrap;
+  font-size: 1.5em;
+}
+
+.project-heading-underline {
+  content: "";
+  width: 43px;
+  border-bottom: 4px solid;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }

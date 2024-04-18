@@ -7,7 +7,7 @@ export default function SingleProjectsVolunteer({ sectionType, data }) {
           <div
             className={`project-dark-heading-container project-heading-underline project-underline-alt`}
           >
-            <h2 className={`project-heading-section`}>Why Join Open Sacramento?</h2>
+            <h2 className={`project-heading`}>Why Join Open Sacramento?</h2>
           </div>
           <p className={`project-section-info`}>
             Join us at Open Sacramento to collaborate on impactful civic tech projects and connect with a diverse

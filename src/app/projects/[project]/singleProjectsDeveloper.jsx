@@ -4,7 +4,7 @@ export default function SingleProjectsDeveloper({ sectionType, data }) {
   return (
     <>
       <section id="developer" className={`project-section-${sectionType}`}>
-        <h2 className="project-heading-section">Developer</h2>
+        <h2 className="project-heading">Developer</h2>
         <p className="project-section-paragraph">
           Developers can actively contribute to the project by submitting pull
           requests with code enhancements or bug fixes via the project's GitHub
