@@ -1,6 +1,7 @@
 "use client";
 import ProjectCard from "@/app/projects/projectCard";
 import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
+import ProjectSearch from "./projectSearch";
 import { jsonResponse } from "@/utils/response";
 import moment from "moment";
 import useSWR from "swr";
@@ -41,7 +42,32 @@ export default function Projects({ githubOwner }) {
         <ProjectsSectionStart
           sectionType={SectionType.light}
         ></ProjectsSectionStart>
+        <ProjectSearch />
         <div className="project-cards-container">
+          {data.map((project) => (
+            <ProjectCard
+              sectionType={SectionType.light}
+              projectTitle={project.meta.title}
+              projectText={project.meta.description}
+              imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
+              pageUrl={`/projects/${project.name}`}
+              githubUrl={project.html_url}
+              tags={project.meta.tags.split(",")}
+              lastUpdatedTimestamp={moment(project.updated_at)}
+            ></ProjectCard>
+          ))}
+          {data.map((project) => (
+            <ProjectCard
+              sectionType={SectionType.light}
+              projectTitle={project.meta.title}
+              projectText={project.meta.description}
+              imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
+              pageUrl={`/projects/${project.name}`}
+              githubUrl={project.html_url}
+              tags={project.meta.tags.split(",")}
+              lastUpdatedTimestamp={moment(project.updated_at)}
+            ></ProjectCard>
+          ))}
           {data.map((project) => (
             <ProjectCard
               sectionType={SectionType.light}
