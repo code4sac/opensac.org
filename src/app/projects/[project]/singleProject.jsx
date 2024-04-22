@@ -43,25 +43,44 @@ export default function SingleProject({ githubFullName }) {
   if (isLoading) return <div>loading...</div>;
 
   console.dir(data); // TODO use this data to populate ProjectCards once the component is created.  Remove this log once it is hooked up.
-  
+
   return (
-    <>
-      <div className="projects-main">
+    <div className={`project-section-${SectionType.dark}`}>
+      <div
+        className={`projects-main project-section-${SectionType.dark}-headings`}
+      >
         <SingleProjectsSectionStart
           sectionType={SectionType.dark}
           data={data}
         ></SingleProjectsSectionStart>
       </div>
 
-      <div className={`project-section-${SectionType.dark}-headings`}>
-        <Link href="#project-brief">Project Brief</Link>
-        <Link href="#screenshots">Screenshots</Link>
-        <Link href="#roadmap">Roadmap</Link>
-        <Link href="#how-to-contribute">How to Contribute</Link>
-        <Link href="#developer">Developer</Link>
-        <Link href="#resources">Resources</Link>
-        <Link href="#how-to-volunteer">How to Volunteer</Link>
+      <div
+        className={`project-info-line-top project-info-line-bottom project-link-container`}
+      >
+        <Link className="project-heading-alt" href="#project-brief">
+          Project Brief
+        </Link>
+        <Link className="project-heading-alt" href="#screenshots">
+          Screenshots
+        </Link>
+        <Link className="project-heading-alt" href="#roadmap">
+          Roadmap
+        </Link>
+        <Link className="project-heading-alt" href="#how-to-contribute">
+          How to Contribute
+        </Link>
+        <Link className="project-heading-alt" href="#developer">
+          Developer
+        </Link>
+        <Link className="project-heading-alt" href="#resources">
+          Resources
+        </Link>
+        <Link className="project-heading-alt" href="#how-to-volunteer">
+          How to Volunteer
+        </Link>
       </div>
+
       <SingleProjectsBrief
         sectionType={SectionType.dark}
         data={data}
@@ -79,8 +98,8 @@ export default function SingleProject({ githubFullName }) {
         data={data}
       ></SingleProjectsContribute>
       <SingleProjectsDeveloper
-      sectionType={SectionType.dark}
-      data={data}
+        sectionType={SectionType.dark}
+        data={data}
       ></SingleProjectsDeveloper>
       <SingleProjectsResources
         sectionType={SectionType.dark}
@@ -90,6 +109,6 @@ export default function SingleProject({ githubFullName }) {
         sectionType={SectionType.dark}
         data={data}
       ></SingleProjectsVolunteer>
-    </>
+    </div>
   );
 }

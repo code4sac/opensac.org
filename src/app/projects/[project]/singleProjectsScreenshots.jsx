@@ -1,4 +1,13 @@
 export default function SingleProjectsScreenshots({ sectionType, data }) {
+  let shownImages = data.meta.screenshots.map((screenshot) => (
+            <img className = "project-screenshot" key = {data.full_name.concat(screenshot)}
+            src={`https://raw.githubusercontent.com/${data.full_name}/main/${screenshot}`}></img>
+          ));
+  for (let i = shownImages.length; i < 6; i++) {
+    shownImages.push(<div className = "project-blank-screenshot" key = {data.full_name + i}></div>);
+  }
+
+
   return (
     <>
       <section id="screenshots" className={`project-section-${sectionType}`}>
@@ -8,10 +17,7 @@ export default function SingleProjectsScreenshots({ sectionType, data }) {
           into its design and functionality.
         </p>
         <div className="project-screenshot-container">
-          {data.meta.screenshots.map((screenshot) => (
-            <img className = "project-screenshot" key = {data.full_name.concat(screenshot)}
-            src={`https://raw.githubusercontent.com/${data.full_name}/main/${screenshot}`}></img>
-          ))}
+          {shownImages}
           
         </div>
       </section>

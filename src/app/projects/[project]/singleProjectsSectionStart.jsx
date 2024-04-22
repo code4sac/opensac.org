@@ -15,7 +15,7 @@ export default function SingleProjectsSectionStart({ sectionType, data }) {
       <div
         className={`project-section-${sectionType}-container project-heading-section-underline`}
       >
-        <h2 className="project-heading project-heading-alt">
+        <h2 className="project-heading-alt">
           {data.meta.project_type.toUpperCase()}
         </h2>
         <h1 className="project-heading project-heading-underline">{data.meta.title}</h1>
