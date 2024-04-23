@@ -1,12 +1,12 @@
 export default function SingleProjectsRoadmap({ sectionType, data }) {
   return (
     <>
-      <section id="roadmap" className={`project-section-${sectionType}`}>
+      <section id="roadmap" className={``}>
         <h2 className="project-heading project-heading-underline">Roadmap</h2>
         <p className="project-section-paragraph">
           Know the current progress, scope, and stage of project
         </p>
-        <div className="project-info-container">
+        <div className="project-info-container-alt">
           <div>
             <p className="project-info-label">Research</p>
             <p className = "project-info-alt">{data.meta.roadmap.research.time_range}</p>

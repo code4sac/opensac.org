@@ -10,7 +10,7 @@ export default function SingleProjectsScreenshots({ sectionType, data }) {
 
   return (
     <>
-      <section id="screenshots" className={`project-section-${sectionType}`}>
+      <section id="screenshots" className={``}>
         <h2 className="project-heading project-heading-underline">Screenshots</h2>
         <p className="project-section-paragraph">
           Explore our project through screenshots, providing visual insights

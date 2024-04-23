@@ -3,7 +3,7 @@ import { upperFirst } from "@/utils/string";
 export default function SingleProjectsBrief({ sectionType, data }) {
   return (
     <>
-      <section id="project-brief" className={`project-section-${sectionType}`}>
+      <section id="project-brief" className={``}>
         <div className = "project-heading-underline">
         <h2 className="project-heading">
           Project Brief

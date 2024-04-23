@@ -53,8 +53,10 @@ roadmap:
   comments: This is the opportunity where you can put any valuable information about the project. This helps in keeping everyone well-informed about our project's status and future plans. Please take a moment to review where the project stands, including what has been accomplished and what's in progress. Our project goals and deadlines are clearly defined to ensure we stay on track.
   outcome: This is the opportunity where you can put the expected outcome of the project.
 resources:
-  documentation:
+  documentation: ./
   tutorials:
+    - ./
+    - ./
   meeting_times: Scheduled for Wednesdays at 6:30 PM and listed on Meetup.
   office_hours: Saturdays at 3:00 PM (Posted on Slack)
 screenshots:

@@ -33,6 +33,7 @@ const fetcher = (...args) =>
  * @returns {JSX.Element}
  */
 export default function SingleProject({ githubFullName }) {
+  githubFullName = "autecht/opensac.org";
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/repos/${githubFullName}`,
     fetcher,
@@ -46,15 +47,10 @@ export default function SingleProject({ githubFullName }) {
 
   return (
     <div className={`project-section-${SectionType.dark}`}>
-      <div
-        className={`projects-main project-section-${SectionType.dark}-headings`}
-      >
-        <SingleProjectsSectionStart
-          sectionType={SectionType.dark}
-          data={data}
-        ></SingleProjectsSectionStart>
-      </div>
-
+      <SingleProjectsSectionStart
+        sectionType={SectionType.dark}
+        data={data}
+      ></SingleProjectsSectionStart>
       <div
         className={`project-info-line-top project-info-line-bottom project-link-container`}
       >
