@@ -1,6 +1,7 @@
 "use client";
 import ProjectCard from "@/app/projects/projectCard";
 import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
+import ProjectSearch from "./projectSearch";
 import { jsonResponse } from "@/utils/response";
 import moment from "moment";
 import useSWR from "swr";
@@ -41,6 +42,7 @@ export default function Projects({ githubOwner }) {
         <ProjectsSectionStart
           sectionType={SectionType.light}
         ></ProjectsSectionStart>
+        <ProjectSearch />
         <div className="project-cards-container">
           {data.map((project) => (
             <ProjectCard

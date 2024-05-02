@@ -15,7 +15,7 @@ export default function ProjectCard({
   return (
     // TODO fix styling classes to represent the projects page?
     <section
-      className={`projects-section-${sectionType} project-card-container`}
+      className={`project-card-container`}
     >
       <div className="project-card-img-container">
         <div className="project-card-img-status">Active</div>
@@ -27,8 +27,8 @@ export default function ProjectCard({
         ))}
       </ul>
       <h2 className="project-card-heading">{projectTitle}</h2>
-      <div>
-        <p>{projectText}</p>
+      <div className="project-card-description-container">
+        <p className="project-card-description">{projectText}</p>
       </div>
       <div className="project-card-last-updated">
         Last Updated: {lastUpdatedTimestamp.format("ddd MMM D, H:mma")}
