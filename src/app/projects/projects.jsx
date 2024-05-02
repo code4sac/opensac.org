@@ -56,30 +56,6 @@ export default function Projects({ githubOwner }) {
               lastUpdatedTimestamp={moment(project.updated_at)}
             ></ProjectCard>
           ))}
-          {data.map((project) => (
-            <ProjectCard
-              sectionType={SectionType.light}
-              projectTitle={project.meta.title}
-              projectText={project.meta.description}
-              imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
-              pageUrl={`/projects/${project.name}`}
-              githubUrl={project.html_url}
-              tags={project.meta.tags.split(",")}
-              lastUpdatedTimestamp={moment(project.updated_at)}
-            ></ProjectCard>
-          ))}
-          {data.map((project) => (
-            <ProjectCard
-              sectionType={SectionType.light}
-              projectTitle={project.meta.title}
-              projectText={project.meta.description}
-              imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
-              pageUrl={`/projects/${project.name}`}
-              githubUrl={project.html_url}
-              tags={project.meta.tags.split(",")}
-              lastUpdatedTimestamp={moment(project.updated_at)}
-            ></ProjectCard>
-          ))}
         </div>
       </div>
     </>

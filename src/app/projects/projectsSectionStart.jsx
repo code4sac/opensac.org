@@ -27,8 +27,9 @@ export default function ProjectsSectionStart({ sectionType }) {
           </p>
         </div>
       </div>
-      <div className="meeting-card">
-        <div className="meeting-card-container">
+      <div className="meeting-card-container">
+       <div className="meeting-card">
+        <div className="meeting-card-section">
           <span className="meeting-card-heading">Keep an eye on our Meetup calendar for upcoming events.</span>
         </div>
         <div>
@@ -38,12 +39,13 @@ export default function ProjectsSectionStart({ sectionType }) {
             <li><span className="meeting-card-list-item-text">Community Action Night (Virtual)</span></li>
           </ul>
         </div>
-        <div className="meeting-card-container">
+        <div className="meeting-card-section">
           <a className="meeting-card-link" href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">
             <span>Go to meetup</span>
             <img src="./img/meeting-card/arrow-right.svg" alt="Arrow right." />
           </a>
         </div>
+      </div> 
       </div>
     </section>
   );

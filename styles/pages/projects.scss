@@ -73,6 +73,14 @@ Projects page layout.
   }
 }
 
+.meeting-card-container {
+  @media (min-width: $screen-lg) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .meeting-card {
   border-top: 1px solid $neutral-500;
   border-bottom: 1px solid $neutral-500;
@@ -102,7 +110,7 @@ Projects page layout.
     }
   }
 
-  .meeting-card-container {
+  .meeting-card-section {
     display: flex;
     align-items: center;
     padding: 20px 10px;
