@@ -33,7 +33,6 @@ const fetcher = (...args) =>
  * @returns {JSX.Element}
  */
 export default function SingleProject({ githubFullName }) {
-  githubFullName = "autecht/opensac.org";
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/repos/${githubFullName}`,
     fetcher,

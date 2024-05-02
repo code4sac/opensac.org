@@ -31,32 +31,20 @@ contributing:
 roadmap:
   research:
     time_range: July 1, 2023 - August 31, 2023
-    objective: Understand what we want from the new website
-    outcome: Goals and direction for design and development
   design:
     time_range: September 1, 2023 - October 5, 2023
-    objective: Create and iterate on figma designs for the website
-    outcome: Completed figma desgins for all pages, enabling development to begin
   development:
     time_range: October 6, 2023 - April 1, 2023
-    objective: Create react application reflecting figma designs
-    outcome: Completed code for website reflecting the figma designs
   deployment:
     time_range: April 2, 2023 - April 9, 2023
-    objective: Deploy react application to opensac.org
-    outcome: Live hosted opensac.org website
   launch:
     time_range: April 10, 2023 - April 24, 2023
-    objective: Raise awareness of new website and branding on social media
-    outcome: People interested in Code for Sacramento are now aware of OpenSac.org
   objective: This is the opportunity where you can put any valuable information about our project's current progress or goals.
   comments: This is the opportunity where you can put any valuable information about the project. This helps in keeping everyone well-informed about our project's status and future plans. Please take a moment to review where the project stands, including what has been accomplished and what's in progress. Our project goals and deadlines are clearly defined to ensure we stay on track.
   outcome: This is the opportunity where you can put the expected outcome of the project.
 resources:
-  documentation: ./
+  documentation:
   tutorials:
-    - ./
-    - ./
   meeting_times: Scheduled for Wednesdays at 6:30 PM and listed on Meetup.
   office_hours: Saturdays at 3:00 PM (Posted on Slack)
 screenshots:
