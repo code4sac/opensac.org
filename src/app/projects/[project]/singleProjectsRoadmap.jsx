@@ -9,15 +9,31 @@ export default function SingleProjectsRoadmap({ sectionType, data }) {
         <div className="project-info-container-alt">
           <div>
             <p className="project-info-label">Research</p>
-            <p className = "project-info-alt">{data.meta.roadmap.research.time_range}</p>
+            <p className = "project-info-alt">{
+            (()=> {if(data.meta.roadmap.research)
+                    return data.meta.roadmap.research.time_range;
+                  else
+                    return null;})()}</p>
             <p className="project-info-label">Design</p>
-            <p className = "project-info-alt">{data.meta.roadmap.design.time_range}</p>
+            <p className = "project-info-alt">{(()=> {if(data.meta.roadmap.design)
+                    return data.meta.roadmap.design.time_range;
+                  else
+                    return null;})()}</p>
             <p className="project-info-label">Development</p>
-            <p className = "project-info-alt">{data.meta.roadmap.development.time_range}</p>
+            <p className = "project-info-alt">{(()=> {if(data.meta.roadmap.development)
+                    return data.meta.roadmap.development.time_range;
+                  else
+                    return null;})()}</p>
             <p className="project-info-label">Deployment</p>
-            <p className = "project-info-alt">{data.meta.roadmap.deployment.time_range}</p>
+            <p className = "project-info-alt">{(()=> {if(data.meta.roadmap.deployment)
+                    return data.meta.roadmap.deployment.time_range;
+                  else
+                    return null;})()}</p>
             <p className="project-info-label">Launch</p>
-            <p className = "project-info-alt">{data.meta.roadmap.launch.time_range}</p>
+            <p className = "project-info-alt">{(()=> {if(data.meta.roadmap.launch)
+                    return data.meta.roadmap.launch.time_range;
+                  else
+                    return null;})()}</p>
           </div>
           <div>
             <h4 className="project-info-label">Objective</h4>
