@@ -46,7 +46,7 @@ const ExtendedNavbarMenu = (visible) => {
             Get started today and volunteer with us to drive positive change through technology, making a meaningful
             impact in your community!
           </p>
-          <Link href="get-started" className="navbar-extended-button" onClick={hide}>Get Started</Link>
+          <Link href="/get-started" className="navbar-extended-button" onClick={hide}>Get Started</Link>
         </div>
         <div className="navbar-extended-desktop-section-item">
           <div className="navbar-extended-text-wrapper-2">Projects</div>
@@ -54,7 +54,7 @@ const ExtendedNavbarMenu = (visible) => {
             Explore our projects and discover how you can contribute your skills to drive innovation and create positive
             change.
           </p>
-          <Link href="projects" className="navbar-extended-button">See Projects</Link>
+          <Link href="/projects" className="navbar-extended-button">See Projects</Link>
         </div>
         <div className="navbar-extended-desktop-section-item">
           <div className="navbar-extended-text-wrapper-2">Pitch a Project</div>
@@ -62,7 +62,7 @@ const ExtendedNavbarMenu = (visible) => {
             Get the latest information and guidance for anyone who want to propose new projects or ideas to the Open
             Sacramento community.
           </p>
-          <Link href="pitch" className="navbar-extended-button">Pitch a Project</Link>
+          <Link href="/pitch" className="navbar-extended-button">Pitch a Project</Link>
         </div>
         <div className="navbar-extended-desktop-section-item">
           <p className="section-content-2">
