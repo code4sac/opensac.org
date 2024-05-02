@@ -2,33 +2,36 @@
 @import "../abstracts/mixins";
 @import "../base/animations";
 
+
 /*
 FAQ page layout.
  */
-
 .projects-section-light {
   color: $neutral-900;
   background-color: $secondary-50;
   padding: 96px 80px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 24px;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-lg) {
     padding: 48px 40px;
     flex-direction: column;
   }
 }
 
-.projects-section-light-container {
-  width: 50%;
-  position: relative;
+.projects-section-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
-  @media (max-width: $screen-md) {
-    width: 100%;
+  @media (min-width: $screen-lg) {
+    max-width: 50%;
   }
+}
+
+.projects-section-light-container {
+  position: relative;
 }
 
 .projects-section-heading-underline::after {
@@ -65,6 +68,82 @@ FAQ page layout.
 
   @media (max-width: $screen-sm) {
     @include p2-regular;
+  }
+}
+
+.meeting-card {
+  border-top: 1px solid $neutral-500;
+  border-bottom: 1px solid $neutral-500;
+
+  ul {
+    padding: 20px 0px;
+    border-top: 1px solid $neutral-500;
+    border-bottom: 1px solid $neutral-500;
+    width: 100%;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    li {
+      &:first-child {
+        list-style-image: url('/img/meeting-card/calender.svg');
+      }
+
+      &:nth-child(2) {
+        list-style-image: url('/img/meeting-card/clock.svg');
+      }
+
+      &:nth-child(3) {
+        list-style-image: url('/img/meeting-card/document-txt.svg');
+      }
+    }
+  }
+
+  .meeting-card-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+  }
+
+  .meeting-card-heading {
+    @include p3-bold;
+  }
+
+  .meeting-card-list-item-text {
+    @include p3-regular;
+    position: relative;
+    top: -5px;
+  }
+
+  .meeting-card-link {
+    @include p3-semi-bold;
+    color: $neutral-900;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    margin-left: 5px;
+  }
+
+  @media (min-width: $screen-xs) {
+    .meeting-card-list-item-text {
+      margin-left: 10px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    border: 1px solid $neutral-500;
+    border-radius: 20px;
+    min-width: 402px;
+    max-width: 402px;
+
+    .meeting-card-container,
+    ul {
+      padding: 20px 40px;
+    }
   }
 }
 
@@ -148,11 +227,11 @@ details {
   padding: 0 20px;
 }
 
-details > summary {
+details>summary {
   list-style: none;
 }
 
-details > summary::-webkit-details-marker {
+details>summary::-webkit-details-marker {
   display: none;
 }
 
@@ -211,7 +290,7 @@ details p {
 }
 
 .project-card-container {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -226,6 +305,7 @@ details p {
   width: 100%;
   padding-bottom: 75%;
 }
+
 .project-card-img-status {
   position: relative;
   text-align: center;
@@ -239,9 +319,10 @@ details p {
   left: 8%;
   z-index: 1000;
 }
-.project-card-img{
+
+.project-card-img {
   border-radius: 20px;
-  position:absolute;
+  position: absolute;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -250,7 +331,8 @@ details p {
   left: 0;
   right: 0;
 }
-.project-card-tags{
+
+.project-card-tags {
   display: flex;
   flex-direction: row;
   margin-bottom: -6px;
@@ -265,24 +347,26 @@ details p {
   background-color: $primary-500;
   color: white;
 }
-.project-card-heading{
+
+.project-card-heading {
   margin-bottom: -16px;
-  
+
 }
-.project-card-last-updated{
+
+.project-card-last-updated {
   font-size: 14px;
   color: $neutral-700;
   margin-top: -8px;
   margin-bottom: -6px;
 }
 
-.project-card-buttons-container{
+.project-card-buttons-container {
   width: fit-content;
   display: flex;
   gap: 20px;
 }
 
-.project-card-button-dark{
+.project-card-button-dark {
   color: $secondary-50;
   background-color: $primary-500;
   cursor: pointer;
@@ -299,7 +383,7 @@ details p {
   @include button-transition($vivid-blue, white);
 }
 
-.project-card-button-light{
+.project-card-button-light {
   color: $primary-500;
   background-color: transparent;
   cursor: pointer;
@@ -325,3 +409,184 @@ details p {
 .project-heading-section-alt {
   color: $secondary-500;
 }
+
+/* Single Project Selectors */
+@mixin aligned-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 4fr 6fr;
+  justify-items: start;
+}
+@mixin aligned-grid-alt {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: start;
+  grid-template-columns: 1fr 1fr;
+}
+.white-text {
+  color: $secondary-50;
+}
+.project-section-dark {
+  color: $neutral-200;
+  background-color: $neutral-900;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.project-info-container {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  @include aligned-grid;
+}
+
+.project-info-container-alt {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  @include aligned-grid-alt;  
+}
+
+.project-paragraph {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.half-width {
+  width: 40vw;
+}
+
+
+.project-info-label {
+  @extend .white-text;
+}
+
+.project-info-alt {
+  font-size: 0.4em;
+  color: #aca9a9;
+}
+
+.project-link-container {
+  display: grid;
+  grid-auto-flow: column;
+}
+.project-button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.project-info-line-top {
+  border-top: 1px solid;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+}
+.project-info-line-bottom {
+  border-bottom: 1px solid;
+}
+
+.project-heading {
+  white-space: nowrap;
+  font-size: 1.5em;
+  @extend .white-text;
+}
+
+.project-heading-alt {
+  color: $neutral-300;
+  font-size: 10px;
+  font-weight: 700;
+  margin: 0;
+  color: $secondary-500;
+  text-decoration: none;
+}
+
+.project-heading-underline {
+  content: "";
+  width: 43px;
+  border-bottom: 4px solid;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.project-screenshot-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 26.8vw 26.8vw 26.8vw;
+  grid-template-rows: 15.13vw 15.13vw; // 26.8 * 232/411
+  column-gap: 10px;
+  row-gap: 10px;
+
+}
+.project-screenshot {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.project-main-image {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  border: 1px solid white;
+}
+
+.project-blank-screenshot {
+  @extend .project-screenshot;
+  background-color: $neutral-200;
+}
+
+.project-button {
+  color: $secondary-50;
+  background-color: transparent;
+  cursor: pointer;
+
+  border: solid $secondary-500 1px;
+  border-radius: 6px;
+  padding: 16px 24px;
+  text-decoration: none;
+  width: fit-content;
+
+  @include button-regular;
+  @include dark-button-transition;
+}
+
+.project-button-alt {
+  /* alternative colors */
+  background-color: $secondary-500;
+  color: $neutral-900;
+
+  @include light-button-transition;
+}
+
+.project-get-started {
+  position: relative;
+  // background-image: url("/img/about/rectangle.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+
+.project-volunteer-anchor {
+  @include h3-bold;
+  color: black;
+  width: 85%;
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+
+  @media (min-width: $screen-xxl) {
+    width: 12em;
+  }
+}
+
+.project-status-label {
+  border: 1px solid $secondary-200;
+  color: $secondary-200;
+  width: fit-content;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 0.7em;
+}
+

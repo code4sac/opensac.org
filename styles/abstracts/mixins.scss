@@ -120,6 +120,12 @@ Mixins are mostly used throughout the application for font attributes. It should
   line-height: 28px;
 }
 
+@mixin p3-semi-bold {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
 @mixin p3-regular {
   font-weight: 400;
   font-size: 18px;
