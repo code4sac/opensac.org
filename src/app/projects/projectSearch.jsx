@@ -9,7 +9,6 @@ const ProjectSearch = ({data, setProjectsData}) => {
         const projectFilter = formData.get("project-filter");
         const projectSortBy = formData.get("project-sort-by");
         let filteredProjects = data;
-        console.log(projectFilter,projectSearch,projectSortBy)
 
         if (projectSearch) {
             filteredProjects = filteredProjects.filter((project) => project.meta.title.toLowerCase().includes(projectSearch));
