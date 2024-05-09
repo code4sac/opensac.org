@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import '@/styles/components/extended-menu.scss'
 import Link from 'next/link'
 
 /**

@@ -1,4 +1,3 @@
-import '@/styles/components/footer.scss'
 import Link from 'next/link'
 
 /**

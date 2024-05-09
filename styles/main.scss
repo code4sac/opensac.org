@@ -1,41 +1,13 @@
 @import "styles/abstracts/variables";
-
-/*
-Base layout styles for all pages. Includes the app theme. This file should be imported in the base layout file.
- */
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: $navbar-color;
-}
-
-html {
-  scroll-padding-top: 80px;
-  scroll-behavior: smooth;
-}
-
-.full-width {
-  width: 100%;
-  overflow: clip;
-  margin: 0;
-  padding: 0;
-}
-
-.hidden {
-  display: none;
-}
-
-.pageContainer {
-  background: $secondary-50;
-}
+@import "styles/base/normalize.scss";
+@import "styles/base/typography.scss";
+@import "styles/pages/home.scss";
+@import "styles/pages/pitch.scss";
+@import "styles/pages/about.scss";
+@import "styles/pages/conduct.scss";
+@import "styles/pages/contact.scss";
+@import "styles/pages/faq.scss";
+@import "styles/pages/get-started.scss";
+@import "styles/components/extended-menu.scss";
+@import "styles/components/navigation-bar.scss";
+@import "styles/components/footer.scss";

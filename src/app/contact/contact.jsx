@@ -1,8 +1,6 @@
 'use client'
 import ContactSectionLanding from './contactSectionLanding'
 import ContactSectionMission from './contactSectionMission'
-import '@/styles/pages/contact.scss'
-import '@/styles/base/typography.scss'
 import {ThemeProvider} from "@mui/material";
 import {createTheme} from "@mui/material/styles";
 
