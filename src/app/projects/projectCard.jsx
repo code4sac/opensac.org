@@ -22,8 +22,8 @@ export default function ProjectCard({
         <img className="project-card-img" src={imgUrl}></img>
       </div>
       <ul className="project-card-tags">
-        {tags.map((tag) => (
-          <div className="project-card-tag">{tag}</div>
+        {tags.map((tag,index) => (
+          <div key={projectTitle + tag} className="project-card-tag">{tag}</div>
         ))}
       </ul>
       <h2 className="project-card-heading">{projectTitle}</h2>
