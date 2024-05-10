@@ -15,12 +15,12 @@ export default function HomeSectionDefault({sectionType}) {
 
       <div className={`home-section-${sectionType}-container`}>
         <p className={`home-section-paragraph`}>
-          <span className={`home-section-paragraph-bold`}>
+          <span className={`paragraph-bold`}>
             Ready to make a difference?
           </span>
           Join us at Open Sacramento and use your skills to drive positive change
           through technology and collaboration.
-          <span className={`home-section-paragraph-bold`}> Whether you're a designer, developer, or anyone eager to volunteer,
+          <span className={`paragraph-bold`}> Whether you're a designer, developer, or anyone eager to volunteer,
             together we're enhancing community services, amplifying voices, and
             giving you the opportunity to improve your resume and portfolio.
           </span> It's a journey of innovation and empowerment waiting for you.

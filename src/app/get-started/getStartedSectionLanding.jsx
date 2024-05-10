@@ -17,7 +17,7 @@ export default function GetStartedSectionLanding() {
           We're thrilled that you're eager to join our community of civic-minded individuals and make a positive impact
           on Sacramento. Volunteering with Code for Sacramento is a rewarding experience that allows you to use your
           skills
-          for the betterment of our city. <span>Whether you're a designer, developer, or anyone else passionate
+          for the betterment of our city. <span className={`paragraph-bold`}>Whether you're a designer, developer, or anyone else passionate
             about civic tech,</span> you'll find step-by-step instructions below to help you get started
           on your journey of civic tech and community empowerment.
         </p>

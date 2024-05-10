@@ -20,7 +20,7 @@ export default function ContactSectionMission() {
           </h2>
         </div>
         <p className={`contact-section-paragraph`}>
-          <span className={`contact-section-paragraph-bold`}>
+          <span className={`paragraph-bold`}>
             Have questions or need assistance? 
           </span> Reach out to us using our form, and we'll get back to you as soon as possible.
           <br></br><br></br>

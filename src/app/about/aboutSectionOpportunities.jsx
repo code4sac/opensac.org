@@ -16,7 +16,7 @@ export default function AboutSectionOpportunities() {
             </h2>
           </div>
           <p className={`opportunities-intro-paragraph`}>
-            <span className={`about-section-paragraph-bold`}>
+            <span className={`paragraph-bold`}>
               Are you passionate about civic tech leadership?
             </span> Open Sacramento invites you to join our Core Team, organizing events, fostering partnerships,
             and driving community impact.

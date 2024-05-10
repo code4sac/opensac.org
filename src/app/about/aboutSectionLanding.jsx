@@ -14,7 +14,7 @@ export default function AboutSectionLanding() {
 
       <div className={`about-section-light-container`}>
         <p className={`about-section-paragraph`}>
-          <span className={`about-section-paragraph-bold`}>
+          <span className={`paragraph-bold`}>
             We are a passionate and diverse group of technologists, developers, designers, and
             civic-minded individuals united by a common goal:
           </span> leveraging technology and open data to address civic challenges and enhance public services in the
