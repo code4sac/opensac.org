@@ -38,16 +38,12 @@ export default function Projects({ githubOwner }) {
     if (data) setProjectsData(data);
   },[data]);
 
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
-
-  console.dir(data); // TODO use this data to populate ProjectCards once the component is created.  Remove this log once it is hooked up.
   return (
     <>
       <div className="projects-main">
         <ProjectsSectionStart sectionType={SectionType.light}/>
         <ProjectSearch data={data} setProjectsData={setProjectsData} />
-        <ProjectsCardsContainer projectsData={projectsData} sectionType={SectionType.light} />
+        <ProjectsCardsContainer error={error} isLoading={isLoading} projectsData={projectsData} sectionType={SectionType.light} />
       </div>
     </>
   );
