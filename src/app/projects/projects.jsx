@@ -38,6 +38,8 @@ export default function Projects({ githubOwner }) {
     if (data) setProjectsData(data);
   },[data]);
 
+  console.log(data)
+
   return (
     <>
       <div className="projects-main">
