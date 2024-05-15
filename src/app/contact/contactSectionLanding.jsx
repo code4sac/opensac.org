@@ -2,17 +2,17 @@
  * contact landing section.
  * @returns {JSX.Element}
  */
-export default function ContactSectionLanding() {
+export default function ContactSectionLanding({sectionType}) {
   return (
     <section className={`contact-section-landing`}>
-      <div className={`contact-section-light-container contact-heading-underline`}>
+      <div className={`contact-section-${sectionType}-container contact-heading-underline`}>
         <h1 className={`contact-heading-section`}>Contact Us</h1>
         <h2 className={`contact-sub-heading`}>
           Contact<br></br> Open Sacramento
         </h2>
       </div>
 
-      <div className={`contact-section-light-container`}>
+      <div className={`contact-section-${sectionType}-container`}>
         <p className={`contact-section-paragraph`}>
           Get in touch with us through our contact page for questions, ideas, or just to say hello. <span
           className={`paragraph-bold`}>

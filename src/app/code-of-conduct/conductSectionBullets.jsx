@@ -1,6 +1,6 @@
-export default function conductSectionBullets() {
+export default function conductSectionBullets({sectionType}) {
   return (
-    <section className={`conduct-list-container conduct-light-theme`}>
+    <section className={`conduct-list-container conduct-${sectionType}-theme`}>
       <p className={`conduct-sub-heading`}>
         Open Sacramento fosters a community that:
       </p>

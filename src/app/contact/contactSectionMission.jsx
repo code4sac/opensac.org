@@ -6,13 +6,13 @@ import Button from '@mui/material/Button';
  * contact mission section.
  * @returns {JSX.Element}
  */
-export default function ContactSectionMission() {
+export default function ContactSectionMission({sectionType}) {
   return (
-    // <section className={`contact-section-dark contact-section-mission`}>
+    // <section className={`contact-section-${sectionType} contact-section-mission`}>
     <section className={`contact-section-mission`}>
       <div className={`contact-mission-container contact-mission-padding`}>
         <div
-          className={`contact-dark-heading-container contact-heading-underline contact-underline-alt`}
+          className={`contact-${sectionType}-heading-container contact-heading-underline contact-underline-alt`}
         >
           <h1 className={`contact-heading-section contact-heading-section-alt`}>CONTACT FORM</h1>
           <h2 className={`contact-heading-section-sub`}>

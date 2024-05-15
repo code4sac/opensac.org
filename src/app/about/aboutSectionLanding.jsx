@@ -2,17 +2,17 @@
  * About landing section.
  * @returns {JSX.Element}
  */
-export default function AboutSectionLanding() {
+export default function AboutSectionLanding({sectionType}) {
   return (
     <section className={`about-section-landing`}>
-      <div className={`about-section-light-container about-heading-underline`}>
+      <div className={`about-section-${sectionType}-container about-heading-underline`}>
         <h1 className={`about-heading-section`}>About Us</h1>
         <h2 className={`about-sub-heading`}>
           Connecting Civic-Minded Technologists
         </h2>
       </div>
 
-      <div className={`about-section-light-container`}>
+      <div className={`about-section-${sectionType}-container`}>
         <p className={`about-section-paragraph`}>
           <span className={`paragraph-bold`}>
             We are a passionate and diverse group of technologists, developers, designers, and

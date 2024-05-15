@@ -4,12 +4,12 @@ import instructions from './instructions.json'
  * Get started instructions section.
  * @returns {JSX.Element}
  */
-export default function GetStartedSectionInstructions() {
+export default function GetStartedSectionInstructions({sectionType}) {
   return (
-    <section className={`section-dark`}>
+    <section className={`section-${sectionType}`}>
       <div className={`instructions-container`}>
         <div className={`instructions-info-container`}>
-          <div className={`dark-heading-container`}>
+          <div className={`${sectionType}-heading-container`}>
             <h1 className={`heading-section heading-section-alt`}>GETTING STARTED</h1>
             <h2 className={`heading-section-sub`}>
               Steps to Volunteer

@@ -2,12 +2,12 @@
  * About mission section.
  * @returns {JSX.Element}
  */
-export default function AboutSectionMission() {
+export default function AboutSectionMission({sectionType}) {
   return (
-    <section className={`about-section-dark about-section-mission`}>
+    <section className={`about-section-${sectionType} about-section-mission`}>
       <div className={`mission-container`}>
         <div
-          className={`about-dark-heading-container about-heading-underline about-underline-alt`}
+          className={`about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
         >
           <h1 className={`about-heading-section about-heading-section-alt`}>OUR MISSION</h1>
           <h2 className={`about-heading-section-sub`}>
