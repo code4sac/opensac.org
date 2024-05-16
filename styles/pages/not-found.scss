@@ -5,13 +5,11 @@
   min-height: 100dvh;
   display: grid;
   background-color: $secondary-50;
+  text-align: center;
 }
 
 .not-found-content {
   margin: 8rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 1rem;
 }
 
