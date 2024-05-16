@@ -2,6 +2,7 @@
 import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from 'keen-slider/react'
 import React from 'react'
+import Link from 'next/link'
 
 /**
  * Home projects section.
@@ -35,7 +36,7 @@ export default function HomeSectionProjects({sectionType}) {
           <span className={`home-section-paragraph-bold`}>our open-source tech and collaboration drive innovation</span>
           for transparent, efficient, engaged local governance.
         </p>
-        <a href="" className={`home-button home-button-alt`}>Find Projects</a>
+        <Link href="/projects" className={`home-button home-button-alt`}>Find Projects</Link>
       </div>
 
       <div className="test">
