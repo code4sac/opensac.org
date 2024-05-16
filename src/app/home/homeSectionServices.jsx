@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * Home services section.
  * @returns {JSX.Element}
@@ -19,7 +21,9 @@ export default function HomeSectionServices({sectionType}) {
             projects at our meetups. Join us to be a part of a vibrant community
             dedicated to positive change through technology.
           </p>
-          <a className={`home-button home-button-numbered" href="`}>Visit Meetup</a>
+          <a className={`home-button home-button-numbered`} href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">
+            Visit Meetup
+          </a>
         </div>
 
         <div className={`home-numbered-container`}>
@@ -30,7 +34,7 @@ export default function HomeSectionServices({sectionType}) {
             real challenges and enhance our city. Be part of a dynamic team working
             on solutions that make a difference.
           </p>
-          <a className={`home-button home-button-numbered" href="`}>See Our Projects</a>
+          <Link className={`home-button home-button-numbered`} href="/projects">See Our Projects</Link>
         </div>
 
         <div className={`home-numbered-container`}>
@@ -41,7 +45,7 @@ export default function HomeSectionServices({sectionType}) {
             join forces with our community of innovators to bring your vision to
             life, driving positive change in Sacramento.
           </p>
-          <a className={`home-button home-button-numbered md:container md:mx-auto" href="`}>Pitch a Project</a>
+          <Link className={`home-button home-button-numbered md:container md:mx-auto`} href="/pitch">Pitch a Project</Link>
         </div>
       </div>
     </section>

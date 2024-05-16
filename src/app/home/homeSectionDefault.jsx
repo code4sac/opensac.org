@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * Home default section.
  * @returns {JSX.Element}
@@ -24,9 +26,9 @@ export default function HomeSectionDefault({sectionType}) {
             together we're enhancing community services, amplifying voices, and
             giving you the opportunity to improve your resume and portfolio.
           </span> It's a journey of innovation and empowerment waiting for you.
-          Your impact starts <a href="/" className={`home-section-paragraph-anchor`}>
+          Your impact starts <Link href="/get-started" className={`home-section-paragraph-anchor`}>
           here!
-        </a>
+        </Link>
         </p>
       </div>
     </section>

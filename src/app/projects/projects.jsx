@@ -1,8 +1,9 @@
 "use client";
-import ProjectCard from "@/app/projects/projectCard";
+import { useState, useEffect } from "react";
+import ProjectsCardsContainer from "@/app/projects/projectsCardsContainer";
 import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
+import ProjectSearch from "@/app/projects/projectSearch";
 import { jsonResponse } from "@/utils/response";
-import moment from "moment";
 import useSWR from "swr";
 import { fetchGithubProjectData } from "./github";
 
@@ -25,36 +26,26 @@ const fetcher = (...args) =>
  * @returns {JSX.Element}
  */
 export default function Projects({ githubOwner }) {
+  const [projectsData, setProjectsData] = useState([]);
+
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/orgs/${githubOwner}/repos?per_page=20&sort=updated&direction=desc`,
     fetcher,
     { shouldRetryOnError: false } // Auto retries quickly exhaust unauthenticated api requests to github, which breaks the page
   );
 
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
+  useEffect(() => {
+    if (data) {
+      setProjectsData(data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)))
+    }
+}, [data]);
 
-  console.dir(data); // TODO use this data to populate ProjectCards once the component is created.  Remove this log once it is hooked up.
   return (
     <>
       <div className="projects-main">
-        <ProjectsSectionStart
-          sectionType={SectionType.light}
-        ></ProjectsSectionStart>
-        <div className="project-cards-container">
-          {data.map((project) => (
-            <ProjectCard
-              sectionType={SectionType.light}
-              projectTitle={project.meta.title}
-              projectText={project.meta.description}
-              imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
-              pageUrl={`/projects/${project.name}`}
-              githubUrl={project.html_url}
-              tags={project.meta.tags.split(",")}
-              lastUpdatedTimestamp={moment(project.updated_at)}
-            ></ProjectCard>
-          ))}
-        </div>
+        <ProjectsSectionStart sectionType={SectionType.light} />
+        <ProjectSearch data={data} setProjectsData={setProjectsData} />
+        <ProjectsCardsContainer error={error} isLoading={isLoading} projectsData={projectsData} sectionType={SectionType.light} />
       </div>
     </>
   );

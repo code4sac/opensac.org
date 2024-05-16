@@ -3,7 +3,9 @@
  * @returns {JSX.Element}
  */
 export default function ProjectCard({
+  isLoading,
   sectionType,
+  projectStatus,
   projectTitle,
   projectText,
   imgUrl,
@@ -14,30 +16,28 @@ export default function ProjectCard({
 }) {
   return (
     // TODO fix styling classes to represent the projects page?
-    <section
-      className={`projects-section-${sectionType} project-card-container`}
-    >
+    <section className={`project-card-container`}>
       <div className="project-card-img-container">
-        <div className="project-card-img-status">Active</div>
-        <img className="project-card-img" src={imgUrl}></img>
+        <div className={`project-card-img-status ${isLoading && 'project-card-loading'}`}>{projectStatus}</div>
+        {isLoading ? <div className="project-card-img project-card-loading"></div> : <img className="project-card-img" src={imgUrl}></img>}
       </div>
       <ul className="project-card-tags">
-        {tags.map((tag) => (
-          <div className="project-card-tag">{tag}</div>
+        {tags.map((tag,index) => (
+          <div key={projectTitle + tag} className={`project-card-tag ${isLoading && 'project-card-loading'}`}>{tag}</div>
         ))}
       </ul>
-      <h2 className="project-card-heading">{projectTitle}</h2>
-      <div>
-        <p>{projectText}</p>
+      <h2 className={`project-card-heading ${isLoading && 'project-card-loading'}`}>{projectTitle}</h2>
+      <div className="project-card-description-container">
+        <p className={`project-card-description ${isLoading && 'project-card-loading'}`}>{projectText}</p>
       </div>
-      <div className="project-card-last-updated">
+      <div className={`project-card-last-updated ${isLoading && 'project-card-loading'}`}>
         Last Updated: {lastUpdatedTimestamp.format("ddd MMM D, H:mma")}
       </div>
       <div className="project-card-buttons-container">
-        <a className="project-card-button-dark" href={pageUrl}>
+        <a className={`project-card-button-dark ${isLoading && 'project-card-loading'}`} href={pageUrl}>
           Learn More
         </a>
-        <a className="project-card-button-light" href={githubUrl}>
+        <a className={`project-card-button-light ${isLoading && 'project-card-loading'}`} href={githubUrl}>
           Source Code
         </a>
       </div>

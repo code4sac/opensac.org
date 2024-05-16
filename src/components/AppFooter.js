@@ -16,13 +16,13 @@ export default function AppFooter() {
 
         <div className="footerActionLinks">
           <p className="footerActionLinksItem">
-            Join us for our weekly meetings on <Link href="/" className="footerActionLinksAnchor">meetup.</Link>
+            Join us for our weekly meetings on <a className="footerActionLinksAnchor" href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">meetup.</a>
           </p>
           <p className="footerActionLinksItem">
-            See our <Link href="/" className="footerActionLinksAnchor">projects.</Link>
+            See our <Link href="/projects" className="footerActionLinksAnchor">projects.</Link>
           </p>
           <p className="footerActionLinksItem">
-            For any questions, visit our <Link href="/" className="footerActionLinksAnchor">FAQs.</Link>
+            For any questions, visit our <Link href="/faq" className="footerActionLinksAnchor">FAQs.</Link>
           </p>
         </div>
 

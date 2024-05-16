@@ -1,4 +1,5 @@
 import instructions from './instructions.json'
+import Link from 'next/link'
 
 /**
  * Get started instructions section.
@@ -49,9 +50,9 @@ export default function GetStartedSectionInstructions({sectionType}) {
           </p>
         </div>
         <div className={`anchors-container`}>
-          <a href="/" className={`anchor`}>Code of Conduct</a>
+          <Link href="/code-of-conduct" className={`anchor`}>Code of Conduct</Link>
           <a href="/" className={`anchor`}>New Member Form</a>
-          <a href="/" className={`anchor`}>Meeting Link</a>
+          <a className={`anchor`} href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">Meeting Link</a>
         </div>
       </div>
     </section>
