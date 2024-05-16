@@ -35,8 +35,10 @@ export default function Projects({ githubOwner }) {
   );
 
   useEffect(() => {
-    if (data) setProjectsData(data);
-  }, [data]);
+    if (data) {
+      setProjectsData(data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)))
+    }
+}, [data]);
 
   return (
     <>
