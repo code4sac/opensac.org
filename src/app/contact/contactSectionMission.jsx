@@ -7,13 +7,13 @@ import Link from 'next/link';
  * contact mission section.
  * @returns {JSX.Element}
  */
-export default function ContactSectionMission() {
+export default function ContactSectionMission({sectionType}) {
   return (
-    // <section className={`contact-section-dark contact-section-mission`}>
+    // <section className={`contact-section-${sectionType} contact-section-mission`}>
     <section className={`contact-section-mission`}>
       <div className={`contact-mission-container contact-mission-padding`}>
         <div
-          className={`contact-dark-heading-container contact-heading-underline contact-underline-alt`}
+          className={`contact-${sectionType}-heading-container contact-heading-underline contact-underline-alt`}
         >
           <h1 className={`contact-heading-section contact-heading-section-alt`}>CONTACT FORM</h1>
           <h2 className={`contact-heading-section-sub`}>
@@ -21,7 +21,7 @@ export default function ContactSectionMission() {
           </h2>
         </div>
         <p className={`contact-section-paragraph`}>
-          <span className={`contact-section-paragraph-bold`}>
+          <span className={`paragraph-bold`}>
             Have questions or need assistance? 
           </span> Reach out to us using our form, and we'll get back to you as soon as possible.
           <br></br><br></br>

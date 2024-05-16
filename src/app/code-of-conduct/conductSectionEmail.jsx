@@ -1,6 +1,6 @@
-export default function conductSectionBullets() {
+export default function conductSectionBullets({sectionType}) {
   return (
-    <section className={`conduct-gray-theme`}>
+    <section className={`conduct-${sectionType}-theme`}>
       <div className={`conduct-email-header-container`}>
         <div className={`conduct-section-heading-container conduct-heading-underline underline-alt`}>
           <h1 className={`conduct-heading-section conduct-heading-section-alt`}>anti-harassment reporting</h1>

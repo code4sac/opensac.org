@@ -71,10 +71,6 @@ Get Started page layout
   }
 }
 
-.section-paragraph span {
-  @include subheading-bold;
-}
-
 .sub-heading {
   @include h1-semi-bold;
   margin: 10px 0;

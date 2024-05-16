@@ -190,10 +190,6 @@ Home page layout.
   }
 }
 
-.home-section-paragraph-bold {
-  @include subheading-bold;
-}
-
 .home-section-paragraph-anchor {
   color: $neutral-900;
   font-weight: 700;

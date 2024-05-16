@@ -2,13 +2,13 @@
  * About opportunities section.
  * @returns {JSX.Element}
  */
-export default function AboutSectionOpportunities() {
+export default function AboutSectionOpportunities({sectionType}) {
   return (
-    <section className={`about-section-dark about-join-container`}>
+    <section className={`about-section-${sectionType} about-join-container`}>
       <div className={`opportunities-container`}>
         <div className={`opportunities-intro-container`}>
           <div
-            className={`about-dark-heading-container about-heading-underline about-underline-alt`}
+            className={`about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
           >
             <h1 className={`about-heading-section about-heading-section-alt`}>opportunities</h1>
             <h2 className={`about-heading-section-sub`}>
@@ -16,7 +16,7 @@ export default function AboutSectionOpportunities() {
             </h2>
           </div>
           <p className={`opportunities-intro-paragraph`}>
-            <span className={`about-section-paragraph-bold`}>
+            <span className={`paragraph-bold`}>
               Are you passionate about civic tech leadership?
             </span> Open Sacramento invites you to join our Core Team, organizing events, fostering partnerships,
             and driving community impact.

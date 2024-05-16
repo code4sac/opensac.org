@@ -33,7 +33,7 @@ export default function HomeSectionProjects({sectionType}) {
         <p className={`home-section-paragraph`}>
           We tackle tech projects addressing civic issues, enhancing services in Sacramento. From open data initiatives
           to government services and community platforms,
-          <span className={`home-section-paragraph-bold`}>our open-source tech and collaboration drive innovation</span>
+          <span className={`paragraph-bold`}> our open-source tech and collaboration drive innovation</span>
           for transparent, efficient, engaged local governance.
         </p>
         <Link href="/projects" className={`home-button home-button-alt`}>Find Projects</Link>
