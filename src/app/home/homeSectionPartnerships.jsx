@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function HomeSectionPartnership({sectionType}) {
   return (
-    <section className={`home-section-${sectionType} partnership-section`}>
+    <section className={`general-section-${sectionType} partnership-section`}>
       <div className={`home-section-${sectionType}-container`}>
         <div className={'home-section-heading-underline-partnership'}>
           <h1 className={`heading-large-section-sub`}>Our Collaborations and Partnerships</h1>

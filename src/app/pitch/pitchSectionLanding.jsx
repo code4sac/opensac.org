@@ -4,7 +4,7 @@
  */
 export default function PitchSectionLanding({sectionType}) {
   return (
-    <section className={`pitch-section-landing`}>
+    <section className={`general-section-${sectionType}`}>
       <div className={`pitch-section-${sectionType}-container pitch-heading-underline`}>
         <h1 className={`pitch-heading-section`}>pitch a project</h1>
         <h2 className={`pitch-sub-heading`}>

@@ -4,7 +4,7 @@
  */
 export default function GetStartedSectionLanding({sectionType}) {
   return (
-    <section className={`section-landing`}>
+    <section className={`general-section-${sectionType}`}>
       <div className={`section-${sectionType}-container heading-underline`}>
         <h1 className={`heading-section`}>GET STARTED</h1>
         <h2 className={`sub-heading`}>

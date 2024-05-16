@@ -6,7 +6,7 @@ import Link from "next/link";
  */
 export default function HomeSectionDonate({sectionType}) {
   return (
-    <section className={`home-section-${sectionType} donate-section`}>
+    <section className={`general-section-${sectionType} donate-section`}>
       <div
         className={`home-section-${sectionType}-container home-section-heading-underline donate-section-underline md:container md:mx-auto`}>
         <h1 className={`heading-large-section-sub`}>Help Support Open Sacramento</h1>

@@ -4,7 +4,7 @@
  */
 export default function AboutSectionOpportunities({sectionType}) {
   return (
-    <section className={`about-section-${sectionType} about-join-container`}>
+    <section className={`general-section-${sectionType} about-join-container`}>
       <div className={`opportunities-container`}>
         <div className={`opportunities-intro-container`}>
           <div

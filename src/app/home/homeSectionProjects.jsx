@@ -22,7 +22,7 @@ export default function HomeSectionProjects({sectionType}) {
   })
 
   return (
-    <section className={`home-section-${sectionType} home-projects-section`}>
+    <section className={`general-section-${sectionType} home-projects-section`}>
       <div className={`home-projects-info-container`}>
         <div
           className={`home-section-${sectionType.dark}-container home-section-heading-underline underline-alt`}>

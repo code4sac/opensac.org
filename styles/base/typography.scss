@@ -13,3 +13,29 @@ Application typography
 .paragraph-bold {
   @include subheading-bold;
 }
+
+.general-section-light {
+  color: $neutral-900;
+  background-color: $secondary-50;
+  padding: 96px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  @media (max-width: $screen-md) {
+    padding: 48px 40px;
+    flex-direction: column;
+  }
+}
+
+.general-section-grey {
+  background-color: $neutral-500;
+  color: $secondary-50;
+}
+
+.general-section-dark {
+  background-color: $neutral-900;
+  color: $neutral-50;
+}

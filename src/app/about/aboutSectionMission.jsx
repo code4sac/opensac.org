@@ -4,7 +4,7 @@
  */
 export default function AboutSectionMission({sectionType}) {
   return (
-    <section className={`about-section-${sectionType} about-section-mission`}>
+    <section className={`general-section-${sectionType} about-section-mission`}>
       <div className={`mission-container`}>
         <div
           className={`about-${sectionType}-heading-container about-heading-underline about-underline-alt`}

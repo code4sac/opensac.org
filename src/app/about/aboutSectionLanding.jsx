@@ -4,7 +4,7 @@
  */
 export default function AboutSectionLanding({sectionType}) {
   return (
-    <section className={`about-section-landing`}>
+    <section className={`general-section-${sectionType}`}>
       <div className={`about-section-${sectionType}-container about-heading-underline`}>
         <h1 className={`about-heading-section`}>About Us</h1>
         <h2 className={`about-sub-heading`}>
