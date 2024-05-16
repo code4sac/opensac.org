@@ -3,7 +3,9 @@
  * @returns {JSX.Element}
  */
 
-const ProjectSearch = ({data, setProjectsData}) => {
+import { useEffect } from "react";
+
+const ProjectSearch = ({ data, setProjectsData }) => {
     const search = (formData) => {
         const projectSearch = formData.get("project-search").toLowerCase();
         const projectFilter = formData.get("project-filter");
@@ -12,13 +14,13 @@ const ProjectSearch = ({data, setProjectsData}) => {
 
         if (projectSearch) {
             filteredProjects = filteredProjects.filter((project) => project.meta.title.toLowerCase().includes(projectSearch));
-        };
+        }
 
         if (projectFilter !== 'all') {
             filteredProjects = filteredProjects.filter((project) => project.meta.project_status === projectFilter);
-        };
+        }
 
-        filteredProjects = filteredProjects.sort((a,b) => new Date(b[projectSortBy]) - new Date(a[projectSortBy]));
+        filteredProjects = filteredProjects.sort((a, b) => new Date(b[projectSortBy]) - new Date(a[projectSortBy]));
         setProjectsData([...filteredProjects]);
     }
 
@@ -26,6 +28,17 @@ const ProjectSearch = ({data, setProjectsData}) => {
         const formData = new FormData(e.target.form);
         search(formData)
     }
+    useEffect(() => {
+        if (data) {
+            let filteredProjects = data;
+            console.log('1', filteredProjects)
+            // filteredProjects = filteredProjects.filter((project) => project.meta.project_status === 'active');
+            console.log('2', filteredProjects)
+            filteredProjects = filteredProjects.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+            console.log('3', filteredProjects)
+            setProjectsData([...filteredProjects])
+        }
+    }, [data]);
 
     return (
         <div className="project-search-section">
@@ -37,7 +50,7 @@ const ProjectSearch = ({data, setProjectsData}) => {
                 <div className="select-container">
                     <div className="form-row">
                         <label htmlFor="project-filter">Filter</label>
-                        <select name="project-filter" id="project-filter" defaultValue="all" onChange={handleChange}>
+                        <select name="project-filter" id="project-filter" defaultValue="active" onChange={handleChange}>
                             <option value="all">All</option>
                             <option value="active">Active</option>
                         </select>
