@@ -16,9 +16,7 @@
 }
 
 .not-found-text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .not-found-content {
@@ -52,6 +50,16 @@
   @include p3-regular;
   color: $neutral-300;
   margin: 0;
+  @media (max-width: $screen-sm) {
+  display: inline;
+    }
+}
+
+.not-found-content p:first-child {
+  @media (max-width: $screen-sm) {
+    display: inline;
+    margin-right: 5px;
+      }
 }
 
 .not-found-link {
