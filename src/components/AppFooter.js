@@ -16,7 +16,11 @@ export default function AppFooter() {
 
         <div className="footerActionLinks">
           <p className="footerActionLinksItem">
-            Join us for our weekly meetings on <a className="footerActionLinksAnchor" href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">meetup.</a>
+            Join us for our weekly meetings on <a className="footerActionLinksAnchor" 
+            href="https://www.meetup.com/code4sac/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Link to Meetup.">meetup.</a>
           </p>
           <p className="footerActionLinksItem">
             See our <Link href="/projects" className="footerActionLinksAnchor">projects.</Link>

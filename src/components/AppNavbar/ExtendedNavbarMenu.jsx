@@ -30,7 +30,7 @@ const ExtendedNavbarMenu = (visible) => {
           <Link className={'mobile-nav-link'} href="/projects">Projects</Link>
           <Link className={'mobile-nav-link'} href="/pitch">Pitch a Project</Link>
           <Link className={'mobile-nav-link'} href="https://www.meetup.com/code4sac/">Meetup</Link>
-          <Link className={'mobile-nav-link'} href="/faq">FAQs</Link>
+          <Link className={'mobile-nav-link'} href="/faq">FAQs</Link> 
           <div>
            <span className={'navbar-extended-mobile-content-button-02'}
                  onClick={() => toggleMobileNavPosition(!mobileNavPosition)}>Back</span>
@@ -65,7 +65,10 @@ const ExtendedNavbarMenu = (visible) => {
         </div>
         <div className="navbar-extended-desktop-section-item">
           <p className="section-content-2">
-            Join us for our weekly meetings on <Link href="#" className="text-wrapper-3">meetup</Link>.
+            Join us for our weekly meetings on <Link href="https://www.meetup.com/code4sac/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-wrapper-3">meetup</Link>.
           </p>
           <p className="section-content-2">
             For any questions, visit our <Link href="/faq" className="text-wrapper-3">FAQs</Link>.
