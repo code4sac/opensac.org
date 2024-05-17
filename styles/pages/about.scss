@@ -4,15 +4,6 @@
 /*
 About page layout.
  */
-.about-section-light-container {
-  width: 50%;
-  position: relative;
-
-  @media (max-width: $screen-md) {
-    width: 100%;
-  }
-}
-
 .about-heading-underline::after {
   content: "";
   position: absolute;

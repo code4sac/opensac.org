@@ -39,3 +39,12 @@ Application typography
   background-color: $neutral-900;
   color: $neutral-50;
 }
+
+.general-section-light-container {
+  width: 50%;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+}

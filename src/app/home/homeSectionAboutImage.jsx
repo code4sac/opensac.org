@@ -7,7 +7,7 @@ export default function HomeSectionAboutImage({sectionType}) {
     <section className={`general-section-${sectionType} home-section-${sectionType}-flex home-about-image`}>
       <div className={`home-about-container`}>
         <div
-          className={`home-section-${sectionType}-container home-section-heading-underline underline-alt`}>
+          className={`general-section-${sectionType}-container home-section-heading-underline underline-alt`}>
           <h1 className={`heading-section heading-section-alt`}>What we do</h1>
           <h2 className={`heading-section-sub`}>
             Building a Better Future <br/>

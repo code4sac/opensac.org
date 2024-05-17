@@ -4,15 +4,6 @@
 /*
 FAQ page layout.
  */
-.faq-section-light-container {
-  width: 50%;
-  position: relative;
-
-  @media (max-width: $screen-md) {
-    width: 100%;
-  }
-}
-
 .faq-section-heading-underline::after {
   content: "";
   position: absolute;

@@ -8,7 +8,7 @@ export default function HomeSectionServices({sectionType}) {
   return (
     <section className={`general-section-${sectionType} home-services-container`}>
       <div
-        className={`home-section-${sectionType}-container home-section-heading-underline underline-alt`}>
+        className={`general-section-${sectionType}-container home-section-heading-underline underline-alt`}>
         <h1 className={`heading-section heading-section-alt`}>Our services</h1>
         <h2 className={`heading-section-sub`}>Explore Our Engagement Options</h2>
       </div>

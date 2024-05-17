@@ -4,15 +4,6 @@
 /*
 Pitch page layout.
  */
-.pitch-section-light-container {
-  width: 50%;
-  position: relative;
-
-  @media (max-width: $screen-md) {
-    width: 100%;
-  }
-}
-
 .pitch-heading-underline::after {
   content: "";
   position: absolute;

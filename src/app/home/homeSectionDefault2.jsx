@@ -5,14 +5,14 @@
 export default function HomeSectionDefault2({sectionType}) {
   return (
     <section className={`general-section-${sectionType}`}>
-      <div className={`home-section-${sectionType}-container home-section-heading-underline`}>
+      <div className={`general-section-${sectionType}-container home-section-heading-underline`}>
         <h1 className={`heading-section`}>Who we are</h1>
         <h2 className={`heading-section-sub`}>
           Building a Brighter Sacramento Through Innovation and Technology
         </h2>
       </div>
 
-      <div className={`home-section-${sectionType}-container`}>
+      <div className={`general-section-${sectionType}-container`}>
         <p className={`home-section-paragraph`}>
           Open Sacramento is
           <span className={`paragraph-bold`}> a community of technologists, developers, designers, and civic-minded

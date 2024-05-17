@@ -105,15 +105,6 @@ Home page layout.
   color: $secondary-500;
 }
 
-.home-section-light-container {
-  width: 50%;
-  position: relative;
-
-  @media (max-width: $screen-md) {
-    width: 100%;
-  }
-}
-
 .home-section-heading-underline::after {
   content: "";
   position: absolute;
