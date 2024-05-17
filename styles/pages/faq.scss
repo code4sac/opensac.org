@@ -4,32 +4,6 @@
 /*
 FAQ page layout.
  */
-
-.faq-section-light {
-  color: $neutral-900;
-  background-color: $secondary-50;
-  padding: 96px 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-
-  @media (max-width: $screen-md) {
-    padding: 48px 40px;
-    flex-direction: column;
-  }
-}
-
-.faq-section-light-container {
-  width: 50%;
-  position: relative;
-
-  @media (max-width: $screen-md) {
-    width: 100%;
-  }
-}
-
 .faq-section-heading-underline::after {
   content: "";
   position: absolute;
@@ -38,24 +12,8 @@ FAQ page layout.
   border-bottom: 4px solid $neutral-900;
 }
 
-.faq-heading-section {
-  color: $neutral-300;
-  @include h1-section;
-  margin: 0;
-}
-
-.faq-heading-section-alt {
-  color: $secondary-500;
-}
-
 .faq-heading-section-sub {
-  margin: 10px 0;
   max-width: 450px;
-  @include h2-semi-bold;
-
-  @media (max-width: $screen-sm) {
-    @include h3-semi-bold;
-  }
 }
 
 .faq-section-paragraph {

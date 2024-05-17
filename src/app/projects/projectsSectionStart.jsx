@@ -12,7 +12,7 @@ export default function ProjectsSectionStart({ sectionType }) {
         <div
           className={`projects-section-${sectionType}-container projects-section-heading-underline`}
         >
-          <h1 className="projects-heading-section">PROJECTS</h1>
+          <h1 className="general-heading-section">PROJECTS</h1>
           <h2 className="projects-heading-section-sub">
             Building a Better Community
           </h2>

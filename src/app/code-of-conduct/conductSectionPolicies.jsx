@@ -3,7 +3,7 @@ export default function conductSectionPolicies() {
     <section className={`conduct-dark-theme`}>
       <div className={`conduct-policy-landing-container conduct-dark-theme`}>
         <div className={`conduct-section-heading-container conduct-heading-underline underline-alt`}>
-          <h1 className={`conduct-heading-section conduct-heading-section-alt`}>anti-harassment policy</h1>
+          <h1 className={`general-heading-section general-heading-section-alt`}>anti-harassment policy</h1>
           <h2 className={`conduct-sub-h1-heading`}>
             Promoting a Safe and Respectful Community
           </h2>

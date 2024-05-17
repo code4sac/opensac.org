@@ -2,7 +2,7 @@ export default function ConductSectionLanding() {
   return (
     <section className={`conduct-section-landing conduct-light-theme`}>
       <div className={`conduct-section-heading-container conduct-heading-underline`}>
-        <h1 className={`conduct-heading-section`}>CODE OF CONDUCT</h1>
+        <h1 className={`general-heading-section`}>CODE OF CONDUCT</h1>
         <h2 className={`conduct-sub-h1-heading`}>
           Fostering Inclusivity and Respect
         </h2>

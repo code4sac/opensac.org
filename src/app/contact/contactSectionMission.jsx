@@ -15,8 +15,8 @@ export default function ContactSectionMission({sectionType}) {
         <div
           className={`contact-${sectionType}-heading-container contact-heading-underline contact-underline-alt`}
         >
-          <h1 className={`contact-heading-section contact-heading-section-alt`}>CONTACT FORM</h1>
-          <h2 className={`contact-heading-section-sub`}>
+          <h1 className={`general-heading-section general-heading-section-alt`}>CONTACT FORM</h1>
+          <h2 className={`general-heading-section-sub`}>
             Get In Touch
           </h2>
         </div>

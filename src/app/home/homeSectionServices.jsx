@@ -6,11 +6,11 @@ import Link from "next/link";
  */
 export default function HomeSectionServices({sectionType}) {
   return (
-    <section className={`home-section-${sectionType} home-services-container`}>
+    <section className={`general-section-${sectionType} home-services-container`}>
       <div
-        className={`home-section-${sectionType}-container home-section-heading-underline underline-alt`}>
-        <h1 className={`heading-section heading-section-alt`}>Our services</h1>
-        <h2 className={`heading-section-sub`}>Explore Our Engagement Options</h2>
+        className={`general-section-${sectionType}-container home-section-heading-underline underline-alt`}>
+        <h1 className={`general-heading-section general-heading-section-alt`}>Our services</h1>
+        <h2 className={`general-heading-section-sub`}>Explore Our Engagement Options</h2>
       </div>
       <div className={`home-numbered-grid`}>
         <div className={`home-numbered-container`}>

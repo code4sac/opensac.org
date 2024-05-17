@@ -11,8 +11,8 @@ export default function GetStartedSectionInstructions({sectionType}) {
       <div className={`instructions-container`}>
         <div className={`instructions-info-container`}>
           <div className={`${sectionType}-heading-container`}>
-            <h1 className={`heading-section heading-section-alt`}>GETTING STARTED</h1>
-            <h2 className={`heading-section-sub`}>
+            <h1 className={`general-heading-section general-heading-section-alt`}>GETTING STARTED</h1>
+            <h2 className={`general-heading-section-sub`}>
               Steps to Volunteer
             </h2>
           </div>
