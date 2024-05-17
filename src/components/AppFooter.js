@@ -27,13 +27,23 @@ export default function AppFooter() {
         </div>
 
         <div className="footerSocialMedia">
-          <Link href="/" className="footerSocialMediaLink">
+          <Link 
+          href="https://www.facebook.com/code4sac"
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="footerSocialMediaLink">
             <img src="/img/socialmedia/facebook.svg" alt="Facebook" className="footerSocialMediaIcon"/>
           </Link>
-          <Link href="/" className="footerSocialMediaLink">
+          <Link href="https://twitter.com/code4sac" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="footerSocialMediaLink">
             <img src="/img/socialmedia/twitter.svg" alt="X" className="footerSocialMediaIcon"/>
           </Link>
-          <Link href="/" className="footerSocialMediaLink">
+          <Link href="https://www.youtube.com/@code4sac" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="footerSocialMediaLink">
             <img src="/img/socialmedia/youtube.svg" alt="Youtube" className="footerSocialMediaIcon"/>
           </Link>
         </div>
