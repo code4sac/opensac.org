@@ -14,16 +14,6 @@ Pitch page layout.
   border-bottom: 4px solid $neutral-900;
 }
 
-.pitch-heading-section {
-  color: $neutral-300;
-  @include h1-section;
-  margin: 0;
-}
-
-.pitch-heading-section-alt {
-  color: $secondary-500;
-}
-
 .pitch-heading-section-sub {
   margin: 10px 0;
   @include h2-semi-bold;

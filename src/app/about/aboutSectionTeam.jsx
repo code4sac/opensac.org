@@ -7,7 +7,7 @@ export default function AboutSectionTeam() {
     <section className={`about-team-section`}>
       <div className={`team-paragraph-container`}>
         <div className={`about-heading-container about-heading-underline`}>
-          <h1 className={`about-heading-section`}>OUR TEAM</h1>
+          <h1 className={`general-heading-section`}>OUR TEAM</h1>
           <h2 className={`about-sub-heading`}>
             Meet the Heartbeat of Open Sacramento
           </h2>

@@ -44,16 +44,6 @@ Projects page layout.
   border-bottom: 4px solid $neutral-900;
 }
 
-.projects-heading-section {
-  color: $neutral-300;
-  @include h1-section;
-  margin: 0;
-}
-
-.projects-heading-section-alt {
-  color: $secondary-500;
-}
-
 .projects-heading-section-sub {
   margin: 10px 0;
   max-width: 450px;

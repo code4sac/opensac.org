@@ -27,7 +27,7 @@ export default function HomeSectionProjects({sectionType}) {
       <div className={`home-projects-info-container`}>
         <div
           className={`home-section-${sectionType.dark}-container home-section-heading-underline underline-alt`}>
-          <h1 className={`heading-section heading-section-alt`}>our projects</h1>
+          <h1 className={`general-heading-section general-heading-section-alt`}>our projects</h1>
           <h2 className={`heading-large-section-sub`}>Driving Innovation Through Tech and Collaboration</h2>
         </div>
         <p className={`home-section-paragraph`}>
@@ -44,7 +44,7 @@ export default function HomeSectionProjects({sectionType}) {
           <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide">
               <div className="slide-content">
-                <h2 className="heading-section-sub">TrashAI</h2>
+                <h2 className="general-heading-section-sub">TrashAI</h2>
                 <p className="home-section-dark-paragraph">
                   Developing machine learning technology to identify trash in images.
                 </p>
@@ -57,7 +57,7 @@ export default function HomeSectionProjects({sectionType}) {
             </div>
             <div className="keen-slider__slide">
               <div className="slide-content">
-                <h2 className="heading-section-sub">TrashAI</h2>
+                <h2 className="general-heading-section-sub">TrashAI</h2>
                 <p className="home-section-dark-paragraph">
                   Developing machine learning technology to identify trash in images.
                 </p>
@@ -70,7 +70,7 @@ export default function HomeSectionProjects({sectionType}) {
             </div>
             <div className="keen-slider__slide">
               <div className="slide-content">
-                <h2 className="heading-section-sub">TrashAI</h2>
+                <h2 className="general-heading-section-sub">TrashAI</h2>
                 <p className="home-section-dark-paragraph">
                   Developing machine learning technology to identify trash in images.
                 </p>

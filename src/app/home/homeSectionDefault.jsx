@@ -8,8 +8,8 @@ export default function HomeSectionDefault({sectionType}) {
   return (
     <section className={`general-section-${sectionType}`}>
       <div className={`general-section-${sectionType}-container home-section-heading-underline`}>
-        <h1 className={`heading-section`}>Why volunteer</h1>
-        <h2 className={`heading-section-sub`}>
+        <h1 className={`general-heading-section`}>Why volunteer</h1>
+        <h2 className={`general-heading-section-sub`}>
           Empower Change with <br/>
           Open Sacramento
         </h2>

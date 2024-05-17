@@ -3,7 +3,7 @@ export default function conductSectionBullets({sectionType}) {
     <section className={`conduct-${sectionType}-theme`}>
       <div className={`conduct-email-header-container`}>
         <div className={`conduct-section-heading-container conduct-heading-underline underline-alt`}>
-          <h1 className={`conduct-heading-section conduct-heading-section-alt`}>anti-harassment reporting</h1>
+          <h1 className={`general-heading-section general-heading-section-alt`}>anti-harassment reporting</h1>
           <h2 className={`conduct-sub-h1-heading`}>
             Email Template
           </h2>

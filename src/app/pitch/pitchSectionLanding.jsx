@@ -6,7 +6,7 @@ export default function PitchSectionLanding({sectionType}) {
   return (
     <section className={`general-section-${sectionType}`}>
       <div className={`general-section-${sectionType}-container pitch-heading-underline`}>
-        <h1 className={`pitch-heading-section`}>pitch a project</h1>
+        <h1 className={`general-heading-section`}>pitch a project</h1>
         <h2 className={`pitch-sub-heading`}>
           Contribute Your Project Idea
         </h2>

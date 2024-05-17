@@ -18,25 +18,6 @@ About page layout.
   border-bottom: 4px solid $neutral-50;
 }
 
-.about-heading-section {
-  color: $neutral-300;
-  @include h1-section;
-  margin: 0;
-}
-
-.about-heading-section-alt {
-  color: $secondary-500;
-}
-
-.about-heading-section-sub {
-  margin: 10px 0;
-  @include h2-semi-bold;
-
-  @media (max-width: $screen-sm) {
-    @include h3-semi-bold;
-  }
-}
-
 .about-section-paragraph {
   @include subheading-regular;
   margin: 0;
