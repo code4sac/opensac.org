@@ -88,7 +88,6 @@ contact page layout
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
   background-color: $neutral-900;
   color: $neutral-50;
 
@@ -115,14 +114,14 @@ contact page layout
   background-color: $secondary-900;
   min-width: 50vh;
   color: var(--Neutral-Neutral-50, #F7F7F8);
-font-family: Inter;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px; /* 166.667% */
-width: 100%;
-height: auto;
-padding: 80px 88px 80px 88px;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 166.667% */
+  width: 100%;
+  height: auto;
+  padding: 80px 88px 80px 88px;
 }
 
 // .TextField.Mui-selected {
