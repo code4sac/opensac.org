@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { fetchGithubSingleProject } from "../github";
 
 import SingleProjectsSectionStart from "./singleProjectsSectionStart";
+import SingleProjectsLinks from "./singleProjectsLinks";
 import SingleProjectsBrief from "./singleProjectsBrief";
 import SingleProjectsScreenshots from "./singleProjectsScreenshots";
 import SingleProjectsRoadmap from "./singleProjectsRoadmap";
@@ -46,40 +47,9 @@ export default function SingleProject({ githubFullName }) {
 
   return (
     <div className={`project-section-${SectionType.dark}`}>
-      <SingleProjectsSectionStart
-        sectionType={SectionType.dark}
-        data={data}
-      ></SingleProjectsSectionStart>
-      <div
-        className={`project-info-line-top project-info-line-bottom project-link-container`}
-      >
-        <Link className="project-heading-alt" href="#project-brief">
-          Project Brief
-        </Link>
-        <Link className="project-heading-alt" href="#screenshots">
-          Screenshots
-        </Link>
-        <Link className="project-heading-alt" href="#roadmap">
-          Roadmap
-        </Link>
-        <Link className="project-heading-alt" href="#how-to-contribute">
-          How to Contribute
-        </Link>
-        <Link className="project-heading-alt" href="#developer">
-          Developer
-        </Link>
-        <Link className="project-heading-alt" href="#resources">
-          Resources
-        </Link>
-        <Link className="project-heading-alt" href="#how-to-volunteer">
-          How to Volunteer
-        </Link>
-      </div>
-
-      <SingleProjectsBrief
-        sectionType={SectionType.dark}
-        data={data}
-      ></SingleProjectsBrief>
+      <SingleProjectsSectionStart sectionType={SectionType.dark} data={data}/>
+      <SingleProjectsLinks sectionType={SectionType.dark}/>
+      <SingleProjectsBrief sectionType={SectionType.dark} data={data}/>
       <SingleProjectsScreenshots
         sectionType={SectionType.dark}
         data={data}
