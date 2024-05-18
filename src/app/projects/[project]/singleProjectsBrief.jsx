@@ -9,40 +9,48 @@ export default function SingleProjectsBrief({ sectionType, data }) {
             Project Brief
           </h2>
         </div>
+        <hr className="project-brief-info-line-top-first"/>
         <div className="project-info-container project-info-container-first project-info-line-top">
           <p className="project-info-label">Status</p>{" "}
           <p className="project-brief-status">
             {upperFirst(data.meta.project_status)}
           </p>
         </div>
+        <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Description</p>{" "}
-          <p className="project-brief-paragraph">{data.meta.description}</p>
+          <p className="project-paragraph-alt">{data.meta.description}</p>
         </div>
+        <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Comments</p>
-          <p className="project-brief-paragraph">{upperFirst(data.meta.project_status)}</p>
+          <p className="project-paragraph-alt">{upperFirst(data.meta.project_status)}</p>
         </div>
+        <hr className="project-brief-info-line-top"/>
         <div className="project-info-container">
           <p className="project-info-label">Communications</p>
           <p className="project-info-label project-info-label-channels">Channels</p>
-          <p className="project-brief-paragraph project-brief-paragraph-communications">{data.meta.communications}</p>
+          <p className="project-paragraph-alt project-brief-paragraph-communications">{data.meta.communications}</p>
         </div>
+        <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Project Partner</p>{" "}
-          <p className="project-brief-paragraph">{data.meta.project_partner}</p>
+          <p className="project-paragraph-alt">{data.meta.project_partner}</p>
         </div>
+        <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Project Lead</p>{" "}
-          <p className="project-brief-paragraph">{data.meta.technical_lead}</p>
+          <p className="project-paragraph-alt">{data.meta.technical_lead}</p>
         </div>
+        <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Technical Lead</p>{" "}
-          <p className="project-brief-paragraph">{data.meta.technical_lead}</p>
+          <p className="project-paragraph-alt">{data.meta.technical_lead}</p>
         </div>
+        <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Lead Designer</p>{" "}
-          <p className="project-brief-paragraph">{data.meta.lead_designer}</p>
+          <p className="project-paragraph-alt">{data.meta.lead_designer}</p>
         </div>
       </section>
     </>

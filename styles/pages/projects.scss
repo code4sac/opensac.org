@@ -581,6 +581,36 @@ details p {
   padding: 0 24px;
 }
 
+.project-paragraph {
+  @include p3-regular;
+  color: $neutral-50;
+}
+
+.project-main-heading-container {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.projects-main-heading-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 43px;
+  border-bottom: 4px solid white;
+}
+
+.project-button-container {
+  display: flex;
+  gap: 16px;
+}
+
+.project-info-line-top-2 {
+  height: 1px;
+  border: none;
+  background: $neutral-400;
+}
+
 // SingleProjectsSectionStart //
 
 .project-section-start {
@@ -602,12 +632,21 @@ details p {
   color: $secondary-500;
 }
 
-.project-main-heading-container {
-  position: relative;
-}
+// .project-main-heading-container {
+//   position: relative;
+//   padding-bottom: 12px;
+// }
+
+// .projects-main-heading-underline::after {
+//   content: "";
+//   position: absolute;
+//   bottom: 0;
+//   height: 1px;
+//   width: 43px;
+//   border-bottom: 4px solid white;
+// }
 
 .project-section-start .project-main-heading-container {
-  padding: 12px 0;
   margin-top: 12px;
 }
 
@@ -625,14 +664,12 @@ details p {
 }
 
 .project-section-start .project-paragraph {
-  @include p3-regular;
-  color: $neutral-50;
   margin-top: 32px;
 }
 
-.project-button-container {
-  display: flex;
-  gap: 16px;
+.project-section-start .project-button-container {
+  // display: flex;
+  // gap: 16px;
   margin-top: 32px;
 }
 
@@ -659,15 +696,6 @@ details p {
   @include light-button-transition;
 }
 
-.projects-main-heading-underline::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 1px;
-  width: 43px;
-  border-bottom: 4px solid white;
-}
-
 // SingleProjectsLinks
 
 .project-link-container {
@@ -677,6 +705,12 @@ details p {
   border-bottom: 1px solid $secondary-50;
   padding: 16px 0;
   margin-top: 24px;
+}
+
+.project-paragraph-alt {
+  @include p3-regular;
+  color: $neutral-200;
+  // margin-top: 16px;
 }
 
 .project-heading-alt {
@@ -697,15 +731,29 @@ details p {
   padding-top: 48px;
 }
 
-.project-info-container {
-  border-top: 1px solid $neutral-400;
+.project-brief-info-line-top-first {
+  height: 1px;
+  border: none;
+  background: $neutral-400;
+  margin-top: 40px;
+}
+
+.project-brief-info-line-top {
+  height: 1px;
+  border: none;
+  background: $neutral-400;
   margin-top: 24px;
+}
+
+.project-info-container {
+  // border-top: 1px solid $neutral-400;
+  // margin-top: 24px;
   padding-top: 8px;
 }
 
 .project-info-container-first {
-  border-top: 1px solid $neutral-400;
-  margin-top: 40px;
+  // border-top: 1px solid $neutral-400;
+  // margin-top: 40px;
   padding-top: 8px;
 }
 
@@ -720,12 +768,116 @@ details p {
   margin-top: 16px;
 }
 
-.project-brief-paragraph {
-  @include p3-regular;
-  color: $neutral-200;
+.project-brief-container .project-paragraph-alt {
+  // @include p3-regular;
+  // color: $neutral-200;
   margin-top: 16px;
 }
 
 .project-info-label-channels, .project-brief-paragraph-communications {
   margin-top: 12px;
+}
+
+// SingleProjectsScreenshots
+
+.project-screenshots-container {
+  margin-top: 20px;
+  padding: 24px 0 42px 0;
+}
+
+.project-screenshots-container .project-paragraph {
+  margin-top: 10px;
+}
+
+.project-screenshot {
+  width: 100%;
+  margin-top: 10px;
+}
+
+// SingleProjectsRoadmap
+
+.project-roadmap-container {
+  margin-top: 20px;
+  padding: 48px 0 20px 0;
+}
+
+.project-roadmap-container .project-paragraph {
+  margin-top: 10px;
+}
+
+.project-info-container-alt {
+  margin-top: 44px;
+}
+
+.project-roadmap-info-container {
+  display: flex;
+}
+
+.project-roadmap-info-label {
+  @include p2-bold;
+  color: $neutral-200;
+}
+
+.project-info-alt {
+  @include p1-regular;
+  color: $neutral-300;
+}
+
+.project-roadmap-icon {
+  margin: 10px 10px 10px 9px;
+}
+
+.project-roadmap-icon-line {
+  margin: 10px 0 10px 24px;
+}
+
+.project-info-text-container {
+  align-self: flex-end;
+}
+
+.project-roadmap-info-label-two {
+  @include h5-semi-bold;
+  color: $secondary-50;
+  margin-top: 20px;
+}
+
+.project-roadmap-info-line-top {
+  height: 1px;
+  border: none;
+  background: $neutral-400;
+  margin-top: 10px;
+}
+
+.project-roadmap-container .project-paragraph-alt {
+  margin-top: 5px;
+}
+
+// SingleProjectsContribute
+
+.project-contribute-container {
+  padding: 24px 0 32px 0;
+}
+
+.project-contribute-container .project-paragraph {
+  margin-top: 32px;
+}
+
+.project-contribute-container .project-info-label {
+  margin-top: 32px;
+}
+
+.project-contribute-container .project-button-container {
+  margin-top: 16px;
+}
+
+// SingleProjectsDeveloper
+
+.project-developer-container {
+  padding-top: 20px;
+}
+
+.project-developer-paragraph {
+  @include subheading-regular;
+  color: $neutral-50;
+  margin: 20px 0;
 }
