@@ -4,14 +4,14 @@
  */
 export default function AboutSectionOpportunities({sectionType}) {
   return (
-    <section className={`about-section-${sectionType} about-join-container`}>
+    <section className={`general-section-${sectionType} about-join-container`}>
       <div className={`opportunities-container`}>
         <div className={`opportunities-intro-container`}>
           <div
             className={`about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
           >
-            <h1 className={`about-heading-section about-heading-section-alt`}>opportunities</h1>
-            <h2 className={`about-heading-section-sub`}>
+            <h1 className={`general-heading-section general-heading-section-alt`}>opportunities</h1>
+            <h2 className={`general-heading-section-sub`}>
               Join Our Team
             </h2>
           </div>

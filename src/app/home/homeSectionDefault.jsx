@@ -6,16 +6,16 @@ import Link from "next/link";
  */
 export default function HomeSectionDefault({sectionType}) {
   return (
-    <section className={`home-section-${sectionType}`}>
-      <div className={`home-section-${sectionType}-container home-section-heading-underline`}>
-        <h1 className={`heading-section`}>Why volunteer</h1>
-        <h2 className={`heading-section-sub`}>
+    <section className={`general-section-${sectionType}`}>
+      <div className={`general-section-${sectionType}-container home-section-heading-underline`}>
+        <h1 className={`general-heading-section`}>Why volunteer</h1>
+        <h2 className={`general-heading-section-sub`}>
           Empower Change with <br/>
           Open Sacramento
         </h2>
       </div>
 
-      <div className={`home-section-${sectionType}-container`}>
+      <div className={`general-section-${sectionType}-container`}>
         <p className={`home-section-paragraph`}>
           <span className={`paragraph-bold`}>
             Ready to make a difference?

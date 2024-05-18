@@ -4,13 +4,13 @@
  */
 export default function AboutSectionMission({sectionType}) {
   return (
-    <section className={`about-section-${sectionType} about-section-mission`}>
+    <section className={`general-section-${sectionType} about-section-mission`}>
       <div className={`mission-container`}>
         <div
           className={`about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
         >
-          <h1 className={`about-heading-section about-heading-section-alt`}>OUR MISSION</h1>
-          <h2 className={`about-heading-section-sub`}>
+          <h1 className={`general-heading-section general-heading-section-alt`}>OUR MISSION</h1>
+          <h2 className={`general-heading-section-sub`}>
             Driving Civic Innovation through Technology
           </h2>
         </div>

@@ -4,31 +4,6 @@
 /*
 contact page layout
  */
-.contact-section-landing {
-  color: $neutral-900;
-  background-color: $secondary-50;
-  padding: 96px 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-
-  @media (max-width: $screen-md) {
-    padding: 48px 40px;
-    flex-direction: column;
-  }
-}
-
-.contact-section-light-container {
-  width: 50%;
-  position: relative;
-
-  @media (max-width: $screen-md) {
-    width: 100%;
-  }
-}
-
 .contact-heading-underline::after {
   content: "";
   position: absolute;
@@ -50,25 +25,6 @@ contact page layout
 
 .contact-underline-alt::after {
   border-bottom: 4px solid $neutral-50;
-}
-
-.contact-heading-section {
-  color: $neutral-300;
-  @include h1-section;
-  margin: 0;
-}
-
-.contact-heading-section-alt {
-  color: $secondary-500;
-}
-
-.contact-heading-section-sub {
-  margin: 10px 0;
-  @include h2-semi-bold;
-
-  @media (max-width: $screen-sm) {
-    @include h3-semi-bold;
-  }
 }
 
 .contact-section-paragraph {
@@ -97,11 +53,6 @@ contact page layout
   @media (max-width: $screen-md) {
     width: 100%;
   }
-}
-
-.contact-section-dark {
-  background-color: $neutral-900;
-  color: $neutral-50;
 }
 
 .contact-dark-heading-container {
@@ -137,7 +88,6 @@ contact page layout
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
   background-color: $neutral-900;
   color: $neutral-50;
 
@@ -161,17 +111,17 @@ contact page layout
 }
 
 .form-holder{
-  background-color: $neutral-900;
+  background-color: $secondary-900;
   min-width: 50vh;
   color: var(--Neutral-Neutral-50, #F7F7F8);
-font-family: Inter;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px; /* 166.667% */
-width: 100%;
-height: auto;
-padding: 80px 88px 80px 88px;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 166.667% */
+  width: 100%;
+  height: auto;
+  padding: 80px 88px 80px 88px;
 }
 
 // .TextField.Mui-selected {
