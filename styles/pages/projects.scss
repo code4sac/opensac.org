@@ -571,8 +571,43 @@ details p {
   padding: 0 24px;
 }
 
+.project-info-label {
+  @include nav-semi-bold;
+  color: $neutral-200;
+}
+
+.project-info-text {
+  @include subheading-regular;
+  color: $neutral-200;
+}
+
+.project-info-link {
+  @include subheading-bold;
+  color: $primary-100;
+}
+
 .project-paragraph {
   @include p3-regular;
+  color: $neutral-50;
+}
+
+.project-paragraph-alt {
+  @include p3-regular;
+  color: $neutral-200;
+}
+
+.project-section-paragraph {
+  @include subheading-regular;
+  color: $neutral-50;
+}
+
+.project-type {
+  @include h1-section;
+  color: $secondary-500;
+}
+
+.project-heading {
+  @include h1-semi-bold;
   color: $neutral-50;
 }
 
@@ -611,38 +646,16 @@ details p {
 
 .project-main-image {
   width: 100%;
+  border-radius: 8px;
+  border: 1px solid #FFFFFF;
 }
 
 .project-main-info-container {
   margin-top: 32px;
 }
 
-.project-type {
-  @include h1-section;
-  color: $secondary-500;
-}
-
-// .project-main-heading-container {
-//   position: relative;
-//   padding-bottom: 12px;
-// }
-
-// .projects-main-heading-underline::after {
-//   content: "";
-//   position: absolute;
-//   bottom: 0;
-//   height: 1px;
-//   width: 43px;
-//   border-bottom: 4px solid white;
-// }
-
 .project-section-start .project-main-heading-container {
   margin-top: 12px;
-}
-
-.project-heading {
-  @include h1-semi-bold;
-  color: $neutral-50;
 }
 
 .project-status-label {
@@ -658,8 +671,6 @@ details p {
 }
 
 .project-section-start .project-button-container {
-  // display: flex;
-  // gap: 16px;
   margin-top: 32px;
 }
 
@@ -697,12 +708,6 @@ details p {
   margin-top: 24px;
 }
 
-.project-paragraph-alt {
-  @include p3-regular;
-  color: $neutral-200;
-  // margin-top: 16px;
-}
-
 .project-heading-alt {
   @include nav-semi-bold;
   color: $secondary-500;
@@ -736,20 +741,7 @@ details p {
 }
 
 .project-info-container {
-  // border-top: 1px solid $neutral-400;
-  // margin-top: 24px;
   padding-top: 8px;
-}
-
-.project-info-container-first {
-  // border-top: 1px solid $neutral-400;
-  // margin-top: 40px;
-  padding-top: 8px;
-}
-
-.project-info-label {
-  @include nav-semi-bold;
-  color: $neutral-200;
 }
 
 .project-brief-status {
@@ -758,9 +750,7 @@ details p {
   margin-top: 16px;
 }
 
-.project-brief-container .project-paragraph-alt {
-  // @include p3-regular;
-  // color: $neutral-200;
+.project-brief-container .project-paragraph-alt, .project-brief-container .project-info-paragraph {
   margin-top: 16px;
 }
 
@@ -775,13 +765,13 @@ details p {
   padding: 24px 0 42px 0;
 }
 
-.project-screenshots-container .project-paragraph {
-  margin-top: 10px;
+.project-screenshots-container .project-section-paragraph {
+  margin: 10px 0;
 }
 
 .project-screenshot {
   width: 100%;
-  margin-top: 10px;
+  border-radius: 8px;
 }
 
 // SingleProjectsRoadmap
@@ -791,7 +781,7 @@ details p {
   padding: 48px 0 20px 0;
 }
 
-.project-roadmap-container .project-paragraph {
+.project-roadmap-container .project-section-paragraph {
   margin-top: 10px;
 }
 
@@ -863,11 +853,57 @@ details p {
 // SingleProjectsDeveloper
 
 .project-developer-container {
-  padding-top: 20px;
+  padding: 20px 0 48px 0;
 }
 
-.project-developer-paragraph {
-  @include subheading-regular;
-  color: $neutral-50;
+.project-developer-container .project-section-paragraph {
   margin: 20px 0;
+}
+
+// SingleProjectsResources
+
+.project-resources-container {
+  padding: 48px 0;
+}
+
+.project-resources-container .project-paragraph {
+  margin-top: 20px;
+}
+
+// SingleProjectsVolunteer
+
+.project-volunteer-container {
+  padding: 48px 0 24px 0;
+}
+
+.project-volunteer-container .project-type {
+  margin-left: 10px;
+}
+
+.project-volunteer-container .project-main-heading-container {
+  margin-top: 12px;
+}
+
+.project-volunteer-container .project-paragraph {
+  margin: 10px 0;
+}
+
+.project-volunteer-image-container {
+  position: relative;
+}
+
+.project-volunteer-image {
+  width: 100%;
+}
+
+.project-volunteer-anchor {
+  @include h4-bold;
+  color: $primary-900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  a {
+    color: $primary-500;
+  }
 }

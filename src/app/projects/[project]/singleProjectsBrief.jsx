@@ -10,9 +10,9 @@ export default function SingleProjectsBrief({ sectionType, data }) {
           </h2>
         </div>
         <hr className="project-brief-info-line-top-first"/>
-        <div className="project-info-container project-info-container-first project-info-line-top">
+        <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Status</p>{" "}
-          <p className="project-brief-status">
+          <p className=".project-info-text project-brief-status">
             {upperFirst(data.meta.project_status)}
           </p>
         </div>
@@ -30,27 +30,27 @@ export default function SingleProjectsBrief({ sectionType, data }) {
         <div className="project-info-container">
           <p className="project-info-label">Communications</p>
           <p className="project-info-label project-info-label-channels">Channels</p>
-          <p className="project-paragraph-alt project-brief-paragraph-communications">{data.meta.communications}</p>
+          <p className="project-info-text project-brief-paragraph-communications">{data.meta.communications}</p>
         </div>
         <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Project Partner</p>{" "}
-          <p className="project-paragraph-alt">{data.meta.project_partner}</p>
+          <p className="project-info-text">{data.meta.project_partner}</p>
         </div>
         <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Project Lead</p>{" "}
-          <p className="project-paragraph-alt">{data.meta.technical_lead}</p>
+          <p className="project-info-text">{data.meta.technical_lead}</p>
         </div>
         <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Technical Lead</p>{" "}
-          <p className="project-paragraph-alt">{data.meta.technical_lead}</p>
+          <p className="project-info-text">{data.meta.technical_lead}</p>
         </div>
         <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Lead Designer</p>{" "}
-          <p className="project-paragraph-alt">{data.meta.lead_designer}</p>
+          <p className="project-info-text">{data.meta.lead_designer}</p>
         </div>
       </section>
     </>

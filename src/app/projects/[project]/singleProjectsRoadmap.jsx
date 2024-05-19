@@ -5,7 +5,7 @@ export default function SingleProjectsRoadmap({ sectionType, data }) {
         <div className="project-main-heading-container projects-main-heading-underline">
           <h2 className="project-heading project-heading-underline">Roadmap</h2>
         </div>  
-        <p className="project-paragraph">
+        <p className="project-section-paragraph">
           Know the current progress, scope, and stage of project
         </p>
         <div className="project-info-container-alt">

@@ -53,18 +53,9 @@ export default function SingleProject({ githubFullName }) {
       <SingleProjectsScreenshots sectionType={SectionType.dark} data={data}/>
       <SingleProjectsRoadmap sectionType={SectionType.dark} data={data}/>
       <SingleProjectsContribute sectionType={SectionType.dark} data={data}/>
-      <SingleProjectsDeveloper
-        sectionType={SectionType.dark}
-        data={data}
-      ></SingleProjectsDeveloper>
-      <SingleProjectsResources
-        sectionType={SectionType.dark}
-        data={data}
-      ></SingleProjectsResources>
-      <SingleProjectsVolunteer
-        sectionType={SectionType.dark}
-        data={data}
-      ></SingleProjectsVolunteer>
+      <SingleProjectsDeveloper sectionType={SectionType.dark} data={data}/>
+      <SingleProjectsResources sectionType={SectionType.dark} data={data}/>
+      <SingleProjectsVolunteer sectionType={SectionType.dark} data={data}/>
     </div>
   );
 }
