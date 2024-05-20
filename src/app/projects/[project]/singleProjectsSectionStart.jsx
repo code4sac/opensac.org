@@ -10,14 +10,16 @@ import moment from "moment";
 export default function SingleProjectsSectionStart({ sectionType, data }) {
   return (
     <section className="project-section-start">
-      <img 
-          className='project-main-image' 
-          src = {`https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url}`}/>
+      <div 
+        className="project-main-image"
+        style={{backgroundImage: `url(https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url})`}}
+      >
+      </div>
       <div className="project-main-info-container">
+        <div className="project-main-heading-container projects-main-heading-underline">
         <span className="project-type">
           {data.meta.project_type.toUpperCase()}
         </span>
-        <div className="project-main-heading-container projects-main-heading-underline">
           <h1 className="project-heading">{data.meta.title}</h1>
         </div>
         <span className="project-status-label">Project Status: {upperFirst(data.meta.project_status)}</span>

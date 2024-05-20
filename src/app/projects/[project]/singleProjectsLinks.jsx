@@ -17,9 +17,9 @@ const SingleProjectsLinks = () => {
         <Link className="project-heading-alt" href="#how-to-contribute">
           How to Contribute
         </Link>
-        <Link className="project-heading-alt" href="#developer">
+        {/* <Link className="project-heading-alt" href="#developer">
           Developer
-        </Link>
+        </Link> */}
         <Link className="project-heading-alt" href="#resources">
           Resources
         </Link>

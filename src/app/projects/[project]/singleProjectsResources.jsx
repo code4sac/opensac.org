@@ -58,9 +58,6 @@ export default function SingleProjectsResources({ sectionType, data }) {
             <p className="project-info-text">
               {data.meta.resources.meeting_times}
             </p>
-          </div>
-          <hr className="project-brief-info-line-top"/>
-          <div className="project-info-container project-info-line-top">
             <p className="project-info-label">Office Hours</p>
             <p className="project-info-text">
               {data.meta.resources.office_hours}

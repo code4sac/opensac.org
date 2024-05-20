@@ -13,9 +13,8 @@ export default function SingleProjectsVolunteer({ sectionType, data }) {
             meaningful difference in our city.
           </p>
         </div>
-        
         <div className="project-volunteer-image-container">
-          <img className="project-volunteer-image" src="/img/about/rectangle.png" alt="rectangle" />
+          <img className="project-volunteer-image" src="/img/about/rectangle.png" alt="rectangle"/>
           <p className={`project-volunteer-anchor`}>
             Not a volunteer yet?
             <br />

@@ -29,8 +29,9 @@ export default function SingleProjectsBrief({ sectionType, data }) {
         <hr className="project-brief-info-line-top"/>
         <div className="project-info-container">
           <p className="project-info-label">Communications</p>
-          <p className="project-info-label project-info-label-channels">Channels</p>
           <p className="project-info-text project-brief-paragraph-communications">{data.meta.communications}</p>
+          <p className="project-info-label project-info-label-channels">Channels</p>
+          
         </div>
         <hr className="project-brief-info-line-top"/>
         <div className="project-info-container project-info-line-top">
