@@ -1,6 +1,7 @@
 export default function SingleProjectsScreenshots({ sectionType, data }) {
   let shownImages = data.meta.screenshots.map((screenshot) => (
-            <div 
+            <div
+              key={data.full_name.concat(screenshot)} 
               className="project-screenshot" 
               style={{backgroundImage: `url(https://raw.githubusercontent.com/${data.full_name}/main/${screenshot})`}}>
             </div>

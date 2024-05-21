@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SingleProjectsVolunteer({ sectionType, data }) {
   return (
     <>
@@ -18,7 +20,7 @@ export default function SingleProjectsVolunteer({ sectionType, data }) {
           <p className={`project-volunteer-anchor`}>
             Not a volunteer yet?
             <br />
-            <a href={data.html_url}>Get Started</a>
+            <Link className="project-volunteer-link" href="/get-started">Get Started</Link>
           </p>
         </div>
       </section>

@@ -1,43 +1,41 @@
 import { upperFirst } from "@/utils/string";
 
-export default function SingleProjectsDeveloper({ sectionType, data }) {
+export default function SingleProjectsDesigner({ sectionType, data }) {
   return (
     <>
-      <section id="developer" className="project-contributor-container">
+      <section id="designer" className="project-contributor-container">
         <div className="project-main-heading-container projects-main-heading-underline">
-          <h2 className="project-heading project-heading-underline">Developer</h2>
+          <h2 className="project-heading project-heading-underline">Designer</h2>
         </div>
         <p className="project-section-paragraph">
-          Developers can actively contribute to the project by submitting pull
-          requests with code enhancements or bug fixes via the project's GitHub
-          repository.
+          Designers can actively contribute to the project by creating content, updating Figma files, and more.
         </p>
         <hr className="project-info-line-top-2" />
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Difficulty</p>
           <p className="project-info-text">
-            {upperFirst(data.meta.contributing.developer.difficulty)}
+            {upperFirst(data.meta.contributing.designer.difficulty)}
           </p>
         </div>
         <hr className="project-info-line-top-2" />
         <div className="project-info-container project-info-line-top">
-          <p className="project-info-label">Frontend</p>
+          <p className="project-info-label">Prototyping Tool</p>
           <p className="project-info-text">
-            {data.meta.contributing.developer.frontend}
+            Figma
           </p>
         </div>
         <hr className="project-info-line-top-2" />
         <div className="project-info-container project-info-line-top">
-          <p className="project-info-label">Backend</p>
+          <p className="project-info-label">Version</p>
           <p className="project-info-text">
-            {data.meta.contributing.developer.backend}
+            2
           </p>
         </div>
         <hr className="project-info-line-top-2" />
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Technologies</p>
           <p className="project-info-text">
-            {data.meta.contributing.developer.technologies}
+            {data.meta.contributing.designer.technologies}
           </p>
         </div>
         <hr className="project-info-line-top-2" />
@@ -57,7 +55,7 @@ export default function SingleProjectsDeveloper({ sectionType, data }) {
         <div className="project-info-container project-info-line-top project-info-line-bottom">
           <p className="project-info-label">Ways to Contribute</p>
           <p className="project-info-text">
-            {data.meta.contributing.developer.ways_to_contribute}
+            {data.meta.contributing.designer.ways_to_contribute}
           </p>
         </div>
         <hr className="project-info-line-top-2" />

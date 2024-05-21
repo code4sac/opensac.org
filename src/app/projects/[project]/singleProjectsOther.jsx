@@ -1,43 +1,40 @@
-import { upperFirst } from "@/utils/string";
 
-export default function SingleProjectsDeveloper({ sectionType, data }) {
+export default function SingleProjectsOther({ sectionType, data }) {
   return (
     <>
-      <section id="developer" className="project-contributor-container">
+      <section id="other" className="project-contributor-container">
         <div className="project-main-heading-container projects-main-heading-underline">
-          <h2 className="project-heading project-heading-underline">Developer</h2>
+          <h2 className="project-heading project-heading-underline">Other</h2>
         </div>
         <p className="project-section-paragraph">
-          Developers can actively contribute to the project by submitting pull
-          requests with code enhancements or bug fixes via the project's GitHub
-          repository.
+            Any volunteers can contribute by writing documentation, generating ideas, attending meetings, helping out the community, and more.
         </p>
         <hr className="project-info-line-top-2" />
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Difficulty</p>
           <p className="project-info-text">
-            {upperFirst(data.meta.contributing.developer.difficulty)}
+            Easy
           </p>
         </div>
         <hr className="project-info-line-top-2" />
         <div className="project-info-container project-info-line-top">
-          <p className="project-info-label">Frontend</p>
+          <p className="project-info-label">Documentation</p>
           <p className="project-info-text">
-            {data.meta.contributing.developer.frontend}
+            Google Sheets
           </p>
         </div>
         <hr className="project-info-line-top-2" />
         <div className="project-info-container project-info-line-top">
-          <p className="project-info-label">Backend</p>
+          <p className="project-info-label">Meetings</p>
           <p className="project-info-text">
-            {data.meta.contributing.developer.backend}
+            ZEP
           </p>
         </div>
         <hr className="project-info-line-top-2" />
         <div className="project-info-container project-info-line-top">
           <p className="project-info-label">Technologies</p>
           <p className="project-info-text">
-            {data.meta.contributing.developer.technologies}
+            To be announced
           </p>
         </div>
         <hr className="project-info-line-top-2" />
@@ -57,7 +54,7 @@ export default function SingleProjectsDeveloper({ sectionType, data }) {
         <div className="project-info-container project-info-line-top project-info-line-bottom">
           <p className="project-info-label">Ways to Contribute</p>
           <p className="project-info-text">
-            {data.meta.contributing.developer.ways_to_contribute}
+            Writing Documentation, Generating new ideas, and more
           </p>
         </div>
         <hr className="project-info-line-top-2" />
