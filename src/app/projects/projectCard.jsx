@@ -15,7 +15,6 @@ export default function ProjectCard({
   lastUpdatedTimestamp,
 }) {
   return (
-    // TODO fix styling classes to represent the projects page?
     <section className={`project-card-container`}>
       <div className="project-card-img-container">
         <div className={`project-card-img-status ${isLoading && 'project-card-loading'}`}>{projectStatus}</div>
