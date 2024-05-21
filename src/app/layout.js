@@ -3,7 +3,10 @@ import AppNavbar from '@/components/AppNavbar'
 import {Inter} from 'next/font/google'
 import '../../styles/main.scss'
 
-const inter = Inter({subsets: ['latin']})
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Open Sacramento',

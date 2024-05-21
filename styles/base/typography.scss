@@ -1,14 +1,8 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
 @import "../abstracts/mixins";
 
 /*
-Application typography
+Application typography. The Inter font family is applied by next/font in layout.js.
  */
-
-* {
-  font-family: "Inter", "Arial", sans-serif;
-}
 
 .paragraph-bold {
   @include subheading-bold;
