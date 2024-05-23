@@ -14,7 +14,6 @@ import SingleProjectsDesigner from "./singleProjectsDesigner";
 import SingleProjectsOther from "./singleProjectsOther";
 import SingleProjectsResources from "./singleProjectsResources";
 import SingleProjectsVolunteer from "./singleProjectsVolunteer";
-import Link from "next/link";
 import { useState } from "react";
 
 /**
