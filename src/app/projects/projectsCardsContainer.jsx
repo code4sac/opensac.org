@@ -4,7 +4,7 @@ import moment from "moment";
 const ProjectsCardsContainer = ({error, isLoading, projectsData, sectionType}) => {
   return (
      isLoading ? (
-        <div className="project-cards-container">
+        <div className={`project-cards-container`}>
           {Array.from({length: 3}).map((_, index) => (
             <ProjectCard
             key={index}
@@ -18,11 +18,11 @@ const ProjectsCardsContainer = ({error, isLoading, projectsData, sectionType}) =
           ))}
         </div>
      ) : error || projectsData.length === 0 ? (
-        <div className="project-cards-load-status-container">
-          <span className="project-cards-load-status-text">{error ? "Failed to load...": "There are no projects that meet the search criteria..."}</span>
+        <div className={`project-cards-load-status-container`}>
+          <span className={`project-cards-load-status-text`}>{error ? "Failed to load...": "There are no projects that meet the search criteria..."}</span>
         </div>
      ) : (
-        <div className="project-cards-container">
+        <div className={`project-cards-container`}>
           {projectsData.map((project) => (
               <ProjectCard
                 key={moment(project.updated_at)}
