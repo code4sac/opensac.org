@@ -1,7 +1,5 @@
-
 export default function SingleProjectsOther({ sectionType, data }) {
   return (
-    <>
       <section id="other" className={`project-contributor-container`}>
         <div className={`project-main-heading-container projects-main-heading-underline`}>
           <h2 className={`project-heading project-heading-underline`}>Other</h2>
@@ -59,6 +57,5 @@ export default function SingleProjectsOther({ sectionType, data }) {
         </div>
         <hr className={`project-info-line-top-2`} />
       </section>
-    </>
   );
 }

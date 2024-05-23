@@ -1,13 +1,11 @@
-import { upperFirst } from "@/utils/string";
 import Link from "next/link";
 
 export default function SingleProjectsResources({ sectionType, data }) {
-  const a = true;
   if (!data.meta.resources) {
     return <section id="resources" className={``}></section>;
   }
+
   return (
-    <>
       <section id="resources" className={`project-resources-container`}>
         <div className={`project-main-heading-container projects-main-heading-underline`}>
           <h2 className={`project-heading`}>Resources</h2>
@@ -41,7 +39,7 @@ export default function SingleProjectsResources({ sectionType, data }) {
               </>
             ));
           }
-        })()}
+        })}
         <hr className={`project-brief-info-line-top`}/>
         <div className={`project-info-line-top`}>
           <div className={`project-info-container`}>
@@ -57,6 +55,5 @@ export default function SingleProjectsResources({ sectionType, data }) {
         </div>
         <hr className={`project-brief-info-line-top`}/>
       </section>
-    </>
   );
 }

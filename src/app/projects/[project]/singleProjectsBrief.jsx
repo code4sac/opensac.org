@@ -2,7 +2,6 @@ import { upperFirst } from "@/utils/string";
 
 export default function SingleProjectsBrief({ sectionType, data }) {
   return (
-    <>
       <section id="project-brief" className={`project-brief-container`}>
         <div className={`project-main-heading-container projects-main-heading-underline`}>
           <h2 className={`project-heading`}>
@@ -54,6 +53,5 @@ export default function SingleProjectsBrief({ sectionType, data }) {
           <p className={`project-info-text`}>{data.meta.lead_designer}</p>
         </div>
       </section>
-    </>
   );
 }

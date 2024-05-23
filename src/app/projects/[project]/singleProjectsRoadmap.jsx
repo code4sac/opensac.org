@@ -14,7 +14,6 @@ export default function SingleProjectsRoadmap({ sectionType, data }) {
     }
   }
   return (
-    <>
       <section id="roadmap" className={`project-roadmap-container`}>
         <div className={`project-main-heading-container projects-main-heading-underline`}>
           <h2 className={`project-heading project-heading-underline`}>Roadmap</h2>
@@ -73,13 +72,11 @@ export default function SingleProjectsRoadmap({ sectionType, data }) {
             <p className="project-paragraph-alt">
               {data.meta.roadmap.objective}
             </p>
-
             <h4 className={`project-roadmap-info-label-two`}>Comments</h4>
               <hr className="project-roadmap-info-line-top" />
             <p className="project-paragraph-alt">
               {data.meta.roadmap.comments}
             </p>
-
             <h4 className={`project-roadmap-info-label-two`}>Outcome</h4>
               <hr className="project-roadmap-info-line-top" />
             <p className="project-paragraph-alt">
@@ -89,6 +86,5 @@ export default function SingleProjectsRoadmap({ sectionType, data }) {
           </div>         
         </div>
       </section>
-    </>
   );
 }

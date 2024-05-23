@@ -1,7 +1,5 @@
-
 export default function SingleProjectsContribute({ sectionType, contributeAs, setContributeAs }) {
   return (
-    <>
       <section id="how-to-contribute" className={`project-contribute-container`}>
         <div className={`project-main-heading-container projects-main-heading-underline`}>
           <h2 className={`project-heading project-heading-underline`}>How to Contribute</h2>
@@ -17,6 +15,5 @@ export default function SingleProjectsContribute({ sectionType, contributeAs, se
           <button className={`project-button ${contributeAs === 'other' && 'project-button-alt'}`} onClick={() => setContributeAs("other")}>Other</button>
         </div>
       </section>
-    </>
   );
 }
