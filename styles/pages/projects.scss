@@ -568,6 +568,7 @@ details p {
 /* SingleProject */
 
 .project-section-dark {
+  background: $neutral-900;
   padding: 0 24px;
 
   @media (min-width: $screen-xl) {
@@ -686,7 +687,7 @@ details p {
   object-fit: cover;
   background-repeat: no-repeat;
   border: 1px solid #FFFFFF;
-  
+
   @media (min-width: $screen-lg) {
     padding-bottom: 32%;
     order: 2;
@@ -936,7 +937,7 @@ details p {
 
 /* SingleProjectsDeveloper */
 
-.project-developer-container {
+.project-contributor-container {
   padding: 20px 0 48px 0;
 
   @media (min-width: $screen-xl) {
@@ -944,7 +945,7 @@ details p {
   }
 }
 
-.project-developer-container .project-section-paragraph {
+.project-contributor-container .project-section-paragraph {
   margin: 20px 0;
 }
 
@@ -1013,7 +1014,8 @@ details p {
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  a {
-    color: $primary-500;
-  }
+}
+
+.project-volunteer-link {
+  color: $primary-500;
 }

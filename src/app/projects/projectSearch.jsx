@@ -28,21 +28,21 @@ const ProjectSearch = ({ data, setProjectsData }) => {
     }
 
     return (
-        <div className="project-search-section">
-            <form className="project-search-form" action={search}>
-                <div className="form-row project-search-row">
-                    <input className="projectSearch" name="project-search" type="search" placeholder="Search" onChange={handleChange} />
+        <div className={`project-search-section`}>
+            <form className={`project-search-form`} action={search}>
+                <div className={`form-row project-search-row`}>
+                    <input className={`projectSearch`} name="project-search" type="search" placeholder="Search" onChange={handleChange} />
                     <img src="/img/form-element/search.svg" alt="Search icon." />
                 </div>
-                <div className="select-container">
-                    <div className="form-row">
+                <div className={`select-container`}>
+                    <div className={`form-row`}>
                         <label htmlFor="project-filter">Filter</label>
                         <select name="project-filter" id="project-filter" defaultValue="all" onChange={handleChange}>
                             <option value="all">All</option>
                             <option value="active">Active</option>
                         </select>
                     </div>
-                    <div className="form-row">
+                    <div className={`form-row`}>
                         <label htmlFor="project-sort-by">Sort By</label>
                         <select name="project-sort-by" id="project-sort-by" onChange={handleChange}>
                             <option value="created_at">Most Recent</option>

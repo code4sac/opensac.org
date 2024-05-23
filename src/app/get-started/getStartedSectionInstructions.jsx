@@ -51,8 +51,18 @@ export default function GetStartedSectionInstructions({sectionType}) {
         </div>
         <div className={`anchors-container`}>
           <Link href="/code-of-conduct" className={`anchor`}>Code of Conduct</Link>
-          <a href="/" className={`anchor`}>New Member Form</a>
-          <a className={`anchor`} href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">Meeting Link</a>
+          <a 
+            className={`anchor`} 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfvzzvz8lCwUD8TEDiPt7ZmN34AB0dhG61590KM_scxYoZf5w/viewform" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Link to new member form.">New Member Form</a>
+          <a 
+            className={`anchor`} 
+            href="https://www.meetup.com/code4sac/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Link to Meetup.">Meeting Link</a>
         </div>
       </div>
     </section>
