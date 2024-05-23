@@ -1,10 +1,17 @@
 'use client'
 import ContactSectionLanding from './contactSectionLanding'
 import ContactSectionMission from './contactSectionMission'
-import '@/styles/pages/contact.scss'
-import '@/styles/base/typography.scss'
 import {ThemeProvider} from "@mui/material";
 import {createTheme} from "@mui/material/styles";
+
+/**
+ * Section type. Displays light or dark themes.
+ * @type {{light: string, dark: string}}
+ */
+export const SectionType = {
+  light: 'light', 
+  dark: 'dark',
+}
 
 /**
  * About page.
@@ -26,8 +33,8 @@ export default function Contact() {
   });
   return (<div className="">
     <ThemeProvider theme={theme}>
-      <ContactSectionLanding/>
-      <ContactSectionMission/>
+      <ContactSectionLanding sectionType={SectionType.light}/>
+      <ContactSectionMission sectionType={SectionType.dark}/>
     </ThemeProvider>
   </div>)
 }

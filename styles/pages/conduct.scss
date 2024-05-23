@@ -14,7 +14,7 @@ conduct page layout
   background-color: $neutral-900;
 }
 
-.conduct-gray-theme {
+.conduct-grey-theme {
   color: $neutral-50;
   background-color: $neutral-500;
 }
@@ -68,25 +68,6 @@ conduct page layout
 
 .underline-alt::after {
   border-bottom: 4px solid $neutral-50;
-}
-
-.conduct-heading-section {
-  color: $neutral-300;
-  @include h1-section;
-  margin: 0;
-}
-
-.conduct-heading-section-alt {
-  color: $secondary-500;
-}
-
-.conduct-heading-section-sub {
-  margin: 10px 0;
-  @include h2-semi-bold;
-
-  @media (max-width: $screen-sm) {
-    @include h1-small-semi-bold;
-  }
 }
 
 .conduct-sub-h1-heading {

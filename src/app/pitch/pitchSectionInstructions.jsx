@@ -2,13 +2,13 @@
  * Instructions for project pitches.
  * @returns {JSX.Element}
  */
-export default function PitchSectionInstructions() {
+export default function PitchSectionInstructions({sectionType}) {
   return (
-    <section className={`pitch-section-dark`}>
+    <section className={`pitch-section-${sectionType}`}>
       <div className={`pitch-instructions-container`}>
         <div className={`pitch-instructions-info-container`}>
-          <div className={`pitch-dark-heading-container`}>
-            <h1 className={`pitch-heading-section pitch-heading-section-alt`}>pitching a project</h1>
+          <div className={`pitch-${sectionType}-heading-container`}>
+            <h1 className={`general-heading-section general-heading-section-alt`}>pitching a project</h1>
             <h2 className={`pitch-heading-section-sub`}>
               How to Start a New Project
             </h2>

@@ -1,17 +1,18 @@
 import instructions from './instructions.json'
+import Link from 'next/link'
 
 /**
  * Get started instructions section.
  * @returns {JSX.Element}
  */
-export default function GetStartedSectionInstructions() {
+export default function GetStartedSectionInstructions({sectionType}) {
   return (
-    <section className={`section-dark`}>
+    <section className={`section-${sectionType}`}>
       <div className={`instructions-container`}>
         <div className={`instructions-info-container`}>
-          <div className={`dark-heading-container`}>
-            <h1 className={`heading-section heading-section-alt`}>GETTING STARTED</h1>
-            <h2 className={`heading-section-sub`}>
+          <div className={`${sectionType}-heading-container`}>
+            <h1 className={`general-heading-section general-heading-section-alt`}>GETTING STARTED</h1>
+            <h2 className={`general-heading-section-sub`}>
               Steps to Volunteer
             </h2>
           </div>
@@ -49,9 +50,9 @@ export default function GetStartedSectionInstructions() {
           </p>
         </div>
         <div className={`anchors-container`}>
-          <a href="/" className={`anchor`}>Code of Conduct</a>
+          <Link href="/code-of-conduct" className={`anchor`}>Code of Conduct</Link>
           <a href="/" className={`anchor`}>New Member Form</a>
-          <a href="/" className={`anchor`}>Meeting Link</a>
+          <a className={`anchor`} href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">Meeting Link</a>
         </div>
       </div>
     </section>

@@ -1,10 +1,63 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
+@import "../abstracts/mixins";
 
 /*
-Application typography
+Application typography. The Inter font family is applied by next/font in layout.js.
  */
 
-* {
-  font-family: "Inter", "Arial", sans-serif;
+.paragraph-bold {
+  @include subheading-bold;
+}
+
+.general-section-light {
+  color: $neutral-900;
+  background-color: $secondary-50;
+  padding: 96px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  @media (max-width: $screen-md) {
+    padding: 48px 40px;
+    flex-direction: column;
+  }
+}
+
+.general-section-grey {
+  background-color: $neutral-500;
+  color: $secondary-50;
+}
+
+.general-section-dark {
+  background-color: $neutral-900;
+  color: $neutral-50;
+}
+
+.general-section-light-container {
+  width: 50%;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+}
+
+.general-heading-section {
+  color: $neutral-300;
+  @include h1-section;
+  margin: 0;
+}
+
+.general-heading-section-alt {
+  color: $secondary-500;
+}
+
+.general-heading-section-sub {
+  margin: 10px 0;
+  @include h2-semi-bold;
+
+  @media (max-width: $screen-sm) {
+    @include h3-semi-bold;
+  }
 }

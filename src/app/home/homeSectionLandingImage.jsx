@@ -20,7 +20,7 @@ export default function HomeSectionLandingImage() {
           </p>
           <div className={`home-buttons-group`}>
             <Link href="/get-started" className={`home-button`}>Get Started</Link>
-            <Link href="" className={`home-button home-button-alt`}>View Projects</Link>
+            <Link href="/projects" className={`home-button home-button-alt`}>View Projects</Link>
           </div>
         </div>
       </section>

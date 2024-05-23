@@ -4,12 +4,12 @@
  */
 export default function HomeSectionAboutImage({sectionType}) {
   return (
-    <section className={`home-section-${sectionType} home-section-${sectionType}-flex home-about-image`}>
+    <section className={`general-section-${sectionType} home-section-${sectionType}-flex home-about-image`}>
       <div className={`home-about-container`}>
         <div
-          className={`home-section-${sectionType}-container home-section-heading-underline underline-alt`}>
-          <h1 className={`heading-section heading-section-alt`}>What we do</h1>
-          <h2 className={`heading-section-sub`}>
+          className={`general-section-${sectionType}-container home-section-heading-underline underline-alt`}>
+          <h1 className={`general-heading-section general-heading-section-alt`}>What we do</h1>
+          <h2 className={`general-heading-section-sub`}>
             Building a Better Future <br/>
             in Sacramento
           </h2>
@@ -19,7 +19,7 @@ export default function HomeSectionAboutImage({sectionType}) {
           we transform ideas into tangible solutions that impact lives throughout
           the Sacramento area. Together, we drive innovation forward, building a
           future where open source technology empowers citizens and uplifts our
-          city. <span className={`home-section-paragraph-bold`}>
+          city. <span className={`paragraph-bold`}>
             Join us in driving innovation through open-source tech and empowering our community!
           </span>
         </p>

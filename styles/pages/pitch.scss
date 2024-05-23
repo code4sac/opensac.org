@@ -4,32 +4,6 @@
 /*
 Pitch page layout.
  */
-
-.pitch-section-landing {
-  color: $neutral-900;
-  background-color: $secondary-50;
-  padding: 96px 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-
-  @media (max-width: $screen-md) {
-    padding: 48px 40px;
-    flex-direction: column;
-  }
-}
-
-.pitch-section-light-container {
-  width: 50%;
-  position: relative;
-
-  @media (max-width: $screen-md) {
-    width: 100%;
-  }
-}
-
 .pitch-heading-underline::after {
   content: "";
   position: absolute;
@@ -38,16 +12,6 @@ Pitch page layout.
   height: 1px;
   width: 43px;
   border-bottom: 4px solid $neutral-900;
-}
-
-.pitch-heading-section {
-  color: $neutral-300;
-  @include h1-section;
-  margin: 0;
-}
-
-.pitch-heading-section-alt {
-  color: $secondary-500;
 }
 
 .pitch-heading-section-sub {

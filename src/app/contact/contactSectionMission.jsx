@@ -1,34 +1,35 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Link from 'next/link';
 
 /**
  * contact mission section.
  * @returns {JSX.Element}
  */
-export default function ContactSectionMission() {
+export default function ContactSectionMission({sectionType}) {
   return (
-    // <section className={`contact-section-dark contact-section-mission`}>
+    // <section className={`contact-section-${sectionType} contact-section-mission`}>
     <section className={`contact-section-mission`}>
       <div className={`contact-mission-container contact-mission-padding`}>
         <div
-          className={`contact-dark-heading-container contact-heading-underline contact-underline-alt`}
+          className={`contact-${sectionType}-heading-container contact-heading-underline contact-underline-alt`}
         >
-          <h1 className={`contact-heading-section contact-heading-section-alt`}>CONTACT FORM</h1>
-          <h2 className={`contact-heading-section-sub`}>
+          <h1 className={`general-heading-section general-heading-section-alt`}>CONTACT FORM</h1>
+          <h2 className={`general-heading-section-sub`}>
             Get In Touch
           </h2>
         </div>
         <p className={`contact-section-paragraph`}>
-          <span className={`contact-section-paragraph-bold`}>
+          <span className={`paragraph-bold`}>
             Have questions or need assistance? 
           </span> Reach out to us using our form, and we'll get back to you as soon as possible.
           <br></br><br></br>
-          Before reaching out, you might find quick answers to your queries in our <a href="/"
+          Before reaching out, you might find quick answers to your queries in our <Link href="/faq"
                                                                                       className="contactActionLinksAnchor">Frequently
-          Asked Questions (FAQs).</a>
+          Asked Questions (FAQs).</Link>
           <br></br><br></br>
-          Check out our weekly meetings on our <a href="/" className="contactActionLinksAnchor">meetup page.</a>
+          Check out our weekly meetings on our <a className="contactActionLinksAnchor"  href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">meetup page.</a>
         </p>
       </div>
       <div className='form-holder mission-container'>
