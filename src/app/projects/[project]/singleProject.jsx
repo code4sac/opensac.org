@@ -9,7 +9,6 @@ import SingleProjectsBrief from "./singleProjectsBrief";
 import SingleProjectsScreenshots from "./singleProjectsScreenshots";
 import SingleProjectsRoadmap from "./singleProjectsRoadmap";
 import SingleProjectsContribute from "./singleProjectsContribute";
-// import SingleProjectsContributor from "./singleProjectsContributor";
 import SingleProjectsDeveloper from "./singleProjectsDeveloper";
 import SingleProjectsDesigner from "./singleProjectsDesigner";
 import SingleProjectsOther from "./singleProjectsOther";
