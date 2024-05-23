@@ -57,7 +57,7 @@ export default function AppFooter() {
         <div className="footerBottomTitle">Open Sacramento</div>
         <div className="footerBottomLinksContainer">
           <Link href="/get-started" className="footerBottomLink">get started</Link>
-          <Link href="about/#team" className="footerBottomLink">our team</Link>
+          <Link href="/about/#team" className="footerBottomLink">our team</Link>
           <Link href="/code-of-conduct" className="footerBottomLink">code of conduct</Link>
         </div>
       </div>
