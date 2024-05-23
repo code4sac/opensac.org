@@ -564,3 +564,456 @@ details p {
     @include p2-regular;
   }
 }
+
+/* SingleProject */
+
+.project-section-dark {
+  padding: 0 24px;
+
+  @media (min-width: $screen-xl) {
+    padding: 0 80px;
+  }
+}
+
+.project-info-label {
+  @include nav-semi-bold;
+  color: $neutral-200;
+}
+
+.project-info-text {
+  @include subheading-regular;
+  color: $neutral-200;
+}
+
+.project-info-link {
+  @include subheading-bold;
+  color: $primary-100;
+}
+
+.project-paragraph {
+  @include p3-regular;
+  color: $neutral-50;
+}
+
+.project-paragraph-alt {
+  @include p3-regular;
+  color: $neutral-200;
+}
+
+.project-section-paragraph {
+  @include subheading-regular;
+  color: $neutral-50;
+}
+
+.project-type {
+  @include h1-section;
+  color: $secondary-500;
+}
+
+.project-heading {
+  @include h1-small-semi-bold;
+  color: $secondary-50;
+}
+
+.project-main-heading-container {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.projects-main-heading-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 43px;
+  border-bottom: 4px solid white;
+}
+
+.project-button-container {
+  display: flex;
+  gap: 16px;
+}
+
+.project-info-line-top-2 {
+  height: 1px;
+  border: none;
+  background: $neutral-400;
+}
+
+.project-button {
+  color: $secondary-50;
+  background-color: transparent;
+  cursor: pointer;
+
+  border: solid $secondary-500 1px;
+  border-radius: 6px;
+  padding: 16px 24px;
+  text-decoration: none;
+  width: fit-content;
+
+  @include button-regular;
+  @include dark-button-transition;
+}
+
+.project-button-alt {
+  background-color: $secondary-500;
+  color: $neutral-900;
+
+  @include light-button-transition;
+}
+
+/* SingleProjectsSectionStart */
+
+.project-section-start {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 26px 0 50px 0;
+
+  @media (min-width: $screen-lg) {
+    padding: 96px 0 93px 0;
+    flex-direction: row;
+    align-items: start;
+    gap: 24px;
+  }
+}
+
+.project-main-image {
+  width: 100%;
+  padding-bottom: 56%;
+  border-radius: 8px;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #FFFFFF;
+  
+  @media (min-width: $screen-lg) {
+    padding-bottom: 32%;
+    order: 2;
+  }
+}
+
+.project-main-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (min-width: $screen-lg) {
+    order: 1;
+    max-width: 411px;
+  }
+}
+
+.project-section-start .project-heading {
+  margin-top: 12px;
+}
+
+.project-status-label {
+  display: inline-block;
+  border: 1px solid $secondary-200;
+  color: $secondary-200;
+  margin-right: auto;
+  padding: 5px 8px;
+}
+
+/* SingleProjectsLinks */
+
+.project-link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid $secondary-50;
+  border-bottom: 1px solid $secondary-50;
+  padding: 16px 0;
+
+  @media (min-width: $screen-xl) {
+    padding: 16px 20px;
+    flex-direction: row;
+    gap: 46px;
+  }
+}
+
+.project-heading-alt {
+  @include nav-semi-bold;
+  color: $secondary-500;
+  text-decoration: none;
+}
+
+/* SingleProjectsBrief */
+
+.project-brief-container {
+  padding-top: 72px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 58px;
+  }
+}
+
+.project-brief-info-line-top-first {
+  height: 1px;
+  border: none;
+  background: $neutral-400;
+  margin-top: 40px;
+}
+
+.project-brief-info-line-top {
+  height: 1px;
+  border: none;
+  background: $neutral-400;
+}
+
+.project-info-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+  padding: 8px 0 24px 0;
+
+  @media (min-width: $screen-lg) {
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0;
+    padding: 12px 0;
+  }
+}
+
+.project-brief-status {
+  @include subheading-regular;
+  color: $neutral-200;
+}
+
+/*.project-info-label-channels, .project-brief-paragraph-communications {
+   margin-top: 12px;
+}*/
+
+// SingleProjectsScreenshots
+
+.project-screenshots-container {
+  padding: 20px 0 42px 0;
+}
+
+.project-screenshots-container .project-section-paragraph {
+  margin: 10px 0;
+}
+
+.project-screenshots-images-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 24px;
+  row-gap: 32px;
+
+  @media (min-width: $screen-md) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 32px;
+  }
+  @media (min-width: $screen-lg) {
+    margin-top: 76px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-screenshot {
+  width: 100%;
+  padding-bottom: 56%;
+  border-radius: 8px;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.project-blank-screenshot {
+  width: 100%;
+  padding-bottom: 56%;
+  border-radius: 8px;
+  background: #D9D9D9;
+}
+
+/* SingleProjectsRoadmap */
+
+.project-roadmap-container {
+  margin-top: 20px;
+  padding: 48px 0 20px 0;
+}
+
+.project-roadmap-container .project-section-paragraph {
+  margin-top: 10px;
+}
+
+.project-info-container-alt {
+  margin-top: 44px;
+  
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.project-roadmap-milestone-container {
+  @media (min-width: $screen-lg) {
+    display: flex;
+    justify-content: center;
+    padding-right: 24px;
+  }
+  @media (min-width: $screen-xl) {
+    padding-right: 80px;
+  }
+}
+
+.project-roadmap-details-container {
+  @media (min-width: $screen-lg) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.project-roadmap-info-container {
+  display: flex;
+}
+
+.project-roadmap-details-container * {
+  @media (min-width: $screen-lg) {
+    max-width: 560px;
+  }
+}
+
+.project-roadmap-info-label {
+  @include p2-bold;
+  color: $neutral-200;
+}
+
+.project-info-alt {
+  @include p1-regular;
+  color: $neutral-300;
+}
+
+.project-roadmap-icon {
+  margin: 10px 10px 10px 9px;
+}
+
+.project-roadmap-icon-line {
+  margin: 10px 0 10px 24px;
+}
+
+.project-info-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-roadmap-info-label-two {
+  @include h5-semi-bold;
+  color: $secondary-50;
+  margin-top: 20px;
+}
+
+.project-roadmap-info-line-top {
+  height: 1px;
+  border: none;
+  background: $neutral-400;
+  margin-top: 10px;
+}
+
+.project-roadmap-container .project-paragraph-alt {
+  margin-top: 5px;
+}
+
+/* SingleProjectsContribute */
+
+.project-contribute-container {
+  padding: 24px 0 32px 0;
+
+  @media (min-width: $screen-xl) {
+    padding: 54px 0 32px 0;
+  }
+}
+
+.project-contribute-container .project-paragraph {
+  margin: 32px 0;
+}
+
+.project-contribute-container .project-button-container {
+  margin-top: 16px;
+}
+
+/* SingleProjectsDeveloper */
+
+.project-developer-container {
+  padding: 20px 0 48px 0;
+
+  @media (min-width: $screen-xl) {
+    padding: 48px 0 48px 0;
+  }
+}
+
+.project-developer-container .project-section-paragraph {
+  margin: 20px 0;
+}
+
+/* SingleProjectsResources */
+
+.project-resources-container {
+  padding: 20px 0 48px 0;
+  
+  @media (min-width: $screen-xl) {
+    padding: 48px 0;
+  }
+}
+
+.project-resources-container .project-paragraph {
+  margin: 20px 0 40px 0;
+}
+
+/* SingleProjectsVolunteer */
+
+.project-volunteer-container {
+  padding: 48px 0 24px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $screen-lg) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 48px 0;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.project-volunteer-container .project-type {
+  margin-left: 10px;
+}
+
+.project-volunteer-info-container {
+  padding: 27px 0;
+}
+
+.project-volunteer-info-container .project-main-heading-container {
+  margin-top: 12px;
+}
+
+.project-volunteer-info-container .project-paragraph {
+  margin: 10px 0;
+  max-width: 644px;
+}
+
+.project-volunteer-image-container {
+  position: relative;
+}
+
+.project-volunteer-image {
+  width: 100%;
+  height: 100%;
+}
+
+.project-volunteer-anchor {
+  @include h4-bold;
+  color: $primary-900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  a {
+    color: $primary-500;
+  }
+}
