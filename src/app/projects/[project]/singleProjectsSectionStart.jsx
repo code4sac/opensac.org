@@ -1,6 +1,6 @@
 import { upperFirst } from "@/utils/string";
 import Link from "next/link";
-
+import moment from "moment";
 
 /**
  * Single project start section.
@@ -9,18 +9,23 @@ import Link from "next/link";
  */
 export default function SingleProjectsSectionStart({ sectionType, data }) {
   return (
-    <section className={`project-info-container`}>
-        <div>
-        <h2 className="project-heading-alt">
+    <section className="project-section-start">
+      <div 
+        className="project-main-image"
+        style={{backgroundImage: `url(https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url})`}}
+      >
+      </div>
+      <div className="project-main-info-container">
+        <div className="project-main-heading-container projects-main-heading-underline">
+        <span className="project-type">
           {data.meta.project_type.toUpperCase()}
-        </h2>
-        <h1 className="project-heading project-heading-underline">{data.meta.title}</h1>
-        <div className={`project-status-label`}>
-          Project Status: {upperFirst(data.meta.project_status)}
+        </span>
+          <h1 className="project-heading">{data.meta.title}</h1>
         </div>
+        <span className="project-status-label">Project Status: {upperFirst(data.meta.project_status)}</span>
         <p className="project-paragraph">{data.meta.description}</p>
-        <p className="project-paragraph">{`Last Updated: ${data.updated_at}`}</p>
-        <div className={`project-button-container`}>
+        <p className="project-paragraph">Last Updated: {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}</p>
+        <div className="project-button-container">
           <Link
             href={data.html_url} // source code
             target="_blank"
@@ -33,10 +38,6 @@ export default function SingleProjectsSectionStart({ sectionType, data }) {
           </Link>
         </div>
       </div>
-      <img 
-          className='project-main-image' 
-          src = {`https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url}`}>
-      </img>
     </section>
   );
 }
