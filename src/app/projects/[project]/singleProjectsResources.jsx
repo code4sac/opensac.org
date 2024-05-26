@@ -39,7 +39,7 @@ export default function SingleProjectsResources({ sectionType, data }) {
               </>
             ));
           }
-        })}
+        })()}
         <hr className={`project-brief-info-line-top`}/>
         <div className={`project-info-line-top`}>
           <div className={`project-info-container`}>

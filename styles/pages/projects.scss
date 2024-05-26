@@ -879,6 +879,7 @@ details p {
 .project-roadmap-info-label {
   @include p2-bold;
   color: $neutral-200;
+  text-transform: capitalize;
 }
 
 .project-info-alt {
@@ -892,6 +893,7 @@ details p {
 
 .project-roadmap-icon-line {
   margin: 10px 0 10px 24px;
+  height: 32px;
 }
 
 .project-info-text-container {

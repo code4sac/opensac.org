@@ -1,18 +1,33 @@
+import moment from "moment";
+import SingleProjectsRoadmapMilestone from "./singleProjectsRoadmapMilestone.jsx"
+
 export default function SingleProjectsRoadmap({ sectionType, data }) {
-  const Status = Object.freeze({
-    NOT_STARTED: 0,
-    IN_PROGRESS: 1,
-    COMPLETED: 2
-  });
-  function parseRoadmapTimelineStatus(roadmap) {
-    if (roadmap.time_range) {
-      // TODO: Get the timeline status by checking the time range relative to the current date.
-      const t = roadmap.time_range.split("-");
-      return Status.COMPLETED
-    } else {
-      return Status.NOT_STARTED
-    }
+  const milestones = parseRoadmapMilestones(data.meta.roadmap);
+  parseRoadmapTimelineStatus(data.meta.roadmap);
+
+  function parseRoadmapMilestones(roadmap) {
+    let roadmapKeys = Object.keys(roadmap);
+    roadmapKeys = roadmapKeys.filter((key) => roadmap[key] !== null && roadmap[key].time_range);
+    return roadmapKeys  
   }
+  
+  function parseRoadmapTimelineStatus(roadmap) {
+    const currentDate = moment(moment(), 'MMMM D, YYYY');
+
+    milestones.map((milestone) => {
+      if (roadmap[milestone].time_range) {
+        const t = roadmap[milestone].time_range.split("-").map((date) => moment(date, 'MMMM D, YYYY'));
+        if (t[1].isBefore(t[currentDate])) {
+          data.meta.roadmap[milestone].status = 'completed';
+        } else if (t[0].isAfter(currentDate)) {
+          data.meta.roadmap[milestone].status = 'not started';
+        } else {
+          data.meta.roadmap[milestone].status = 'in progress';
+        }
+      }
+    })
+  }
+
   return (
       <section id="roadmap" className={`project-roadmap-container`}>
         <div className={`project-main-heading-container projects-main-heading-underline`}>
@@ -24,45 +39,14 @@ export default function SingleProjectsRoadmap({ sectionType, data }) {
         <div className={`project-info-container-alt`}>
           <div className={`project-roadmap-milestone-container`}>
             <div>
-                <div className={`project-roadmap-info-container`}>
-                <img className={`project-roadmap-icon`} src={data.meta.roadmap.research ? "/img/project-roadmap/check-circle.svg" : "/img/project-roadmap/circle-stop.svg"} alt="Check circle image." />
-                <div className={`project-info-text-container`}>
-                  <p className={`project-roadmap-info-label`}>Research</p>
-                  <p className={`project-info-alt`}>{data.meta.roadmap.research && data.meta.roadmap.research.time_range}</p>
-                </div>
-              </div>
-              <img height={'32px'} className={`project-roadmap-icon-line`} src={data.meta.roadmap.research ? "/img/project-roadmap/line-4.svg" : "/img/project-roadmap/line-5.svg"} alt="Project roadmap divider line." />
-              <div className={`project-roadmap-info-container`}>
-                <img className={`project-roadmap-icon`} src={data.meta.roadmap.design ? "/img/project-roadmap/check-circle.svg" : "/img/project-roadmap/circle-stop.svg"} alt="Check circle image." />
-                <div className={`project-info-text-container`}>
-                  <p className={`project-roadmap-info-label`}>Design</p>
-                  <p className={`project-info-alt`}>{data.meta.roadmap.design && data.meta.roadmap.design.time_range}</p>
-                </div>
-              </div>
-              <img className={`project-roadmap-icon-line`} src={data.meta.roadmap.design ? "/img/project-roadmap/line-4.svg" : "/img/project-roadmap/line-5.svg"} alt="Project roadmap divider line." />
-              <div className={`project-roadmap-info-container`}>
-                <img className={`project-roadmap-icon`} src={data.meta.roadmap.development ? "/img/project-roadmap/check-circle.svg" : "/img/project-roadmap/circle-stop.svg"} alt="Check circle image." />
-                <div className={`project-info-text-container`}>
-                  <p className={`project-roadmap-info-label`}>Development</p>
-                  <p className={`project-info-alt`}>{data.meta.roadmap.development && data.meta.roadmap.development.time_range}</p>
-                </div>
-              </div>
-              <img className={`project-roadmap-icon-line`} src={data.meta.roadmap.development ? "/img/project-roadmap/line-4.svg" : "/img/project-roadmap/line-5.svg"} alt="Project roadmap divider line." />
-              <div className={`project-roadmap-info-container`}>
-                <img className={`project-roadmap-icon`} src={data.meta.roadmap.deployment ? "/img/project-roadmap/check-circle.svg" : "/img/project-roadmap/circle-stop.svg"} alt="Check circle image." />
-                <div className={`project-info-text-container`}>
-                  <p className={`project-roadmap-info-label`}>Deployment</p>
-                  <p className={`project-info-alt`}>{data.meta.roadmap.deployment && data.meta.roadmap.deployment.time_range}</p>
-                </div>
-              </div>
-              <img className={`project-roadmap-icon-line`} src={data.meta.roadmap.deployment ? "/img/project-roadmap/line-4.svg" : "/img/project-roadmap/line-5.svg"} alt="Project roadmap divider line." />
-              <div className={`project-roadmap-info-container`}>
-                <img className={`project-roadmap-icon`} src={data.meta.roadmap.launch ? "/img/project-roadmap/check-circle.svg" : "/img/project-roadmap/circle-stop.svg"} alt="Check circle image." />
-                <div className={`project-info-text-container`}>
-                  <p className={`project-roadmap-info-label`}>Launch</p>
-                  <p className={`project-info-alt`}>{data.meta.roadmap.launch && data.meta.roadmap.launch.time_range}</p>
-                </div>
-              </div>
+              {milestones.map((milestone, index) => {
+                return <SingleProjectsRoadmapMilestone
+                  key={milestone + index}
+                  data={data}
+                  milestone={milestone}
+                  isLastIndex={index === milestones.length - 1}
+                />
+              })}
             </div>
           </div>
           <div className="project-roadmap-details-container">

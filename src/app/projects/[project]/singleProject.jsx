@@ -47,8 +47,6 @@ export default function SingleProject({ githubFullName }) {
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
 
-  console.dir(data); // TODO use this data to populate ProjectCards once the component is created.  Remove this log once it is hooked up.
-
   return (
     <div className={`project-section-${SectionType.dark}`}>
       <SingleProjectsSectionStart sectionType={SectionType.dark} data={data}/>
