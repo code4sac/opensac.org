@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function SingleProjectsVolunteer({ sectionType, data }) {
+export default function SingleProjectsVolunteer({ sectionType }) {
   return (
     <section id="how-to-volunteer" className={`project-volunteer-container`}>
       <div className={`project-volunteer-info-container`}>

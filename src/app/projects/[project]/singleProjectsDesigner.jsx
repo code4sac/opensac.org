@@ -9,36 +9,36 @@ export default function SingleProjectsDesigner({ sectionType, data }) {
         <p className={`project-section-paragraph`}>
           Designers can actively contribute to the project by creating content, updating Figma files, and more.
         </p>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Difficulty</p>
           <p className={`project-info-text`}>
             {upperFirst(data.meta.contributing.designer.difficulty)}
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Prototyping Tool</p>
           <p className={`project-info-text`}>
             Figma
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Version</p>
           <p className={`project-info-text`}>
             2
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Technologies</p>
           <p className={`project-info-text`}>
             {data.meta.contributing.designer.technologies}
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div>
           <div className={`project-info-container`}>
             <p className={`project-info-label`}>Version Control</p>
             <p className={`project-info-text`}>
@@ -50,14 +50,14 @@ export default function SingleProjectsDesigner({ sectionType, data }) {
             </p>
           </div>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top project-info-line-bottom`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Ways to Contribute</p>
           <p className={`project-info-text`}>
             {data.meta.contributing.designer.ways_to_contribute}
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
+        <hr className={`project-info-line`}/>
       </section>
   );
 }

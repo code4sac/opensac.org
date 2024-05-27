@@ -52,17 +52,17 @@ export default function SingleProjectsRoadmap({ sectionType, data }) {
           <div className="project-roadmap-details-container">
             <div>
               <h4 className={`project-roadmap-info-label-two`}>Objective</h4>
-              <hr className="project-roadmap-info-line-top" />
+              <hr className="project-info-line" />
             <p className="project-paragraph-alt">
               {data.meta.roadmap.objective}
             </p>
             <h4 className={`project-roadmap-info-label-two`}>Comments</h4>
-              <hr className="project-roadmap-info-line-top" />
+              <hr className="project-info-line" />
             <p className="project-paragraph-alt">
               {data.meta.roadmap.comments}
             </p>
             <h4 className={`project-roadmap-info-label-two`}>Outcome</h4>
-              <hr className="project-roadmap-info-line-top" />
+              <hr className="project-info-line" />
             <p className="project-paragraph-alt">
               {data.meta.roadmap.outcome}
             </p>

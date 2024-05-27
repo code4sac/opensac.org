@@ -586,6 +586,11 @@ details p {
   color: $neutral-200;
 }
 
+.project-info-alt {
+  @include p1-regular;
+  color: $neutral-300;
+}
+
 .project-info-link {
   @include subheading-bold;
   color: $primary-100;
@@ -635,7 +640,7 @@ details p {
   gap: 16px;
 }
 
-.project-info-line-top-2 {
+.project-info-line {
   height: 1px;
   border: none;
   background: $neutral-400;
@@ -750,17 +755,8 @@ details p {
   }
 }
 
-.project-brief-info-line-top-first {
-  height: 1px;
-  border: none;
-  background: $neutral-400;
+.project-brief-info-line-first {
   margin-top: 40px;
-}
-
-.project-brief-info-line-top {
-  height: 1px;
-  border: none;
-  background: $neutral-400;
 }
 
 .project-info-container {
@@ -775,15 +771,6 @@ details p {
     padding: 12px 0;
   }
 }
-
-.project-brief-status {
-  @include subheading-regular;
-  color: $neutral-200;
-}
-
-/*.project-info-label-channels, .project-brief-paragraph-communications {
-   margin-top: 12px;
-}*/
 
 // SingleProjectsScreenshots
 
@@ -882,11 +869,6 @@ details p {
   text-transform: capitalize;
 }
 
-.project-info-alt {
-  @include p1-regular;
-  color: $neutral-300;
-}
-
 .project-roadmap-icon {
   margin: 10px 10px 10px 9px;
 }
@@ -908,10 +890,7 @@ details p {
   margin-top: 20px;
 }
 
-.project-roadmap-info-line-top {
-  height: 1px;
-  border: none;
-  background: $neutral-400;
+.project-roadmap-container .project-info-line {
   margin-top: 10px;
 }
 
