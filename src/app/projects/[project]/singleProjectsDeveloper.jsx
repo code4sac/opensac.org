@@ -1,5 +1,3 @@
-import { upperFirst } from "@/utils/string";
-
 export default function SingleProjectsDeveloper({ sectionType, data }) {
   return (
       <section id="developer" className={`project-contributor-container`}>
@@ -14,8 +12,8 @@ export default function SingleProjectsDeveloper({ sectionType, data }) {
         <hr className={`project-info-line`}/>
         <div className={`project-info-container`}>
           <p className={`project-info-label`}>Difficulty</p>
-          <p className={`project-info-text`}>
-            {upperFirst(data.meta.contributing.developer.difficulty)}
+          <p className={`project-info-text upper-first`}>
+            {data.meta.contributing.developer.difficulty}
           </p>
         </div>
         <hr className={`project-info-line`}/>
