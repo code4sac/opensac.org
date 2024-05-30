@@ -1,4 +1,4 @@
-import { upperFirst } from "@/utils/string";
+import { upperFirstOneWord, upperFirst } from "@/utils/string";
 
 export default function SingleProjectsBrief({ sectionType, data }) {
   return (
@@ -8,48 +8,47 @@ export default function SingleProjectsBrief({ sectionType, data }) {
             Project Brief
           </h2>
         </div>
-        <hr className={`project-brief-info-line-top-first`}/>
-        <div className={`project-info-container project-info-line-top`}>
-          <p className={`project-info-label`}>Status</p>{" "}
-          <p className={`project-info-text project-brief-status`}>
+        <hr className={`project-info-line project-brief-info-line-first`}/>
+        <div className={`project-info-container`}>
+          <p className={`project-info-label`}>Status</p>
+          <p className={`project-info-text`}>
             {upperFirst(data.meta.project_status)}
           </p>
         </div>
-        <hr className={`project-brief-info-line-top`}/>
-        <div className={`project-info-container project-info-line-top`}>
-          <p className={`project-info-label`}>Description</p>{" "}
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
+          <p className={`project-info-label`}>Description</p>
           <p className={`project-paragraph-alt`}>{data.meta.description}</p>
         </div>
-        <hr className={`project-brief-info-line-top`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Comments</p>
-          <p className={`project-paragraph-alt`}>{upperFirst(data.meta.project_status)}</p>
+          <p className={`project-paragraph-alt`}>{upperFirstOneWord(data.meta.comments)}</p>
         </div>
-        <hr className={`project-brief-info-line-top`}/>
+        <hr className={`project-info-line`}/>
         <div className={`project-info-container`}>
           <p className={`project-info-label`}>Communications</p>
-          <p className={`project-info-text project-brief-paragraph-communications`}>{data.meta.communications}</p>
-          <p className={`project-info-label project-info-label-channels`}>Channels</p>
-          
+          <p className={`project-info-text`}>{data.meta.communications}</p>
+          <p className={`project-info-label`}>Channels</p>   
         </div>
-        <hr className={`project-brief-info-line-top`}/>
-        <div className={`project-info-container project-info-line-top`}>
-          <p className={`project-info-label`}>Project Partner</p>{" "}
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
+          <p className={`project-info-label`}>Project Partner</p>
           <p className={`project-info-text`}>{data.meta.project_partner}</p>
         </div>
-        <hr className={`project-brief-info-line-top`}/>
-        <div className={`project-info-container project-info-line-top`}>
-          <p className={`project-info-label`}>Project Lead</p>{" "}
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
+          <p className={`project-info-label`}>Project Lead</p>
+          <p className={`project-info-text`}>{data.meta.project_lead}</p>
+        </div>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
+          <p className={`project-info-label`}>Technical Lead</p>
           <p className={`project-info-text`}>{data.meta.technical_lead}</p>
         </div>
-        <hr className={`project-brief-info-line-top`}/>
-        <div className={`project-info-container project-info-line-top`}>
-          <p className={`project-info-label`}>Technical Lead</p>{" "}
-          <p className={`project-info-text`}>{data.meta.technical_lead}</p>
-        </div>
-        <hr className={`project-brief-info-line-top`}/>
-        <div className={`project-info-container project-info-line-top`}>
-          <p className={`project-info-label`}>Lead Designer</p>{" "}
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
+          <p className={`project-info-label`}>Lead Designer</p>
           <p className={`project-info-text`}>{data.meta.lead_designer}</p>
         </div>
       </section>

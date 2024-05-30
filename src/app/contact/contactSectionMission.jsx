@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
@@ -8,6 +8,15 @@ import Link from 'next/link';
  * @returns {JSX.Element}
  */
 export default function ContactSectionMission({sectionType}) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [body, setBody] = useState("");
+  
+
+  const mailtoUri = `mailto:hello@opensac.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}%0A%0A%0A%0A${encodeURIComponent(firstName)}%20${encodeURIComponent(lastName)}%0A${encodeURIComponent(email)}`;
+
   return (
     // <section className={`contact-section-${sectionType} contact-section-mission`}>
     <section className={`contact-section-mission`}>
@@ -33,7 +42,7 @@ export default function ContactSectionMission({sectionType}) {
         </p>
       </div>
       <div className='form-holder mission-container'>
-        <form>
+       <form>
           {/* <div className='name-holder'>
             <div className='form-input name-input'>
             <lable for='fname'>First Name</lable>
@@ -57,8 +66,9 @@ export default function ContactSectionMission({sectionType}) {
             <TextField
               id="standard-helperText"
               label="First Name"
-              // defaultValue="John"
               placeholder='John'
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
               variant="standard"
               margin='dense'
               sx={{
@@ -84,8 +94,9 @@ export default function ContactSectionMission({sectionType}) {
             <TextField
               id="standard-helperText"
               label="Last Name"
-              // defaultValue="John"
               placeholder='Smith'
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               variant="standard"
               margin='dense'
               sx={{
@@ -112,8 +123,9 @@ export default function ContactSectionMission({sectionType}) {
             <TextField
               id="standard-helperText"
               label="Email"
-              // defaultValue="John"
               placeholder='Example@email.com'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               variant="standard"
               margin='dense'
               fullWidth
@@ -140,8 +152,9 @@ export default function ContactSectionMission({sectionType}) {
             <TextField
               id="standard-helperText"
               label="Subject"
-              // defaultValue="John"
-              placeholder='Write  your subject...'
+              placeholder='Write your subject...'
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               variant="standard"
               margin='dense'
               fullWidth
@@ -168,9 +181,11 @@ export default function ContactSectionMission({sectionType}) {
             <TextField
               id="standard-multiline-static"
               label="Body"
+              placeholder="Write your message..."
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
               multiline
               rows={1}
-              placeholder="Write your message..."
               variant="standard"
               margin='dense'
               fullWidth
@@ -193,7 +208,7 @@ export default function ContactSectionMission({sectionType}) {
               }}
             />
           </div>
-          <Button variant="contained" size="large" sx={{
+          <Button variant="contained" size="large" href={mailtoUri} sx={{
             whiteSpace: 'nowrap',
             background: 'white',
             color: 'black',
@@ -201,7 +216,6 @@ export default function ContactSectionMission({sectionType}) {
           }}>
             Send Message
           </Button>
-
         </form>
       </div>
     </section>

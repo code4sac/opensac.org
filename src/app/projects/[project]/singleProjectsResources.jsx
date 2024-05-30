@@ -15,8 +15,8 @@ export default function SingleProjectsResources({ sectionType, data }) {
           of design assets, tutorials, and tools that will inspire and empower
           your creative journey.
         </p>
-        <hr className={`project-brief-info-line-top`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Documentation</p>
           {data.meta.resources.documentation ? <Link className={`project-info-link`} href="{data.meta.resources.documentation}">
                   Download
@@ -27,8 +27,8 @@ export default function SingleProjectsResources({ sectionType, data }) {
             let tutorialCounter = 1;
             return data.meta.resources.tutorials.map((link) => (
               <>
-                <hr className={`project-brief-info-line-top`}/>
-                <div className={`project-info-container project-info-line-top`}>
+                <hr className={`project-info-line`}/>
+                <div className={`project-info-container`}>
                   <p className={`project-info-label`}>
                     Tutorial {tutorialCounter++}
                   </p>
@@ -39,9 +39,9 @@ export default function SingleProjectsResources({ sectionType, data }) {
               </>
             ));
           }
-        })}
-        <hr className={`project-brief-info-line-top`}/>
-        <div className={`project-info-line-top`}>
+        })()}
+        <hr className={`project-info-line`}/>
+        <div>
           <div className={`project-info-container`}>
             <p className={`project-info-label`}>Meeting Times</p>
             <p className={`project-info-text`}>
@@ -53,7 +53,7 @@ export default function SingleProjectsResources({ sectionType, data }) {
             </p>
           </div>
         </div>
-        <hr className={`project-brief-info-line-top`}/>
+        <hr className={`project-info-line`}/>
       </section>
   );
 }

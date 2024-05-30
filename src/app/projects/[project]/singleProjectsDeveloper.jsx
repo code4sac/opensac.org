@@ -11,36 +11,36 @@ export default function SingleProjectsDeveloper({ sectionType, data }) {
           requests with code enhancements or bug fixes via the project's GitHub
           repository.
         </p>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Difficulty</p>
           <p className={`project-info-text`}>
             {upperFirst(data.meta.contributing.developer.difficulty)}
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Frontend</p>
           <p className={`project-info-text`}>
             {data.meta.contributing.developer.frontend}
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Backend</p>
           <p className={`project-info-text`}>
             {data.meta.contributing.developer.backend}
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Technologies</p>
           <p className={`project-info-text`}>
             {data.meta.contributing.developer.technologies}
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className="project-info-line-top">
+        <hr className={`project-info-line`}/>
+        <div>
           <div className="project-info-container">
             <p className={`project-info-label`}>Version Control</p>
             <p className={`project-info-text`}>
@@ -52,14 +52,14 @@ export default function SingleProjectsDeveloper({ sectionType, data }) {
             </p>
           </div>
         </div>
-        <hr className={`project-info-line-top-2`}/>
-        <div className={`project-info-container project-info-line-top project-info-line-bottom`}>
+        <hr className={`project-info-line`}/>
+        <div className={`project-info-container`}>
           <p className={`project-info-label`}>Ways to Contribute</p>
           <p className={`project-info-text`}>
             {data.meta.contributing.developer.ways_to_contribute}
           </p>
         </div>
-        <hr className={`project-info-line-top-2`}/>
+        <hr className={`project-info-line`}/>
       </section>
   );
 }

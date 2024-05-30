@@ -3,7 +3,7 @@ import Link from "next/link";
 const SingleProjectsLinks = () => {
   return (
     <section
-        className={`project-info-line-top project-info-line-bottom project-link-container`}
+        className={`project-link-container`}
       >
         <Link className={`project-heading-alt`} href="#project-brief">
           Project Brief
