@@ -5,7 +5,7 @@ import AppFooter from '../../src/components/AppFooter'
 render(<AppFooter />)
 
 /* 
-Renders the Appfooter component and checks if all link elements are rendering
+Renders the AppFooter component and checks if all link elements are rendering
 */
 
 test('AppFooter', () => {
