@@ -12,7 +12,6 @@ import Link from 'next/link';
  * @returns {JSX.Element}
  */
 export default function ContactSectionMission({ sectionType }) {
-export default function ContactSectionMission({sectionType}) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
