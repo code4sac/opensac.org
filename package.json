@@ -44,11 +44,16 @@
     "@mdx-js/react": "^3.0.0",
     "@mui/material": "^5.15.4",
     "@next/mdx": "^14.0.4",
+    "@stripe/react-stripe-js": "^2.7.1",
+    "@stripe/stripe-js": "^3.4.1",
     "@types/mdx": "^2.0.10",
+    "co-body": "^6.1.0",
     "keen-slider": "^6.8.6",
+    "micro": "^10.0.1",
     "moment": "^2.30.1",
     "next-mdx-remote": "^4.4.1",
     "prop-types": "^15.8.1",
+    "stripe": "^15.8.0",
     "swr": "^2.2.5",
     "yaml": "^2.4.1"
   }
