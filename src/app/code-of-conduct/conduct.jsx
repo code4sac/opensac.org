@@ -19,7 +19,7 @@ export default function Conduct() {
       <ConductSectionLanding sectionType={SectionType.light}/>
       <ConductSectionBullets sectionType={SectionType.dark}/>
       <ConductSectionPolicies sectionType={SectionType.light}/>
-      <ConductSectionEmail sectionType={SectionType.dark}/>
+      <ConductSectionEmail sectionType={SectionType.grey}/>
     </div>
   )
 }
