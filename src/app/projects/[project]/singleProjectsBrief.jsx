@@ -1,5 +1,3 @@
-import { upperFirstOneWord, upperFirst } from "@/utils/string";
-
 export default function SingleProjectsBrief({ sectionType, data }) {
   return (
       <section id="project-brief" className={`project-brief-container`}>
@@ -11,8 +9,8 @@ export default function SingleProjectsBrief({ sectionType, data }) {
         <hr className={`project-info-line project-brief-info-line-first`}/>
         <div className={`project-info-container`}>
           <p className={`project-info-label`}>Status</p>
-          <p className={`project-info-text`}>
-            {upperFirst(data.meta.project_status)}
+          <p className={`project-info-text upper-first`}>
+            {data.meta.project_status}
           </p>
         </div>
         <hr className={`project-info-line`}/>
@@ -23,7 +21,7 @@ export default function SingleProjectsBrief({ sectionType, data }) {
         <hr className={`project-info-line`}/>
         <div className={`project-info-container`}>
           <p className={`project-info-label`}>Comments</p>
-          <p className={`project-paragraph-alt`}>{upperFirstOneWord(data.meta.comments)}</p>
+          <p className={`project-paragraph-alt`}>{data.meta.comments}</p>
         </div>
         <hr className={`project-info-line`}/>
         <div className={`project-info-container`}>

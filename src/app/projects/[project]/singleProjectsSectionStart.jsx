@@ -1,4 +1,3 @@
-import { upperFirst } from "@/utils/string";
 import Link from "next/link";
 import moment from "moment";
 
@@ -18,11 +17,11 @@ export default function SingleProjectsSectionStart({ sectionType, data }) {
       <div className={`project-main-info-container`}>
         <div className={`project-main-heading-container projects-main-heading-underline`}>
         <span className={`project-type`}>
-          {data.meta.project_type.toUpperCase()}
+          {data.meta.project_type}
         </span>
           <h1 className={`project-heading`}>{data.meta.title}</h1>
         </div>
-        <span className={`project-status-label`}>Project Status: {upperFirst(data.meta.project_status)}</span>
+        <span className={`project-status-label upper-first`}>Project Status: {data.meta.project_status}</span>
         <p className={`project-paragraph`}>{data.meta.description}</p>
         <p className={`project-paragraph`}>Last Updated: {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}</p>
         <div className={`project-button-container`}>
@@ -33,7 +32,7 @@ export default function SingleProjectsSectionStart({ sectionType, data }) {
           >
             View Source Code
           </Link>
-          <Link href="" className={`project-button project-button-alt`}>
+          <Link href="/get-started" className={`project-button project-button-alt`}>
             Get Started
           </Link>
         </div>
