@@ -105,7 +105,7 @@ roadmap:
   development:
     time_range: October 6, 2023 - April 1, 2023
     objective: Create react application reflecting figma designs
-    outcome: Completed code for website reflecting the figma designs
+    outcome: Completed Open Sacramento website reflecting the figma designs
   deployment:
     time_range: April 2, 2023 - April 9, 2023
     objective: Deploy react application to opensac.org
@@ -113,7 +113,7 @@ roadmap:
   launch:
     time_range: April 10, 2023 - April 24, 2023
     objective: Raise awareness of new website and branding on social media
-    outcome: People interested in Code for Sacramento are now aware of OpenSac.org
+    outcome: People interested in Open Sacramento are now aware of OpenSac.org
 resources:
 screenshots:
   - opensac.jpg

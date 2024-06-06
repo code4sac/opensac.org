@@ -53,7 +53,7 @@ Data files from the old website codeforsac.org.
 - name: Dan Fey
   title: Captain
   headshot: dan_fey.jpg
-  bio: Dan is a back end software engineer with experiences in application development, distributed systems, and databases.  He has been involved with Code For Sacramento since January 2018.  Dan loves working with others on open source projects to help the community.
+  bio: Dan is a back end software engineer with experiences in application development, distributed systems, and databases.  He has been involved with Open Sacramento since January 2018.  Dan loves working with others on open source projects to help the community.
   email: dan@opensac.org
   twitter: 
   linkedin: https://www.linkedin.com/in/feydan/
@@ -61,7 +61,7 @@ Data files from the old website codeforsac.org.
 - name: Mary Fey Norris
   title: Captain
   headshot: mary_fey_norris.jpg
-  bio: Mary is interested in elevating our underserved communities with awareness and accessibility. She has been a Co-Captain of Code for Fresno since 2020 and actively participates with Get Your Refund and Reimaging 911, all of which are Code for America programs. She is also a CfA ReVisioning Spokes Council member. Her motto is,  You must Represent To Reinvent!
+  bio: Mary is interested in elevating our underserved communities with awareness and accessibility. She has been a Co-Captain of Open Fresno since 2020 and actively participates with Get Your Refund and Reimaging 911, all of which are Code for America programs. She is also a CfA ReVisioning Spokes Council member. Her motto is,  You must Represent To Reinvent!
   email: mlong101628@gmail.com
   twitter: MaryN7269
   linkedin:
@@ -69,7 +69,7 @@ Data files from the old website codeforsac.org.
 - name: Walter Yu
   title: Captain
   headshot: walter_yu.png
-  bio: Walter is a civil engineer with experience in data science, GIS and web application development. He joined Code for Sacramento in 2018 and enjoys working on open source software projects.
+  bio: Walter is a civil engineer with experience in data science, GIS and web application development. He joined Open Sacramento in 2018 and enjoys working on open source software projects.
   email: kharma@gmail.com
   twitter: 
   linkedin: https://www.linkedin.com/in/realwalteryu/
@@ -77,7 +77,7 @@ Data files from the old website codeforsac.org.
 - name: Brianda Hernandez
   title: Director of Marketing & Engagement
   headshot: brianda_hernandez.jpg
-  bio: Brianda is interested in giving a helping hand wherever and however it's needed. Because of this, she has worked in a diverse range of industries in and out of tech. Now, during the day, she volunteers with Code for Sacramento helping with project management, marketing and engagement. 
+  bio: Brianda is interested in giving a helping hand wherever and however it's needed. Because of this, she has worked in a diverse range of industries in and out of tech. Now, during the day, she volunteers with Open Sacramento helping with project management, marketing and engagement. 
   email: brianda7hernandez@gmail.com
   twitter: 
   linkedin: https://www.linkedin.com/in/createhernandez/
