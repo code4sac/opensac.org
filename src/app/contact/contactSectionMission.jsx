@@ -62,25 +62,6 @@ export default function ContactSectionMission({ sectionType }) {
       </div>
       <div className="form-holder mission-container">
         <form>
-          {/* <div className='name-holder'>
-            <div className='form-input name-input'>
-            <lable for='fname'>First Name</lable>
-            <input type='text' id='fname' placeholder='John'></input></div>
-            <div className='form-input'>
-            <lable for='lname'>Last Name</lable>
-            <input type='text' id='lname' placeholder='Smith'></input></div>
-            </div>
-            <div className='form-input'>
-            <lable for='email'>Email</lable>
-            <input type='text' id='email' placeholder='example@email.com'></input></div>
-            <div className='form-input'>
-            <lable for='subject'>Subject</lable>
-            <input type='text' id='subject' placeholder='Write your subject..'></input></div>
-            <div className='form-input'>
-            <lable for='message'>Message</lable>
-            <input type='text' id='message' placeholder='Write your message..'></input></div>
-          <input className='form-submit' type='submit' value="Send Message"></input> */}
-
           <div className="name-holder form-input">
             <TextField
               id="standard-helperText"
