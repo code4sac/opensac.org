@@ -1,11 +1,7 @@
-import * as React from "react";
-import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 import Link from "next/link";
-import { useState } from 'react';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import Link from 'next/link';
+import { useState } from "react";
 
 /**
  * contact mission section.
@@ -17,9 +13,12 @@ export default function ContactSectionMission({ sectionType }) {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [body, setBody] = useState("");
-  
 
-  const mailtoUri = `mailto:hello@opensac.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}%0A%0A%0A%0A${encodeURIComponent(firstName)}%20${encodeURIComponent(lastName)}%0A${encodeURIComponent(email)}`;
+  const mailtoUri = `mailto:hello@opensac.org?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}%0A%0A%0A%0A${encodeURIComponent(
+    firstName
+  )}%20${encodeURIComponent(lastName)}%0A${encodeURIComponent(email)}`;
 
   return (
     // <section className={`contact-section-${sectionType} contact-section-mission`}>
@@ -63,8 +62,6 @@ export default function ContactSectionMission({ sectionType }) {
       </div>
       <div className="form-holder mission-container">
         <form>
-      <div className='form-holder mission-container'>
-       <form>
           {/* <div className='name-holder'>
             <div className='form-input name-input'>
             <lable for='fname'>First Name</lable>
@@ -90,7 +87,6 @@ export default function ContactSectionMission({ sectionType }) {
               label="First Name"
               // defaultValue="John"
               placeholder="John"
-              placeholder='John'
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               variant="standard"
@@ -120,7 +116,6 @@ export default function ContactSectionMission({ sectionType }) {
               label="Last Name"
               // defaultValue="John"
               placeholder="Smith"
-              placeholder='Smith'
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               variant="standard"
@@ -151,7 +146,6 @@ export default function ContactSectionMission({ sectionType }) {
               label="Email"
               // defaultValue="John"
               placeholder="Example@email.com"
-              placeholder='Example@email.com'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               variant="standard"
@@ -182,7 +176,6 @@ export default function ContactSectionMission({ sectionType }) {
               label="Subject"
               // defaultValue="John"
               placeholder="Write  your subject..."
-              placeholder='Write your subject...'
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               variant="standard"
@@ -248,12 +241,6 @@ export default function ContactSectionMission({ sectionType }) {
               marginLeft: "80%",
             }}
           >
-          <Button variant="contained" size="large" href={mailtoUri} sx={{
-            whiteSpace: 'nowrap',
-            background: 'white',
-            color: 'black',
-            marginLeft: '80%'
-          }}>
             Send Message
           </Button>
         </form>
