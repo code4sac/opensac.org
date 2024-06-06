@@ -1,3 +1,7 @@
+import * as React from "react";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Link from "next/link";
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -7,7 +11,7 @@ import Link from 'next/link';
  * contact mission section.
  * @returns {JSX.Element}
  */
-export default function ContactSectionMission({sectionType}) {
+export default function ContactSectionMission({ sectionType }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,23 +28,41 @@ export default function ContactSectionMission({sectionType}) {
         <div
           className={`contact-${sectionType}-heading-container contact-heading-underline contact-underline-alt`}
         >
-          <h1 className={`general-heading-section general-heading-section-alt`}>CONTACT FORM</h1>
-          <h2 className={`general-heading-section-sub`}>
-            Get In Touch
-          </h2>
+          <h1 className={`general-heading-section general-heading-section-alt`}>
+            CONTACT FORM
+          </h1>
+          <h2 className={`general-heading-section-sub`}>Get In Touch</h2>
         </div>
         <p className={`contact-section-paragraph`}>
           <span className={`paragraph-bold`}>
-            Have questions or need assistance? 
-          </span> Reach out to us using our form, and we'll get back to you as soon as possible.
-          <br></br><br></br>
-          Before reaching out, you might find quick answers to your queries in our <Link href="/faq"
-                                                                                      className="contactActionLinksAnchor">Frequently
-          Asked Questions (FAQs).</Link>
-          <br></br><br></br>
-          Check out our weekly meetings on our <a className="contactActionLinksAnchor"  href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">meetup page.</a>
+            Have questions or need assistance?
+          </span>{" "}
+          Reach out to us using our form, and we'll get back to you as soon as
+          possible.
+          <br></br>
+          <br></br>
+          Before reaching out, you might find quick answers to your queries in
+          our{" "}
+          <Link href="/faq" className="contactActionLinksAnchor">
+            Frequently Asked Questions (FAQs)
+          </Link>
+          .<br></br>
+          <br></br>
+          Check out our weekly meetings on our{" "}
+          <a
+            className="contactActionLinksAnchor"
+            href="https://www.meetup.com/code4sac/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Meetup."
+          >
+            meetup page
+          </a>
+          .
         </p>
       </div>
+      <div className="form-holder mission-container">
+        <form>
       <div className='form-holder mission-container'>
        <form>
           {/* <div className='name-holder'>
@@ -62,122 +84,130 @@ export default function ContactSectionMission({sectionType}) {
             <input type='text' id='message' placeholder='Write your message..'></input></div>
           <input className='form-submit' type='submit' value="Send Message"></input> */}
 
-          <div className='name-holder form-input'>
+          <div className="name-holder form-input">
             <TextField
               id="standard-helperText"
               label="First Name"
+              // defaultValue="John"
+              placeholder="John"
               placeholder='John'
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               variant="standard"
-              margin='dense'
+              margin="dense"
               sx={{
-                width: '45%',
-                marginRight: '10%',
-                '& .MuiInputLabel-root': {
-                  color: 'white'
+                width: "45%",
+                marginRight: "10%",
+                "& .MuiInputLabel-root": {
+                  color: "white",
                 },
-                '& .MuiInput-input': {
-                  color: 'white'
+                "& .MuiInput-input": {
+                  color: "white",
                 },
-                '& .MuiInput-underline:before': {
-                  borderBottom: '2px solid white', // Default underline color
+                "& .MuiInput-underline:before": {
+                  borderBottom: "2px solid white", // Default underline color
                 },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  color: 'white', // Label color when input is focused
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // Label color when input is focused
                 },
-                '& .MuiInput-underline.Mui-focused:after': {
-                  borderBottom: '2px solid white', // Underline color when input is focused
+                "& .MuiInput-underline.Mui-focused:after": {
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
             />
             <TextField
               id="standard-helperText"
               label="Last Name"
+              // defaultValue="John"
+              placeholder="Smith"
               placeholder='Smith'
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               variant="standard"
-              margin='dense'
+              margin="dense"
               sx={{
-                width: '45%',
-                '& .MuiInputLabel-root': {
-                  color: 'white'
+                width: "45%",
+                "& .MuiInputLabel-root": {
+                  color: "white",
                 },
-                '& .MuiInput-input': {
-                  color: 'white'
+                "& .MuiInput-input": {
+                  color: "white",
                 },
-                '& .MuiInput-underline:before': {
-                  borderBottom: '2px solid white', // Default underline color
+                "& .MuiInput-underline:before": {
+                  borderBottom: "2px solid white", // Default underline color
                 },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  color: 'white', // Label color when input is focused
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // Label color when input is focused
                 },
-                '& .MuiInput-underline.Mui-focused:after': {
-                  borderBottom: '2px solid white', // Underline color when input is focused
+                "& .MuiInput-underline.Mui-focused:after": {
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
             />
           </div>
-          <div className='form-input'>
+          <div className="form-input">
             <TextField
               id="standard-helperText"
               label="Email"
+              // defaultValue="John"
+              placeholder="Example@email.com"
               placeholder='Example@email.com'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               variant="standard"
-              margin='dense'
+              margin="dense"
               fullWidth
               sx={{
-                '& .MuiInputLabel-root': {
-                  color: 'white'
+                "& .MuiInputLabel-root": {
+                  color: "white",
                 },
-                '& .MuiInput-input': {
-                  color: 'white'
+                "& .MuiInput-input": {
+                  color: "white",
                 },
-                '& .MuiInput-underline:before': {
-                  borderBottom: '2px solid white', // Default underline color
+                "& .MuiInput-underline:before": {
+                  borderBottom: "2px solid white", // Default underline color
                 },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  color: 'white', // Label color when input is focused
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // Label color when input is focused
                 },
-                '& .MuiInput-underline.Mui-focused:after': {
-                  borderBottom: '2px solid white', // Underline color when input is focused
+                "& .MuiInput-underline.Mui-focused:after": {
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
             />
           </div>
-          <div className='form-input'>
+          <div className="form-input">
             <TextField
               id="standard-helperText"
               label="Subject"
+              // defaultValue="John"
+              placeholder="Write  your subject..."
               placeholder='Write your subject...'
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               variant="standard"
-              margin='dense'
+              margin="dense"
               fullWidth
               sx={{
-                '& .MuiInputLabel-root': {
-                  color: 'white'
+                "& .MuiInputLabel-root": {
+                  color: "white",
                 },
-                '& .MuiInput-input': {
-                  color: 'white'
+                "& .MuiInput-input": {
+                  color: "white",
                 },
-                '& .MuiInput-underline:before': {
-                  borderBottom: '2px solid white', // Default underline color
+                "& .MuiInput-underline:before": {
+                  borderBottom: "2px solid white", // Default underline color
                 },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  color: 'white', // Label color when input is focused
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // Label color when input is focused
                 },
-                '& .MuiInput-underline.Mui-focused:after': {
-                  borderBottom: '2px solid white', // Underline color when input is focused
+                "& .MuiInput-underline.Mui-focused:after": {
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
             />
           </div>
-          <div className='form-input'>
+          <div className="form-input">
             <TextField
               id="standard-multiline-static"
               label="Body"
@@ -187,27 +217,37 @@ export default function ContactSectionMission({sectionType}) {
               multiline
               rows={1}
               variant="standard"
-              margin='dense'
+              margin="dense"
               fullWidth
               sx={{
-                '& .MuiInputLabel-root': {
-                  color: 'white',
+                "& .MuiInputLabel-root": {
+                  color: "white",
                 },
-                '& .MuiInput-input': {
-                  color: 'white',
+                "& .MuiInput-input": {
+                  color: "white",
                 },
-                '& .MuiInput-underline:before': {
-                  borderBottom: '2px solid white', // Default underline color
+                "& .MuiInput-underline:before": {
+                  borderBottom: "2px solid white", // Default underline color
                 },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  color: 'white', // Label color when input is focused
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "white", // Label color when input is focused
                 },
-                '& .MuiInput-underline.Mui-focused:after': {
-                  borderBottom: '2px solid white', // Underline color when input is focused
+                "& .MuiInput-underline.Mui-focused:after": {
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
             />
           </div>
+          <Button
+            variant="contained"
+            size="large"
+            sx={{
+              whiteSpace: "nowrap",
+              background: "white",
+              color: "black",
+              marginLeft: "80%",
+            }}
+          >
           <Button variant="contained" size="large" href={mailtoUri} sx={{
             whiteSpace: 'nowrap',
             background: 'white',
@@ -219,5 +259,5 @@ export default function ContactSectionMission({sectionType}) {
         </form>
       </div>
     </section>
-  )
+  );
 }

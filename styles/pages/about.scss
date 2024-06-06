@@ -179,7 +179,7 @@ About page layout.
   flex-direction: column;
   gap: 15px;
   padding: 0 0 15px 0;
-  border: solid 1px #EAECF0;
+  border: solid 1px #eaecf0;
 }
 
 .member-info-container {
@@ -210,12 +210,12 @@ About page layout.
   font-weight: 400;
   font-size: 13px;
   line-height: 21px;
-  color: #3E3E59;
+  color: #3e3e59;
   margin: 0;
 }
 
 .member-quote {
-  color: #5F6980;
+  color: #5f6980;
   margin-right: auto;
 }
 
@@ -389,6 +389,7 @@ About page layout.
 
 .get-started-bottom img {
   opacity: 0;
+  width: 100%;
 }
 
 .opportunities-anchor-bottom {
