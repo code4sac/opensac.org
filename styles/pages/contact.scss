@@ -30,7 +30,6 @@ contact page layout
 .contact-section-paragraph {
   @include subheading-regular;
   margin: 0;
-  max-width: 60%;
 
   @media (max-width: $screen-sm) {
     @include p3-regular;
