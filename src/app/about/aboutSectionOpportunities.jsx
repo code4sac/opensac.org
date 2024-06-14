@@ -28,7 +28,7 @@ export default function AboutSectionOpportunities({sectionType}) {
           <p className={`opportunities-anchor`}>
             Not a volunteer yet?
             <br/>
-            <a href="">Get Started</a>
+            <a href="/get-started">Get Started</a>
           </p>
         </div>
       </div>
@@ -86,7 +86,7 @@ export default function AboutSectionOpportunities({sectionType}) {
         <p className={`opportunities-anchor-bottom`}>
           Not a volunteer yet?
           <br/>
-          <a href="">Get Started</a>
+          <a href="/get-started">Get Started</a>
         </p>
       </div>
     </section>

@@ -213,6 +213,7 @@ export default function ContactSectionMission({ sectionType }) {
             />
           </div>
           <Button
+            href={mailtoUri}
             variant="contained"
             size="large"
             sx={{

@@ -1,3 +1,5 @@
+import Button from "@/components/Buttons";
+
 /**
  * Projects start section.
  * @returns {JSX.Element}
@@ -33,12 +35,8 @@ export default function ProjectCard({
         Last Updated: {lastUpdatedTimestamp.format("ddd MMM D, H:mma")}
       </div>
       <div className={`project-card-buttons-container`}>
-        <a className={`project-card-button-dark ${isLoading && 'project-card-loading'}`} href={pageUrl}>
-          Learn More
-        </a>
-        <a className={`project-card-button-light ${isLoading && 'project-card-loading'}`} href={githubUrl}>
-          Source Code
-        </a>
+        <Button className={`btn btn-blue ${isLoading && 'project-card-loading'}`} href={pageUrl} textContent="Learn More" />
+        <Button className={`btn btn-alt-blue ${isLoading && 'project-card-loading'}`} href={githubUrl} textContent="Source Code" />
       </div>
     </section>
   );

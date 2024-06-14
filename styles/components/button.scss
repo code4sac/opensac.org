@@ -1,0 +1,52 @@
+@import "../abstracts/variables.scss";
+@import "../abstracts/mixins";
+
+.btn {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 16px 24px;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    white-space: nowrap;
+    
+    @include button-regular;
+}
+
+.btn-gold {
+    background: $secondary-500;
+    color: $neutral-900;
+    @include light-button-transition;
+}
+
+.btn-blue {
+    color: $secondary-50;
+    background-color: $primary-500;
+    border: solid $primary-500 1px;
+
+    @include button-transition($vivid-blue, white);
+}
+
+.btn-alt-light {
+    color: $secondary-50;
+    background-color: transparent;
+    border: solid $secondary-500 1px;
+    
+    @include dark-button-transition;
+}
+
+.btn-alt-gold {
+    color: $secondary-500;
+    background-color: transparent;
+    border: solid $secondary-500 1px;
+    
+    @include dark-button-transition;
+}
+
+.btn-alt-blue {
+    color: $primary-500;
+    background-color: transparent;
+    border: solid $primary-500 1px;
+
+    @include dark-button-transition;
+}

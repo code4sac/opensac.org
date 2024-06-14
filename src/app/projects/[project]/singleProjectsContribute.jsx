@@ -1,3 +1,5 @@
+import Button from "@/components/Buttons";
+
 export default function SingleProjectsContribute({ sectionType, contributeAs, setContributeAs }) {
   return (
       <section id="how-to-contribute" className={`project-contribute-container`}>
@@ -10,9 +12,9 @@ export default function SingleProjectsContribute({ sectionType, contributeAs, se
         </p>
         <h4 className={`project-info-label`}>Get Involved As</h4>
         <div className = {`project-button-container`}>
-          <button className = {`project-button ${contributeAs === 'developer' && 'project-button-alt'}`} onClick={() => setContributeAs("developer")}>Developer</button>
-          <button className={`project-button ${contributeAs === 'designer' && 'project-button-alt'}`} onClick={() => setContributeAs("designer")}>Designer</button>
-          <button className={`project-button ${contributeAs === 'other' && 'project-button-alt'}`} onClick={() => setContributeAs("other")}>Other</button>
+          <Button className = {`btn ${contributeAs === "developer" ? "btn-gold" : "btn-alt-gold"}`} onClick={() => setContributeAs("developer")} textContent={"Developer"} />
+          <Button className={`btn ${contributeAs === "designer" ? "btn-gold" : "btn-alt-gold"}`} onClick={() => setContributeAs("designer")} textContent={"Designer"} />
+          <Button className={`btn ${contributeAs === "other" ? "btn-gold" : "btn-alt-gold"}`} onClick={() => setContributeAs("other")} textContent={"Other"} />
         </div>
       </section>
   );
