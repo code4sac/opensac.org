@@ -78,7 +78,7 @@ export default function AppNavbar() {
                   <Link href="/contact">Contact</Link>
                 </li>
                 <li className={`navbar-link`}>
-                  <Link href="#">Donate</Link>
+                  <Link href="/donate">Donate</Link>
                 </li>
                 <hr className={'navbar-underline'}/>
               </ul>
