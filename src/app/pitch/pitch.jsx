@@ -1,12 +1,13 @@
-import PitchSectionLanding from './pitchSectionLanding'
 import PitchSectionInstructions from './pitchSectionInstructions'
+import HeaderUnderline from "@/components/HeaderUnderline";
+import LandingSection from "@/components/PageSection/LandingSection";
 
 /**
  * Section type. Displays light or dark themes.
  * @type {{light: string, dark: string}}
  */
 export const SectionType = {
-  light: 'light', 
+  light: 'light',
   dark: 'dark',
 }
 
@@ -17,7 +18,14 @@ export const SectionType = {
 export default function Pitch() {
   return (
     <div className="">
-      <PitchSectionLanding sectionType={SectionType.light}/>
+      <LandingSection sectionType={SectionType.light}>
+        <HeaderUnderline sectionType={SectionType.light} title="Pitch a project"
+                         description="Contribute Your Project Idea"/>
+        <div className={`section-${SectionType.light} landing-section-paragraph`}>
+          Share your innovative ideas and collaborate with our community to turn them into reality.
+          Pitch your project to make a positive impact on Sacramento using technology and civic engagement.
+        </div>
+      </LandingSection>
       <PitchSectionInstructions sectionType={SectionType.dark}/>
     </div>
   )
