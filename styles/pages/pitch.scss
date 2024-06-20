@@ -4,15 +4,6 @@
 /*
 Pitch page layout.
  */
-.pitch-heading-underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 1px;
-  width: 43px;
-  border-bottom: 4px solid $neutral-900;
-}
 
 .pitch-heading-section-sub {
   margin: 10px 0;
@@ -21,45 +12,6 @@ Pitch page layout.
 
   @media (max-width: $screen-sm) {
     @include h1-small-semi-bold;
-  }
-}
-
-.pitch-sub-heading {
-  @include h1-small-semi-bold;
-  margin: 10px 0;
-  color: $neutral-900;
-
-  @media (max-width: $screen-sm) {
-    @include h1-small-semi-bold;
-  }
-}
-
-.pitch-section-paragraph {
-  @include p3-regular;
-  margin: 0;
-  color: $neutral-900;
-
-  @media (max-width: $screen-sm) {
-    @include p2-regular;
-  }
-}
-
-.pitch-section-dark {
-  background-color: $primary-900;
-  color: white;
-  padding: 64px 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
-
-  @media (max-width: $screen-lg) {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 40px;
-    padding: 8vw 4vw;
   }
 }
 

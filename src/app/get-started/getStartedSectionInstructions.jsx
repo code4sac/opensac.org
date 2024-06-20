@@ -7,7 +7,7 @@ import Link from 'next/link'
  */
 export default function GetStartedSectionInstructions({sectionType}) {
   return (
-    <section className={`section-${sectionType}`}>
+    <section className={`section-${sectionType} section-container2`}>
       <div className={`instructions-container`}>
         <div className={`instructions-info-container`}>
           <div className={`${sectionType}-heading-container`}>
@@ -16,7 +16,7 @@ export default function GetStartedSectionInstructions({sectionType}) {
               Steps to Volunteer
             </h2>
           </div>
-          <p className={`heading-paragraph`}>
+          <p className={`heading-paragraph-large`}>
             Discover how you can become a valued volunteer at Open Sacramento.
             Follow these simple steps to join our community of technologists, developers,
             and civic-minded individuals dedicated to driving positive change through technology and collaboration.
@@ -51,17 +51,17 @@ export default function GetStartedSectionInstructions({sectionType}) {
         </div>
         <div className={`anchors-container`}>
           <Link href="/code-of-conduct" className={`anchor`}>Code of Conduct</Link>
-          <a 
-            className={`anchor`} 
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfvzzvz8lCwUD8TEDiPt7ZmN34AB0dhG61590KM_scxYoZf5w/viewform" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            className={`anchor`}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfvzzvz8lCwUD8TEDiPt7ZmN34AB0dhG61590KM_scxYoZf5w/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Link to new member form.">New Member Form</a>
-          <a 
-            className={`anchor`} 
-            href="https://www.meetup.com/code4sac/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            className={`anchor`}
+            href="https://www.meetup.com/code4sac/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Link to Meetup.">Meeting Link</a>
         </div>
       </div>

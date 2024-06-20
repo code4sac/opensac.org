@@ -4,7 +4,7 @@
  */
 export default function PitchSectionInstructions({sectionType}) {
   return (
-    <section className={`pitch-section-${sectionType}`}>
+    <section className={`section-${sectionType} section-container2`}>
       <div className={`pitch-instructions-container`}>
         <div className={`pitch-instructions-info-container`}>
           <div className={`pitch-${sectionType}-heading-container`}>
