@@ -50,8 +50,30 @@
   width: 50%;
   position: relative;
 
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+
   @media (max-width: $screen-sm) {
     @include p3-regular;
+  }
+}
+// Refactor this to use general section container class without light prefix. Dark is used but not defined. This class should possibly be moved to split section styles.
+.general-section-light-container {
+  width: 50%;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+}
+
+.split-section-content-container {
+  width: 50%;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
   }
 }
 

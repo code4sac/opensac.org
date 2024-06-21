@@ -8,21 +8,12 @@
   color: $secondary-500;
 }
 
-.general-heading-section-sub {
+.sub-heading {
   @include h2-semi-bold;
   margin: 10px 0;
 
   @media (max-width: $screen-sm) {
     @include h3-semi-bold;
-  }
-}
-
-.sub-heading {
-  @include h1-small-semi-bold;
-  margin: 10px 0;
-
-  @media (max-width: $screen-sm) {
-    @include h1-small-semi-bold;
   }
 }
 
@@ -43,6 +34,10 @@
   @media (max-width: $screen-sm) {
     @include p2-regular;
   }
+}
+
+.underline-header-container {
+  position: relative;
 }
 
 .heading-underline::after {

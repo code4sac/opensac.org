@@ -9,7 +9,7 @@ export default function HomeSectionAboutImage({sectionType}) {
         <div
           className={`general-section-${sectionType}-container home-section-heading-underline underline-alt`}>
           <h1 className={`general-heading-section general-heading-section-alt`}>What we do</h1>
-          <h2 className={`general-heading-section-sub`}>
+          <h2 className={`sub-heading`}>
             Building a Better Future <br/>
             in Sacramento
           </h2>
