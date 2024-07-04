@@ -11,7 +11,7 @@ export default function HomeSectionDefault({ sectionType }) {
         className={`general-section-${sectionType}-container home-section-heading-underline`}
       >
         <h1 className={`general-heading-section`}>Why volunteer</h1>
-        <h2 className={`general-heading-section-sub`}>
+        <h2 className={`sub-heading`}>
           Empower Change with <br />
           Open Sacramento
         </h2>

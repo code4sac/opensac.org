@@ -44,7 +44,7 @@ export default function HomeSectionProjects({sectionType}) {
           <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide">
               <div className="slide-content">
-                <h2 className="general-heading-section-sub">TrashAI</h2>
+                <h2 className="sub-heading">TrashAI</h2>
                 <p className="home-section-dark-paragraph">
                   Developing machine learning technology to identify trash in images.
                 </p>
@@ -57,7 +57,7 @@ export default function HomeSectionProjects({sectionType}) {
             </div>
             <div className="keen-slider__slide">
               <div className="slide-content">
-                <h2 className="general-heading-section-sub">TrashAI</h2>
+                <h2 className="sub-heading">TrashAI</h2>
                 <p className="home-section-dark-paragraph">
                   Developing machine learning technology to identify trash in images.
                 </p>
@@ -70,7 +70,7 @@ export default function HomeSectionProjects({sectionType}) {
             </div>
             <div className="keen-slider__slide">
               <div className="slide-content">
-                <h2 className="general-heading-section-sub">TrashAI</h2>
+                <h2 className="sub-heading">TrashAI</h2>
                 <p className="home-section-dark-paragraph">
                   Developing machine learning technology to identify trash in images.
                 </p>

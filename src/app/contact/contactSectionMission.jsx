@@ -30,7 +30,7 @@ export default function ContactSectionMission({ sectionType }) {
           <h1 className={`general-heading-section general-heading-section-alt`}>
             CONTACT FORM
           </h1>
-          <h2 className={`general-heading-section-sub`}>Get In Touch</h2>
+          <h2 className={`sub-heading`}>Get In Touch</h2>
         </div>
         <p className={`contact-section-paragraph`}>
           <span className={`paragraph-bold`}>

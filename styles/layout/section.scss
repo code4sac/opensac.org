@@ -1,0 +1,20 @@
+.section-dark {
+  background-color: $primary-900;
+  color: white;
+}
+
+.section-light {
+  background-color: $secondary-50;
+  color: $neutral-900;
+}
+
+// Refactor general-section-grey and general-section container from typography to here.
+.general-section-grey {
+  background-color: $neutral-500;
+  color: $secondary-50;
+}
+
+.general-section-dark {
+  background-color: $neutral-900;
+  color: $neutral-50;
+}
