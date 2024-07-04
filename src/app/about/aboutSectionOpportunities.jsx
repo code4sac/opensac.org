@@ -20,7 +20,7 @@ export default function AboutSectionOpportunities({sectionType}) {
               Are you passionate about civic tech leadership?
             </span> Open Sacramento invites you to join our Core Team, organizing events, fostering partnerships,
             and driving community impact.
-            Shape Sacramento's civic innovation future – connect with us and explore joining our dedicated team.
+            Shape Sacramento&apos;s civic innovation future – connect with us and explore joining our dedicated team.
           </p>
         </div>
         <div className={`opportunities-get-started`}>

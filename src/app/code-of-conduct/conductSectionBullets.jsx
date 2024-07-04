@@ -22,7 +22,7 @@ export default function conductSectionBullets({sectionType}) {
       <div className={`conduct-numbered-item`}>
         <img src={`/img/3.png`} alt={`Point 3`} className={`conduct-item-image`}/>
         <p className={`conduct-item-paragraph`}>
-          Welcomes everyone's ideas, skills, and contributions.
+          Welcomes everyone&apos;s ideas, skills, and contributions.
         </p>
       </div>
 
@@ -37,7 +37,7 @@ export default function conductSectionBullets({sectionType}) {
         <img src={`/img/5.png`} alt={`Point 5`} className={`conduct-item-image`}/>
         <p className={`conduct-item-paragraph`}>
           Encourages people to find and utilize their strengths and skills productively. We can foster this environment
-          through "yes/and" statements.
+          through &quot;yes/and&quot; statements.
         </p>
       </div>
 
@@ -58,14 +58,14 @@ export default function conductSectionBullets({sectionType}) {
       <div className={`conduct-numbered-item`}>
         <img src={`/img/8.png`} alt={`Point 8`} className={`conduct-item-image`}/>
         <p className={`conduct-item-paragraph`}>
-          Sees the strength in diverse teams and seeks input from those who's voices have been excluded.
+          Sees the strength in diverse teams and seeks input from those who&apos;s voices have been excluded.
         </p>
       </div>
 
       <div className={`conduct-numbered-item`}>
         <img src={`/img/9.png`} alt={`Point 9`} className={`conduct-item-image`}/>
         <p className={`conduct-item-paragraph`}>
-          Works to bring in people who are not recognized as "main stream" for any reason including race, gender,
+          Works to bring in people who are not recognized as &quot;main stream&quot; for any reason including race, gender,
           economic status, etc. They shall be included throughout the planning, designing, and implementation phases of
           civic tech.
         </p>

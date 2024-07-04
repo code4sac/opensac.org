@@ -36,7 +36,7 @@ export default function ContactSectionMission({ sectionType }) {
           <span className={`paragraph-bold`}>
             Have questions or need assistance?
           </span>{" "}
-          Reach out to us using our form, and we'll get back to you as soon as
+          Reach out to us using our form, and we&apos;ll get back to you as soon as
           possible.
           <br></br>
           <br></br>
