@@ -1,0 +1,56 @@
+.general-heading-section {
+  color: $neutral-300;
+  @include h1-section;
+  margin: 0;
+}
+
+.general-heading-section-alt {
+  color: $secondary-500;
+}
+
+.sub-heading {
+  @include h2-semi-bold;
+  margin: 10px 0;
+
+  @media (max-width: $screen-sm) {
+    @include h3-semi-bold;
+  }
+}
+
+.sub-heading-large {
+  @include h1-semi-bold;
+  margin: 10px 0;
+
+  @media (max-width: $screen-sm) {
+    @include h1-small-semi-bold;
+  }
+}
+
+.heading-paragraph-large {
+  @include subheading-regular;
+  margin: 0;
+  color: $neutral-50;
+
+  @media (max-width: $screen-sm) {
+    @include p2-regular;
+  }
+}
+
+.underline-header-container {
+  position: relative;
+}
+
+.heading-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 43px;
+  border-bottom: 4px solid $neutral-900;
+}
+
+// Refactor multiple declarations of this class.
+.underline-alt::after {
+  border-bottom: 4px solid $neutral-50;
+}

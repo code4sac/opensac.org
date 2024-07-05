@@ -11,7 +11,7 @@ export default function AboutSectionOpportunities({sectionType}) {
             className={`about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
           >
             <h1 className={`general-heading-section general-heading-section-alt`}>opportunities</h1>
-            <h2 className={`general-heading-section-sub`}>
+            <h2 className={`sub-heading`}>
               Join Our Team
             </h2>
           </div>

@@ -10,7 +10,7 @@ export default function AboutSectionMission({sectionType}) {
           className={`about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
         >
           <h1 className={`general-heading-section general-heading-section-alt`}>OUR MISSION</h1>
-          <h2 className={`general-heading-section-sub`}>
+          <h2 className={`sub-heading`}>
             Driving Civic Innovation through Technology
           </h2>
         </div>

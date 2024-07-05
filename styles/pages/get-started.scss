@@ -4,68 +4,8 @@
 /*
 Get Started page layout
  */
-.heading-underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 1px;
-  width: 43px;
-  border-bottom: 4px solid $neutral-900;
-}
-
-.underline-alt::after {
-  border-bottom: 4px solid $neutral-50;
-}
-
-.section-paragraph {
-  @include subheading-regular;
-  margin: 0;
-
-  @media (max-width: $screen-sm) {
-    @include p3-regular;
-  }
-}
-
-.sub-heading {
-  @include h1-semi-bold;
-  margin: 10px 0;
-
-  @media (max-width: $screen-sm) {
-    @include h1-small-semi-bold;
-  }
-}
-
-.heading-paragraph {
-  @include subheading-regular;
-  margin: 0;
-  color: $neutral-50;
-
-  @media (max-width: $screen-sm) {
-    @include p2-regular;
-  }
-}
 
 // Instructions section
-
-.section-dark {
-  background-color: $primary-900;
-  color: white;
-  padding: 64px 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
-
-  @media (max-width: $screen-lg) {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 40px;
-    padding: 8vw 4vw;
-  }
-}
 
 .instructions-container {
   display: flex;
