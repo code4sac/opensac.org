@@ -24,11 +24,11 @@ export default function HomeSectionDefault({ sectionType }) {
           change through technology and collaboration.
           <span className={`paragraph-bold`}>
             {" "}
-            Whether you're a designer, developer, or anyone eager to volunteer,
-            together we're enhancing community services, amplifying voices, and
+            Whether you&apos;re a designer, developer, or anyone eager to volunteer,
+            together we&apos;re enhancing community services, amplifying voices, and
             giving you the opportunity to improve your resume and portfolio.
           </span>{" "}
-          It's a journey of innovation and empowerment waiting for you. Your
+          It&apos;s a journey of innovation and empowerment waiting for you. Your
           impact starts{" "}
           <Link href="/get-started" className={`home-section-paragraph-anchor`}>
             here

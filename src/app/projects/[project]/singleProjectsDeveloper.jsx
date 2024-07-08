@@ -6,7 +6,7 @@ export default function SingleProjectsDeveloper({ sectionType, data }) {
         </div>
         <p className={`project-section-paragraph`}>
           Developers can actively contribute to the project by submitting pull
-          requests with code enhancements or bug fixes via the project's GitHub
+          requests with code enhancements or bug fixes via the project&apos;s GitHub
           repository.
         </p>
         <hr className={`project-info-line`}/>

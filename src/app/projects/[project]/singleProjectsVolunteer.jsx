@@ -10,7 +10,7 @@ export default function SingleProjectsVolunteer({ sectionType }) {
         </div>
         <p className={`project-paragraph`}>
             Join us at Open Sacramento to collaborate on impactful civic tech projects and connect with a diverse
-            community of like-minded individuals. It's a rewarding way to make a 
+            community of like-minded individuals. It&apos;s a rewarding way to make a 
             meaningful difference in our city.
         </p>
         </div>
