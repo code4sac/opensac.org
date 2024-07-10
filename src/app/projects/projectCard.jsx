@@ -18,7 +18,7 @@ export default function ProjectCard({
     <section className={`project-card-container`}>
       <div className="project-card-img-container">
         <div className={`project-card-img-status ${isLoading && 'project-card-loading'}`}>{projectStatus}</div>
-        {isLoading ? <div className={`project-card-img project-card-loading`}></div> : <img className={`project-card-img`} src={imgUrl}></img>}
+        {isLoading ? <div className={`project-card-img project-card-loading`}></div> : <img className={`project-card-img`} src={imgUrl} alt={'Default project image'}></img>}
       </div>
       <ul className={`project-card-tags`}>
         {tags.map((tag,index) => (

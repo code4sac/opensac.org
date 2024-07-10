@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 /**
- * Instructions for projects page.
+ * Instructions for project page.
+ * Not implemented yet. Styles are only available for mobile on Figma.
  * @returns {JSX.Element}
  */
 export default function projectSectionVolunteer({sectionType}) {
@@ -14,7 +15,7 @@ export default function projectSectionVolunteer({sectionType}) {
         </div>
         <p className={`project-paragraph`}>
           Join us at Open Sacramento to collaborate on impactful civic tech projects and connect with a diverse
-          community of like-minded individuals. It's a rewarding way to make a
+          community of like-minded individuals. It&apos;s a rewarding way to make a
           meaningful difference in our city.
         </p>
       </div>
