@@ -17,6 +17,16 @@
   }
 }
 
+//.pitch-heading-section-sub {
+//  margin: 10px 0;
+//  @include h2-semi-bold;
+//  color: $neutral-50;
+//
+//  @media (max-width: $screen-sm) {
+//    @include h1-small-semi-bold;
+//  }
+//}
+//
 .sub-heading-large {
   @include h1-semi-bold;
   margin: 10px 0;

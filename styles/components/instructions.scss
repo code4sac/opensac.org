@@ -1,0 +1,71 @@
+.sidebar-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.steps-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.steps-step-container {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+
+  @media (max-width: $screen-xl) {
+    gap: 16px;
+  }
+}
+
+.step-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-image {
+  width: 10vw;
+  height: 10vw;
+  max-width: 72px;
+  max-height: 72px;
+}
+
+.step-header {
+  @include h3-bold;
+  margin: 0;
+  color: $neutral-50;
+
+  @media (max-width: $screen-sm) {
+    @include h5-semi-bold;
+    font-weight: 700;
+  }
+}
+
+.step-paragraph {
+  @include p3-regular;
+  margin: 0;
+  color: $neutral-50;
+
+  @media (max-width: $screen-sm) {
+    @include p2-regular;
+  }
+}
+
+.step-anchor {
+  color: $secondary-500;
+  font-weight: 700;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: $screen-xs) {
+    gap: 0;
+  }
+}

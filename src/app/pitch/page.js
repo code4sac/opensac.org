@@ -1,6 +1,8 @@
-  import LandingSection from "@/components/ui/LandingSection";
+import LandingSection from "@/components/ui/LandingSection";
 import HeaderUnderline from "@/components/content/HeaderUnderline";
-import PitchSectionInstructions from "@/app/pitch/pitchSectionInstructions";
+import instructionData from "./instructions.json";
+import SidebarSection from "@/components/ui/SidebarSection";
+import Steps from "@/components/content/Steps";
 
 /**
  * Section type. Displays light or dark themes.
@@ -27,7 +29,16 @@ export default function PitchPage() {
           Pitch your project to make a positive impact on Sacramento using technology and civic engagement.
         </div>
       </LandingSection>
-      <PitchSectionInstructions sectionType={SectionType.dark}/>
+      <SidebarSection sectionType={SectionType.dark}>
+        <div className={`sidebar-info-container`}>
+          <HeaderUnderline sectionType={SectionType.dark}
+                           title="Pitching a project" description="How to Start a New Project">
+            Ready to turn your civic tech idea into reality? Follow these simple steps to pitch your project idea to
+            Open Sacramento.
+          </HeaderUnderline>
+        </div>
+        <Steps sectionType={SectionType.dark} steps={instructionData}></Steps>
+      </SidebarSection>
     </div>
   )
 }
