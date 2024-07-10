@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+/**
+ * Instructions for project page.
+ * @returns {JSX.Element}
+ */
 export default function SingleProjectsVolunteer({ sectionType }) {
   return (
     <section id="how-to-volunteer" className={`project-volunteer-container`}>

@@ -52,7 +52,7 @@ export default function AppNavbar() {
       default:
         setFadeLayout(false)
     }
-  }, [websiteURL])
+  }, [websiteURL, currentScrollHeight])
   return (
     <div className='navbar-background'>
       <nav className={`navbar-toolbar`}
