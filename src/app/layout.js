@@ -1,5 +1,5 @@
-import AppFooter from '@/components/AppFooter'
-import AppNavbar from '@/components/AppNavbar'
+import AppFooter from '@/components/app/AppFooter'
+import AppNavbar from '@/components/app/AppNavbar'
 import {Inter} from 'next/font/google'
 import '../../styles/main.scss'
 

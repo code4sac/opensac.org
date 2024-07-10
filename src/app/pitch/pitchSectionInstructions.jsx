@@ -4,7 +4,7 @@
  */
 export default function PitchSectionInstructions({sectionType}) {
   return (
-    <section className={`pitch-section-${sectionType}`}>
+    <section className={`section-${sectionType} section-container2`}>
       <div className={`pitch-instructions-container`}>
         <div className={`pitch-instructions-info-container`}>
           <div className={`pitch-${sectionType}-heading-container`}>
@@ -25,7 +25,7 @@ export default function PitchSectionInstructions({sectionType}) {
             <div className={`pitch-step-container`}>
               <h3 className={`pitch-step-header`}>Check Eligibility</h3>
               <div className={`pitch-step-paragraph`}>
-                Before presenting your project idea, it's crucial to verify
+                Before presenting your project idea, it&apos;s crucial to verify
                 its alignment with our mission and principles.
                 Please review the following conditions to ensure your project falls within our scope:
                 <ol>
@@ -59,7 +59,7 @@ export default function PitchSectionInstructions({sectionType}) {
               <p className={`pitch-step-paragraph`}>
                 Fill out a <a href="/" className="pitch-step-anchor">Project Form</a> to formally propose your idea.
                 After submitting, please allow 1-2 weeks for our team to review your project proposal.
-                We'll carefully assess its alignment with our mission and guidelines.
+                We&apos;ll carefully assess its alignment with our mission and guidelines.
                 During this time, someone from our team will reach out to discuss your project further.
               </p>
             </div>

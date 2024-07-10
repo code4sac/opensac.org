@@ -1,0 +1,79 @@
+.section-container2 {
+  padding: 64px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+
+  @media (max-width: $screen-lg) {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    padding: 8vw 4vw;
+  }
+}
+
+.split-section-container {
+  padding: 96px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  @media (max-width: $screen-md) {
+    padding: 48px 40px;
+    flex-direction: column;
+  }
+}
+
+.landing-section-paragraph {
+  @include p3-regular;
+  margin: 0;
+  width: 50%;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+
+  @media (max-width: $screen-sm) {
+    @include p2-regular;
+  }
+}
+
+.landing-section-paragraph-large {
+  @include subheading-regular;
+  margin: 0;
+  width: 50%;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+
+  @media (max-width: $screen-sm) {
+    @include p3-regular;
+  }
+}
+// Refactor this to use general section container class without light prefix. Dark is used but not defined. This class should possibly be moved to split section styles.
+.general-section-light-container {
+  width: 50%;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+}
+
+.split-section-content-container {
+  width: 50%;
+  position: relative;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+}
+

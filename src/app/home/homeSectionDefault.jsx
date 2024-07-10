@@ -11,7 +11,7 @@ export default function HomeSectionDefault({ sectionType }) {
         className={`general-section-${sectionType}-container home-section-heading-underline`}
       >
         <h1 className={`general-heading-section`}>Why volunteer</h1>
-        <h2 className={`general-heading-section-sub`}>
+        <h2 className={`sub-heading`}>
           Empower Change with <br />
           Open Sacramento
         </h2>
@@ -24,11 +24,11 @@ export default function HomeSectionDefault({ sectionType }) {
           change through technology and collaboration.
           <span className={`paragraph-bold`}>
             {" "}
-            Whether you're a designer, developer, or anyone eager to volunteer,
-            together we're enhancing community services, amplifying voices, and
+            Whether you&apos;re a designer, developer, or anyone eager to volunteer,
+            together we&apos;re enhancing community services, amplifying voices, and
             giving you the opportunity to improve your resume and portfolio.
           </span>{" "}
-          It's a journey of innovation and empowerment waiting for you. Your
+          It&apos;s a journey of innovation and empowerment waiting for you. Your
           impact starts{" "}
           <Link href="/get-started" className={`home-section-paragraph-anchor`}>
             here
