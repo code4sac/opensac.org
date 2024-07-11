@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Button from "@/components/Buttons";
 
 /**
  * Home projects section.
@@ -19,8 +19,8 @@ export default function HomeSectionLandingImage() {
             better future!
           </p>
           <div className={`home-buttons-group`}>
-            <Link href="/get-started" className={`home-button`}>Get Started</Link>
-            <Link href="/projects" className={`home-button home-button-alt`}>View Projects</Link>
+            <Button className={`btn btn-alt-light`} href="/get-started" textContent="Get Started" />
+            <Button className={`btn btn-gold`} href="/projects" textContent="View Projects" />
           </div>
         </div>
       </section>

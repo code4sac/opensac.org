@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function conductSectionBullets({ sectionType }) {
   return (
     <section className={`conduct-${sectionType}-theme`}>
@@ -16,7 +18,7 @@ export default function conductSectionBullets({ sectionType }) {
         <p className={`conduct-item-paragraph`}>
           If you are being harassed, notice that someone else is being harassed,
           or have any other concerns, please fill out{" "}
-          <a href="https://forms.gle/JF3Q1AQA6pGxNSNS8">this form</a>.
+          <Link href="https://forms.gle/JF3Q1AQA6pGxNSNS8">this form</Link>.
         </p>
       </div>
     </section>

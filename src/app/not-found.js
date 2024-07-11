@@ -1,4 +1,5 @@
 import '@/styles/pages/not-found.scss';
+import Link from 'next/link';
 
 /**
  * 404 not found page. This is a built-in Next.js function.
@@ -16,7 +17,7 @@ export default function notFound() {
             <p>Looks like this page hasn&apos;t been developed yet.</p>
             <p>Would you like to join and be a part of creating it?</p>
           </div>
-          <a
+          <Link
               href="https://github.com/code4sac/opensac.org"
               className="not-found-link"
               target="_blank"
@@ -24,7 +25,7 @@ export default function notFound() {
               aria-label="Link to opensac.org github page."
             >
               Get Started
-            </a>
+            </Link>
           <p>Explore our site using the menu above.</p>
         </div>
       </section>

@@ -497,39 +497,6 @@ details p {
   gap: 20px;
 }
 
-.project-card-button-dark {
-  color: $secondary-50;
-  background-color: $primary-500;
-  cursor: pointer;
-
-  border: solid $primary-500 1px;
-  border-radius: 6px;
-  padding: 16px 24px;
-  text-decoration: none;
-  width: fit-content;
-  height: fit-content;
-  white-space: nowrap;
-
-  @include button-regular;
-  @include button-transition($vivid-blue, white);
-}
-
-.project-card-button-light {
-  color: $primary-500;
-  background-color: transparent;
-  cursor: pointer;
-  border: solid $primary-500 1px;
-  border-radius: 6px;
-  padding: 16px 24px;
-  text-decoration: none;
-  width: fit-content;
-  height: fit-content;
-  white-space: nowrap;
-
-  @include button-regular;
-  @include dark-button-transition;
-}
-
 .project-heading-section {
   color: $neutral-300;
   @include h1-section;
@@ -644,28 +611,6 @@ details p {
   height: 1px;
   border: none;
   background: $neutral-400;
-}
-
-.project-button {
-  color: $secondary-50;
-  background-color: transparent;
-  cursor: pointer;
-
-  border: solid $secondary-500 1px;
-  border-radius: 6px;
-  padding: 16px 24px;
-  text-decoration: none;
-  width: fit-content;
-
-  @include button-regular;
-  @include dark-button-transition;
-}
-
-.project-button-alt {
-  background-color: $secondary-500;
-  color: $neutral-900;
-
-  @include light-button-transition;
 }
 
 /* SingleProjectsSectionStart */

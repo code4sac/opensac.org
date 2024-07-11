@@ -1,8 +1,8 @@
 'use client'
 import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from 'keen-slider/react'
-import React from 'react'
-import Link from 'next/link'
+import { useState } from 'react';
+import Button from '@/components/Buttons';
 
 /**
  * Home projects section.
@@ -10,8 +10,8 @@ import Link from 'next/link'
  */
 export default function HomeSectionProjects({sectionType}) {
 
-  const [currentSlide, setCurrentSlide] = React.useState(0)
-  const [loaded, setLoaded] = React.useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slideChanged(slider) {
@@ -36,7 +36,7 @@ export default function HomeSectionProjects({sectionType}) {
           <span className={`paragraph-bold`}> our open-source tech and collaboration drive innovation</span>
           for transparent, efficient, engaged local governance.
         </p>
-        <Link href="/projects" className={`home-button home-button-alt`}>Find Projects</Link>
+        <Button href="/projects" className={`btn btn-gold`} textContent="Find Projects" />
       </div>
 
       <div className="test">

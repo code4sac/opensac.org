@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Button from "@/components/Buttons";
 
 /**
  * Home donate section.
@@ -22,8 +22,8 @@ export default function HomeSectionDonate({sectionType}) {
           innovation.<span> Join us today and be a catalyst for lasting, community-driven transformation!</span>
         </p>
         <div className={`home-buttons-group`}>
-          <Link href="/get-started" className={`home-button home-button-numbered`}>Get Started</Link>
-          <Link href="" className={`home-button home-button-alt`}>Donate</Link>
+          <Button href="/get-started" className={`btn btn-alt-gold`} textContent="Get Started" />
+          <Button href="/donate" className={`btn btn-gold`} textContent="Donate" />
         </div>
       </div>
     </section>
