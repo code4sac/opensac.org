@@ -1,4 +1,5 @@
 import { getWednesday } from "@/utils/get-wednesday";
+import Link from "next/link";
 
 /**
  * Projects start section.
@@ -40,10 +41,10 @@ export default function ProjectsSectionStart({ sectionType }) {
           </ul>
         </div>
         <div className={`meeting-card-section`}>
-          <a className={`meeting-card-link`} href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">
+          <Link className={`meeting-card-link`} href="https://www.meetup.com/code4sac/" target="_blank" rel="noopener noreferrer" aria-label="Link to Meetup.">
             <span>Go to meetup</span>
             <img src="./img/meeting-card/arrow-right.svg" alt="Arrow right." />
-          </a>
+          </Link>
         </div>
       </div> 
       </div>
