@@ -57,7 +57,7 @@ export default function PitchSectionInstructions({sectionType}) {
             <div className={`pitch-step-container`}>
               <h3 className={`pitch-step-header`}>Complete Project Form</h3>
               <p className={`pitch-step-paragraph`}>
-                Fill out a <a href="/" className="pitch-step-anchor">Project Form</a> to formally propose your idea.
+                Fill out a <a href="https://docs.google.com/forms/d/1abnO-X0OQU-fR2WwLNNrXys7cYNdNH3KWSSHiGbz2ug/viewform?pli=1&pli=1&edit_requested=true" className="pitch-step-anchor">Project Form</a> to formally propose your idea.
                 After submitting, please allow 1-2 weeks for our team to review your project proposal.
                 We&apos;ll carefully assess its alignment with our mission and guidelines.
                 During this time, someone from our team will reach out to discuss your project further.
