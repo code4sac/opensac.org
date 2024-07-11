@@ -58,6 +58,7 @@
     @include p3-regular;
   }
 }
+
 // Refactor this to use general section container class without light prefix. Dark is used but not defined. This class should possibly be moved to split section styles.
 .general-section-light-container {
   width: 50%;

@@ -5,15 +5,6 @@
 Pitch page layout.
  */
 
-.pitch-heading-section-sub {
-  margin: 10px 0;
-  @include h2-semi-bold;
-  color: $neutral-50;
-
-  @media (max-width: $screen-sm) {
-    @include h1-small-semi-bold;
-  }
-}
 
 .pitch-instructions-container {
   display: flex;
@@ -25,10 +16,6 @@ Pitch page layout.
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-
-.pitch-dark-heading-container {
-  position: relative;
 }
 
 .pitch-dark-heading-container::after {
@@ -101,10 +88,6 @@ Pitch page layout.
   }
 }
 
-.pitch-step-anchor {
-  color: $secondary-500;
-  font-weight: 700;
-}
 
 .pitch-sidebar-container {
   display: flex;

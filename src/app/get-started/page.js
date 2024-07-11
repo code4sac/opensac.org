@@ -1,7 +1,8 @@
 import LandingSection from "@/components/ui/LandingSection";
 import HeaderUnderline from "@/components/content/HeaderUnderline";
 import SidebarSection from "@/components/ui/SidebarSection";
-import Instructions from "@/components/content/Instructions";
+import Steps from "@/components/content/Steps";
+import instructionData from "./instructions.json";
 
 /**
  * Section type. Displays light or dark themes.
@@ -22,16 +23,23 @@ export default function GetStartedPage() {
                          description="Ready to Volunteer with Open Sacramento"
                          large={true} className={'split-section-content-container'}/>
         <div className={`section-${SectionType.light} landing-section-paragraph-large`}>
-          We're thrilled that you're eager to join our community of civic-minded individuals and make a positive impact
-          on Sacramento. Volunteering with Open Sacramento is a rewarding experience that allows you to use your
-          skills for the betterment of our city. <span className={`paragraph-bold`}>Whether you're a designer, developer,
-        or anyone else passionate about civic tech,</span> you'll
-          find step-by-step instructions below to help you get started
-          on your journey of civic tech and community empowerment.
+          We&apos;re thrilled that you&apos;re eager to join our community of civic-minded individuals and make a
+          positive impact on Sacramento. Volunteering with Open Sacramento is a rewarding experience that allows you to
+          use your skills for the betterment of our city. <span className={`paragraph-bold`}>Whether you&apos;re a designer, developer, or anyone else passionate about civic tech,</span> you&apos;ll
+          find step-by-step instructions below to help you get started on your journey of civic tech and community
+          empowerment.
         </div>
       </LandingSection>
       <SidebarSection sectionType={SectionType.dark}>
-        <Instructions sectionType={SectionType.dark}></Instructions>
+        <div className={`sidebar-info-container`}>
+          <HeaderUnderline className={'split-section-content-container'} sectionType={SectionType.dark}
+                           title="Getting started" description="Steps to Volunteer">
+            Discover how you can become a valued volunteer at Open Sacramento.
+            Follow these simple steps to join our community of technologists, developers,
+            and civic-minded individuals dedicated to driving positive change through technology and collaboration.
+          </HeaderUnderline>
+        </div>
+        <Steps sectionType={SectionType.dark} steps={instructionData}></Steps>
       </SidebarSection>
     </div>
   )
