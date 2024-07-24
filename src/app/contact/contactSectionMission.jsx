@@ -48,7 +48,7 @@ export default function ContactSectionMission({ sectionType }) {
           .<br></br>
           <br></br>
           Check out our weekly meetings on our{" "}
-          <a
+          <Link
             className="contactActionLinksAnchor"
             href="https://www.meetup.com/code4sac/"
             target="_blank"
@@ -56,7 +56,7 @@ export default function ContactSectionMission({ sectionType }) {
             aria-label="Link to Meetup."
           >
             meetup page
-          </a>
+          </Link>
           .
         </p>
       </div>

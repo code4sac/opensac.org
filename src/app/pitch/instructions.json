@@ -7,17 +7,17 @@
   {
     "id": 2,
     "title": "Review our Code of Conduct",
-    "body": "Familiarize yourself with our Code of Conduct, which outlines the principles and expectations\nguiding our community. We value respectful and inclusive interactions to create a positive\nenvironment for everyone. Please read and understand <a href=\"/\" class=\"step-anchor\">our\nguidelines</a> for a positive experience."
+    "body": "Familiarize yourself with our Code of Conduct, which outlines the principles and expectations\nguiding our community. We value respectful and inclusive interactions to create a positive\nenvironment for everyone. Please read and understand <a href=\"/code-of-conduct\" class=\"step-anchor\" aria-label=\"Link to code of conduct.\">our\nguidelines</a> for a positive experience."
   },
   {
     "id": 3,
     "title": "Complete Project Form",
-    "body": "Fill out a <a href=\"/\" class=\"step-anchor\">Project Form</a> to formally propose your idea.\nAfter submitting, please allow 1-2 weeks for our team to review your project proposal.\nWe&apos;ll carefully assess its alignment with our mission and guidelines.\nDuring this time, someone from our team will reach out to discuss your project further."
+    "body": "Fill out a <a href=\"https://docs.google.com/forms/d/1abnO-X0OQU-fR2WwLNNrXys7cYNdNH3KWSSHiGbz2ug/viewform?pli=1&pli=1&edit_requested=true\" class=\"step-anchor\" target=\"_blank\" aria-label=\"Link to project form.\">Project Form</a> to formally propose your idea.\nAfter submitting, please allow 1-2 weeks for our team to review your project proposal.\nWe&apos;ll carefully assess its alignment with our mission and guidelines.\nDuring this time, someone from our team will reach out to discuss your project further."
   },
   {
     "id": 4,
     "title": "Attend Weekly Meetings (optional)",
-    "body": "For the fastest way to engage with our community and potentially pitch your project,\nconsider attending our weekly meetings posted on Meetup. These meetings provide an excellent\nopportunity to connect with our team, discuss your project ideas,\nand explore collaborations within our community."
+    "body": "For the fastest way to engage with our community and potentially pitch your project,\nconsider attending our weekly meetings posted on <a class=\"step-anchor\" href=\"https://www.meetup.com/code4sac/\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Link to Meetup.\">Meetup</a>. These meetings provide an excellent\nopportunity to connect with our team, discuss your project ideas,\nand explore collaborations within our community."
   },
   {
     "id": 5,

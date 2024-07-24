@@ -1,0 +1,13 @@
+.general-heading-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 43px;
+    border-bottom: 4px solid $neutral-900;
+  }
+  
+  .general-underline-alt::after {
+    border-bottom: 4px solid $neutral-50;
+  }

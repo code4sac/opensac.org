@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * About opportunities section.
  * @returns {JSX.Element}
@@ -28,7 +30,7 @@ export default function AboutSectionOpportunities({sectionType}) {
           <p className={`opportunities-anchor`}>
             Not a volunteer yet?
             <br/>
-            <a href="/get-started">Get Started</a>
+            <Link href="/get-started">Get Started</Link>
           </p>
         </div>
       </div>
@@ -86,7 +88,7 @@ export default function AboutSectionOpportunities({sectionType}) {
         <p className={`opportunities-anchor-bottom`}>
           Not a volunteer yet?
           <br/>
-          <a href="/get-started">Get Started</a>
+          <Link href="/get-started">Get Started</Link>
         </p>
       </div>
     </section>

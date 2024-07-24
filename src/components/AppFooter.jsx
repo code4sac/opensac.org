@@ -20,7 +20,7 @@ export default function AppFooter() {
         <div className="footerActionLinks">
           <p className="footerActionLinksItem">
             Join us for our weekly meetings on{" "}
-            <Link
+            <a
               className="footerActionLinksAnchor"
               href="https://www.meetup.com/code4sac/"
               target="_blank"
@@ -28,7 +28,7 @@ export default function AppFooter() {
               aria-label="Link to Meetup."
             >
               meetup
-            </Link>
+            </a>
             .
           </p>
           <p className="footerActionLinksItem">
