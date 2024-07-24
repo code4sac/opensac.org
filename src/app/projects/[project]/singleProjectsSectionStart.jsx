@@ -8,7 +8,7 @@ import Button from "@/components/Buttons";
  */
 export default function SingleProjectsSectionStart({ sectionType, data }) {
   return (
-    <section className={`project-section-start`}>
+    <section id="project-section-start" className={`project-section-start`}>
       <div 
         className={`project-main-image`}
         style={{backgroundImage: `url(https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url})`}}
