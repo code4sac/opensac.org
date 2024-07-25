@@ -725,7 +725,11 @@ details p {
 // SingleProjectsScreenshots
 
 .project-screenshots-container {
-  padding: 20px 0 42px 0;
+  padding: 20px 0 34px 0;
+
+  @media (min-width: $screen-md) {
+    padding: 20px 0 42px 0;
+  }
 
   @media (min-width: $screen-xl) {
     scroll-margin-top: 70px;
@@ -737,12 +741,10 @@ details p {
 }
 
 .project-screenshots-images-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 24px;
-  row-gap: 32px;
+  display: none;
 
   @media (min-width: $screen-md) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
     row-gap: 32px;
@@ -750,6 +752,25 @@ details p {
   @media (min-width: $screen-lg) {
     margin-top: 76px;
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-screenshots-slider-container {
+  .project-screenshot, .project-blank-screenshot {
+    border: 1px solid $neutral-700;
+    border-radius: 8px;
+  }
+  
+  .dot {
+    background: $primary-600;
+  }
+
+  .dot.active {
+    background: $primary-400;
+  }
+
+  @media (min-width: $screen-md) {
+    display: none;
   }
 }
 
