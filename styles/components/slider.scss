@@ -1,0 +1,47 @@
+.navigation-wrapper {
+    position: relative;
+}
+
+.project-screenshots-slider-container {
+    .project-screenshot, .project-blank-screenshot {
+        border: 1px solid $neutral-700;
+        border-radius: 8px;
+    }
+    
+    .dot {
+        background: $primary-600;
+    }
+  
+    .dot.active {
+        background: $primary-400;
+    }
+  
+    @media (min-width: $screen-md) {
+        display: none;
+    }
+}  
+
+.dots {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.dot {
+    border: none;
+    width: 10px;
+    height: 10px;
+    background: $secondary-50;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+  
+.dot:focus {
+    outline: none;
+}
+  
+.dot.active {
+    background: $secondary-500;
+}  

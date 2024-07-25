@@ -755,25 +755,6 @@ details p {
   }
 }
 
-.project-screenshots-slider-container {
-  .project-screenshot, .project-blank-screenshot {
-    border: 1px solid $neutral-700;
-    border-radius: 8px;
-  }
-  
-  .dot {
-    background: $primary-600;
-  }
-
-  .dot.active {
-    background: $primary-400;
-  }
-
-  @media (min-width: $screen-md) {
-    display: none;
-  }
-}
-
 .project-screenshot {
   width: 100%;
   padding-bottom: 56%;
