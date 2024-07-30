@@ -16,7 +16,7 @@ const ExtendedNavbarMenu = (visible) => {
     <div className="dropdown-menu" style={visible ? {} : {display: 'none'}}>
       <div className={'navbar-extended-mobile-container'}>
         <div className={`navbar-extended-mobile-content`} style={mobileNavPosition ? {display: 'none'} : {}}>
-          <Link className={'mobile-nav-link'} href="/public">Home</Link>
+          <Link className={'mobile-nav-link'} href="/">Home</Link>
           <Link className={'mobile-nav-link'} href="/about">About</Link>
           <Link className={'mobile-nav-link'} href="/contact">Contact</Link>
           <Link className={'mobile-nav-link'} href="#">Donate</Link>
