@@ -1,26 +1,13 @@
 'use client'
-import 'keen-slider/keen-slider.min.css'
-import {useKeenSlider} from 'keen-slider/react'
-import { useState } from 'react';
+import { Slider } from '@/components/ui';
 import Button from '@/components/Buttons';
+
 
 /**
  * Home projects section.
  * @returns {JSX.Element}
  */
 export default function HomeSectionProjects({sectionType}) {
-
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider({
-    initial: 0,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
-    },
-    created() {
-      setLoaded(true)
-    },
-  })
 
   return (
     <section className={`general-section-${sectionType} home-projects-section`}>
@@ -40,9 +27,8 @@ export default function HomeSectionProjects({sectionType}) {
       </div>
 
       <div className="test">
-        <div className="navigation-wrapper">
-          <div ref={sliderRef} className="keen-slider">
-            <div className="keen-slider__slide">
+        <Slider containerClass={"navigation-wrapper"}>
+          <div className="keen-slider__slide">
               <div className="slide-content">
                 <h2 className="sub-heading">TrashAI</h2>
                 <p className="home-section-dark-paragraph">
@@ -80,28 +66,9 @@ export default function HomeSectionProjects({sectionType}) {
                 alt="Open Data Day"
                 className="home-section-project-image"
               />
-            </div>
-          </div>
-        </div>
-        {loaded && instanceRef.current && (
-          <div className="dots">
-            {[
-              ...Array(instanceRef.current.track.details.slides.length).keys(),
-            ].map((idx) => {
-              return (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    instanceRef.current?.moveToIdx(idx)
-                  }}
-                  className={"dot" + (currentSlide === idx ? " active" : "")}
-                ></button>
-              )
-            })}
-          </div>
-        )}
+            </div>  
+        </Slider>
       </div>
     </section>
   )
 }
-

@@ -279,53 +279,17 @@ Home page layout.
   }
 }
 
-.navigation-wrapper {
-  position: relative;
-}
-
-.dots {
-  display: flex;
-  padding: 10px 0;
-  justify-content: center;
-}
-
-.dot {
-  border: none;
-  width: 10px;
-  height: 10px;
-  background: $secondary-50;
-  border-radius: 50%;
-  margin: 0 5px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.dot:focus {
-  outline: none;
-}
-
-.dot.active {
-  background: $secondary-500;
-}
-
 .partnership-section {
   padding: 64px 80px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
 
   @media (max-width: $screen-lg) {
-    flex-direction: column;
     padding: 64px 40px;
+    align-items: center;
   }
-}
-
-.partnership-section-paragraph-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .home-section-heading-underline-partnership::after {
@@ -390,17 +354,17 @@ Home page layout.
 }
 
 .home-projects-section-partnerships {
-  padding: 64px 32px 64px 32px;
+  padding-left: 32px;
   display: flex;
   flex-direction: row;
   align-items: center;
   align-content: flex-start;
   gap: 48px;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-lg) {
     flex-direction: column;
     justify-content: center;
-    padding: 48px 40px;
+    padding: 0;
     gap: 60px;
   }
 }

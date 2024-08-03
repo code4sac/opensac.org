@@ -8,12 +8,10 @@ import Link from "next/link";
 export default function HomeSectionPartnership({sectionType}) {
   return (
     <section className={`general-section-${sectionType} partnership-section`}>
-      <div className={`general-section-${sectionType}-container`}>
         <div className={'home-section-heading-underline-partnership'}>
           <h1 className={`heading-large-section-sub`}>Our Collaborations and Partnerships</h1>
         </div>
-        <div className={`partnership-section-paragraph-container`}>
-          <p className={`home-numbered-paragraph-partnerships`}>We have had the privilege of working with a
+        <p className={`home-numbered-paragraph-partnerships`}>We have had the privilege of working with a
             diverse array of companies, organizations, and government entities, some of which are showcased
             below.</p>
           <div className={`home-projects-section-partnerships`}>
@@ -39,8 +37,6 @@ export default function HomeSectionPartnership({sectionType}) {
                    alt="DBA"/>
             </Link>
           </div>
-        </div>
-      </div>
     </section>
   );
 }

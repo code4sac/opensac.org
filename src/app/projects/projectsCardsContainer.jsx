@@ -31,7 +31,7 @@ const ProjectsCardsContainer = ({error, isLoading, projectsData, sectionType}) =
                 projectTitle={project.meta.title}
                 projectText={project.meta.description}
                 imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
-                pageUrl={`/projects/${project.name}`}
+                pageUrl={`/projects/${project.name}/#project-section-start`}
                 githubUrl={project.html_url}
                 tags={project.meta.tags.split(",")}
                 lastUpdatedTimestamp={moment(project.updated_at)}
