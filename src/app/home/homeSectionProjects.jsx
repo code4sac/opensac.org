@@ -30,14 +30,14 @@ export default function HomeSectionProjects({sectionType}) {
         <Slider containerClass={"navigation-wrapper"}>
           <div className="keen-slider__slide">
               <div className="slide-content">
-                <h2 className="sub-heading">TrashAI</h2>
+                <h2 className="sub-heading">Learning Blocks</h2>
                 <p className="home-section-dark-paragraph">
-                  Developing machine learning technology to identify trash in images.
+                  Unlock grades, schedules, and progress in one thrilling platform!
                 </p>
               </div>
               <img
-                src="https://assets-global.website-files.com/64760069e93084646c9ee428/64776faa0c1419b8475edd51_www.awwwards.com_%20(1).jpg"
-                alt="Open Data Day"
+                src="/img/home/learningblocks.jpg"
+                alt="Learning Blocks"
                 className="home-section-project-image"
               />
             </div>
@@ -50,20 +50,20 @@ export default function HomeSectionProjects({sectionType}) {
               </div>
               <img
                 src="/img/TrashAI2.png"
-                alt="Open Data Day"
+                alt="TrashAI"
                 className="home-section-project-image"
               />
             </div>
             <div className="keen-slider__slide">
               <div className="slide-content">
-                <h2 className="sub-heading">TrashAI</h2>
+                <h2 className="sub-heading">Open Budget Sac</h2>
                 <p className="home-section-dark-paragraph">
-                  Developing machine learning technology to identify trash in images.
+                  Fiscal transparency and visualization web app for the City of Sacramento.
                 </p>
               </div>
               <img
-                src="https://assets.awwwards.com/awards/sites_of_the_day/2019/10/rogue-studio-website-design.jpg"
-                alt="Open Data Day"
+                src="https://raw.githubusercontent.com/code4sac/openbudgetsac.org/main/screenshot.jpg"
+                alt="Open Budget Sac"
                 className="home-section-project-image"
               />
             </div>  

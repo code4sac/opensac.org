@@ -19,7 +19,7 @@ export default function HomeSectionDefault({ sectionType }) {
 
       <div className={`general-section-${sectionType}-container`}>
         <p className={`home-section-paragraph`}>
-          <span className={`paragraph-bold`}>Ready to make a difference?</span>
+          <span className={`paragraph-bold`}>Ready to make a difference?{" "}</span>
           Join us at Open Sacramento and use your skills to drive positive
           change through technology and collaboration.
           <span className={`paragraph-bold`}>
