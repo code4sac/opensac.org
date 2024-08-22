@@ -13,7 +13,8 @@ export default function AppFooter() {
           <p className="footerMessageParagraph">
             Open Sacramento is a tax-deductible civic-tech community dedicated
             to using technology and open data for positive civic change in
-            Sacramento.
+            Sacramento. Open Sacramento is fiscally sponsored by{" "}
+            <Link href="https://www.dbaarts.org/">DBA Arts</Link>.
           </p>
         </div>
 

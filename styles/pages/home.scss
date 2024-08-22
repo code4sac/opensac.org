@@ -258,6 +258,7 @@ Home page layout.
 .home-section-project-image {
   width: 100%;
   aspect-ratio: 2/1;
+  object-fit: cover;
 }
 
 .slide-content {
