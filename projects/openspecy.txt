@@ -1,6 +1,6 @@
 1:HL["/_next/static/media/a34f9d1faa5f3315-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/_next/static/css/25a8871c434ec1ad.css","style",{"crossOrigin":""}]
-0:["7JKLOxOm5OjuCOdh4Rjnn",[[["",{"children":["projects",{"children":[["project","openspecy","d"],{"children":["__PAGE__?{\"project\":\"openspecy\"}",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/25a8871c434ec1ad.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
+0:["NIL7D_W9T-czJ_qK5RTUM",[[["",{"children":["projects",{"children":[["project","openspecy","d"],{"children":["__PAGE__?{\"project\":\"openspecy\"}",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/25a8871c434ec1ad.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
 5:HL["/_next/static/css/cdd9ebffd4c60fbc.css","style",{"crossOrigin":""}]
 6:I[3293,["326","static/chunks/326-37f4781ab9342048.js","185","static/chunks/app/layout-e856dafe7c5628c1.js"],""]
 7:I[6954,[],""]
