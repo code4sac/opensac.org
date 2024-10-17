@@ -1,5 +1,5 @@
 "use client";
-import DonateSectionLanding from "./donateSectionLanding";
+import NameChangeSectionLanding from "./nameChangeLanding";
 
 /**
  * Section type. Displays light or dark themes.
@@ -14,10 +14,10 @@ export const SectionType = {
  * About page.
  * @returns {JSX.Element}
  */
-export default function Donate() {
+export default function NameChange() {
   return (
     <div className="">
-      <DonateSectionLanding sectionType={SectionType.light} />
+      <NameChangeSectionLanding sectionType={SectionType.light} />
     </div>
   );
 }

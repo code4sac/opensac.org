@@ -2,7 +2,7 @@
  * Donate landing section.
  * @returns {JSX.Element}
  */
-export default function ContactSectionLanding({ sectionType }) {
+export default function DonateSectionLanding({ sectionType }) {
   return (
     <section className={`general-section-${sectionType}`}>
       <div
