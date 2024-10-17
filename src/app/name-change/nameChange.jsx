@@ -14,7 +14,7 @@ export const SectionType = {
  * About page.
  * @returns {JSX.Element}
  */
-export default function Contact() {
+export default function NameChange() {
   return (
     <div className="">
       <NameChangeSectionLanding sectionType={SectionType.light} />

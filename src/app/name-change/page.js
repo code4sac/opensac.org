@@ -1,10 +1,9 @@
-import Donate from './nameChange'
+import NameChange from "./nameChange";
 
-
-export default function DonatePage() {
+export default function NameChangePage() {
   return (
     <>
-      <Donate></Donate>
+      <NameChange></NameChange>
     </>
-  )
+  );
 }
