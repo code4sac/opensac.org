@@ -1,5 +1,5 @@
 "use client";
-import DonateSectionLanding from "./nameChangeLanding";
+import NameChangeSectionLanding from "./nameChangeLanding";
 
 /**
  * Section type. Displays light or dark themes.
@@ -17,7 +17,7 @@ export const SectionType = {
 export default function Contact() {
   return (
     <div className="">
-      <DonateSectionLanding sectionType={SectionType.light} />
+      <NameChangeSectionLanding sectionType={SectionType.light} />
     </div>
   );
 }

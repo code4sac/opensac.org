@@ -1,8 +1,8 @@
 /**
- * Donate landing section.
+ * Name change landing section.
  * @returns {JSX.Element}
  */
-export default function ContactSectionLanding({ sectionType }) {
+export default function NameChangeSectionLanding({ sectionType }) {
   return (
     <section className={`general-section-${sectionType}`}>
       <div
