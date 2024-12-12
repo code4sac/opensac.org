@@ -36,7 +36,7 @@ export default function Projects({githubOwner}) {
 
   useEffect(() => {
     if (data) {
-      setProjectsData(data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)))
+      setProjectsData(data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)))
     }
   }, [data]);
 

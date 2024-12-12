@@ -42,7 +42,7 @@ export const fetchGithubProjectData = async (ghFullResponses) => {
  */
 export const fetchGithubSingleProject = async (ghResponse) => {
   const ghData = mapGhData(ghResponse);
-  const meta = await fetchMetaFile(ghData.full_name);
+  const meta = await fetchMetaFile(ghData.full_name, ghData.default_branch);
   return meta
     ? {
         ...ghData,
@@ -57,6 +57,7 @@ const mapGhData = (ghResponse) => ({
   homepage: ghResponse.homepage,
   name: ghResponse.name,
   full_name: ghResponse.full_name,
+  default_branch: ghResponse.default_branch,
   html_url: ghResponse.html_url,
   api_url: ghResponse.url,
   created_at: ghResponse.created_at,
@@ -121,7 +122,7 @@ screenshots:
  * @param string ghFullName, in the form of "owner/repo"
  * @returns 
  */
-const fetchMetaFile = async (ghFullName) => {
+const fetchMetaFile = async (ghFullName, defaultBranchName) => {
   console.dir(`${ghFullName}/${githubProject}`)
   console.dir(localMetaYaml)
   if (
@@ -132,7 +133,7 @@ const fetchMetaFile = async (ghFullName) => {
   }
 
   const metaResponse = await fetch(
-    `https://raw.githubusercontent.com/${ghFullName}/main/${metaFile}`
+    `https://raw.githubusercontent.com/${ghFullName}/${defaultBranchName}/${metaFile}`
   );
   if (metaResponse.status === 404) {
     return null;

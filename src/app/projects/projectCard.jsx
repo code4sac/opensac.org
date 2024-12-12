@@ -32,7 +32,7 @@ export default function ProjectCard({
         <p className={`project-card-description ${isLoading && 'project-card-loading'}`}>{projectText}</p>
       </div>
       <div className={`project-card-last-updated ${isLoading && 'project-card-loading'}`}>
-        Last Updated: {lastUpdatedTimestamp.format("ddd MMM D, H:mma")}
+        Last Updated: {lastUpdatedTimestamp.format("ddd MMM D Y")}
       </div>
       <div className={`project-card-buttons-container`}>
         <Button className={`btn btn-blue ${isLoading && 'project-card-loading'}`} href={pageUrl} textContent="Learn More" />
